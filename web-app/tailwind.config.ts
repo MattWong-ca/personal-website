@@ -14,12 +14,17 @@ const config: Config = {
       },
       width: {
         '100': '22rem',
+        '20': '5rem',
+        '70': '18rem'
       },
       height: {
         '300': '45rem'
       },
       borderRadius: {
         '70': '44px'
+      },
+      padding: {
+        '5': '3rem'
       }
     },
   },
