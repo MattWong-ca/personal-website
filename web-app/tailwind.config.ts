@@ -17,6 +17,9 @@ const config: Config = {
       },
       height: {
         '300': '45rem'
+      },
+      borderRadius: {
+        '70': '44px'
       }
     },
   },
