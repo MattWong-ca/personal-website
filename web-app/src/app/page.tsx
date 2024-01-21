@@ -7,7 +7,7 @@ export default function Home() {
         <div className="mt-50 ml-25">
           {/* New container with 50px padding */}
           <h1 className="text-5xl font-bold">MATT WONG</h1>
-          <p className="text-xl">Entrepreneurial software developer studying biomedical engineering @ UWaterloo</p>
+          <p className="text-xl">Software Developer. Studying Biomedical Engineering at the University of Waterloo.</p>
           <p>EXPERIENCE</p>
           <p>&gt; ExaCare</p>
           <p>ACCOMPLISHMENTS</p>
