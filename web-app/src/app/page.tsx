@@ -25,7 +25,7 @@ export default function Home() {
               <Image src="/statusbar.png" alt="iPhone Status Bar" width={80} height={50} className="filter brightness-0 invert justify-end" />
             </div>
             <div className="pt-4">
-              <div>
+              <div className="flex flex-col items-center">
               <Image src="/about.png" alt="About me icon" width={60} height={60} className="rounded-40"></Image>
               <p className="text-white">About</p>
               </div>
