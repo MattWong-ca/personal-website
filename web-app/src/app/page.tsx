@@ -1,6 +1,25 @@
+"use client";
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 export default function Home() {
+  const [currentTime, setCurrentTime] = useState('');
+  const { DateTime } = require('luxon');
+
+  function updateCurrentTimeET() {
+    const etTime = DateTime.local().setZone('America/New_York');
+    const formattedTime = etTime.toFormat('h:mm');
+    setCurrentTime(formattedTime);
+  }
+
+  useEffect(() => {
+    // Update the current time every second
+    const intervalId = setInterval(updateCurrentTimeET, 1000);
+
+    // Clear the interval on component unmount
+    return () => clearInterval(intervalId);
+  });
+
   return (
     <div className="h-screen flex">
       <div className="bg-blue-500 w-3/5">
@@ -20,7 +39,7 @@ export default function Home() {
           style={{ backgroundImage: `url('https://i.pinimg.com/736x/30/86/1b/30861b54751c4f458c0054fb500dc76e.jpg')` }}>
           <div>
             <div className="w-70 flex items-center">
-              <p className="text-m text-white justify-start pr-5 pl-2">1:23</p>
+              <p className="text-m text-white justify-start pr-5 pl-2">{currentTime}</p>
               <div className="bg-black rounded-xl w-20 h-6 mx-auto"></div>
               <Image src="/statusbar.png" alt="iPhone Status Bar" width={80} height={50} className="filter brightness-0 invert justify-end" />
             </div>
