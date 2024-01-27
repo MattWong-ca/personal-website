@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import IconAndText from './components/IconAndText';
 
 export default function Home() {
   const [currentTime, setCurrentTime] = useState('');
@@ -43,23 +44,11 @@ export default function Home() {
               <div className="bg-black rounded-xl w-20 h-6 mx-auto"></div>
               <Image src="/statusbar.png" alt="iPhone Status Bar" width={80} height={50} className="filter brightness-0 invert justify-end" />
             </div>
-            <div className="pt-4 flex space-x-5 justify-center">
-              <div className="flex flex-col items-center">
-                <Image src="/about.png" alt="About me icon" width={55} height={55} className="rounded-40"></Image>
-                <p className="text-xs text-white">About</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <Image src="/about.png" alt="About me icon" width={55} height={55} className="rounded-40"></Image>
-                <p className="text-xs text-white">About</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <Image src="/about.png" alt="About me icon" width={55} height={55} className="rounded-40"></Image>
-                <p className="text-xs text-white">About</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <Image src="/about.png" alt="About me icon" width={55} height={55} className="rounded-40"></Image>
-                <p className="text-xs text-white">About</p>
-              </div>
+            <div className="pt-8 flex space-x-5 justify-center">
+              <IconAndText src='/about.png' text='About' />
+              <IconAndText src='/about.png' text='About' />
+              <IconAndText src='/about.png' text='About' />
+              <IconAndText src='/about.png' text='About' />
             </div>
           </div>
         </div>
