@@ -21,6 +21,13 @@ export default function Home() {
     return () => clearInterval(intervalId);
   });
 
+  const icons = [
+    { src: '/about.png', text: 'About' },
+    { src: '/about.png', text: 'About' },
+    { src: '/about.png', text: 'About' },
+    { src: '/about.png', text: 'About' },
+  ];
+
   return (
     <div className="h-screen flex">
       <div className="bg-blue-500 w-3/5">
@@ -44,11 +51,10 @@ export default function Home() {
               <div className="bg-black rounded-xl w-20 h-6 mx-auto"></div>
               <Image src="/statusbar.png" alt="iPhone Status Bar" width={80} height={50} className="filter brightness-0 invert justify-end" />
             </div>
-            <div className="pt-8 flex space-x-5 justify-center">
-              <IconAndText src='/about.png' text='About' />
-              <IconAndText src='/about.png' text='About' />
-              <IconAndText src='/about.png' text='About' />
-              <IconAndText src='/about.png' text='About' />
+            <div className="pt-8 pl-1 flex space-x-5">
+              {icons.map((item, itemIndex) => (
+                <IconAndText key={itemIndex} src={item.src} text={item.text} />
+              ))}
             </div>
           </div>
         </div>
