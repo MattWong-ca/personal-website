@@ -29,17 +29,15 @@ export default function Home() {
   ];
 
   return (
-    <div className="h-screen flex">
-      <div className="bg-blue-500 w-3/5">
+    <div style={{ height: '100vh', display: 'flex' }}>
+      <div style={{ backgroundColor: '#3490dc', width: '60%' }}>
         {/* Content for the 60% width column */}
-        <div className="mt-50 ml-25">
+        <div style={{ marginTop: '12.5rem', marginLeft: '6.25rem' }}>
           {/* New container with 50px padding */}
-          <h1 className="text-5xl font-bold">MATT WONG</h1>
-          <p className="text-xl">Software Developer. Studying Biomedical Engineering at the University of Waterloo.</p>
+          <h1 style={{ fontSize: '3.75rem', fontWeight: 'bold' }}>MATTHEW WONG</h1>
+          <p style={{ fontSize: '1.25rem' }}>Software developer studying biomedical engineering at the University of Waterloo.</p>
           <p>EXPERIENCE</p>
           <p>&gt; ExaCare</p>
-          <p>ACCOMPLISHMENTS</p>
-          <p>&gt; Academic</p>
         </div>
       </div>
       <div className="bg-red-500 flex-1 flex items-center justify-center border-l-4 border-black">
@@ -56,7 +54,7 @@ export default function Home() {
                 <IconAndText key={itemIndex} src={item.src} text={item.text} />
               ))}
             </div>
-            <div className="absolute bottom-0 w-100 h-20 bg-black rounded-70"></div>
+            {/* <div className="absolute bottom-0 w-100 h-20 bg-black rounded-70"></div> */}
           </div>
         </div>
       </div>
