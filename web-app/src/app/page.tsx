@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import IconAndText from './components/IconAndText';
+import './globals.css';
 
 export default function Home() {
   const [currentTime, setCurrentTime] = useState('');
@@ -30,13 +31,14 @@ export default function Home() {
 
   return (
     <div style={{ height: '100vh', display: 'flex' }}>
-      <div style={{ backgroundColor: '#3490dc', width: '60%' }}>
+      <div style={{ width: '60%' }}>
         {/* Content for the 60% width column */}
         <div style={{ marginTop: '12.5rem', marginLeft: '6.25rem' }}>
           {/* New container with 50px padding */}
-          <h1 style={{ fontSize: '3.75rem', fontWeight: 'bold' }}>MATTHEW WONG</h1>
-          <p style={{ fontSize: '1.25rem' }}>Software developer studying biomedical engineering at the University of Waterloo.</p>
-          <p>EXPERIENCE</p>
+          <h1 className="nameOutline" style={{ fontSize: '3.75rem', fontWeight: 'bold' }}>MATTHEW WONG</h1>
+          <h1 className="name" style={{ fontSize: '3.75rem', fontWeight: 'bold' }}>MATTHEW WONG</h1>
+          <p className="headline" style={{ fontSize: '1.25rem' }}>Software developer shipping frontends at hackathons and <br/> studying engineering at UWaterloo.</p>
+          <p>Experience</p>
           <p>&gt; ExaCare</p>
         </div>
       </div>

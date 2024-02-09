@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
+import Head from "next/head";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Poppins({
+  subsets: ["latin-ext"],
+  weight: ["700", "500"],
+  style: ["normal"]
+});
 
 export const metadata: Metadata = {
   title: "Matthew Wong | Software Developer",
-  description: "Matthew Wong | UWaterloo | Software Developer",
+  description: "Matthew Wong. Waterloo. Software developer. Blockchain. Web3.",
 };
 
 export default function RootLayout({
