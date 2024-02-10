@@ -51,7 +51,7 @@ export default function Home() {
 
   return (
     <div style={{ height: '100vh', display: 'flex' }}>
-      <div style={{ width: '60%', backgroundImage: `url('https://img.freepik.com/free-photo/cardboard-texture_1194-5419.jpg')` }}>
+      <div style={{ width: '60%', position: 'relative', backgroundImage: `url('https://img.freepik.com/free-photo/cardboard-texture_1194-5419.jpg')` }}>
         {/* Content for the 60% width column */}
         <div style={{ marginTop: '12.5rem', marginLeft: '6.25rem' }}>
           {/* New container with 50px padding */}
@@ -64,8 +64,17 @@ export default function Home() {
             <p className={`${experience.className} `} style={{ fontSize: '1.3rem', marginTop: '0.5rem' }}>➔ iOS developer, theScore Bet</p>
             <p className={`${experience.className} `} style={{ fontSize: '1.3rem', marginTop: '0.5rem' }}>➔ Store designer, Shopify</p>
           </div>
-
         </div>
+        <div style={{ transform: 'rotate(10deg)', position: 'absolute', bottom: 20, right: 30 }}>
+          <Image
+            src="/ethereum.webp"
+            alt="3D Ethereum icon"
+            width={150}
+            height={0}
+            style={{ animation: 'hoverUpDown 10s ease infinite' }}
+          />
+        </div>
+
       </div>
       <div className="bg-red-500 flex-1 flex items-center justify-center border-l-4 border-black">
         <div className="w-100 h-300 border-4 border-black rounded-70 flex items-start justify-center bg-cover pt-3"

@@ -36,3 +36,15 @@
   /* font-weight: 400;
   font-style: normal; */
 }
+
+@keyframes hoverUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Adjust the distance */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
