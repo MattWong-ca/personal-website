@@ -12,7 +12,7 @@ const title = Poppins({
   style: ["normal"]
 });
 
-const asdf = Poppins({
+const tagline = Poppins({
   subsets: ["latin-ext"],
   weight: ["600"],
   style: ["normal"]
@@ -50,20 +50,29 @@ export default function Home() {
   ];
 
   return (
-    <div style={{ height: '100vh', display: 'flex' }}>
+    <div style={{ overflow: 'hidden', height: '100vh', display: 'flex' }}>
       <div style={{ width: '60%', position: 'relative', backgroundImage: `url('https://img.freepik.com/free-photo/cardboard-texture_1194-5419.jpg')` }}>
         {/* Content for the 60% width column */}
         <div style={{ marginTop: '12.5rem', marginLeft: '6.25rem' }}>
           {/* New container with 50px padding */}
           <h1 className="nameOutline" style={{ fontSize: '3.75rem', fontWeight: 'bold' }}>MATTHEW WONG</h1>
           <h1 className={`${title.className} name`} style={{ fontSize: '3.75rem', fontWeight: 'bold' }}>MATTHEW WONG</h1>
-          <p className={`${asdf.className} `} style={{ fontSize: '1.6rem' }}>Shipping software at hackathons and studying engineering at UWaterloo!</p>
-          <p className={`${asdf.className} `} style={{ fontSize: '1.6rem', marginTop: '2rem' }}>Experience</p>
+          <p className={`${tagline.className} `} style={{ fontSize: '1.6rem' }}>Shipping software at hackathons and studying engineering at UWaterloo!</p>
+          <p className={`${tagline.className} `} style={{ fontSize: '1.6rem', marginTop: '2rem' }}>Experience</p>
           <div style={{ marginLeft: '1.3rem' }}>
             <p className={`${experience.className} `} style={{ fontSize: '1.3rem', marginTop: '0.5rem' }}>➔ Full stack developer, ExaCare</p>
             <p className={`${experience.className} `} style={{ fontSize: '1.3rem', marginTop: '0.5rem' }}>➔ iOS developer, theScore Bet</p>
             <p className={`${experience.className} `} style={{ fontSize: '1.3rem', marginTop: '0.5rem' }}>➔ Store designer, Shopify</p>
           </div>
+        </div>
+        <div style={{ position: 'relative', marginTop: '30px', right: '40px'}}>
+        <Image
+            src="/basketball.webp"
+            alt="Basketball icon"
+            width={300}
+            height={0}
+            style={{ animation: 'hoverUpDown 15s ease infinite' }}
+          />
         </div>
         <div style={{ transform: 'rotate(10deg)', position: 'absolute', bottom: 20, right: 30 }}>
           <Image
@@ -77,10 +86,10 @@ export default function Home() {
 
       </div>
       <div className="bg-red-500 flex-1 flex items-center justify-center border-l-4 border-black"
-                style={{ backgroundImage: `url('https://images.unsplash.com/photo-1519810755548-39cd217da494?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHNwYWNlJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D')` }}
+                style={{ backgroundSize: 'cover', backgroundImage: `url('https://512pixels.net/downloads/macos-wallpapers-6k/10-3-6k.jpg')` }}
                 >
-        <div className="w-100 h-300 border-4 border-black rounded-70 flex items-start justify-center bg-cover pt-3"
-          style={{ backgroundImage: `url('https://i.pinimg.com/736x/30/86/1b/30861b54751c4f458c0054fb500dc76e.jpg')` }}>
+        <div className="bg-gray-300 w-100 h-300 border-4 border-black rounded-70 flex items-start justify-center bg-cover pt-3"
+          style={{ backgroundImage: `` }}>
           <div className="relative">
             <div /* Top status bar */ className="w-70 flex items-center">
               <p className="text-m text-white justify-start pr-5 pl-2">{currentTime}</p>
