@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
 
-const inter = Poppins({
+const poppins = Poppins({
   subsets: ["latin-ext"],
   weight: ["700", "500"],
   style: ["normal"]
+});
+
+const inter = Inter({
+  subsets: ["latin"]
 });
 
 export const metadata: Metadata = {

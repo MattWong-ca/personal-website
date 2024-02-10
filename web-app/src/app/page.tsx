@@ -60,7 +60,7 @@ export default function Home() {
         {/* Content for the 60% width column */}
         <div style={{ marginTop: '12.5rem', marginLeft: '6.25rem' }}>
           {/* New container with 50px padding */}
-          <h1 className="nameOutline" style={{ fontSize: '3.75rem', fontWeight: 'bold' }}>MATTHEW WONG</h1>
+          <h1 className={`${title.className} nameOutline`} style={{ fontSize: '3.75rem', fontWeight: 'bold' }}>MATTHEW WONG</h1>
           <h1 className={`${title.className} name`} style={{ fontSize: '3.75rem', fontWeight: 'bold' }}>MATTHEW WONG</h1>
           <p className={`${tagline.className} `} style={{ fontSize: '1.6rem' }}>Shipping software at hackathons and studying engineering at UWaterloo!</p>
           <p className={`${tagline.className} `} style={{ fontSize: '1.6rem', marginTop: '2rem' }}>Experience</p>
@@ -90,12 +90,27 @@ export default function Home() {
         </div>
 
       </div>
-      <div className="flex-1 border-l-4 border-black"
-        style={{ backgroundSize: 'cover', backgroundImage: `url('https://512pixels.net/downloads/macos-wallpapers-6k/10-3-6k.jpg')` }}
+      <div className="bg-gray-300 flex-1 flex items-center justify-center border-l-4 border-black"
+        style={{ backgroundSize: 'cover', backgroundImage: `url('https://images-s3.twelvesouth.com/large_files/Wallpapers_6/12S_Mountain_InnValley_Right_23.jpg')` }}
       >
-        <div style={{ marginTop: '15px', paddingLeft: '20px', paddingRight: '20px', display: 'flex', justifyContent: 'space-between', height: '20px', width: '100%'}}>
+        {/* <div style={{ marginTop: '15px', paddingLeft: '20px', paddingRight: '20px', display: 'flex', justifyContent: 'space-between', height: '20px', width: '100%'}}>
           <p className="apple">{currentTime}</p>
           <Image src="/statusbar.png" alt="iPhone Status Bar" width={80} height={50} className="filter brightness-0 invert" />
+        </div> */}
+        <div className="bg-gray-300 w-100 h-300 rounded-70 flex items-start justify-center bg-cover pt-3"
+          style={{ border: '8px solid black', boxShadow:'5px 5px 0 black, 10px 10px 20px rgba(0, 0, 0, 0.5)', backgroundImage: `url('https://512pixels.net/downloads/macos-wallpapers-6k/10-3-6k.jpg')` }}>
+          <div className="relative">
+            <div className="w-70 flex items-center">
+              <p className="text-m text-white justify-start pr-5 pl-2">{currentTime}</p>
+              <div className="bg-black rounded-xl w-20 h-6 mx-auto"></div>
+              <Image src="/statusbar.png" alt="iPhone Status Bar" width={80} height={50} className="filter brightness-0 invert justify-end" />
+            </div>
+            <div  className="pt-8 pl-1 flex space-x-5">
+              {icons.map((item, itemIndex) => (
+                <IconAndText key={itemIndex} src={item.src} text={item.text} />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -116,7 +131,6 @@ export default function Home() {
                 <IconAndText key={itemIndex} src={item.src} text={item.text} />
               ))}
             </div>
-            <div className="absolute bottom-0 w-100 h-20 bg-black rounded-70"></div>
           </div>
         </div>
         */ }
