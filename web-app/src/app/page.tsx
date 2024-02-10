@@ -3,6 +3,26 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import IconAndText from './components/IconAndText';
 import './globals.css';
+import { Poppins } from 'next/font/google';
+
+// Fonts
+const title = Poppins({
+  subsets: ["latin-ext"],
+  weight: ["700"],
+  style: ["normal"]
+});
+
+const asdf = Poppins({
+  subsets: ["latin-ext"],
+  weight: ["600"],
+  style: ["normal"]
+});
+
+const experience = Poppins({
+  subsets: ["latin-ext"],
+  weight: ["400"],
+  style: ["normal"]
+});
 
 export default function Home() {
   const [currentTime, setCurrentTime] = useState('');
@@ -31,15 +51,20 @@ export default function Home() {
 
   return (
     <div style={{ height: '100vh', display: 'flex' }}>
-      <div style={{ width: '60%' }}>
+      <div style={{ width: '60%', backgroundImage: `url('https://img.freepik.com/free-photo/cardboard-texture_1194-5419.jpg')` }}>
         {/* Content for the 60% width column */}
         <div style={{ marginTop: '12.5rem', marginLeft: '6.25rem' }}>
           {/* New container with 50px padding */}
           <h1 className="nameOutline" style={{ fontSize: '3.75rem', fontWeight: 'bold' }}>MATTHEW WONG</h1>
-          <h1 className="name" style={{ fontSize: '3.75rem', fontWeight: 'bold' }}>MATTHEW WONG</h1>
-          <p className="headline" style={{ fontSize: '1.25rem' }}>Software developer shipping frontends at hackathons and <br/> studying engineering at UWaterloo.</p>
-          <p>Experience</p>
-          <p>&gt; ExaCare</p>
+          <h1 className={`${title.className} name`} style={{ fontSize: '3.75rem', fontWeight: 'bold' }}>MATTHEW WONG</h1>
+          <p className={`${asdf.className} `} style={{ fontSize: '1.6rem' }}>Shipping software at hackathons and studying engineering at UWaterloo!</p>
+          <p className={`${asdf.className} `} style={{ fontSize: '1.6rem', marginTop: '2rem' }}>Experience</p>
+          <div style={{ marginLeft: '1.3rem' }}>
+            <p className={`${experience.className} `} style={{ fontSize: '1.3rem', marginTop: '0.5rem' }}>➔ Full stack developer, ExaCare</p>
+            <p className={`${experience.className} `} style={{ fontSize: '1.3rem', marginTop: '0.5rem' }}>➔ iOS developer, theScore Bet</p>
+            <p className={`${experience.className} `} style={{ fontSize: '1.3rem', marginTop: '0.5rem' }}>➔ Store designer, Shopify</p>
+          </div>
+
         </div>
       </div>
       <div className="bg-red-500 flex-1 flex items-center justify-center border-l-4 border-black">
