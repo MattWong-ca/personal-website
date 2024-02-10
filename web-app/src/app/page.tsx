@@ -71,12 +71,14 @@ export default function Home() {
             alt="3D Ethereum icon"
             width={150}
             height={0}
-            style={{ animation: 'hoverUpDown 10s ease infinite' }}
+            style={{ animation: 'hoverUpDown 15s ease infinite' }}
           />
         </div>
 
       </div>
-      <div className="bg-red-500 flex-1 flex items-center justify-center border-l-4 border-black">
+      <div className="bg-red-500 flex-1 flex items-center justify-center border-l-4 border-black"
+                style={{ backgroundImage: `url('https://images.unsplash.com/photo-1519810755548-39cd217da494?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHNwYWNlJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D')` }}
+                >
         <div className="w-100 h-300 border-4 border-black rounded-70 flex items-start justify-center bg-cover pt-3"
           style={{ backgroundImage: `url('https://i.pinimg.com/736x/30/86/1b/30861b54751c4f458c0054fb500dc76e.jpg')` }}>
           <div className="relative">
