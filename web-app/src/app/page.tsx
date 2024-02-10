@@ -4,12 +4,17 @@ import Image from 'next/image';
 import IconAndText from './components/IconAndText';
 import './globals.css';
 import { Poppins } from 'next/font/google';
+import { Inter } from 'next/font/google';
 
 // Fonts
 const title = Poppins({
   subsets: ["latin-ext"],
   weight: ["700"],
   style: ["normal"]
+});
+
+const inter = Inter({
+  subsets: ["latin"],
 });
 
 const tagline = Poppins({
@@ -88,8 +93,8 @@ export default function Home() {
       <div className="flex-1 border-l-4 border-black"
         style={{ backgroundSize: 'cover', backgroundImage: `url('https://512pixels.net/downloads/macos-wallpapers-6k/10-3-6k.jpg')` }}
       >
-        <div style={{ display: 'flex', justifyContent: 'space-between', height: '20px', width: '100%'}}>
-          <p>{currentTime}</p>
+        <div style={{ marginTop: '15px', paddingLeft: '20px', paddingRight: '20px', display: 'flex', justifyContent: 'space-between', height: '20px', width: '100%'}}>
+          <p className="apple">{currentTime}</p>
           <Image src="/statusbar.png" alt="iPhone Status Bar" width={80} height={50} className="filter brightness-0 invert" />
         </div>
       </div>
