@@ -65,13 +65,13 @@ export default function Home() {
             <p className={`${experience.className} `} style={{ fontSize: '1.3rem', marginTop: '0.5rem' }}>➔ Store designer, Shopify</p>
           </div>
         </div>
-        <div style={{ position: 'relative', marginTop: '30px', right: '40px'}}>
-        <Image
+        <div style={{ position: 'relative', marginTop: '30px', right: '40px' }}>
+          <Image
             src="/basketball.webp"
             alt="Basketball icon"
             width={300}
             height={0}
-            style={{ animation: 'hoverUpDown 15s ease infinite' }}
+          // style={{ animation: 'hoverUpDown 15s ease infinite' }}
           />
         </div>
         <div style={{ transform: 'rotate(10deg)', position: 'absolute', bottom: 20, right: 30 }}>
@@ -85,26 +85,33 @@ export default function Home() {
         </div>
 
       </div>
-      <div className="bg-red-500 flex-1 flex items-center justify-center border-l-4 border-black"
-                style={{ backgroundSize: 'cover', backgroundImage: `url('https://512pixels.net/downloads/macos-wallpapers-6k/10-3-6k.jpg')` }}
-                >
-        <div className="bg-gray-300 w-100 h-300 border-4 border-black rounded-70 flex items-start justify-center bg-cover pt-3"
-          style={{ backgroundImage: `` }}>
-          <div className="relative">
-            <div /* Top status bar */ className="w-70 flex items-center">
-              <p className="text-m text-white justify-start pr-5 pl-2">{currentTime}</p>
-              <div className="bg-black rounded-xl w-20 h-6 mx-auto"></div>
-              <Image src="/statusbar.png" alt="iPhone Status Bar" width={80} height={50} className="filter brightness-0 invert justify-end" />
-            </div>
-            <div /* Icons first row */ className="pt-8 pl-1 flex space-x-5">
-              {icons.map((item, itemIndex) => (
-                <IconAndText key={itemIndex} src={item.src} text={item.text} />
-              ))}
-            </div>
-            {/* <div className="absolute bottom-0 w-100 h-20 bg-black rounded-70"></div> */}
-          </div>
+      <div className="flex-1 border-l-4 border-black"
+        style={{ backgroundSize: 'cover', backgroundImage: `url('https://512pixels.net/downloads/macos-wallpapers-6k/10-3-6k.jpg')` }}
+      >
+        <div style={{ display: 'flex', justifyContent: 'space-between', height: '20px', width: '100%'}}>
+          <p>{currentTime}</p>
+          <Image src="/statusbar.png" alt="iPhone Status Bar" width={80} height={50} className="filter brightness-0 invert" />
         </div>
       </div>
     </div>
   );
 }
+
+{/*
+        <div className="bg-gray-300 w-100 h-300 border-4 border-black rounded-70 flex items-start justify-center bg-cover pt-3"
+          style={{ backgroundImage: `` }}>
+          <div className="relative">
+            <div className="w-70 flex items-center">
+              <p className="text-m text-white justify-start pr-5 pl-2">{currentTime}</p>
+              <div className="bg-black rounded-xl w-20 h-6 mx-auto"></div>
+              <Image src="/statusbar.png" alt="iPhone Status Bar" width={80} height={50} className="filter brightness-0 invert justify-end" />
+            </div>
+            <div  className="pt-8 pl-1 flex space-x-5">
+              {icons.map((item, itemIndex) => (
+                <IconAndText key={itemIndex} src={item.src} text={item.text} />
+              ))}
+            </div>
+            <div className="absolute bottom-0 w-100 h-20 bg-black rounded-70"></div>
+          </div>
+        </div>
+        */ }
