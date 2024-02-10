@@ -98,14 +98,17 @@ export default function Home() {
           <Image src="/statusbar.png" alt="iPhone Status Bar" width={80} height={50} className="filter brightness-0 invert" />
         </div> */}
         <div className="bg-gray-300 w-100 h-300 rounded-70 flex items-start justify-center bg-cover pt-3"
-          style={{ border: '8px solid black', boxShadow:'5px 5px 0 black, 10px 10px 20px rgba(0, 0, 0, 0.5)', backgroundImage: `url('https://512pixels.net/downloads/macos-wallpapers-6k/10-3-6k.jpg')` }}>
+          style={{ border: '8px solid black', boxShadow: '5px 5px 0 black, 10px 10px 20px rgba(0, 0, 0, 0.5)', backgroundImage: `url('https://512pixels.net/downloads/macos-wallpapers-6k/10-3-6k.jpg')` }}>
           <div className="relative">
-            <div className="w-70 flex items-center">
-              <p className="text-m text-white justify-start pr-5 pl-2">{currentTime}</p>
-              <div className="bg-black rounded-xl w-20 h-6 mx-auto"></div>
-              <Image src="/statusbar.png" alt="iPhone Status Bar" width={80} height={50} className="filter brightness-0 invert justify-end" />
+            <div className="w-70 flex items-center" style={{ justifyContent: 'space-between' }}>
+              <p className="apple" style={{ fontSize: '1rem', color: 'white', justifyContent: 'start', paddingRight: '1.25rem', paddingLeft: '0.5rem', paddingTop: '0.125rem' }}>{currentTime}</p>
+              <Image src="/statusbar.png" alt="iPhone Status Bar" width={80} height={50} className="filter brightness-0 invert pr-1" />
             </div>
-            <div  className="pt-8 pl-1 flex space-x-5">
+            <div className="flex justify-center">
+              <div className="bg-black rounded-xl w-20 h-6 mx-auto absolute top-0"></div>
+            </div>
+
+            <div className="pt-8 pl-1 flex space-x-5">
               {icons.map((item, itemIndex) => (
                 <IconAndText key={itemIndex} src={item.src} text={item.text} />
               ))}
