@@ -97,7 +97,8 @@ export default function Home() {
       >
         {/* iPhone */}
         <div className="bg-gray-300 w-100 h-300 rounded-70 bg-cover pt-3 relative"
-          style={{ border: '8px solid black', boxShadow: '5px 5px 0 black, 10px 10px 20px rgba(0, 0, 0, 0.5)', backgroundImage: `url('https://512pixels.net/downloads/macos-wallpapers-6k/10-3-6k.jpg')` }}>
+          // In case I want to add opaque boxShadow back: 5px 5px 0 black
+          style={{ border: '8px solid black', boxShadow: '10px 10px 20px rgba(0, 0, 0, 0.5)', backgroundImage: `url('https://512pixels.net/downloads/macos-wallpapers-6k/10-3-6k.jpg')` }}>
 
           {/* Status bar */}
           <div style={{ height: '26px' }} className="flex justify-center">
@@ -110,7 +111,7 @@ export default function Home() {
 
           {/* Icons */}
           <div className="flex justify-center">
-            <div className="pt-8 flex space-x-5">
+            <div className="pt-7 flex space-x-5">
               {icons.map((item, itemIndex) => (
                 <IconAndText key={itemIndex} src={item.src} text={item.text} />
               ))}
