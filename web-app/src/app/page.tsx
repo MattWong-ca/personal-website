@@ -90,44 +90,38 @@ export default function Home() {
         </div>
 
       </div>
-      <div className="bg-gray-300 flex-1 flex items-center justify-center border-l-4 border-black"
+
+      {/* 40% screen, mountain valley background */}
+      <div className="flex-1 flex items-center justify-center border-l-4 border-black"
         style={{ backgroundSize: 'cover', backgroundImage: `url('https://images-s3.twelvesouth.com/large_files/Wallpapers_6/12S_Mountain_InnValley_Right_23.jpg')` }}
       >
-        {/* <div style={{ marginTop: '15px', paddingLeft: '20px', paddingRight: '20px', display: 'flex', justifyContent: 'space-between', height: '20px', width: '100%'}}>
-          <p className="apple">{currentTime}</p>
-          <Image src="/statusbar.png" alt="iPhone Status Bar" width={80} height={50} className="filter brightness-0 invert" />
-        </div> */}
-        <div className="bg-gray-300 w-100 h-300 rounded-70 bg-cover pt-3"
+        {/* iPhone */}
+        <div className="bg-gray-300 w-100 h-300 rounded-70 bg-cover pt-3 relative"
           style={{ border: '8px solid black', boxShadow: '5px 5px 0 black, 10px 10px 20px rgba(0, 0, 0, 0.5)', backgroundImage: `url('https://512pixels.net/downloads/macos-wallpapers-6k/10-3-6k.jpg')` }}>
-          <div className="relative">
 
-            <div style={{ height: '26px' }} className="flex justify-center">
-              <div className="w-70 flex items-center" style={{ justifyContent: 'space-between' }}>
-                {currentTime ? (<p className="apple" style={{ fontSize: '1rem', color: 'white', justifyContent: 'start', paddingLeft: '0.5rem', paddingTop: '0.125rem' }}>{currentTime}</p>) : (<p className="apple" style={{ fontSize: '1rem', color: 'white', justifyContent: 'start', paddingLeft: '0.5rem', paddingTop: '0.125rem' }}>1:23</p>)}
-                <Image src="/statusbar.png" alt="iPhone Status Bar" width={80} height={50} className="filter brightness-0 invert pr-1" />
-              </div>
+          {/* Status bar */}
+          <div style={{ height: '26px' }} className="flex justify-center">
+            <div className="w-70 flex items-center" style={{ justifyContent: 'space-between' }}>
+              {currentTime ? (<p className="apple" style={{ fontSize: '1rem', color: 'white', justifyContent: 'start', paddingLeft: '0.5rem', paddingTop: '0.125rem' }}>{currentTime}</p>) : (<p className="apple" style={{ fontSize: '1rem', color: 'white', justifyContent: 'start', paddingLeft: '0.5rem', paddingTop: '0.125rem' }}>1:23</p>)}
+              <Image src="/statusbar.png" alt="iPhone Status Bar" width={80} height={50} className="filter brightness-0 invert pr-1" />
             </div>
+            <div className="bg-black rounded-xl w-20 h-6 mx-auto absolute pt-3"></div>
+          </div>
 
-
-
-            <div className="flex justify-center">
-              <div className="bg-black rounded-xl w-20 h-6 mx-auto absolute top-0"></div>
-            </div>
-
-            <div className="flex justify-center">
-              <div className="pt-8 flex space-x-5">
-                {icons.map((item, itemIndex) => (
-                  <IconAndText key={itemIndex} src={item.src} text={item.text} />
-                ))}
-              </div>
+          {/* Icons */}
+          <div className="flex justify-center">
+            <div className="pt-8 flex space-x-5">
+              {icons.map((item, itemIndex) => (
+                <IconAndText key={itemIndex} src={item.src} text={item.text} />
+              ))}
             </div>
           </div>
-          <div className="flex justify-center">
+
+          <div className="flex justify-center absolute bottom-0 w-full">
             <div style={{ backgroundColor: 'black', width: '90px' }}>Hi</div>
           </div>
 
         </div>
-
       </div>
     </div>
   );
@@ -150,3 +144,8 @@ export default function Home() {
           </div>
         </div>
         */ }
+
+{/* <div style={{ marginTop: '15px', paddingLeft: '20px', paddingRight: '20px', display: 'flex', justifyContent: 'space-between', height: '20px', width: '100%'}}>
+          <p className="apple">{currentTime}</p>
+          <Image src="/statusbar.png" alt="iPhone Status Bar" width={80} height={50} className="filter brightness-0 invert" />
+        </div> */}
