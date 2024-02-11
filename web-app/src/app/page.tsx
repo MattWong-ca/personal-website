@@ -120,10 +120,11 @@ export default function Home() {
           {/* Bottom icon bar */}
           <div className="flex justify-center absolute bottom-4 w-full">
             <div style={{ gap: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(240, 240, 240, 0.15)', borderRadius: '30px', width: '310px', height: '80px' }}>
-            <IconAndText src={'/about.png'} text={''} />
-            <IconAndText src={'/about.png'} text={''} />
-            <IconAndText src={'/about.png'} text={''} />
-            <IconAndText src={'/about.png'} text={''} />
+              {/* Either need to make these bigger or my custom ones smaller */}
+            <IconAndText src={'/mail.webp'} text={''} />
+            <IconAndText src={'/camera.webp'} text={''} />
+            <IconAndText src={'/safari.webp'} text={''} />
+            <IconAndText src={'/phone.webp'} text={''} />
             </div>
           </div>
 
