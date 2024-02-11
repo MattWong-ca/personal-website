@@ -13,7 +13,7 @@ const config: Config = {
         '25': '6.25rem'
       },
       width: {
-        '100': '22rem',
+        '100': '22.5rem',
         '20': '5rem',
         '70': '18rem'
       },

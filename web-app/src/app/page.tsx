@@ -49,9 +49,9 @@ export default function Home() {
 
   const icons = [
     { src: '/about.png', text: 'About' },
-    { src: '/about.png', text: 'About' },
-    { src: '/about.png', text: 'About' },
-    { src: '/about.png', text: 'About' },
+    { src: '/about.png', text: 'Work' },
+    { src: '/about.png', text: 'School' },
+    { src: '/about.png', text: 'Projects' },
   ];
 
   return (
@@ -117,8 +117,14 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex justify-center absolute bottom-0 w-full">
-            <div style={{ backgroundColor: 'black', width: '90px' }}>Hi</div>
+          {/* Bottom icon bar */}
+          <div className="flex justify-center absolute bottom-4 w-full">
+            <div style={{ gap: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(240, 240, 240, 0.15)', borderRadius: '30px', width: '310px', height: '80px' }}>
+            <IconAndText src={'/about.png'} text={''} />
+            <IconAndText src={'/about.png'} text={''} />
+            <IconAndText src={'/about.png'} text={''} />
+            <IconAndText src={'/about.png'} text={''} />
+            </div>
           </div>
 
         </div>
