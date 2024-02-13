@@ -49,9 +49,9 @@ export default function Home() {
 
   const icons = [
     { src: '/about.png', text: 'About', link: 'https://www.linkedin.com/in/mattwong-ca/' },
-    { src: '/about.png', text: 'Work', link: 'https://www.linkedin.com/in/mattwong-ca/' },
-    { src: '/about.png', text: 'Education', link: 'https://www.linkedin.com/in/mattwong-ca/' },
-    { src: '/about.png', text: 'Projects', link: 'https://www.linkedin.com/in/mattwong-ca/' },
+    { src: '/briefcase.png', text: 'Work', link: 'https://www.linkedin.com/in/mattwong-ca/' },
+    { src: '/projects.png', text: 'Projects', link: 'https://www.linkedin.com/in/mattwong-ca/' },
+    { src: '/education.jpeg', text: 'Education', link: 'https://www.linkedin.com/in/mattwong-ca/' }
   ];
 
   return (
@@ -117,13 +117,13 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div className="flex justify-center">
+          {/* <div className="flex justify-center">
             <div className="pt-4 flex space-x-5">
               {icons.map((item, itemIndex) => (
                 <IconAndText key={itemIndex} src={item.src} text={item.text} link={item.link} />
               ))}
             </div>
-          </div>
+          </div> */}
           {/* Bottom icon bar */}
           <div className="flex justify-center absolute bottom-4 w-full">
             <div style={{ gap: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(240, 240, 240, 0.15)', borderRadius: '30px', width: '310px', height: '80px' }}>
