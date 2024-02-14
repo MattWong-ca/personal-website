@@ -53,7 +53,19 @@ export default function Home() {
     { src: '/projects.png', text: 'Projects', link: 'https://www.linkedin.com/in/mattwong-ca/' },
     { src: '/education.jpeg', text: 'Education', link: 'https://www.linkedin.com/in/mattwong-ca/' }
   ];
+  const [isPopupVisible, setPopupVisible] = useState(false);
+  // const [popupContent, setPopupContent] = useState('');
 
+  // Function to toggle the visibility of the popup and set its content
+  const togglePopup = () => {
+    // setPopupContent(content);
+    setPopupVisible(!isPopupVisible);
+  };
+
+  // Function to handle icon click and set appropriate content
+  const handleIconClick = (content: string) => {
+    // togglePopup(content);
+  };
   return (
     <div style={{ overflow: 'hidden', height: '100vh', display: 'flex' }}>
       <div style={{ width: '60%', position: 'relative', backgroundImage: `url('https://img.freepik.com/free-photo/cardboard-texture_1194-5419.jpg')` }}>
@@ -132,14 +144,22 @@ export default function Home() {
             <IconAndText src={'/camera.webp'} link='https://www.linkedin.com/in/mattwong-ca/'/>
             <IconAndText src={'/safari.webp'} link='https://www.google.com/search?q=matt+wong+waterloo'/>
             <IconAndText src={'/phone.webp'} link='https://www.linkedin.com/in/mattwong-ca/'/>
+            {/* <div className="flex flex-col items-center">
+                <Image onClick={() => togglePopup()} src={'/phone.webp'} alt="About me icon" width={55} height={55} className="rounded-40"></Image>
+                <p style={{ marginTop: true ? '2px' : '0px', fontSize: '11px', maxWidth: '55px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} className="apple text-white">{'text'}</p>
+            </div> */}
             </div>
           </div>
 
         </div>
       </div>
-      {/* <div className="absolute inset-0 flex items-center justify-center">
-        <div style={{ width: '60%', height: '70%', backgroundColor: 'black' }}></div>
-      </div> */}
+      {/* {isPopupVisible && (
+        <div className="absolute inset-0 flex items-center justify-center">
+        <div style={{ borderRadius: '10px', width: '60%', height: '70%', backgroundColor: 'black' }}>
+          <div style={{ borderRadius: '10px 10px 0 0', width: '100%', height: '20px', backgroundColor: 'grey' }}></div>
+        </div>
+      </div>
+      )} */}
     </div>
   );
 }
