@@ -54,20 +54,14 @@ export default function Home() {
     { src: '/education.jpeg', text: 'Education', link: 'https://www.linkedin.com/in/mattwong-ca/' }
   ];
   const [isPopupVisible, setPopupVisible] = useState(false);
-  // const [popupContent, setPopupContent] = useState('');
 
   // Function to toggle the visibility of the popup and set its content
   const togglePopup = () => {
-    // setPopupContent(content);
     setPopupVisible(!isPopupVisible);
   };
 
-  // Function to handle icon click and set appropriate content
-  const handleIconClick = (content: string) => {
-    // togglePopup(content);
-  };
   return (
-    <div style={{ overflow: 'hidden', height: '100vh', display: 'flex' }}>
+    <div style={{ overflow: 'hidden', height: '100vh', display: 'flex', position: 'relative' }}>
       <div style={{ width: '60%', position: 'relative', backgroundImage: `url('https://img.freepik.com/free-photo/cardboard-texture_1194-5419.jpg')` }}>
         {/* Content for the 60% width column */}
         <div style={{ marginTop: '12.5rem', marginLeft: '6.25rem' }}>
@@ -140,26 +134,26 @@ export default function Home() {
           <div className="flex justify-center absolute bottom-4 w-full">
             <div style={{ gap: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(240, 240, 240, 0.15)', borderRadius: '30px', width: '310px', height: '80px' }}>
               {/* Either need to make these bigger or my custom ones smaller */}
-            <IconAndText src={'/mail.webp'} link='https://www.linkedin.com/in/mattwong-ca/'/>
-            <IconAndText src={'/camera.webp'} link='https://www.linkedin.com/in/mattwong-ca/'/>
-            <IconAndText src={'/safari.webp'} link='https://www.google.com/search?q=matt+wong+waterloo'/>
-            <IconAndText src={'/phone.webp'} link='https://www.linkedin.com/in/mattwong-ca/'/>
-            {/* <div className="flex flex-col items-center">
-                <Image onClick={() => togglePopup()} src={'/phone.webp'} alt="About me icon" width={55} height={55} className="rounded-40"></Image>
+              <IconAndText src={'/mail.webp'} link='https://www.linkedin.com/in/mattwong-ca/' />
+              <IconAndText src={'/camera.webp'} link='https://www.linkedin.com/in/mattwong-ca/' />
+              <IconAndText src={'/safari.webp'} link='https://www.google.com/search?q=matt+wong+waterloo' />
+              <IconAndText src={'/phone.webp'} link='https://www.linkedin.com/in/mattwong-ca/' />
+              {/* <div className="flex flex-col items-center">
+                <Image onClick={togglePopup} src={'/phone.webp'} alt="About me icon" width={55} height={55} className="rounded-40"></Image>
                 <p style={{ marginTop: true ? '2px' : '0px', fontSize: '11px', maxWidth: '55px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} className="apple text-white">{'text'}</p>
-            </div> */}
+              </div> */}
             </div>
           </div>
 
         </div>
       </div>
-      {/* {isPopupVisible && (
+      {/* {isPopupVisible ? (
         <div className="absolute inset-0 flex items-center justify-center">
-        <div style={{ borderRadius: '10px', width: '60%', height: '70%', backgroundColor: 'black' }}>
-          <div style={{ borderRadius: '10px 10px 0 0', width: '100%', height: '20px', backgroundColor: 'grey' }}></div>
+          <div style={{ borderRadius: '10px', width: '60%', height: '70%', backgroundColor: 'black' }}>
+            <div style={{ borderRadius: '10px 10px 0 0', width: '100%', height: '20px', backgroundColor: 'grey' }}></div>
+          </div>
         </div>
-      </div>
-      )} */}
+      ) : null}  */}
     </div>
   );
 }
