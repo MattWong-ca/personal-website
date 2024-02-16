@@ -5,6 +5,7 @@ import IconAndText from './components/IconAndText';
 import './globals.css';
 import { Poppins } from 'next/font/google';
 import { Inter } from 'next/font/google';
+import BasicModal from './mui';
 
 // Fonts
 const title = Poppins({
@@ -164,7 +165,7 @@ export default function Home() {
                 <Image style={{ position: 'relative', zIndex: '1000' }} onClick={togglePopup} src={'/phone.webp'} alt="About me icon" width={55} height={55} className="rounded-40"></Image>
                 <p style={{ marginTop: '0px', fontSize: '11px', maxWidth: '55px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} className="apple text-white">{'text'}</p>
               </div> */}
-
+              {/* <BasicModal/> */}
             </div>
           </div>
 
