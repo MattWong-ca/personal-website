@@ -6,6 +6,7 @@ import './globals.css';
 import { Poppins } from 'next/font/google';
 import { Inter } from 'next/font/google';
 import { Box, Modal, Typography } from '@mui/material';
+import BasicModal from './mui';
 
 // Fonts
 const title = Poppins({
@@ -96,7 +97,7 @@ export default function Home() {
           {/* New container with 50px padding */}
           <h1 className={`${title.className} nameOutline`} style={{ fontSize: '3.75rem', fontWeight: 'bold' }}>MATTHEW WONG</h1>
           <h1 className={`${title.className} name`} style={{ fontSize: '3.75rem', fontWeight: 'bold' }}>MATTHEW WONG</h1>
-          <p className={`${tagline.className} `} style={{ fontSize: '1.6rem' }}>Shipping software at hackathons and studying engineering at UWaterloo!</p>
+          <p className={`${tagline.className} `} style={{ fontSize: '1.6rem' }}>Building software, designing products, & studying engineering at UWaterloo!</p>
           <p className={`${tagline.className} `} style={{ fontSize: '1.6rem', marginTop: '2rem' }}>Experience</p>
           <div style={{ marginLeft: '1.3rem' }}>
             <p className={`${experience.className} `} style={{ fontSize: '1.3rem', marginTop: '0.5rem' }}>➔ Full stack developer, ExaCare</p>
@@ -175,18 +176,26 @@ export default function Home() {
               </div> */}
 
               {/* MUI */}
-                <Modal
+              <Modal
                   open={open}
                   onClose={handleClose}
                   // aria-labelledby="modal-modal-title"
                   // aria-describedby="modal-modal-description"
                 >
-                  <Box sx={style}>
+                  <Box className={`no-outline`} sx={style}>
+                    <div style={{ width: '100%', height: '26px', backgroundColor: 'grey', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
+                    <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
+                    <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>Email</p>
+                    <hr style={{ backgroundColor: 'white', height: '2px', border: 'none' }} />
+                    <p className={`${experience.className}`} style={{ color: 'white' }}>elonmusk@gmail.com</p>
+
+                    </div>
+                    
                     <Typography /*id="modal-modal-title" variant="h6" component="h2"*/>
-                      My Email
+                      
                     </Typography>
                     <Typography /*id="modal-modal-description" sx={{ mt: 2 }}*/>
-                      elonmusk@gmail.com
+                      
                     </Typography>
                   </Box>
                 </Modal>
@@ -216,11 +225,13 @@ const style = {
   transform: 'translate(-50%, -50%)',
   width: '60%',
   height: '70%',
-  bgcolor: 'background.paper',
+  bgcolor: '#130f40',
   boxShadow: 24,
   // p: 4,
-  borderRadius: '10px'
+  borderRadius: '12px',
+  overflowY: 'auto' 
 };
+
 {/*
         <div className="bg-gray-300 w-100 h-300 border-4 border-black rounded-70 flex items-start justify-center bg-cover pt-3"
           style={{ backgroundImage: `` }}>
