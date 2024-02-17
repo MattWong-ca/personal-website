@@ -86,7 +86,10 @@ export default function Home() {
 
   // MUI
   const [open, setOpen] = React.useState(false);
-
+  const [aboutOpen, setAboutOpen] = React.useState(false);
+  const [workOpen, setWorkOpen] = React.useState(false);
+  const [projectsOpen, setProjectsOpen] = React.useState(false);
+  const [educationOpen, setEducationOpen] = React.useState(false);
   return (
     <div style={{ overflow: 'hidden', height: '100vh', display: 'flex', position: 'relative', zIndex: '100' }}>
       <div style={{ width: '60%', position: 'relative', backgroundImage: `url('https://img.freepik.com/free-photo/cardboard-texture_1194-5419.jpg')` }}>
@@ -145,22 +148,22 @@ export default function Home() {
           {/* Icons */}
           <div className="flex justify-center">
             <div className="pt-7 flex space-x-5">
-            <div onClick={() => setOpen(true)} className="flex flex-col items-center">
+              <div onClick={() => setAboutOpen(true)} className="flex flex-col items-center">
                 <Image src={'/about.png'} alt="About me icon" width={55} height={55} className="rounded-40"></Image>
                 <p style={{ marginTop: '2px', fontSize: '11px', maxWidth: '55px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} className="apple text-white">{'About'}</p>
-            </div>
-            <div onClick={() => setOpen(true)} className="flex flex-col items-center">
+              </div>
+              <div onClick={() => setOpen(true)} className="flex flex-col items-center">
                 <Image src={'/briefcase.png'} alt="About me icon" width={55} height={55} className="rounded-40"></Image>
                 <p style={{ marginTop: '2px', fontSize: '11px', maxWidth: '55px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} className="apple text-white">{'Work'}</p>
-            </div>
-            <div onClick={() => setOpen(true)} className="flex flex-col items-center">
+              </div>
+              <div onClick={() => setOpen(true)} className="flex flex-col items-center">
                 <Image src={'/projects.png'} alt="About me icon" width={55} height={55} className="rounded-40"></Image>
                 <p style={{ marginTop: '2px', fontSize: '11px', maxWidth: '55px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} className="apple text-white">{'Projects'}</p>
-            </div>
-            <div onClick={() => setOpen(true)} className="flex flex-col items-center">
+              </div>
+              <div onClick={() => setOpen(true)} className="flex flex-col items-center">
                 <Image src={'/education.jpeg'} alt="About me icon" width={55} height={55} className="rounded-40"></Image>
                 <p style={{ marginTop: '2px', fontSize: '11px', maxWidth: '55px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} className="apple text-white">{'Education'}</p>
-            </div>
+              </div>
               {/* {icons.map((item, itemIndex) => (
                 <IconAndText key={itemIndex} src={item.src} text={item.text} link={item.link} />
               ))} */}
@@ -177,10 +180,7 @@ export default function Home() {
           <div className="flex justify-center absolute bottom-4 w-full">
             <div style={{ gap: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(240, 240, 240, 0.15)', borderRadius: '30px', width: '310px', height: '80px' }}>
               {/* Either need to make these bigger or my custom ones smaller */}
-              <div onClick={() => setOpen(true)} className="flex flex-col items-center">
-                <Image src={'/mail.webp'} alt="About me icon" width={55} height={55} className="rounded-40"></Image>
-                <p style={{ marginTop: '0px', fontSize: '11px', maxWidth: '55px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} className="apple text-white"></p>
-              </div>
+              <IconAndText src={'/mail.webp'} onClick={() => setOpen(true)}/>
               <IconAndText src={'/camera.webp'} link='https://www.linkedin.com/in/mattwong-ca/' />
               <IconAndText src={'/safari.webp'} link='https://www.google.com/search?q=matt+wong+waterloo' />
               <IconAndText src={'/phone.webp'} link='https://www.linkedin.com/in/mattwong-ca/' />
@@ -191,28 +191,43 @@ export default function Home() {
 
               {/* MUI */}
               <Modal
-                  open={open}
-                  onClose={() => setOpen(false)}
-                  // aria-labelledby="modal-modal-title"
-                  // aria-describedby="modal-modal-description"
-                >
-                  <Box className={`no-outline`} sx={style}>
-                    <div style={{ width: '100%', height: '30px', backgroundColor: 'grey', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
-                    <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
+                open={open}
+                onClose={() => setOpen(false)}
+              // aria-labelledby="modal-modal-title"
+              // aria-describedby="modal-modal-description"
+              >
+                <Box className={`no-outline`} sx={style}>
+                  <div style={{ width: '100%', height: '30px', backgroundColor: 'grey', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
+                  <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
                     <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>Email</p>
                     <hr style={{ backgroundColor: 'white', height: '2px', border: 'none' }} />
                     <p className={`${experience.className}`} style={{ color: 'white' }}>elonmusk@gmail.com</p>
 
-                    </div>
-                    
-                    <Typography /*id="modal-modal-title" variant="h6" component="h2"*/>
-                      
-                    </Typography>
-                    <Typography /*id="modal-modal-description" sx={{ mt: 2 }}*/>
-                      
-                    </Typography>
-                  </Box>
-                </Modal>
+                  </div>
+
+                  <Typography /*id="modal-modal-title" variant="h6" component="h2"*/>
+
+                  </Typography>
+                  <Typography /*id="modal-modal-description" sx={{ mt: 2 }}*/>
+
+                  </Typography>
+                </Box>
+              </Modal>
+
+              <Modal
+                open={aboutOpen}
+                onClose={() => setAboutOpen(false)}
+              >
+                <Box className={`no-outline`} sx={style}>
+                  <div style={{ width: '100%', height: '30px', backgroundColor: 'grey', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
+                  <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
+                    <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>About</p>
+                    <hr style={{ backgroundColor: 'white', height: '2px', border: 'none' }} />
+                    <p className={`${experience.className}`} style={{ color: 'white' }}>elonmusk@gmail.com</p>
+                  </div>
+                </Box>
+              </Modal>
+
             </div>
           </div>
 
@@ -243,7 +258,7 @@ const style = {
   boxShadow: 24,
   // p: 4,
   borderRadius: '12px',
-  overflowY: 'auto' 
+  overflowY: 'auto'
 };
 
 {/*
