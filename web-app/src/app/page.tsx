@@ -57,6 +57,7 @@ export default function Home() {
   const [workOpen, setWorkOpen] = React.useState(false);
   const [projectsOpen, setProjectsOpen] = React.useState(false);
   const [educationOpen, setEducationOpen] = React.useState(false);
+  const [phoneOpen, setPhoneOpen] = React.useState(false);
 
   return (
     <div style={{ overflow: 'hidden', height: '100vh', display: 'flex', position: 'relative', zIndex: '100' }}>
@@ -66,7 +67,7 @@ export default function Home() {
           {/* New container with 50px padding */}
           <h1 className={`${title.className} nameOutline`} style={{ fontSize: '3.75rem', fontWeight: 'bold' }}>MATTHEW WONG</h1>
           <h1 className={`${title.className} name`} style={{ fontSize: '3.75rem', fontWeight: 'bold' }}>MATTHEW WONG</h1>
-          <p className={`${tagline.className} `} style={{ fontSize: '1.6rem' }}>Building software, designing products, & studying engineering at UWaterloo!</p>
+          <p className={`${tagline.className} `} style={{ fontSize: '1.6rem' }}>Building software & studying engineering <br/> at UWaterloo!</p>
           <p className={`${tagline.className} `} style={{ fontSize: '1.6rem', marginTop: '2rem' }}>Experience</p>
           <div style={{ marginLeft: '1.3rem' }}>
             <p className={`${experience.className} `} style={{ fontSize: '1.3rem', marginTop: '0.5rem' }}>➔ Full stack developer, ExaCare</p>
@@ -127,7 +128,7 @@ export default function Home() {
               <IconAndText src={'/mail.webp'} onClick={() => setOpen(true)} />
               <IconAndText src={'/camera.webp'} link='https://www.linkedin.com/in/mattwong-ca/' />
               <IconAndText src={'/safari.webp'} link='https://www.google.com/search?q=matt+wong+waterloo' />
-              <IconAndText src={'/phone.webp'} link='https://www.linkedin.com/in/mattwong-ca/' />
+              <IconAndText src={'/phone.webp'} onClick={() => setPhoneOpen(true)} />
 
               {/* MUI */}
               <Modal
@@ -139,7 +140,7 @@ export default function Home() {
                   <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
                     <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>Email</p>
                     <hr style={{ backgroundColor: 'white', height: '2px', border: 'none' }} />
-                    <p className={`${experience.className}`} style={{ color: 'white' }}>elonmusk@gmail.com</p>
+                    <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>elonmusk@gmail.com</p>
                   </div>
                 </Box>
               </Modal>
@@ -154,7 +155,7 @@ export default function Home() {
                   <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
                     <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>About</p>
                     <hr style={{ backgroundColor: 'white', height: '2px', border: 'none' }} />
-                    <p className={`${experience.className}`} style={{ color: 'white' }}>elonmusk@gmail.com</p>
+                    <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>elonmusk@gmail.com</p>
                   </div>
                 </Box>
               </Modal>
@@ -169,7 +170,7 @@ export default function Home() {
                   <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
                     <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>Work</p>
                     <hr style={{ backgroundColor: 'white', height: '2px', border: 'none' }} />
-                    <p className={`${experience.className}`} style={{ color: 'white' }}>elonmusk@gmail.com</p>
+                    <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>elonmusk@gmail.com</p>
                   </div>
                 </Box>
               </Modal>
@@ -184,7 +185,7 @@ export default function Home() {
                   <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
                     <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>Projects</p>
                     <hr style={{ backgroundColor: 'white', height: '2px', border: 'none' }} />
-                    <p className={`${experience.className}`} style={{ color: 'white' }}>elonmusk@gmail.com</p>
+                    <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>elonmusk@gmail.com</p>
                   </div>
                 </Box>
               </Modal>
@@ -199,7 +200,22 @@ export default function Home() {
                   <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
                     <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>Education</p>
                     <hr style={{ backgroundColor: 'white', height: '2px', border: 'none' }} />
-                    <p className={`${experience.className}`} style={{ color: 'white' }}>elonmusk@gmail.com</p>
+                    <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>elonmusk@gmail.com</p>
+                  </div>
+                </Box>
+              </Modal>
+
+              {/* Phone */}
+              <Modal
+                open={phoneOpen}
+                onClose={() => setPhoneOpen(false)}
+              >
+                <Box className={`no-outline`} sx={popupStyle}>
+                  <div style={{ width: '100%', height: '30px', backgroundColor: 'grey', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
+                  <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
+                    <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>Phone</p>
+                    <hr style={{ backgroundColor: 'white', height: '2px', border: 'none' }} />
+                    <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>My phone is always on silent. Please use Discord, Telegram, or email for fastest response times!</p>
                   </div>
                 </Box>
               </Modal>
