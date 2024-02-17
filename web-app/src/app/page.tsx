@@ -1,11 +1,11 @@
 "use client";
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import IconAndText from './components/IconAndText';
 import './globals.css';
 import { Poppins } from 'next/font/google';
 import { Inter } from 'next/font/google';
-import BasicModal from './mui';
+import { Box, Modal, Typography } from '@mui/material';
 
 // Fonts
 const title = Poppins({
@@ -83,6 +83,11 @@ export default function Home() {
   //   };
   // }, []);
 
+  // MUI
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
+
   return (
     <div style={{ overflow: 'hidden', height: '100vh', display: 'flex', position: 'relative', zIndex: '100' }}>
       <div style={{ width: '60%', position: 'relative', backgroundImage: `url('https://img.freepik.com/free-photo/cardboard-texture_1194-5419.jpg')` }}>
@@ -157,7 +162,10 @@ export default function Home() {
           <div className="flex justify-center absolute bottom-4 w-full">
             <div style={{ gap: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(240, 240, 240, 0.15)', borderRadius: '30px', width: '310px', height: '80px' }}>
               {/* Either need to make these bigger or my custom ones smaller */}
-              <IconAndText src={'/mail.webp'} link='https://www.linkedin.com/in/mattwong-ca/' />
+              <div onClick={handleOpen} className="flex flex-col items-center">
+                <Image src={'/mail.webp'} alt="About me icon" width={55} height={55} className="rounded-40"></Image>
+                <p style={{ marginTop: '0px', fontSize: '11px', maxWidth: '55px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} className="apple text-white"></p>
+              </div>
               <IconAndText src={'/camera.webp'} link='https://www.linkedin.com/in/mattwong-ca/' />
               <IconAndText src={'/safari.webp'} link='https://www.google.com/search?q=matt+wong+waterloo' />
               <IconAndText src={'/phone.webp'} link='https://www.linkedin.com/in/mattwong-ca/' />
@@ -165,7 +173,23 @@ export default function Home() {
                 <Image style={{ position: 'relative', zIndex: '1000' }} onClick={togglePopup} src={'/phone.webp'} alt="About me icon" width={55} height={55} className="rounded-40"></Image>
                 <p style={{ marginTop: '0px', fontSize: '11px', maxWidth: '55px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} className="apple text-white">{'text'}</p>
               </div> */}
-              {/* <BasicModal/> */}
+
+              {/* MUI */}
+                <Modal
+                  open={open}
+                  onClose={handleClose}
+                  // aria-labelledby="modal-modal-title"
+                  // aria-describedby="modal-modal-description"
+                >
+                  <Box sx={style}>
+                    <Typography /*id="modal-modal-title" variant="h6" component="h2"*/>
+                      My Email
+                    </Typography>
+                    <Typography /*id="modal-modal-description" sx={{ mt: 2 }}*/>
+                      elonmusk@gmail.com
+                    </Typography>
+                  </Box>
+                </Modal>
             </div>
           </div>
 
@@ -185,7 +209,18 @@ export default function Home() {
     </div>
   );
 }
-
+const style = {
+  position: 'absolute' as 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: '60%',
+  height: '70%',
+  bgcolor: 'background.paper',
+  boxShadow: 24,
+  // p: 4,
+  borderRadius: '10px'
+};
 {/*
         <div className="bg-gray-300 w-100 h-300 border-4 border-black rounded-70 flex items-start justify-center bg-cover pt-3"
           style={{ backgroundImage: `` }}>
