@@ -95,7 +95,7 @@ export default function Home() {
 
       {/* 40% screen, mountain valley background */}
       <div className="flex-1 flex items-center justify-center border-l-4 border-black"
-        style={{ backgroundSize: 'cover', backgroundImage: `url('https://images-s3.twelvesouth.com/large_files/Wallpapers_6/12S_Mountain_InnValley_Right_23.jpg')` }}
+        style={{ backgroundSize: 'cover', backgroundImage: `url(./mountainValleyBackground.jpeg)` }}
       >
         {/* iPhone */}
         <div className="bg-gray-300 w-100 h-300 rounded-70 bg-cover pt-3 relative"
@@ -134,7 +134,7 @@ export default function Home() {
                 open={open}
                 onClose={() => setOpen(false)}
               >
-                <Box className={`no-outline`} sx={style}>
+                <Box className={`no-outline`} sx={popupStyle}>
                   <div style={{ width: '100%', height: '30px', backgroundColor: 'grey', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
                   <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
                     <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>Email</p>
@@ -149,7 +149,7 @@ export default function Home() {
                 open={aboutOpen}
                 onClose={() => setAboutOpen(false)}
               >
-                <Box className={`no-outline`} sx={style}>
+                <Box className={`no-outline`} sx={popupStyle}>
                   <div style={{ width: '100%', height: '30px', backgroundColor: 'grey', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
                   <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
                     <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>About</p>
@@ -164,7 +164,7 @@ export default function Home() {
                 open={workOpen}
                 onClose={() => setWorkOpen(false)}
               >
-                <Box className={`no-outline`} sx={style}>
+                <Box className={`no-outline`} sx={popupStyle}>
                   <div style={{ width: '100%', height: '30px', backgroundColor: 'grey', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
                   <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
                     <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>Work</p>
@@ -179,7 +179,7 @@ export default function Home() {
                 open={projectsOpen}
                 onClose={() => setProjectsOpen(false)}
               >
-                <Box className={`no-outline`} sx={style}>
+                <Box className={`no-outline`} sx={popupStyle}>
                   <div style={{ width: '100%', height: '30px', backgroundColor: 'grey', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
                   <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
                     <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>Projects</p>
@@ -194,7 +194,7 @@ export default function Home() {
                 open={educationOpen}
                 onClose={() => setEducationOpen(false)}
               >
-                <Box className={`no-outline`} sx={style}>
+                <Box className={`no-outline`} sx={popupStyle}>
                   <div style={{ width: '100%', height: '30px', backgroundColor: 'grey', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
                   <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
                     <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>Education</p>
@@ -212,13 +212,13 @@ export default function Home() {
   );
 }
 
-const style = {
+const popupStyle = {
   position: 'absolute' as 'absolute',
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: '60%',
-  height: '70%',
+  height: '80%',
   bgcolor: '#130f40',
   boxShadow: 24,
   borderRadius: '12px',
