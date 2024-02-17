@@ -32,20 +32,15 @@ const experience = Poppins({
 });
 
 export default function Home() {
+  // Time on status bar
   const [currentTime, setCurrentTime] = useState('');
   const { DateTime } = require('luxon');
-
   function updateCurrentTimeET() {
-    const etTime = DateTime.local().setZone('America/New_York');
-    const formattedTime = etTime.toFormat('h:mm');
-    setCurrentTime(formattedTime);
+    const currentFormattedTime = DateTime.local().setZone('America/New_York').toFormat('h:mm');
+    setCurrentTime(currentFormattedTime);
   }
-
   useEffect(() => {
-    // Update the current time every second
     const intervalId = setInterval(updateCurrentTimeET, 1000);
-
-    // Clear the interval on component unmount
     return () => clearInterval(intervalId);
   });
 
@@ -55,34 +50,6 @@ export default function Home() {
     { src: '/projects.png', text: 'Projects', link: 'https://www.linkedin.com/in/mattwong-ca/' },
     { src: '/education.jpeg', text: 'Education', link: 'https://www.linkedin.com/in/mattwong-ca/' }
   ];
-  const [isPopupVisible, setPopupVisible] = useState(false);
-  // const popupRef = useRef<HTMLDivElement | null>(null);
-  // const iconRef = useRef<HTMLDivElement | null>(null);
-
-  // Function to toggle the visibility of the popup and set its content
-  const togglePopup = () => {
-    setPopupVisible(!isPopupVisible);
-  };
-
-  // const handleClickOutside = (event: MouseEvent) => {
-  //   if (
-  //     popupRef.current &&
-  //     !popupRef.current.contains(event.target as Node) &&
-  //     iconRef.current &&
-  //     !iconRef.current.contains(event.target as Node)
-  //   ) {
-  //     setPopupVisible(false);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   // Add event listener on component mount
-  //   document.addEventListener('mousedown', handleClickOutside);
-  //   // Remove event listener on component unmount
-  //   return () => {
-  //     document.removeEventListener('mousedown', handleClickOutside);
-  //   };
-  // }, []);
 
   // MUI
   const [open, setOpen] = React.useState(false);
@@ -90,6 +57,7 @@ export default function Home() {
   const [workOpen, setWorkOpen] = React.useState(false);
   const [projectsOpen, setProjectsOpen] = React.useState(false);
   const [educationOpen, setEducationOpen] = React.useState(false);
+
   return (
     <div style={{ overflow: 'hidden', height: '100vh', display: 'flex', position: 'relative', zIndex: '100' }}>
       <div style={{ width: '60%', position: 'relative', backgroundImage: `url('https://img.freepik.com/free-photo/cardboard-texture_1194-5419.jpg')` }}>
@@ -112,7 +80,6 @@ export default function Home() {
             alt="Basketball icon"
             width={300}
             height={0}
-          // style={{ animation: 'hoverUpDown 15s ease infinite' }}
           />
         </div>
         <div style={{ transform: 'rotate(10deg)', position: 'absolute', bottom: 20, right: 30 }}>
@@ -148,53 +115,26 @@ export default function Home() {
           {/* Icons */}
           <div className="flex justify-center">
             <div className="pt-7 flex space-x-5">
-              <div onClick={() => setAboutOpen(true)} className="flex flex-col items-center">
-                <Image src={'/about.png'} alt="About me icon" width={55} height={55} className="rounded-40"></Image>
-                <p style={{ marginTop: '2px', fontSize: '11px', maxWidth: '55px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} className="apple text-white">{'About'}</p>
-              </div>
-              <div onClick={() => setOpen(true)} className="flex flex-col items-center">
-                <Image src={'/briefcase.png'} alt="About me icon" width={55} height={55} className="rounded-40"></Image>
-                <p style={{ marginTop: '2px', fontSize: '11px', maxWidth: '55px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} className="apple text-white">{'Work'}</p>
-              </div>
-              <div onClick={() => setOpen(true)} className="flex flex-col items-center">
-                <Image src={'/projects.png'} alt="About me icon" width={55} height={55} className="rounded-40"></Image>
-                <p style={{ marginTop: '2px', fontSize: '11px', maxWidth: '55px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} className="apple text-white">{'Projects'}</p>
-              </div>
-              <div onClick={() => setOpen(true)} className="flex flex-col items-center">
-                <Image src={'/education.jpeg'} alt="About me icon" width={55} height={55} className="rounded-40"></Image>
-                <p style={{ marginTop: '2px', fontSize: '11px', maxWidth: '55px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} className="apple text-white">{'Education'}</p>
-              </div>
-              {/* {icons.map((item, itemIndex) => (
-                <IconAndText key={itemIndex} src={item.src} text={item.text} link={item.link} />
-              ))} */}
+              <IconAndText src={'/about.png'} onClick={() => setAboutOpen(true)} text='About' />
+              <IconAndText src={'/briefcase.png'} onClick={() => setWorkOpen(true)} text='Work' />
+              <IconAndText src={'/projects.png'} onClick={() => setProjectsOpen(true)} text='Projects' />
+              <IconAndText src={'/education.jpeg'} onClick={() => setEducationOpen(true)} text='Education' />
             </div>
           </div>
-          {/* <div className="flex justify-center">
-            <div className="pt-4 flex space-x-5">
-              {icons.map((item, itemIndex) => (
-                <IconAndText key={itemIndex} src={item.src} text={item.text} link={item.link} />
-              ))}
-            </div>
-          </div> */}
+
           {/* Bottom icon bar */}
           <div className="flex justify-center absolute bottom-4 w-full">
             <div style={{ gap: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(240, 240, 240, 0.15)', borderRadius: '30px', width: '310px', height: '80px' }}>
               {/* Either need to make these bigger or my custom ones smaller */}
-              <IconAndText src={'/mail.webp'} onClick={() => setOpen(true)}/>
+              <IconAndText src={'/mail.webp'} onClick={() => setOpen(true)} />
               <IconAndText src={'/camera.webp'} link='https://www.linkedin.com/in/mattwong-ca/' />
               <IconAndText src={'/safari.webp'} link='https://www.google.com/search?q=matt+wong+waterloo' />
               <IconAndText src={'/phone.webp'} link='https://www.linkedin.com/in/mattwong-ca/' />
-              {/* <div className="flex flex-col items-center">
-                <Image style={{ position: 'relative', zIndex: '1000' }} onClick={togglePopup} src={'/phone.webp'} alt="About me icon" width={55} height={55} className="rounded-40"></Image>
-                <p style={{ marginTop: '0px', fontSize: '11px', maxWidth: '55px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} className="apple text-white">{'text'}</p>
-              </div> */}
 
               {/* MUI */}
               <Modal
                 open={open}
                 onClose={() => setOpen(false)}
-              // aria-labelledby="modal-modal-title"
-              // aria-describedby="modal-modal-description"
               >
                 <Box className={`no-outline`} sx={style}>
                   <div style={{ width: '100%', height: '30px', backgroundColor: 'grey', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
@@ -202,18 +142,11 @@ export default function Home() {
                     <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>Email</p>
                     <hr style={{ backgroundColor: 'white', height: '2px', border: 'none' }} />
                     <p className={`${experience.className}`} style={{ color: 'white' }}>elonmusk@gmail.com</p>
-
                   </div>
-
-                  <Typography /*id="modal-modal-title" variant="h6" component="h2"*/>
-
-                  </Typography>
-                  <Typography /*id="modal-modal-description" sx={{ mt: 2 }}*/>
-
-                  </Typography>
                 </Box>
               </Modal>
 
+              {/* About */}
               <Modal
                 open={aboutOpen}
                 onClose={() => setAboutOpen(false)}
@@ -228,22 +161,25 @@ export default function Home() {
                 </Box>
               </Modal>
 
+              {/* Work */}
+              <Modal
+                open={workOpen}
+                onClose={() => setWorkOpen(false)}
+              >
+                <Box className={`no-outline`} sx={style}>
+                  <div style={{ width: '100%', height: '30px', backgroundColor: 'grey', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
+                  <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
+                    <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>Work</p>
+                    <hr style={{ backgroundColor: 'white', height: '2px', border: 'none' }} />
+                    <p className={`${experience.className}`} style={{ color: 'white' }}>elonmusk@gmail.com</p>
+                  </div>
+                </Box>
+              </Modal>
+
             </div>
           </div>
-
         </div>
       </div>
-      {/* <div style={{ position: 'relative', zIndex: '100' }}>
-        {isPopupVisible && (<div style={{ position: 'fixed', top: '0', left: '0', width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', zIndex: '999' }}>
-          <div style={{ width: '60%', height: '70%', backgroundColor: 'black', borderRadius: '10px', textAlign: 'center' }}>
-            <div style={{ width: '100%', height: '20px', backgroundColor: 'grey', borderTopLeftRadius: '10px', borderTopRightRadius: '10px' }}></div>
-            <p>This is the content of the centered component.</p>
-          </div>
-        </div>)}
-      </div> */}
-
-
-
     </div>
   );
 }
@@ -256,30 +192,6 @@ const style = {
   height: '70%',
   bgcolor: '#130f40',
   boxShadow: 24,
-  // p: 4,
   borderRadius: '12px',
   overflowY: 'auto'
 };
-
-{/*
-        <div className="bg-gray-300 w-100 h-300 border-4 border-black rounded-70 flex items-start justify-center bg-cover pt-3"
-          style={{ backgroundImage: `` }}>
-          <div className="relative">
-            <div className="w-70 flex items-center">
-              <p className="text-m text-white justify-start pr-5 pl-2">{currentTime}</p>
-              <div className="bg-black rounded-xl w-20 h-6 mx-auto"></div>
-              <Image src="/statusbar.png" alt="iPhone Status Bar" width={80} height={50} className="filter brightness-0 invert justify-end" />
-            </div>
-            <div  className="pt-8 pl-1 flex space-x-5">
-              {icons.map((item, itemIndex) => (
-                <IconAndText key={itemIndex} src={item.src} text={item.text} />
-              ))}
-            </div>
-          </div>
-        </div>
-        */ }
-
-{/* <div style={{ marginTop: '15px', paddingLeft: '20px', paddingRight: '20px', display: 'flex', justifyContent: 'space-between', height: '20px', width: '100%'}}>
-          <p className="apple">{currentTime}</p>
-          <Image src="/statusbar.png" alt="iPhone Status Bar" width={80} height={50} className="filter brightness-0 invert" />
-        </div> */}
