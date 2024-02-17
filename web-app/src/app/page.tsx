@@ -136,11 +136,11 @@ export default function Home() {
                 onClose={() => setOpen(false)}
               >
                 <Box className={`no-outline`} sx={popupStyle}>
-                  <div style={{ width: '100%', height: '30px', backgroundColor: 'grey', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
+                  <div style={{ width: '100%', height: '30px', backgroundColor: '#a5b1c2', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
                   <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
                     <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>Email</p>
                     <hr style={{ backgroundColor: 'white', height: '2px', border: 'none' }} />
-                    <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>elonmusk@gmail.com</p>
+                    <p className={`${experience.className}`} style={{ paddingTop: '10px', color: 'white', fontSize: '18px' }}>elonmusk@gmail.com</p>
                   </div>
                 </Box>
               </Modal>
@@ -151,11 +151,11 @@ export default function Home() {
                 onClose={() => setAboutOpen(false)}
               >
                 <Box className={`no-outline`} sx={popupStyle}>
-                  <div style={{ width: '100%', height: '30px', backgroundColor: 'grey', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
+                  <div style={{ width: '100%', height: '30px', backgroundColor: '#a5b1c2', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
                   <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
                     <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>About</p>
                     <hr style={{ backgroundColor: 'white', height: '2px', border: 'none' }} />
-                    <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>elonmusk@gmail.com</p>
+                    <p className={`${experience.className}`} style={{ paddingTop: '10px', color: 'white', fontSize: '18px' }}>elonmusk@gmail.com</p>
                   </div>
                 </Box>
               </Modal>
@@ -166,11 +166,11 @@ export default function Home() {
                 onClose={() => setWorkOpen(false)}
               >
                 <Box className={`no-outline`} sx={popupStyle}>
-                  <div style={{ width: '100%', height: '30px', backgroundColor: 'grey', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
+                  <div style={{ width: '100%', height: '30px', backgroundColor: '#a5b1c2', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
                   <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
                     <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>Work</p>
                     <hr style={{ backgroundColor: 'white', height: '2px', border: 'none' }} />
-                    <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>elonmusk@gmail.com</p>
+                    <p className={`${experience.className}`} style={{ paddingTop: '10px', color: 'white', fontSize: '18px' }}>elonmusk@gmail.com</p>
                   </div>
                 </Box>
               </Modal>
@@ -181,11 +181,11 @@ export default function Home() {
                 onClose={() => setProjectsOpen(false)}
               >
                 <Box className={`no-outline`} sx={popupStyle}>
-                  <div style={{ width: '100%', height: '30px', backgroundColor: 'grey', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
+                  <div style={{ width: '100%', height: '30px', backgroundColor: '#a5b1c2', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
                   <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
                     <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>Projects</p>
                     <hr style={{ backgroundColor: 'white', height: '2px', border: 'none' }} />
-                    <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>elonmusk@gmail.com</p>
+                    <p className={`${experience.className}`} style={{ paddingTop: '10px', color: 'white', fontSize: '18px' }}>elonmusk@gmail.com</p>
                   </div>
                 </Box>
               </Modal>
@@ -196,11 +196,11 @@ export default function Home() {
                 onClose={() => setEducationOpen(false)}
               >
                 <Box className={`no-outline`} sx={popupStyle}>
-                  <div style={{ width: '100%', height: '30px', backgroundColor: 'grey', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
+                  <div style={{ width: '100%', height: '30px', backgroundColor: '#a5b1c2', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
                   <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
                     <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>Education</p>
                     <hr style={{ backgroundColor: 'white', height: '2px', border: 'none' }} />
-                    <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>elonmusk@gmail.com</p>
+                    <p className={`${experience.className}`} style={{ paddingTop: '10px', color: 'white', fontSize: '18px' }}>elonmusk@gmail.com</p>
                   </div>
                 </Box>
               </Modal>
@@ -211,11 +211,11 @@ export default function Home() {
                 onClose={() => setPhoneOpen(false)}
               >
                 <Box className={`no-outline`} sx={popupStyle}>
-                  <div style={{ width: '100%', height: '30px', backgroundColor: 'grey', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
+                  <div style={{ width: '100%', height: '30px', backgroundColor: '#a5b1c2', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
                   <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
                     <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>Phone</p>
                     <hr style={{ backgroundColor: 'white', height: '2px', border: 'none' }} />
-                    <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>My phone is always on silent. Please use Discord, Telegram, or email for fastest response times!</p>
+                    <p className={`${experience.className}`} style={{ paddingTop: '10px', color: 'white', fontSize: '18px' }}>My phone is always on silent. Please use Discord, Telegram, or email for fastest response times!</p>
                   </div>
                 </Box>
               </Modal>
@@ -235,7 +235,7 @@ const popupStyle = {
   transform: 'translate(-50%, -50%)',
   width: '60%',
   height: '80%',
-  bgcolor: '#130f40',
+  bgcolor: '#0097e6',
   boxShadow: 24,
   borderRadius: '12px',
   overflowY: 'auto'
