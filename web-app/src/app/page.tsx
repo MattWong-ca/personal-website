@@ -95,7 +95,7 @@ export default function Home() {
 
       {/* 40% screen, mountain valley background */}
       <div className="flex-1 flex items-center justify-center border-l-4 border-black"
-        style={{ backgroundSize: 'cover', backgroundImage: `url(./mountainValleyBackground.jpeg)` }}
+        style={{ backgroundSize: 'cover', backgroundImage: `url('https://images-s3.twelvesouth.com/large_files/Wallpapers_6/12S_Mountain_InnValley_Right_23.jpg')` }}
       >
         {/* iPhone */}
         <div className="bg-gray-300 w-100 h-300 rounded-70 bg-cover pt-3 relative"
