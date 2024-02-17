@@ -91,7 +91,6 @@ export default function Home() {
             style={{ animation: 'hoverUpDown 15s ease infinite' }}
           />
         </div>
-
       </div>
 
       {/* 40% screen, mountain valley background */}
@@ -100,7 +99,6 @@ export default function Home() {
       >
         {/* iPhone */}
         <div className="bg-gray-300 w-100 h-300 rounded-70 bg-cover pt-3 relative"
-          // In case I want to add opaque boxShadow back: 5px 5px 0 black
           style={{ border: '8px solid black', boxShadow: '10px 10px 20px rgba(0, 0, 0, 0.5)', backgroundImage: `url('https://512pixels.net/downloads/macos-wallpapers-6k/10-3-6k.jpg')` }}>
 
           {/* Status bar */}
@@ -176,6 +174,36 @@ export default function Home() {
                 </Box>
               </Modal>
 
+              {/* Projects */}
+              <Modal
+                open={projectsOpen}
+                onClose={() => setProjectsOpen(false)}
+              >
+                <Box className={`no-outline`} sx={style}>
+                  <div style={{ width: '100%', height: '30px', backgroundColor: 'grey', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
+                  <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
+                    <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>Projects</p>
+                    <hr style={{ backgroundColor: 'white', height: '2px', border: 'none' }} />
+                    <p className={`${experience.className}`} style={{ color: 'white' }}>elonmusk@gmail.com</p>
+                  </div>
+                </Box>
+              </Modal>
+
+              {/* Education */}
+              <Modal
+                open={educationOpen}
+                onClose={() => setEducationOpen(false)}
+              >
+                <Box className={`no-outline`} sx={style}>
+                  <div style={{ width: '100%', height: '30px', backgroundColor: 'grey', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
+                  <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
+                    <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>Education</p>
+                    <hr style={{ backgroundColor: 'white', height: '2px', border: 'none' }} />
+                    <p className={`${experience.className}`} style={{ color: 'white' }}>elonmusk@gmail.com</p>
+                  </div>
+                </Box>
+              </Modal>
+
             </div>
           </div>
         </div>
@@ -183,6 +211,7 @@ export default function Home() {
     </div>
   );
 }
+
 const style = {
   position: 'absolute' as 'absolute',
   top: '50%',
