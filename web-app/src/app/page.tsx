@@ -67,7 +67,7 @@ export default function Home() {
           {/* New container with 50px padding */}
           <h1 className={`${title.className} nameOutline`} style={{ fontSize: '3.75rem', fontWeight: 'bold' }}>MATTHEW WONG</h1>
           <h1 className={`${title.className} name`} style={{ fontSize: '3.75rem', fontWeight: 'bold' }}>MATTHEW WONG</h1>
-          <p className={`${tagline.className} `} style={{ fontSize: '1.6rem' }}>Building software & studying engineering <br/> at UWaterloo!</p>
+          <p className={`${tagline.className} `} style={{ fontSize: '1.6rem' }}>Building software & studying engineering <br /> at UWaterloo!</p>
           <p className={`${tagline.className} `} style={{ fontSize: '1.6rem', marginTop: '2rem' }}>Experience</p>
           <div style={{ marginLeft: '1.3rem' }}>
             <p className={`${experience.className} `} style={{ fontSize: '1.3rem', marginTop: '0.5rem' }}>➔ Full stack developer, ExaCare</p>
@@ -155,7 +155,16 @@ export default function Home() {
                   <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
                     <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>About</p>
                     <hr style={{ backgroundColor: 'white', height: '2px', border: 'none' }} />
-                    <p className={`${experience.className}`} style={{ paddingTop: '10px', color: 'white', fontSize: '18px' }}>elonmusk@gmail.com</p>
+                    <div className="flex" style={{ paddingTop: '10px' }}>
+                      <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>TLDR</p>
+                      <Image
+                        src="/profilepic.png"
+                        alt="Profile pic"
+                        width={200}
+                        height={0}
+                        style={{ marginLeft: 'auto', pointerEvents: 'none', userSelect: 'none' }}
+                      />
+                    </div>
                   </div>
                 </Box>
               </Modal>
@@ -213,9 +222,11 @@ export default function Home() {
                 <Box className={`no-outline`} sx={popupStyle}>
                   <div style={{ width: '100%', height: '30px', backgroundColor: '#a5b1c2', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
                   <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
-                    <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>Phone</p>
+                    <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>Phone 🤠</p>
                     <hr style={{ backgroundColor: 'white', height: '2px', border: 'none' }} />
-                    <p className={`${experience.className}`} style={{ paddingTop: '10px', color: 'white', fontSize: '18px' }}>My phone is always on silent. Please use Discord, Telegram, or email for fastest response times!</p>
+                    <div style={{ paddingTop: '10px' }}>
+                      <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>My phone is always on silent. Please use Discord, Telegram, or email for fastest response times!</p>
+                    </div>
                   </div>
                 </Box>
               </Modal>

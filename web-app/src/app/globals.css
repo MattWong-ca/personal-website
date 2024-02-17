@@ -57,3 +57,8 @@
 .no-outline:focus {
   outline: none;
 }
+
+img {
+  pointer-events: none;
+  user-select: none;
+}
