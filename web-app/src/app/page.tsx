@@ -86,8 +86,6 @@ export default function Home() {
 
   // MUI
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
 
   return (
     <div style={{ overflow: 'hidden', height: '100vh', display: 'flex', position: 'relative', zIndex: '100' }}>
@@ -147,9 +145,25 @@ export default function Home() {
           {/* Icons */}
           <div className="flex justify-center">
             <div className="pt-7 flex space-x-5">
-              {icons.map((item, itemIndex) => (
+            <div onClick={() => setOpen(true)} className="flex flex-col items-center">
+                <Image src={'/about.png'} alt="About me icon" width={55} height={55} className="rounded-40"></Image>
+                <p style={{ marginTop: '2px', fontSize: '11px', maxWidth: '55px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} className="apple text-white">{'About'}</p>
+            </div>
+            <div onClick={() => setOpen(true)} className="flex flex-col items-center">
+                <Image src={'/briefcase.png'} alt="About me icon" width={55} height={55} className="rounded-40"></Image>
+                <p style={{ marginTop: '2px', fontSize: '11px', maxWidth: '55px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} className="apple text-white">{'Work'}</p>
+            </div>
+            <div onClick={() => setOpen(true)} className="flex flex-col items-center">
+                <Image src={'/projects.png'} alt="About me icon" width={55} height={55} className="rounded-40"></Image>
+                <p style={{ marginTop: '2px', fontSize: '11px', maxWidth: '55px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} className="apple text-white">{'Projects'}</p>
+            </div>
+            <div onClick={() => setOpen(true)} className="flex flex-col items-center">
+                <Image src={'/education.jpeg'} alt="About me icon" width={55} height={55} className="rounded-40"></Image>
+                <p style={{ marginTop: '2px', fontSize: '11px', maxWidth: '55px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} className="apple text-white">{'Education'}</p>
+            </div>
+              {/* {icons.map((item, itemIndex) => (
                 <IconAndText key={itemIndex} src={item.src} text={item.text} link={item.link} />
-              ))}
+              ))} */}
             </div>
           </div>
           {/* <div className="flex justify-center">
@@ -163,7 +177,7 @@ export default function Home() {
           <div className="flex justify-center absolute bottom-4 w-full">
             <div style={{ gap: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(240, 240, 240, 0.15)', borderRadius: '30px', width: '310px', height: '80px' }}>
               {/* Either need to make these bigger or my custom ones smaller */}
-              <div onClick={handleOpen} className="flex flex-col items-center">
+              <div onClick={() => setOpen(true)} className="flex flex-col items-center">
                 <Image src={'/mail.webp'} alt="About me icon" width={55} height={55} className="rounded-40"></Image>
                 <p style={{ marginTop: '0px', fontSize: '11px', maxWidth: '55px', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }} className="apple text-white"></p>
               </div>
@@ -178,12 +192,12 @@ export default function Home() {
               {/* MUI */}
               <Modal
                   open={open}
-                  onClose={handleClose}
+                  onClose={() => setOpen(false)}
                   // aria-labelledby="modal-modal-title"
                   // aria-describedby="modal-modal-description"
                 >
                   <Box className={`no-outline`} sx={style}>
-                    <div style={{ width: '100%', height: '26px', backgroundColor: 'grey', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
+                    <div style={{ width: '100%', height: '30px', backgroundColor: 'grey', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
                     <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
                     <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>Email</p>
                     <hr style={{ backgroundColor: 'white', height: '2px', border: 'none' }} />
