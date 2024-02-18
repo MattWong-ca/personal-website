@@ -60,8 +60,8 @@ export default function Home() {
   const [phoneOpen, setPhoneOpen] = React.useState(false);
 
   return (
-    <div style={{ overflow: 'hidden', height: '100vh', display: 'flex', position: 'relative', zIndex: '100' }}>
-      <div style={{ width: '60%', position: 'relative', backgroundImage: `url('https://img.freepik.com/free-photo/cardboard-texture_1194-5419.jpg')` }}>
+    <div style={{  backgroundSize: 'cover', backgroundImage: `url('https://coolbackgrounds.io/images/backgrounds/index/ranger-4df6c1b6.png')`, overflow: 'hidden', height: '100vh', display: 'flex', position: 'relative', zIndex: '100' }}>
+      <div style={{ width: '60%', position: 'relative', /*backgroundImage: `url('https://img.freepik.com/free-photo/cardboard-texture_1194-5419.jpg')`*/ }}>
         {/* Content for the 60% width column */}
         <div style={{ marginTop: '12.5rem', marginLeft: '6.25rem' }}>
           {/* New container with 50px padding */}
@@ -95,8 +95,8 @@ export default function Home() {
       </div>
 
       {/* 40% screen, mountain valley background */}
-      <div className="flex-1 flex items-center justify-center border-l-4 border-black"
-        style={{ backgroundSize: 'cover', backgroundImage: `url('./mountainValleyBackground.jpeg')` }}
+      <div className="flex-1 flex items-center justify-center " /* border-l-4 border-black */
+        style={{ backgroundSize: 'cover', /*backgroundImage: `url('./mountainValleyBackground.jpeg')`*/ }}
       >
         {/* iPhone */}
         <div className="bg-gray-300 w-100 h-300 rounded-70 bg-cover pt-3 relative"
