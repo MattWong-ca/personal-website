@@ -128,7 +128,7 @@ export default function Home() {
           <div className="flex justify-center">
             <div className="pt-4 flex space-x-5">
               <IconAndText src={'/about.png'} onClick={() => setAboutOpen(true)} text='Contact' />
-              <IconAndText src={'/briefcase.png'} onClick={() => setWorkOpen(true)} text='Writing' />
+              <IconAndText src={'/about.png'} onClick={() => setWorkOpen(true)} text='Writing' />
               <IconAndText src={'/quests.png'} onClick={() => setQuestsOpen(true)} text='Quests' />
               <IconAndText src={'/media.png'} onClick={() => setFeaturesOpen(true)} text='Features' />
             </div>
@@ -142,12 +142,6 @@ export default function Home() {
               <IconAndText src={'/camera.webp'} link='https://www.linkedin.com/in/mattwong-ca/' />
               <IconAndText src={'/safari.webp'} link='https://www.google.com/search?q=matt+wong+waterloo' />
               <IconAndText src={'/phone.webp'} onClick={() => setPhoneOpen(true)} />
-
-              {/* MUI */}
-              <PopUp title='Email' open={emailOpen} onClose={() => setEmailOpen(false)}>
-                <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>elonmusk@gmail.com or mark.zuckerberg@gmail.com</p>
-              </PopUp>
-
 
               {/* About */}
               <PopUp title='About' open={aboutOpen} onClose={() => setAboutOpen(false)}>
@@ -185,6 +179,11 @@ export default function Home() {
               {/* Education */}
               <PopUp title='Education' open={educationOpen} onClose={() => setEducationOpen(false)}>
                 <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>University of Waterloo, Carleton University, St. Robert CHS, soon SUTD</p>
+              </PopUp>
+
+              {/* Email */}
+              <PopUp title='Email' open={emailOpen} onClose={() => setEmailOpen(false)}>
+                <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>elonmusk@gmail.com or mark.zuckerberg@gmail.com</p>
               </PopUp>
 
               {/* Phone */}
