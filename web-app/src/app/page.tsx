@@ -7,6 +7,7 @@ import { Poppins } from 'next/font/google';
 import { Inter } from 'next/font/google';
 import { Box, Modal, Typography } from '@mui/material';
 import BasicModal from './mui';
+import PopUp from './components/popup';
 
 // Fonts
 const title = Poppins({
@@ -52,7 +53,7 @@ export default function Home() {
   ];
 
   // MUI
-  const [open, setOpen] = React.useState(false);
+  const [emailOpen, setEmailOpen] = React.useState(false);
   const [aboutOpen, setAboutOpen] = React.useState(false);
   const [workOpen, setWorkOpen] = React.useState(false);
   const [projectsOpen, setProjectsOpen] = React.useState(false);
@@ -60,8 +61,8 @@ export default function Home() {
   const [phoneOpen, setPhoneOpen] = React.useState(false);
 
   return (
-    <div style={{  backgroundSize: 'cover', backgroundImage: `url('https://coolbackgrounds.io/images/backgrounds/index/ranger-4df6c1b6.png')`, overflow: 'hidden', height: '100vh', display: 'flex', position: 'relative', zIndex: '100' }}>
-      <div style={{ width: '60%', position: 'relative', /*backgroundImage: `url('https://img.freepik.com/free-photo/cardboard-texture_1194-5419.jpg')`*/ }}>
+    <div style={{  /* backgroundSize: 'cover', backgroundImage: `url('https://coolbackgrounds.io/images/backgrounds/index/ranger-4df6c1b6.png')`, */ overflow: 'hidden', height: '100vh', display: 'flex', position: 'relative', zIndex: '100' }}>
+      <div style={{ width: '60%', position: 'relative', backgroundImage: `url('https://img.freepik.com/free-photo/cardboard-texture_1194-5419.jpg')` }}>
         {/* Content for the 60% width column */}
         <div style={{ marginTop: '12.5rem', marginLeft: '6.25rem' }}>
           {/* New container with 50px padding */}
@@ -69,10 +70,10 @@ export default function Home() {
           <h1 className={`${title.className} name`} style={{ fontSize: '3.75rem', fontWeight: 'bold' }}>MATTHEW WONG</h1>
           <p className={`${tagline.className} `} style={{ fontSize: '1.6rem' }}>Building software & studying engineering <br /> at UWaterloo!</p>
           <p className={`${tagline.className} `} style={{ fontSize: '1.6rem', marginTop: '2rem' }}>Experience</p>
-          <div style={{ marginLeft: '1.3rem' }}>
-            <p className={`${experience.className} `} style={{ fontSize: '1.3rem', marginTop: '0.5rem' }}>➔ Full stack developer, ExaCare</p>
-            <p className={`${experience.className} `} style={{ fontSize: '1.3rem', marginTop: '0.5rem' }}>➔ iOS developer, theScore Bet</p>
-            <p className={`${experience.className} `} style={{ fontSize: '1.3rem', marginTop: '0.5rem' }}>➔ Store designer, Shopify</p>
+          <div className={`${experience.className} `} style={{ marginLeft: '1.3rem', fontSize: '1.3rem' }}>
+            <p style={{ marginTop: '0.5rem' }}>➔ Full stack developer, ExaCare</p>
+            <p style={{ marginTop: '0.5rem' }}>➔ iOS developer, theScore Bet</p>
+            <p style={{ marginTop: '0.5rem' }}>➔ Store designer, Shopify</p>
           </div>
         </div>
         <div style={{ position: 'relative', marginTop: '30px', right: '40px' }}>
@@ -95,8 +96,8 @@ export default function Home() {
       </div>
 
       {/* 40% screen, mountain valley background */}
-      <div className="flex-1 flex items-center justify-center " /* border-l-4 border-black */
-        style={{ backgroundSize: 'cover', /*backgroundImage: `url('./mountainValleyBackground.jpeg')`*/ }}
+      <div className="flex-1 flex items-center justify-center border-l-4 border-black"
+        style={{ backgroundSize: 'cover', backgroundImage: `url('./mountainValleyBackground.jpeg')` }}
       >
         {/* iPhone */}
         <div className="bg-gray-300 w-100 h-300 rounded-70 bg-cover pt-3 relative"
@@ -125,111 +126,59 @@ export default function Home() {
           <div className="flex justify-center absolute bottom-4 w-full">
             <div style={{ gap: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(240, 240, 240, 0.15)', borderRadius: '30px', width: '310px', height: '80px' }}>
               {/* Either need to make these bigger or my custom ones smaller */}
-              <IconAndText src={'/mail.webp'} onClick={() => setOpen(true)} />
+              <IconAndText src={'/mail.webp'} onClick={() => setEmailOpen(true)} />
               <IconAndText src={'/camera.webp'} link='https://www.linkedin.com/in/mattwong-ca/' />
               <IconAndText src={'/safari.webp'} link='https://www.google.com/search?q=matt+wong+waterloo' />
               <IconAndText src={'/phone.webp'} onClick={() => setPhoneOpen(true)} />
 
               {/* MUI */}
-              <Modal
-                open={open}
-                onClose={() => setOpen(false)}
-              >
-                <Box className={`no-outline`} sx={popupStyle}>
-                  <div style={{ width: '100%', height: '30px', backgroundColor: '#a5b1c2', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
-                  <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
-                    <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>Email</p>
-                    <hr style={{ backgroundColor: 'white', height: '2px', border: 'none' }} />
-                    <p className={`${experience.className}`} style={{ paddingTop: '10px', color: 'white', fontSize: '18px' }}>elonmusk@gmail.com</p>
-                  </div>
-                </Box>
-              </Modal>
+              <PopUp title='Email' open={emailOpen} onClose={() => setEmailOpen(false)}>
+              <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>elonmusk@gmail.com or mark.zuckerberg@gmail.com</p>
+              </PopUp>
+
 
               {/* About */}
-              <Modal
-                open={aboutOpen}
-                onClose={() => setAboutOpen(false)}
-              >
-                <Box className={`no-outline`} sx={popupStyle}>
-                  <div style={{ width: '100%', height: '30px', backgroundColor: '#a5b1c2', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
-                  <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
-                    <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>About</p>
-                    <hr style={{ backgroundColor: 'white', height: '2px', border: 'none' }} />
-                    <div className="flex" style={{ paddingTop: '10px' }}>
-                      <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>TLDR</p>
-                      <Image
-                        src="/profilepic.png"
-                        alt="Profile pic"
-                        width={200}
-                        height={0}
-                        style={{ marginLeft: 'auto', pointerEvents: 'none', userSelect: 'none' }}
-                      />
-                    </div>
+              <PopUp title='About' open={aboutOpen} onClose={() => setAboutOpen(false)}>
+                <div className="flex">
+                <div style={{ marginTop: '0.5rem' }}>
+                  <p className={`${tagline.className}`} style={{ lineHeight: 'normal', color: 'white', fontSize: '25px' }}>TLDR</p>
+                  <div className={`${experience.className}`} style={{ color: 'white', marginLeft: '1.3rem', fontSize: '18px' }}>
+                    <p >➔ Software developer with 3+ years of experience</p>
+                    <p style={{ marginTop: '0.5rem' }}>➔ 2nd year engineering student at UWaterloo</p>
+                    <p style={{ marginTop: '0.5rem' }}>➔ Building in blockchain and exploring in AI</p>
+                    <p style={{ marginTop: '0.5rem' }}>➔ Enjoys hackathons, travelling, & sports</p>
                   </div>
-                </Box>
-              </Modal>
+                </div>
+                <Image
+                  src="/profilepic.png"
+                  alt="Profile pic"
+                  width={200}
+                  height={0}
+                  style={{ marginLeft: 'auto', marginTop: '5px', pointerEvents: 'none', userSelect: 'none' }}
+                />
+                </div>
+                <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>More details soon...</p>
+              </PopUp>
 
               {/* Work */}
-              <Modal
-                open={workOpen}
-                onClose={() => setWorkOpen(false)}
-              >
-                <Box className={`no-outline`} sx={popupStyle}>
-                  <div style={{ width: '100%', height: '30px', backgroundColor: '#a5b1c2', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
-                  <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
-                    <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>Work</p>
-                    <hr style={{ backgroundColor: 'white', height: '2px', border: 'none' }} />
-                    <p className={`${experience.className}`} style={{ paddingTop: '10px', color: 'white', fontSize: '18px' }}>elonmusk@gmail.com</p>
-                  </div>
-                </Box>
-              </Modal>
+              <PopUp title='Work' open={workOpen} onClose={() => setWorkOpen(false)}>
+              <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>Soon... Full stack dev at ExaCare, iOS dev at theScore, store design at Shopify</p>
+              </PopUp>
 
               {/* Projects */}
-              <Modal
-                open={projectsOpen}
-                onClose={() => setProjectsOpen(false)}
-              >
-                <Box className={`no-outline`} sx={popupStyle}>
-                  <div style={{ width: '100%', height: '30px', backgroundColor: '#a5b1c2', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
-                  <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
-                    <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>Projects</p>
-                    <hr style={{ backgroundColor: 'white', height: '2px', border: 'none' }} />
-                    <p className={`${experience.className}`} style={{ paddingTop: '10px', color: 'white', fontSize: '18px' }}>elonmusk@gmail.com</p>
-                  </div>
-                </Box>
-              </Modal>
+              <PopUp title='Projects' open={projectsOpen} onClose={() => setProjectsOpen(false)}>
+              <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>Soon...</p>
+              </PopUp>
 
               {/* Education */}
-              <Modal
-                open={educationOpen}
-                onClose={() => setEducationOpen(false)}
-              >
-                <Box className={`no-outline`} sx={popupStyle}>
-                  <div style={{ width: '100%', height: '30px', backgroundColor: '#a5b1c2', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
-                  <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
-                    <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>Education</p>
-                    <hr style={{ backgroundColor: 'white', height: '2px', border: 'none' }} />
-                    <p className={`${experience.className}`} style={{ paddingTop: '10px', color: 'white', fontSize: '18px' }}>elonmusk@gmail.com</p>
-                  </div>
-                </Box>
-              </Modal>
+              <PopUp title='Education' open={educationOpen} onClose={() => setEducationOpen(false)}>
+              <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>University of Waterloo, Carleton University, St. Robert CHS, soon SUTD</p>
+              </PopUp>
 
               {/* Phone */}
-              <Modal
-                open={phoneOpen}
-                onClose={() => setPhoneOpen(false)}
-              >
-                <Box className={`no-outline`} sx={popupStyle}>
-                  <div style={{ width: '100%', height: '30px', backgroundColor: '#a5b1c2', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
-                  <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
-                    <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>Phone 🤠</p>
-                    <hr style={{ backgroundColor: 'white', height: '2px', border: 'none' }} />
-                    <div style={{ paddingTop: '10px' }}>
-                      <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>My phone is always on silent. Please use Discord, Telegram, or email for fastest response times!</p>
-                    </div>
-                  </div>
-                </Box>
-              </Modal>
+              <PopUp title='Phone 🤠' open={phoneOpen} onClose={() => setPhoneOpen(false)}>
+              <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>My phone is always on silent. Please use Discord, Telegram, or email for fastest response times!</p>
+              </PopUp>
 
             </div>
           </div>
