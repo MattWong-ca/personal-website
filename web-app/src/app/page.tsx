@@ -60,6 +60,9 @@ export default function Home() {
   const [educationOpen, setEducationOpen] = React.useState(false);
   const [phoneOpen, setPhoneOpen] = React.useState(false);
 
+  const [questsOpen, setQuestsOpen] = React.useState(false);
+  const [featuresOpen, setFeaturesOpen] = React.useState(false);
+
   return (
     <div style={{  /* backgroundSize: 'cover', backgroundImage: `url('https://coolbackgrounds.io/images/backgrounds/index/ranger-4df6c1b6.png')`, */ overflow: 'hidden', height: '100vh', display: 'flex', position: 'relative', zIndex: '100' }}>
       <div style={{ width: '60%', position: 'relative', backgroundImage: `url('https://img.freepik.com/free-photo/cardboard-texture_1194-5419.jpg')` }}>
@@ -122,6 +125,15 @@ export default function Home() {
             </div>
           </div>
 
+          <div className="flex justify-center">
+            <div className="pt-4 flex space-x-5">
+              <IconAndText src={'/about.png'} onClick={() => setAboutOpen(true)} text='Contact' />
+              <IconAndText src={'/briefcase.png'} onClick={() => setWorkOpen(true)} text='Writing' />
+              <IconAndText src={'/quests.png'} onClick={() => setQuestsOpen(true)} text='Quests' />
+              <IconAndText src={'/media.png'} onClick={() => setFeaturesOpen(true)} text='Features' />
+            </div>
+          </div>
+
           {/* Bottom icon bar */}
           <div className="flex justify-center absolute bottom-4 w-full">
             <div style={{ gap: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(240, 240, 240, 0.15)', borderRadius: '30px', width: '310px', height: '80px' }}>
@@ -133,51 +145,61 @@ export default function Home() {
 
               {/* MUI */}
               <PopUp title='Email' open={emailOpen} onClose={() => setEmailOpen(false)}>
-              <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>elonmusk@gmail.com or mark.zuckerberg@gmail.com</p>
+                <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>elonmusk@gmail.com or mark.zuckerberg@gmail.com</p>
               </PopUp>
 
 
               {/* About */}
               <PopUp title='About' open={aboutOpen} onClose={() => setAboutOpen(false)}>
                 <div className="flex">
-                <div style={{ marginTop: '0.5rem' }}>
-                  <p className={`${tagline.className}`} style={{ lineHeight: 'normal', color: 'white', fontSize: '25px' }}>TLDR</p>
-                  <div className={`${experience.className}`} style={{ color: 'white', marginLeft: '1.3rem', fontSize: '18px' }}>
-                    <p >➔ Software developer with 3+ years of experience</p>
-                    <p style={{ marginTop: '0.5rem' }}>➔ 2nd year engineering student at UWaterloo</p>
-                    <p style={{ marginTop: '0.5rem' }}>➔ Building in blockchain and exploring in AI</p>
-                    <p style={{ marginTop: '0.5rem' }}>➔ Enjoys hackathons, travelling, & sports</p>
+                  <div style={{ marginTop: '0.5rem' }}>
+                    <p className={`${tagline.className}`} style={{ lineHeight: 'normal', color: 'white', fontSize: '25px' }}>TLDR</p>
+                    <div className={`${experience.className}`} style={{ color: 'white', marginLeft: '1.3rem', fontSize: '18px' }}>
+                      <p >➔ Software developer with 3+ years of experience</p>
+                      <p style={{ marginTop: '0.5rem' }}>➔ 2nd year engineering student at UWaterloo</p>
+                      <p style={{ marginTop: '0.5rem' }}>➔ Building in blockchain and exploring in AI</p>
+                      <p style={{ marginTop: '0.5rem' }}>➔ Enjoys hackathons, travelling, & sports</p>
+                    </div>
                   </div>
-                </div>
-                <Image
-                  src="/profilepic.png"
-                  alt="Profile pic"
-                  width={200}
-                  height={0}
-                  style={{ marginLeft: 'auto', marginTop: '5px', pointerEvents: 'none', userSelect: 'none' }}
-                />
+                  <Image
+                    src="/profilepic.png"
+                    alt="Profile pic"
+                    width={200}
+                    height={0}
+                    style={{ marginLeft: 'auto', marginTop: '5px', pointerEvents: 'none', userSelect: 'none' }}
+                  />
                 </div>
                 <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>More details soon...</p>
               </PopUp>
 
               {/* Work */}
               <PopUp title='Work' open={workOpen} onClose={() => setWorkOpen(false)}>
-              <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>Soon... Full stack dev at ExaCare, iOS dev at theScore, store design at Shopify</p>
+                <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>Soon... Full stack dev at ExaCare, iOS dev at theScore, store design at Shopify</p>
               </PopUp>
 
               {/* Projects */}
               <PopUp title='Projects' open={projectsOpen} onClose={() => setProjectsOpen(false)}>
-              <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>Soon...</p>
+                <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>Soon...</p>
               </PopUp>
 
               {/* Education */}
               <PopUp title='Education' open={educationOpen} onClose={() => setEducationOpen(false)}>
-              <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>University of Waterloo, Carleton University, St. Robert CHS, soon SUTD</p>
+                <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>University of Waterloo, Carleton University, St. Robert CHS, soon SUTD</p>
               </PopUp>
 
               {/* Phone */}
               <PopUp title='Phone 🤠' open={phoneOpen} onClose={() => setPhoneOpen(false)}>
-              <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>My phone is always on silent. Please use Discord, Telegram, or email for fastest response times!</p>
+                <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>My phone is always on silent. Please use Discord, Telegram, or email for fastest response times!</p>
+              </PopUp>
+
+              {/* Quests */}
+              <PopUp title='Quests' open={questsOpen} onClose={() => setQuestsOpen(false)}>
+                <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>My side quests</p>
+              </PopUp>
+
+              {/* Features */}
+              <PopUp title='Features' open={featuresOpen} onClose={() => setFeaturesOpen(false)}>
+                <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>News features</p>
               </PopUp>
 
             </div>
