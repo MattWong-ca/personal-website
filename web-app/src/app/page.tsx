@@ -52,17 +52,16 @@ export default function Home() {
     { src: '/education.jpeg', text: 'Education', link: 'https://www.linkedin.com/in/mattwong-ca/' }
   ];
 
-  // MUI
-  const [emailOpen, setEmailOpen] = React.useState(false);
   const [aboutOpen, setAboutOpen] = React.useState(false);
   const [workOpen, setWorkOpen] = React.useState(false);
   const [projectsOpen, setProjectsOpen] = React.useState(false);
   const [educationOpen, setEducationOpen] = React.useState(false);
-  const [phoneOpen, setPhoneOpen] = React.useState(false);
-
   const [writingOpen, setWritingOpen] = React.useState(false);
   const [questsOpen, setQuestsOpen] = React.useState(false);
   const [featuresOpen, setFeaturesOpen] = React.useState(false);
+  const [contactOpen, setContactOpen] = React.useState(false);
+  const [emailOpen, setEmailOpen] = React.useState(false);
+  const [phoneOpen, setPhoneOpen] = React.useState(false);
 
   return (
     <div style={{  /* backgroundSize: 'cover', backgroundImage: `url('https://coolbackgrounds.io/images/backgrounds/index/ranger-4df6c1b6.png')`, */ overflow: 'hidden', height: '100vh', display: 'flex', position: 'relative', zIndex: '100' }}>
@@ -128,10 +127,10 @@ export default function Home() {
 
           <div className="flex justify-center">
             <div className="pt-4 flex space-x-5">
-              <IconAndText src={'/about.png'} onClick={() => setAboutOpen(true)} text='Contact' />
               <IconAndText src={'/writing.png'} onClick={() => setWritingOpen(true)} text='Writing' />
               <IconAndText src={'/quests.png'} onClick={() => setQuestsOpen(true)} text='Quests' />
               <IconAndText src={'/media.png'} onClick={() => setFeaturesOpen(true)} text='Features' />
+              <IconAndText src={'/contact.png'} onClick={() => setContactOpen(true)} text='Contact' />
             </div>
           </div>
 
@@ -205,6 +204,11 @@ export default function Home() {
               {/* Features */}
               <PopUp title='Features' open={featuresOpen} onClose={() => setFeaturesOpen(false)}>
                 <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>News features</p>
+              </PopUp>
+
+              {/* Contact */}
+              <PopUp title='Contact' open={contactOpen} onClose={() => setContactOpen(false)}>
+                <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>All my links...</p>
               </PopUp>
 
             </div>
