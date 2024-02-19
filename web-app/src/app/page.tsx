@@ -218,16 +218,3 @@ export default function Home() {
     </div>
   );
 }
-
-const popupStyle = {
-  position: 'absolute' as 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: '60%',
-  height: '80%',
-  bgcolor: '#0097e6',
-  boxShadow: 24,
-  borderRadius: '12px',
-  overflowY: 'auto'
-};
