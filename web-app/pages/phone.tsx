@@ -1,5 +1,5 @@
 import React from 'react';
-import '/Users/matt_wong/Desktop/personal-website/web-app/src/app/globals.css';
+import './globals.css';
 
 const iPhoneStyle = () => {
   return (
