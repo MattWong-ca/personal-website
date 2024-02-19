@@ -1,12 +1,10 @@
 "use client";
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import IconAndText from './components/IconAndText';
 import './globals.css';
 import { Poppins } from 'next/font/google';
 import { Inter } from 'next/font/google';
-import { Box, Modal, Typography } from '@mui/material';
-import BasicModal from './mui';
 import PopUp from './components/popup';
 
 // Fonts
