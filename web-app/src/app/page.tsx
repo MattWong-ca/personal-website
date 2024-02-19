@@ -60,6 +60,7 @@ export default function Home() {
   const [educationOpen, setEducationOpen] = React.useState(false);
   const [phoneOpen, setPhoneOpen] = React.useState(false);
 
+  const [writingOpen, setWritingOpen] = React.useState(false);
   const [questsOpen, setQuestsOpen] = React.useState(false);
   const [featuresOpen, setFeaturesOpen] = React.useState(false);
 
@@ -128,7 +129,7 @@ export default function Home() {
           <div className="flex justify-center">
             <div className="pt-4 flex space-x-5">
               <IconAndText src={'/about.png'} onClick={() => setAboutOpen(true)} text='Contact' />
-              <IconAndText src={'/about.png'} onClick={() => setWorkOpen(true)} text='Writing' />
+              <IconAndText src={'/writing.png'} onClick={() => setWritingOpen(true)} text='Writing' />
               <IconAndText src={'/quests.png'} onClick={() => setQuestsOpen(true)} text='Quests' />
               <IconAndText src={'/media.png'} onClick={() => setFeaturesOpen(true)} text='Features' />
             </div>
@@ -189,6 +190,11 @@ export default function Home() {
               {/* Phone */}
               <PopUp title='Phone 🤠' open={phoneOpen} onClose={() => setPhoneOpen(false)}>
                 <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>My phone is always on silent. Please use Discord, Telegram, or email for fastest response times!</p>
+              </PopUp>
+
+              {/* Writing */}
+              <PopUp title='Writing' open={writingOpen} onClose={() => setWritingOpen(false)}>
+                <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>My writing and notes...</p>
               </PopUp>
 
               {/* Quests */}
