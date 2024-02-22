@@ -63,7 +63,7 @@ export default function Home() {
 
   return (
     <div style={{  /* backgroundSize: 'cover', backgroundImage: `url('https://coolbackgrounds.io/images/backgrounds/index/ranger-4df6c1b6.png')`, */ overflow: 'hidden', height: '100vh', display: 'flex', position: 'relative', zIndex: '100' }}>
-      <div style={{ width: '60%', position: 'relative', backgroundImage: `url('https://img.freepik.com/free-photo/cardboard-texture_1194-5419.jpg')` }}>
+      <div style={{ width: '60%', position: 'relative' }}>
         {/* Content for the 60% width column */}
         <div style={{ marginTop: '12.5rem', marginLeft: '6.25rem' }}>
           {/* New container with 50px padding */}
@@ -77,32 +77,15 @@ export default function Home() {
             <p style={{ marginTop: '0.5rem' }}>➔ Store designer, Shopify</p>
           </div>
         </div>
-        <div style={{ position: 'relative', marginTop: '30px', right: '40px' }}>
-          <Image
-            src="/basketball.webp"
-            alt="Basketball icon"
-            width={300}
-            height={0}
-          />
-        </div>
-        <div style={{ transform: 'rotate(10deg)', position: 'absolute', bottom: 20, right: 30 }}>
-          <Image
-            src="/ethereum.webp"
-            alt="3D Ethereum icon"
-            width={150}
-            height={0}
-            style={{ animation: 'hoverUpDown 15s ease infinite' }}
-          />
-        </div>
       </div>
 
       {/* 40% screen, mountain valley background */}
       <div className="flex-1 flex items-center justify-center border-l-4 border-black"
-        style={{ backgroundSize: 'cover', backgroundImage: `url('./mountainValleyBackground.jpeg')` }}
+        style={{ backgroundSize: 'cover'}}
       >
         {/* iPhone */}
         <div className="bg-gray-300 w-100 h-300 rounded-70 bg-cover pt-3 relative"
-          style={{ border: '8px solid black', boxShadow: '10px 10px 20px rgba(0, 0, 0, 0.5)', backgroundImage: `url('https://512pixels.net/downloads/macos-wallpapers-6k/10-3-6k.jpg')` }}>
+          style={{ border: '8px solid black', backgroundImage: `url('https://512pixels.net/downloads/macos-wallpapers-6k/10-3-6k.jpg')` }}>
 
           {/* Status bar */}
           <div style={{ height: '26px' }} className="flex justify-center">
