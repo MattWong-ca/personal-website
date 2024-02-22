@@ -65,8 +65,12 @@ export default function Home() {
     <div style={{  /* backgroundSize: 'cover', backgroundImage: `url('https://coolbackgrounds.io/images/backgrounds/index/ranger-4df6c1b6.png')`, */ overflow: 'hidden', height: '100vh', display: 'flex', position: 'relative', zIndex: '100' }}>
       <div style={{ width: '60%', position: 'relative' }}>
         {/* Content for the 60% width column */}
-        <div style={{ marginTop: '12.5rem', marginLeft: '6.25rem' }}>
-          {/* New container with 50px padding */}
+        <div className="w-full h-1/4 border-b-4 border-black"></div>
+        <div className="w-full h-1/2 border-b-4 border-black flex">
+          <div className="w-1/5 h-full border-r-4 border-black"></div>
+          <div className="w-3/5 h-full border-r-4 border-black"></div>
+        </div>
+        {/* <div style={{ marginTop: '12.5rem', marginLeft: '6.25rem' }}>
           <h1 className={`${title.className} nameOutline`} style={{ fontSize: '3.75rem', fontWeight: 'bold' }}>MATTHEW WONG</h1>
           <h1 className={`${title.className} name`} style={{ fontSize: '3.75rem', fontWeight: 'bold' }}>MATTHEW WONG</h1>
           <p className={`${tagline.className} `} style={{ fontSize: '1.6rem' }}>Building software & studying engineering <br /> at UWaterloo!</p>
@@ -76,7 +80,7 @@ export default function Home() {
             <p style={{ marginTop: '0.5rem' }}>➔ iOS developer, theScore Bet</p>
             <p style={{ marginTop: '0.5rem' }}>➔ Store designer, Shopify</p>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* 40% screen, mountain valley background */}
