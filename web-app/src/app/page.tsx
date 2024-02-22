@@ -68,7 +68,9 @@ export default function Home() {
         <div className="w-full h-1/4 border-b-4 border-black"></div>
         <div className="w-full h-1/2 border-b-4 border-black flex">
           <div className="w-1/5 h-full border-r-4 border-black"></div>
-          <div className="w-3/5 h-full border-r-4 border-black"></div>
+          <div className="w-3/5 h-full border-r-4 border-black flex">
+  <div className="flex-1 p-4">MATTHEW WONG</div>
+</div>
         </div>
         {/* <div style={{ marginTop: '12.5rem', marginLeft: '6.25rem' }}>
           <h1 className={`${title.className} nameOutline`} style={{ fontSize: '3.75rem', fontWeight: 'bold' }}>MATTHEW WONG</h1>
