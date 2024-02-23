@@ -68,8 +68,8 @@ export default function Home() {
         <div className="w-full h-1/4 border-b-4 border-black flex">
           <div className="h-full border-r-4 border-black" style={{ width: '5%' }}></div>
           <div className="w-full">
-            <div className="w-full h-1/3 border-b-4 border-black"></div>
-            <div className="w-3/4 h-2/3 border-r-4 border-black" style={{ height: '67%' }}>
+            <div className="w-full h-1/5 border-b-4 border-black"></div>
+            <div className="w-3/4 border-r-4 border-black" style={{ height: '81%' }}>
               <div className="w-3/4 h-full border-r-4 border-black">
                 <div className="w-full border-b-4 border-black" style={{ height: '66%' }}></div>
               </div>
@@ -83,6 +83,15 @@ export default function Home() {
             <div className="flex-1 p-4">MATTHEW WONG</div>
           </div>
         </div>
+        <div className="w-full h-1/4 flex">
+        <div className="w-1/5 h-full border-r-4 border-black">
+          <div className="w-full h-1/6 border-b-4 border-black"></div>
+          <div className="w-full h-1/6 border-b-4 border-black"></div>
+        </div>
+        <div className="w-full h-4/5 border-b-4 border-black"></div>
+        </div>
+        
+
         {/* <div style={{ marginTop: '12.5rem', marginLeft: '6.25rem' }}>
           <h1 className={`${title.className} nameOutline`} style={{ fontSize: '3.75rem', fontWeight: 'bold' }}>MATTHEW WONG</h1>
           <h1 className={`${title.className} name`} style={{ fontSize: '3.75rem', fontWeight: 'bold' }}>MATTHEW WONG</h1>
