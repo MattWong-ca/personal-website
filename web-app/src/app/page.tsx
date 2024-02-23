@@ -113,7 +113,7 @@ export default function Home() {
           <div className="h-full border-r-4 border-black flex items-center justify-center" style={{ width: '72%' }}>
 
             <div className="bg-gray-300 h-4/5 rounded-70 bg-cover pt-3 relative"
-              style={{ width: '80%', height: '90%', border: '8px solid black', backgroundImage: `url('https://512pixels.net/downloads/macos-wallpapers-6k/10-3-6k.jpg')` }}>
+              style={{ width: '80%', height: '90%', border: '7px solid black', backgroundImage: `url('https://512pixels.net/downloads/macos-wallpapers-6k/10-3-6k.jpg')` }}>
 
               <div style={{ height: '26px' }} className="flex justify-center">
                 <div className="w-70 flex items-center" style={{ justifyContent: 'space-between' }}>
