@@ -84,13 +84,13 @@ export default function Home() {
           </div>
         </div>
         <div className="w-full h-1/4 flex">
-        <div className="w-1/5 h-full border-r-4 border-black">
-          <div className="w-full h-1/6 border-b-4 border-black"></div>
-          <div className="w-full h-1/6 border-b-4 border-black"></div>
+          <div className="w-1/5 h-full border-r-4 border-black">
+            <div className="w-full h-1/6 border-b-4 border-black"></div>
+            <div className="w-full h-1/6 border-b-4 border-black"></div>
+          </div>
+          <div className="w-full h-4/5 border-b-4 border-black"></div>
         </div>
-        <div className="w-full h-4/5 border-b-4 border-black"></div>
-        </div>
-        
+
 
         {/* <div style={{ marginTop: '12.5rem', marginLeft: '6.25rem' }}>
           <h1 className={`${title.className} nameOutline`} style={{ fontSize: '3.75rem', fontWeight: 'bold' }}>MATTHEW WONG</h1>
@@ -107,8 +107,113 @@ export default function Home() {
 
       {/* 40% screen, mountain valley background */}
       <div className="w-2/5 border-l-4 border-black">
-        <div className="w-full border-b-4 border-black" style={{ height: '4.9%'}}></div>
-        
+        <div className="w-full border-b-4 border-black" style={{ height: '4.9%' }}></div>
+        <div className="w-full border-b-4 border-black flex" style={{ height: '90.1%' }}>
+          <div className="h-full border-r-4 border-black" style={{ width: '14%' }}></div>
+          <div className="h-full border-r-4 border-black flex items-center justify-center" style={{ width: '72%' }}>
+
+            <div className="bg-gray-300 h-4/5 rounded-70 bg-cover pt-3 relative"
+              style={{ width: '80%', height: '90%', border: '8px solid black', backgroundImage: `url('https://512pixels.net/downloads/macos-wallpapers-6k/10-3-6k.jpg')` }}>
+
+              <div style={{ height: '26px' }} className="flex justify-center">
+                <div className="w-70 flex items-center" style={{ justifyContent: 'space-between' }}>
+                  {currentTime ? (<p className="apple" style={{ fontSize: '1rem', color: 'white', justifyContent: 'start', paddingLeft: '0.5rem', paddingTop: '0.125rem' }}>{currentTime}</p>) : (<p className="apple" style={{ fontSize: '1rem', color: 'white', justifyContent: 'start', paddingLeft: '0.5rem', paddingTop: '0.125rem' }}>1:23</p>)}
+                  <Image src="/statusbar.png" alt="iPhone Status Bar" width={80} height={50} className="filter brightness-0 invert pr-1" />
+                </div>
+                <div className="bg-black rounded-xl w-20 h-6 mx-auto absolute pt-3"></div>
+              </div>
+
+              <div className="flex justify-center">
+                <div className="pt-7 flex space-x-5">
+                  <IconAndText src={'/about.png'} onClick={() => setAboutOpen(true)} text='About' />
+                  <IconAndText src={'/briefcase.png'} onClick={() => setWorkOpen(true)} text='Work' />
+                  <IconAndText src={'/projects.png'} onClick={() => setProjectsOpen(true)} text='Projects' />
+                  <IconAndText src={'/education.jpeg'} onClick={() => setEducationOpen(true)} text='Education' />
+                </div>
+              </div>
+
+              <div className="flex justify-center">
+                <div className="pt-4 flex space-x-5">
+                  <IconAndText src={'/writing.png'} onClick={() => setWritingOpen(true)} text='Writing' />
+                  <IconAndText src={'/quests.png'} onClick={() => setQuestsOpen(true)} text='Quests' />
+                  <IconAndText src={'/media.png'} onClick={() => setFeaturesOpen(true)} text='Features' />
+                  <IconAndText src={'/contact.png'} onClick={() => setContactOpen(true)} text='Contact' />
+                </div>
+              </div>
+
+              <div className="flex justify-center absolute bottom-4 w-full">
+                <div style={{ gap: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(240, 240, 240, 0.15)', borderRadius: '30px', width: '310px', height: '80px' }}>
+                  <IconAndText src={'/mail.webp'} onClick={() => setEmailOpen(true)} />
+                  <IconAndText src={'/camera.webp'} link='https://www.linkedin.com/in/mattwong-ca/' />
+                  <IconAndText src={'/safari.webp'} link='https://www.google.com/search?q=matt+wong+waterloo' />
+                  <IconAndText src={'/phone.webp'} onClick={() => setPhoneOpen(true)} />
+
+                  <PopUp title='About' open={aboutOpen} onClose={() => setAboutOpen(false)}>
+                    <div className="flex">
+                      <div style={{ marginTop: '0.5rem' }}>
+                        <p className={`${tagline.className}`} style={{ lineHeight: 'normal', color: 'white', fontSize: '25px' }}>TLDR</p>
+                        <div className={`${experience.className}`} style={{ color: 'white', marginLeft: '1.3rem', fontSize: '18px' }}>
+                          <p >➔ Software developer with 3+ years of experience</p>
+                          <p style={{ marginTop: '0.5rem' }}>➔ 2nd year engineering student at UWaterloo</p>
+                          <p style={{ marginTop: '0.5rem' }}>➔ Building in blockchain and exploring in AI</p>
+                          <p style={{ marginTop: '0.5rem' }}>➔ Enjoys hackathons, travelling, & sports</p>
+                        </div>
+                      </div>
+                      <Image
+                        src="/profilepic.png"
+                        alt="Profile pic"
+                        width={200}
+                        height={0}
+                        style={{ marginLeft: 'auto', marginTop: '5px', pointerEvents: 'none', userSelect: 'none' }}
+                      />
+                    </div>
+                    <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>More details soon...</p>
+                  </PopUp>
+
+                  <PopUp title='Work' open={workOpen} onClose={() => setWorkOpen(false)}>
+                    <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>Soon... Full stack dev at ExaCare, iOS dev at theScore, store design at Shopify</p>
+                  </PopUp>
+
+                  <PopUp title='Projects' open={projectsOpen} onClose={() => setProjectsOpen(false)}>
+                    <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>Soon...</p>
+                  </PopUp>
+
+                  <PopUp title='Education' open={educationOpen} onClose={() => setEducationOpen(false)}>
+                    <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>University of Waterloo, Carleton University, St. Robert CHS, soon SUTD</p>
+                  </PopUp>
+
+                  <PopUp title='Email' open={emailOpen} onClose={() => setEmailOpen(false)}>
+                    <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>elonmusk@gmail.com or mark.zuckerberg@gmail.com</p>
+                  </PopUp>
+
+                  <PopUp title='Phone 🤠' open={phoneOpen} onClose={() => setPhoneOpen(false)}>
+                    <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>My phone is always on silent. Please use Discord, Telegram, or email for fastest response times!</p>
+                  </PopUp>
+
+                  <PopUp title='Writing' open={writingOpen} onClose={() => setWritingOpen(false)}>
+                    <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>My writing and notes...</p>
+                  </PopUp>
+
+                  <PopUp title='Quests' open={questsOpen} onClose={() => setQuestsOpen(false)}>
+                    <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>My side quests</p>
+                  </PopUp>
+
+                  <PopUp title='Features' open={featuresOpen} onClose={() => setFeaturesOpen(false)}>
+                    <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>News features</p>
+                  </PopUp>
+
+                  <PopUp title='Contact' open={contactOpen} onClose={() => setContactOpen(false)}>
+                    <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>All my links...</p>
+                  </PopUp>
+
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
       </div>
 
 
@@ -123,7 +228,7 @@ export default function Home() {
 
 // Iphone
 
-{/* iPhone */}
+{/* iPhone */ }
 /*
 <div className="bg-gray-300 h-4/5 rounded-70 bg-cover pt-3 relative"
 style={{ width: '60%', border: '8px solid black', backgroundImage: `url('https://512pixels.net/downloads/macos-wallpapers-6k/10-3-6k.jpg')` }}>
