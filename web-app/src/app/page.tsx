@@ -65,12 +65,23 @@ export default function Home() {
     <div style={{  /* backgroundSize: 'cover', backgroundImage: `url('https://coolbackgrounds.io/images/backgrounds/index/ranger-4df6c1b6.png')`, */ overflow: 'hidden', height: '100vh', display: 'flex', position: 'relative', zIndex: '100' }}>
       <div style={{ width: '60%', position: 'relative' }}>
         {/* Content for the 60% width column */}
-        <div className="w-full h-1/4 border-b-4 border-black"></div>
+        <div className="w-full h-1/4 border-b-4 border-black flex">
+          <div className="h-full border-r-4 border-black" style={{ width: '5%' }}></div>
+          <div className="w-full">
+            <div className="w-full h-1/3 border-b-4 border-black"></div>
+            <div className="w-3/4 h-2/3 border-r-4 border-black" style={{ height: '67%' }}>
+              <div className="w-3/4 h-full border-r-4 border-black">
+                <div className="w-full border-b-4 border-black" style={{ height: '66%' }}></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
         <div className="w-full h-1/2 border-b-4 border-black flex">
           <div className="w-1/5 h-full border-r-4 border-black"></div>
           <div className="w-3/5 h-full border-r-4 border-black flex">
-  <div className="flex-1 p-4">MATTHEW WONG</div>
-</div>
+            <div className="flex-1 p-4">MATTHEW WONG</div>
+          </div>
         </div>
         {/* <div style={{ marginTop: '12.5rem', marginLeft: '6.25rem' }}>
           <h1 className={`${title.className} nameOutline`} style={{ fontSize: '3.75rem', fontWeight: 'bold' }}>MATTHEW WONG</h1>
@@ -87,7 +98,7 @@ export default function Home() {
 
       {/* 40% screen, mountain valley background */}
       <div className="flex-1 flex items-center justify-center border-l-4 border-black"
-        style={{ backgroundSize: 'cover'}}
+        style={{ backgroundSize: 'cover' }}
       >
         {/* iPhone */}
         <div className="bg-gray-300 w-100 h-300 rounded-70 bg-cover pt-3 relative"
