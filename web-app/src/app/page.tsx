@@ -79,8 +79,9 @@ export default function Home() {
         </div>
         <div className="w-full h-1/2 border-b-4 border-black flex">
           <div className="w-1/5 h-full border-r-4 border-black"></div>
-          <div className="w-3/5 h-full border-r-4 border-black flex">
-            <div className="flex-1 p-4">MATTHEW WONG</div>
+          <div className="w-3/5 h-full border-r-4 border-black">
+            <div className={`${title.className}  flex-1 p-4`} style={{ fontSize: '92px', lineHeight: '1' }}>MATTHEW WONG</div>
+            <div>I build software.</div>
           </div>
         </div>
         <div className="w-full h-1/4 flex">
