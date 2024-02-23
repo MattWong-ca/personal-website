@@ -112,15 +112,15 @@ export default function Home() {
           <div className="h-full border-r-4 border-black" style={{ width: '14%' }}></div>
           <div className="h-full border-r-4 border-black flex items-center justify-center" style={{ width: '72%' }}>
 
-            <div className="bg-gray-300 h-4/5 rounded-70 bg-cover pt-3 relative"
-              style={{ width: '80%', height: '90%', border: '7px solid black', backgroundImage: `url('https://512pixels.net/downloads/macos-wallpapers-6k/10-3-6k.jpg')` }}>
+            <div className="bg-blue-600 h-4/5 rounded-70 bg-cover pt-3 relative"
+              style={{ width: '82%', height: '90%', border: '7px solid black', backgroundImage: `url('')` }}>
 
               <div style={{ height: '26px' }} className="flex justify-center">
                 <div className="w-70 flex items-center" style={{ justifyContent: 'space-between' }}>
-                  {currentTime ? (<p className="apple" style={{ fontSize: '1rem', color: 'white', justifyContent: 'start', paddingLeft: '0.5rem', paddingTop: '0.125rem' }}>{currentTime}</p>) : (<p className="apple" style={{ fontSize: '1rem', color: 'white', justifyContent: 'start', paddingLeft: '0.5rem', paddingTop: '0.125rem' }}>1:23</p>)}
-                  <Image src="/statusbar.png" alt="iPhone Status Bar" width={80} height={50} className="filter brightness-0 invert pr-1" />
+                  {currentTime ? (<p className="apple" style={{ fontSize: '0.92rem', color: 'white', justifyContent: 'start', paddingLeft: '0.5rem', paddingTop: '0.125rem' }}>{currentTime}</p>) : (<p className="apple" style={{ fontSize: '1rem', color: 'white', justifyContent: 'start', paddingLeft: '0.5rem', paddingTop: '0.125rem' }}>1:23</p>)}
+                  <Image src="/statusbar.png" alt="iPhone Status Bar" width={75} height={50} className="filter brightness-0 invert pr-1" />
                 </div>
-                <div className="bg-black rounded-xl w-20 h-6 mx-auto absolute pt-3"></div>
+                <div className="bg-black rounded-xl w-20 h-6 mx-auto absolute" style={{ height: '21.5px'}}></div>
               </div>
 
               <div className="flex justify-center">
@@ -142,7 +142,7 @@ export default function Home() {
               </div>
 
               <div className="flex justify-center absolute bottom-4 w-full">
-                <div style={{ gap: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(240, 240, 240, 0.15)', borderRadius: '30px', width: '310px', height: '80px' }}>
+                <div style={{ gap: '18px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(240, 240, 240, 0.15)', borderRadius: '30px', width: '290px', height: '75px' }}>
                   <IconAndText src={'/mail.webp'} onClick={() => setEmailOpen(true)} />
                   <IconAndText src={'/camera.webp'} link='https://www.linkedin.com/in/mattwong-ca/' />
                   <IconAndText src={'/safari.webp'} link='https://www.google.com/search?q=matt+wong+waterloo' />
