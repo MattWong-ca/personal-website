@@ -107,13 +107,24 @@ export default function Home() {
 
       {/* 40% screen, mountain valley background */}
       <div className="w-2/5 border-l-4 border-black">
-        <div className="w-full border-b-4 border-black" style={{ height: '4.9%' }}></div>
+        <div className="w-full border-b-4 border-black" style={{ height: '4.9%' }}>
+        <div className="h-full border-r-4 border-black" style={{ width: '86%' }}>
+        <div className="w-1/2 h-full border-r-4 border-black"></div>
+        </div>
+
+        </div>
         <div className="w-full border-b-4 border-black flex" style={{ height: '90.1%' }}>
-          <div className="h-full border-r-4 border-black" style={{ width: '14%' }}></div>
+          <div className="h-full border-r-4 border-black" style={{ width: '14%' }}>
+            <div className="w-full h-full">
+              <div className="w-full h-1/3 border-b-4 border-black" style={{ height: '22.45%' }}></div>
+              <div className="w-full border-b-4 border-black" style={{ height: '55.8%' }}></div>
+
+
+            </div>
+          </div>
           <div className="h-full border-r-4 border-black flex items-center justify-center" style={{ width: '72%' }}>
 
-            <div className="bg-blue-600 h-4/5 rounded-70 bg-cover pt-3 relative"
-              style={{ width: '82%', height: '90%', border: '5px solid #d3d3d3', backgroundImage: `url('https://images.squarespace-cdn.com/content/v1/5345721ae4b044acbaa99d99/1442769721240-NLJQQGX4339GFWOZUCF0/Eyeball-Headed-man-lisa-zador')` }}>
+            <div className="boxShadow bg-blue-600 h-4/5 rounded-70 bg-cover pt-3 relative" style={{ width: '82%', height: '90%', border: '5px solid #d3d3d3', backgroundImage: `url('astronaut.jpg')` }}>
 
               <div style={{ height: '26px' }} className="flex justify-center">
                 <div className="w-70 flex items-center" style={{ justifyContent: 'space-between' }}>
@@ -213,6 +224,17 @@ export default function Home() {
 
 
           </div>
+          <div className="h-full border-r-4 border-black" style={{ width: '14%' }}>
+
+            <div className="w-full h-1/6 border-b-4 border-black"></div>
+            <div className="w-full h-1/5 border-b-4 border-black"></div>
+            <div className="w-full h-1/3 border-b-4 border-black"></div>
+          </div>
+        </div>
+        <div className="w-full flex" style={{ height: '5%' }}>
+          <div className="h-full border-r-4 border-black" style={{ width: '14%' }}></div>
+          <div className="h-full w-1/2 border-r-4 border-black"></div>
+
         </div>
       </div>
 
