@@ -5,30 +5,16 @@ import IconAndText from './components/IconAndText';
 import './globals.css';
 import { Poppins } from 'next/font/google';
 import { Inter } from 'next/font/google';
+import { EB_Garamond } from 'next/font/google';
 import PopUp from './components/popup';
+import { subtle } from 'crypto';
 
 // Fonts
-const title = Poppins({
-  subsets: ["latin-ext"],
-  weight: ["700"],
-  style: ["normal"]
-});
-
-const inter = Inter({
-  subsets: ["latin"],
-});
-
-const tagline = Poppins({
-  subsets: ["latin-ext"],
-  weight: ["600"],
-  style: ["normal"]
-});
-
-const experience = Poppins({
-  subsets: ["latin-ext"],
-  weight: ["400"],
-  style: ["normal"]
-});
+const inter = Inter({ subsets: ["latin"] });
+const title = Poppins({ subsets: ["latin-ext"], weight: ["700"], style: ["normal"] });
+const tagline = Poppins({ subsets: ["latin-ext"], weight: ["600"], style: ["normal"] });
+const experience = Poppins({ subsets: ["latin-ext"], weight: ["400"], style: ["normal"] });
+const subTitle = EB_Garamond({ subsets: ["latin-ext"], weight: ["400"], style: ["normal"] });
 
 export default function Home() {
   // Time on status bar
@@ -81,16 +67,18 @@ export default function Home() {
           <div className="w-1/5 h-full border-r-4 border-black"></div>
           <div className="w-3/5 h-full p-4 border-r-4 border-black">
             <div className={`${title.className} flex-1`} style={{ fontSize: '92px', lineHeight: '1' }}>MATTHEW WONG</div>
-            <div style={{ marginTop: '15px', fontSize: '35px', lineHeight: '1' }}>I ship software products.</div>
-            <div style={{ marginTop: '50px' }}>
+            <div className={`${subTitle.className}`} style={{ marginTop: '12px', marginLeft: '4px', fontSize: '35px', lineHeight: '1' }}>I code + design software products</div>
+            <div className={`${subTitle.className} flex`} style={{ marginTop: '42px' }}>
 
-              <div className="flex" style={{ fontSize: '25px' }}>
-                <div style={{ marginTop: '15px', lineHeight: '1' }}>✸ About</div>
-                <div style={{ marginTop: '15px', marginLeft: '70px', lineHeight: '1' }}>✸ Experience</div>
+              <div className="pl-3">
+                <div style={{ fontSize: '28px', lineHeight: '1' }}>✸ &nbsp;About</div>
+                <div style={{ fontSize: '28px', marginTop: '18px', lineHeight: '1' }}>✸ &nbsp;Experience</div>
               </div>
 
-              <div style={{ fontSize: '25px', lineHeight: '1', marginTop: '15px' }}>✸ Features</div>
-
+              <div style={{ paddingLeft: '60px' }}>
+                <div style={{ fontSize: '28px', lineHeight: '1' }}>✸ &nbsp;Contact</div>
+                <div style={{ fontSize: '28px', marginTop: '18px', lineHeight: '1' }}>✸ &nbsp;Features</div>
+              </div>
 
             </div>
           </div>
