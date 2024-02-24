@@ -113,7 +113,7 @@ export default function Home() {
           <div className="h-full border-r-4 border-black flex items-center justify-center" style={{ width: '72%' }}>
 
             <div className="bg-blue-600 h-4/5 rounded-70 bg-cover pt-3 relative"
-              style={{ width: '82%', height: '90%', border: '5px solid #d3d3d3', backgroundImage: `url('')` }}>
+              style={{ width: '82%', height: '90%', border: '5px solid #d3d3d3', backgroundImage: `url('https://images.squarespace-cdn.com/content/v1/5345721ae4b044acbaa99d99/1442769721240-NLJQQGX4339GFWOZUCF0/Eyeball-Headed-man-lisa-zador')` }}>
 
               <div style={{ height: '26px' }} className="flex justify-center">
                 <div className="w-70 flex items-center" style={{ justifyContent: 'space-between' }}>
