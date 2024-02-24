@@ -55,10 +55,14 @@ export default function Home() {
           <div className="h-full border-r-4 border-black" style={{ width: '5%' }}></div>
           <div className="w-full">
             <div className="w-full h-1/5 border-b-4 border-black"></div>
-            <div className="w-3/4 border-r-4 border-black" style={{ height: '81%' }}>
+            <div className=" w-full flex" style={{ height: '81%' }}>
+            <div className="w-3/4 h-full border-r-4 border-black">
               <div className="w-3/4 h-full border-r-4 border-black">
                 <div className="w-full border-b-4 border-black" style={{ height: '66%' }}></div>
               </div>
+              
+            </div>
+            <div className="bg-yellow-400 w-1/4 h-1/2 border-b-4 border-black"></div>
             </div>
           </div>
 
@@ -117,7 +121,7 @@ export default function Home() {
           <div className="h-full border-r-4 border-black" style={{ width: '14%' }}>
             <div className="w-full h-full">
               <div className="w-full h-1/3 border-b-4 border-black" style={{ height: '22.45%' }}></div>
-              <div className="w-full border-b-4 border-black" style={{ height: '55.8%' }}></div>
+              <div className="bg-blue-500 w-full border-b-4 border-black" style={{ height: '55.8%' }}></div>
 
 
             </div>
