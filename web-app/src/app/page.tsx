@@ -79,9 +79,20 @@ export default function Home() {
         </div>
         <div className="w-full h-1/2 border-b-4 border-black flex">
           <div className="w-1/5 h-full border-r-4 border-black"></div>
-          <div className="w-3/5 h-full border-r-4 border-black">
-            <div className={`${title.className}  flex-1 p-4`} style={{ fontSize: '92px', lineHeight: '1' }}>MATTHEW WONG</div>
-            <div>I build software.</div>
+          <div className="w-3/5 h-full p-4 border-r-4 border-black">
+            <div className={`${title.className} flex-1`} style={{ fontSize: '92px', lineHeight: '1' }}>MATTHEW WONG</div>
+            <div style={{ marginTop: '15px', fontSize: '35px', lineHeight: '1' }}>I ship software products.</div>
+            <div style={{ marginTop: '50px' }}>
+
+              <div className="flex" style={{ fontSize: '25px' }}>
+                <div style={{ marginTop: '15px', lineHeight: '1' }}>✸ About</div>
+                <div style={{ marginTop: '15px', marginLeft: '70px', lineHeight: '1' }}>✸ Experience</div>
+              </div>
+
+              <div style={{ fontSize: '25px', lineHeight: '1', marginTop: '15px' }}>✸ Features</div>
+
+
+            </div>
           </div>
         </div>
         <div className="w-full h-1/4 flex">
@@ -121,7 +132,7 @@ export default function Home() {
                   {currentTime ? (<p className="apple" style={{ fontSize: '0.92rem', color: 'white', justifyContent: 'start', paddingLeft: '0.5rem', paddingTop: '0.125rem' }}>{currentTime}</p>) : (<p className="apple" style={{ fontSize: '1rem', color: 'white', justifyContent: 'start', paddingLeft: '0.5rem', paddingTop: '0.125rem' }}>1:23</p>)}
                   <Image src="/statusbar.png" alt="iPhone Status Bar" width={75} height={50} className="filter brightness-0 invert pr-1" />
                 </div>
-                <div className="bg-black rounded-xl w-20 h-6 mx-auto absolute" style={{ height: '21.5px'}}></div>
+                <div className="bg-black rounded-xl w-20 h-6 mx-auto absolute" style={{ height: '21.5px' }}></div>
               </div>
 
               <div className="flex justify-center">

@@ -18,7 +18,17 @@
   position: absolute;
   z-index:100;
 }
-
+.flying{
+  cursor: url('https://res.cloudinary.com/dvkugaw3b/image/upload/v1641562028/cursor_ad12rf.png'), auto;
+}
+.square-cursor {
+  cursor: url('https://cryptologos.cc/logos/ethereum-eth-logo.png'), auto; /* Replace 'square-cursor.png' with the path to your square cursor image */
+  /* cursor: none; */
+}
+body {
+  cursor: url('https://cryptologos.cc/logos/ethereum-eth-logo.png'), auto;
+  /* cursor: none; */
+}
 .name {
   /* font-family: "Poppins", sans-serif;
   font-weight: 700;
