@@ -48,7 +48,7 @@ export default function Home() {
   const [phoneOpen, setPhoneOpen] = React.useState(false);
 
   return (
-    <div style={{  /* backgroundSize: 'cover', backgroundImage: `url('https://coolbackgrounds.io/images/backgrounds/index/ranger-4df6c1b6.png')`, */ overflow: 'hidden', height: '100vh', display: 'flex', position: 'relative', zIndex: '100' }}>
+    <div style={{ overflow: 'hidden', height: '100vh', display: 'flex', position: 'relative', zIndex: '100' }}>
       <div style={{ width: '60%', position: 'relative' }}>
         {/* Content for the 60% width column */}
         <div className="w-full h-1/4 border-b-4 border-black flex">
@@ -68,16 +68,13 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-
               </div>
               <div className="bg-yellow-400 w-1/4 h-1/2 border-b-4 border-black"></div>
             </div>
           </div>
-
         </div>
         <div className="w-full h-1/2 border-b-4 border-black flex">
           <div className="bg-black w-1/5 h-full border-r-4 border-black">
-
             <div className="h-full flex" style={{ width: '100%' }}>
               <div className="h-full border-r-4 border-black" style={{ width: '85.7%' }}>
                 <div className="bg-blue-500 w-full border-b-4 border-black" style={{ height: '34%' }}>
@@ -87,40 +84,30 @@ export default function Home() {
                     <div className="bg-white w-1/2 h-full border-r-4 border-black"></div>
                     <div className="bg-white w-1/2 h-full"></div>
                   </div>
-
-
                 </div>
               </div>
               <div className="bg-yellow-400 h-full" style={{ width: '14.3%' }}></div>
-
             </div>
-
-
           </div>
           <div className="w-3/5 h-full p-4 border-r-4 border-black">
             <div className={`${title.className} flex-1`} style={{ fontSize: '92px', lineHeight: '1' }}>MATTHEW WONG</div>
             <div className={`${subTitle.className}`} style={{ marginTop: '10px', marginLeft: '4px', fontSize: '35px', lineHeight: '1' }}>I code + design software products</div>
             <div className={`${subTitle.className} flex`} style={{ marginTop: '42px' }}>
-
               <div className="pl-3">
                 <div style={{ fontSize: '28px', lineHeight: '1' }}>✸ &nbsp;About</div>
                 <div style={{ fontSize: '28px', marginTop: '18px', lineHeight: '1' }}>✸ &nbsp;Experience</div>
               </div>
-
               <div style={{ paddingLeft: '60px' }}>
                 <div style={{ fontSize: '28px', lineHeight: '1' }}>✸ &nbsp;Contact</div>
                 <div style={{ fontSize: '28px', marginTop: '18px', lineHeight: '1' }}>✸ &nbsp;Features</div>
               </div>
-
             </div>
           </div>
           <div className="w-1/5 h-full">
             <div className="bg-red-600 w-full h-1/5 border-b-4 border-black"></div>
-            <div className="h-1/5 border-b-4 border-black" style={{ width: '100%' }}></div>
-            <div className="bg-yellow-400 h-3/5 border-r-4 border-black" style={{ width: '50%' }}></div>
-
+            <div className="w-full h-1/5 border-b-4 border-black"></div>
+            <div className="bg-yellow-400 w-1/2 h-3/5 border-r-4 border-black"></div>
           </div>
-
         </div>
         <div className="w-full h-1/4 flex">
           <div className="w-1/5 h-full border-r-4 border-black">
@@ -131,42 +118,27 @@ export default function Home() {
             </div>
           </div>
           <div className="w-full h-4/5">
-          <div className="w-full h-full border-b-4 border-black flex">
-            <div className="bg-blue-500 w-1/5 h-full border-r-4 border-black">
-              <div className="bg-white w-4/5 h-full border-r-4 border-black"></div>
-            </div>
-            <div className="h-full border-r-4 border-black flex" style={{ width: '55.95%' }}>
-              <div className="w-full h-full">
-                <div className="bg-blue-500 w-full border-b-4 border-black flex" style={{ height: '52.5%' }}>
-                  <div className="bg-white h-full border-r-4 border-black" style={{ width: '34%' }}></div>
-                  <div className="bg-red-600 w-1/3 h-full border-r-4 border-black"></div>
-                </div>
-                <div className="bg-yellow-400 w-1/2 border-r-4 border-black" style={{ height: '47.5%' }}></div>
+            <div className="w-full h-full border-b-4 border-black flex">
+              <div className="bg-blue-500 w-1/5 h-full border-r-4 border-black">
+                <div className="bg-white w-4/5 h-full border-r-4 border-black"></div>
               </div>
+              <div className="h-full border-r-4 border-black flex" style={{ width: '55.95%' }}>
+                <div className="w-full h-full">
+                  <div className="bg-blue-500 w-full border-b-4 border-black flex" style={{ height: '52.5%' }}>
+                    <div className="bg-white h-full border-r-4 border-black" style={{ width: '34%' }}></div>
+                    <div className="bg-red-600 w-1/3 h-full border-r-4 border-black"></div>
+                  </div>
+                  <div className="bg-yellow-400 w-1/2 border-r-4 border-black" style={{ height: '47.5%' }}></div>
+                </div>
+              </div>
+              <div className="bg-red-600 w-1/5 h-full border-r-4 border-black"></div>
             </div>
-            <div className="bg-red-600 h-full border-r-4 border-black" style={{ width: '20%' }}></div>
+            <div className="bg-yellow-400 w-full h-1/4 flex">
+              <div className="bg-white w-1/3 h-full border-r-4 border-black"></div>
+              <div className="bg-white w-1/3 h-full border-r-4 border-black"></div>
+            </div>
           </div>
-          <div className="bg-yellow-400 w-full h-1/4 flex">
-          <div className="bg-white w-1/3 h-full border-r-4 border-black"></div>
-          <div className="bg-white w-1/3 h-full border-r-4 border-black"></div>
-
-          </div>
-          </div>
-          
         </div>
-
-
-        {/* <div style={{ marginTop: '12.5rem', marginLeft: '6.25rem' }}>
-          <h1 className={`${title.className} nameOutline`} style={{ fontSize: '3.75rem', fontWeight: 'bold' }}>MATTHEW WONG</h1>
-          <h1 className={`${title.className} name`} style={{ fontSize: '3.75rem', fontWeight: 'bold' }}>MATTHEW WONG</h1>
-          <p className={`${tagline.className} `} style={{ fontSize: '1.6rem' }}>Building software & studying engineering <br /> at UWaterloo!</p>
-          <p className={`${tagline.className} `} style={{ fontSize: '1.6rem', marginTop: '2rem' }}>Experience</p>
-          <div className={`${experience.className} `} style={{ marginLeft: '1.3rem', fontSize: '1.3rem' }}>
-            <p style={{ marginTop: '0.5rem' }}>➔ Full stack developer, ExaCare</p>
-            <p style={{ marginTop: '0.5rem' }}>➔ iOS developer, theScore Bet</p>
-            <p style={{ marginTop: '0.5rem' }}>➔ Store designer, Shopify</p>
-          </div>
-        </div> */}
       </div>
 
       {/* 40% screen, mountain valley background */}
@@ -175,7 +147,6 @@ export default function Home() {
           <div className="bg-yellow-400 h-full border-r-4 border-black" style={{ width: '86%' }}>
             <div className="bg-white w-1/2 h-full border-r-4 border-black"></div>
           </div>
-
         </div>
         <div className="w-full border-b-4 border-black flex" style={{ height: '90.1%' }}>
           <div className="h-full border-r-4 border-black" style={{ width: '14%' }}>
@@ -183,7 +154,6 @@ export default function Home() {
               <div className="w-full h-1/3 border-b-4 border-black" style={{ height: '22.45%' }}></div>
               <div className="bg-blue-500 w-full border-b-4 border-black" style={{ height: '55.8%' }}></div>
               <div className="bg-black w-full h-1/3" style={{ height: '22%' }}></div>
-
             </div>
           </div>
           <div className="h-full border-r-4 border-black flex items-center justify-center" style={{ width: '72%' }}>
@@ -284,12 +254,8 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
-
-
           </div>
           <div className="bg-blue-500 h-full" style={{ width: '14%' }}>
-
             <div className="bg-black w-full h-1/6 border-b-4 border-black"></div>
             <div className="bg-white w-full h-1/5 border-b-4 border-black"></div>
             <div className="bg-red-600 w-full h-1/3 border-b-4 border-black"></div>
@@ -298,14 +264,8 @@ export default function Home() {
         <div className="bg-white w-full flex" style={{ height: '5%' }}>
           <div className="h-full border-r-4 border-black" style={{ width: '14%' }}></div>
           <div className="bg-red-600 h-full w-1/2 border-r-4 border-black"></div>
-
         </div>
       </div>
-
-
-
-
-
     </div>
   );
 }
