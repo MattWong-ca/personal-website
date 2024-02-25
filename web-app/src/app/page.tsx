@@ -288,16 +288,16 @@ export default function Home() {
 
 
           </div>
-          <div className="h-full" style={{ width: '14%' }}>
+          <div className="bg-blue-500 h-full" style={{ width: '14%' }}>
 
-            <div className="w-full h-1/6 border-b-4 border-black"></div>
-            <div className="w-full h-1/5 border-b-4 border-black"></div>
-            <div className="w-full h-1/3 border-b-4 border-black"></div>
+            <div className="bg-black w-full h-1/6 border-b-4 border-black"></div>
+            <div className="bg-white w-full h-1/5 border-b-4 border-black"></div>
+            <div className="bg-red-600 w-full h-1/3 border-b-4 border-black"></div>
           </div>
         </div>
-        <div className="w-full flex" style={{ height: '5%' }}>
+        <div className="bg-white w-full flex" style={{ height: '5%' }}>
           <div className="h-full border-r-4 border-black" style={{ width: '14%' }}></div>
-          <div className="h-full w-1/2 border-r-4 border-black"></div>
+          <div className="bg-red-600 h-full w-1/2 border-r-4 border-black"></div>
 
         </div>
       </div>
