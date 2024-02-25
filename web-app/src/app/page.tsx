@@ -52,13 +52,21 @@ export default function Home() {
       <div style={{ width: '60%', position: 'relative' }}>
         {/* Content for the 60% width column */}
         <div className="w-full h-1/4 border-b-4 border-black flex">
-          <div className="h-full border-r-4 border-black" style={{ width: '5%' }}></div>
+          <div className="bg-red-600 h-full border-r-4 border-black" style={{ width: '5%' }}></div>
           <div className="w-full">
-            <div className="w-full h-1/5 border-b-4 border-black"></div>
-            <div className=" w-full flex" style={{ height: '81%' }}>
+            <div className="bg-blue-500 w-full h-1/5 border-b-4 border-black"></div>
+            <div className="w-full flex" style={{ height: '81%' }}>
             <div className="w-3/4 h-full border-r-4 border-black">
-              <div className="w-3/4 h-full border-r-4 border-black">
-                <div className="w-full border-b-4 border-black" style={{ height: '66%' }}></div>
+              <div className="bg-blue-500 w-3/4 h-full border-r-4 border-black" style={{ height: '99%' }}>
+                <div className="w-full border-b-4 border-black" style={{ height: '66%' }}>
+                  <div className="bg-red-600 w-full h-full flex">
+                  <div className="border-r-4 border-black" style={{ width: '34%' }}>
+                  <div className="bg-yellow-400 w-full border-b-4 border-black" style={{ height: '53.5%' }}></div>
+                  <div className="bg-white w-full" style={{ height: '46.5%' }}></div>
+                  </div>
+                  <div className="bg-white w-1/3 border-r-4 border-black"></div>
+                  </div>
+                </div>
               </div>
               
             </div>
@@ -68,10 +76,30 @@ export default function Home() {
 
         </div>
         <div className="w-full h-1/2 border-b-4 border-black flex">
-          <div className="w-1/5 h-full border-r-4 border-black"></div>
+          <div className="bg-black w-1/5 h-full border-r-4 border-black">
+
+          <div className="h-full flex" style={{ width: '100%' }}>
+          <div className="h-full border-r-4 border-black" style={{ width: '85.7%' }}>
+            <div className="bg-blue-500 w-full border-b-4 border-black" style={{ height: '34%' }}>
+            </div>
+            <div className="w-full h-1/3 border-b-4 border-black">
+            <div className="w-full h-full flex">
+            <div className="bg-white w-1/2 h-full border-r-4 border-black"></div>
+            <div className="bg-white w-1/2 h-full"></div>
+            </div>
+            
+
+            </div>
+          </div>
+          <div className="bg-yellow-400 h-full" style={{ width: '14.3%' }}></div>
+
+          </div>
+
+
+          </div>
           <div className="w-3/5 h-full p-4 border-r-4 border-black">
             <div className={`${title.className} flex-1`} style={{ fontSize: '92px', lineHeight: '1' }}>MATTHEW WONG</div>
-            <div className={`${subTitle.className}`} style={{ marginTop: '12px', marginLeft: '4px', fontSize: '35px', lineHeight: '1' }}>I code + design software products</div>
+            <div className={`${subTitle.className}`} style={{ marginTop: '10px', marginLeft: '4px', fontSize: '35px', lineHeight: '1' }}>I code + design software products</div>
             <div className={`${subTitle.className} flex`} style={{ marginTop: '42px' }}>
 
               <div className="pl-3">
@@ -86,11 +114,22 @@ export default function Home() {
 
             </div>
           </div>
+          <div className="w-1/5 h-full">
+          <div className="bg-red-600 w-full h-1/5 border-b-4 border-black"></div>
+          <div className="h-1/5 border-b-4 border-black" style={{ width: '100%' }}></div>
+          <div className="bg-yellow-400 h-3/5 border-r-4 border-black" style={{ width: '50%' }}></div>
+
+          </div>
+
         </div>
         <div className="w-full h-1/4 flex">
           <div className="w-1/5 h-full border-r-4 border-black">
             <div className="w-full h-1/6 border-b-4 border-black"></div>
-            <div className="w-full h-1/6 border-b-4 border-black"></div>
+            <div className="bg-blue-500 w-full h-1/6 border-b-4 border-black"></div>
+            <div className="bg-red-600 w-full h-2/3">
+            <div className="bg-white w-1/5 h-full border-r-4 border-black"></div>
+            </div>
+
           </div>
           <div className="w-full h-4/5 border-b-4 border-black"></div>
         </div>
@@ -122,7 +161,7 @@ export default function Home() {
             <div className="w-full h-full">
               <div className="w-full h-1/3 border-b-4 border-black" style={{ height: '22.45%' }}></div>
               <div className="bg-blue-500 w-full border-b-4 border-black" style={{ height: '55.8%' }}></div>
-
+              <div className="bg-black w-full h-1/3" style={{ height: '22%' }}></div>
 
             </div>
           </div>
@@ -228,7 +267,7 @@ export default function Home() {
 
 
           </div>
-          <div className="h-full border-r-4 border-black" style={{ width: '14%' }}>
+          <div className="h-full" style={{ width: '14%' }}>
 
             <div className="w-full h-1/6 border-b-4 border-black"></div>
             <div className="w-full h-1/5 border-b-4 border-black"></div>
