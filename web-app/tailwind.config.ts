@@ -14,15 +14,15 @@ const config: Config = {
       },
       width: {
         '100': '22.5rem',
-        '20': '5rem',
-        '70': '18rem'
+        '20': '78px',
+        '70': '17.5rem'
       },
       height: {
         '300': '45rem'
       },
       borderRadius: {
         '70': '44px',
-        '40': '1rem'
+        '40': '14px'
       },
       padding: {
         '5': '3rem'
