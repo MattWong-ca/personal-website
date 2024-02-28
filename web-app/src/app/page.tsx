@@ -400,3 +400,33 @@ style={{ width: '60%', border: '8px solid black', backgroundImage: `url('https:/
   </div>
 </div>
 </div> */
+
+// Cursor
+// const [mousePosition, setMousePosition] = useState({
+//   x: 0,
+//   y: 0
+// });
+// const variants = {
+//   default: {
+//     x: mousePosition.x - 13,
+//     y: mousePosition.y - 13,
+//   }
+// }
+// useEffect(() => {
+//   const mouseMove = (e: MouseEvent) => {
+//     setMousePosition({
+//       x: e.clientX,
+//       y: e.clientY
+//     })
+//   }
+//   window.addEventListener("mousemove", mouseMove);
+//   return () => {
+//     window.removeEventListener("mousemove", mouseMove);
+//   }
+// }, []);
+
+{/* <motion.div
+      className="cursor"
+      variants={variants}
+      animate="default"
+      /> */}
