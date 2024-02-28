@@ -3,11 +3,12 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import IconAndText from './components/IconAndText';
 import './globals.css';
+import { motion } from 'framer-motion';
 import { Poppins } from 'next/font/google';
 import { Inter } from 'next/font/google';
 import { EB_Garamond } from 'next/font/google';
 import PopUp from './components/popup';
-import { subtle } from 'crypto';
+import useMouse from "@react-hook/mouse-position";
 
 // Fonts
 const inter = Inter({ subsets: ["latin"] });
@@ -29,6 +30,25 @@ export default function Home() {
     return () => clearInterval(intervalId);
   });
 
+  // Custom cursor
+  const [cursorVariant, setCursorVariant] = useState("default");
+  const ref = React.useRef(null);
+  const mouse = useMouse(ref, {});
+  let mouseXPosition = 0;
+  let mouseYPosition = 0;
+  if (mouse.x !== null) {
+    mouseXPosition = mouse.clientX ?? 0;
+  }
+  if (mouse.y !== null) {
+    mouseYPosition = mouse.clientY ?? 0;
+  }
+  const variants = {
+    default: {
+      x: mouseXPosition,
+      y: mouseYPosition,
+    },
+  };
+
   const icons = [
     { src: '/about.png', text: 'About', link: 'https://www.linkedin.com/in/mattwong-ca/' },
     { src: '/briefcase.png', text: 'Work', link: 'https://www.linkedin.com/in/mattwong-ca/' },
@@ -48,7 +68,7 @@ export default function Home() {
   const [phoneOpen, setPhoneOpen] = React.useState(false);
 
   return (
-    <div style={{ overflow: 'hidden', height: '100vh', display: 'flex', position: 'relative', zIndex: '100' }}>
+    <div ref={ref} style={{ overflow: 'hidden', height: '100vh', display: 'flex', position: 'relative', zIndex: '100' }}>
       <div style={{ width: '60%', position: 'relative' }}>
         {/* Content for the 60% width column */}
         <div className="w-full h-1/4 border-b-4 border-black flex">
@@ -265,6 +285,13 @@ export default function Home() {
           <div className="h-full border-r-4 border-black" style={{ width: '14%' }}></div>
           <div className="bg-red-600 h-full w-1/2 border-r-4 border-black"></div>
         </div>
+      </div>
+      <div>
+        <motion.div
+          variants={variants}
+          className="circle"
+          animate={cursorVariant}
+        ></motion.div>
       </div>
     </div>
   );
