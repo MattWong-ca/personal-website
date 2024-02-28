@@ -158,7 +158,7 @@ export default function Home() {
           </div>
           <div className="h-full border-r-4 border-black flex items-center justify-center" style={{ width: '72%' }}>
 
-            <div className="boxShadow bg-blue-600 h-4/5 rounded-70 bg-cover pt-3 relative" style={{ width: '82%', height: '90%', border: '5px solid #d3d3d3', backgroundImage: `url('astronaut.jpg')` }}>
+            <div className="boxShadow bg-blue-600 h-4/5 rounded-70 bg-cover pt-3 relative" style={{ width: '333px', height: '650px', border: '5px solid #d3d3d3', backgroundImage: `url('astronaut.jpg')` }}>
 
               <div style={{ height: '26px' }} className="flex justify-center">
                 <div className="w-70 flex items-center" style={{ justifyContent: 'space-between' }}>
