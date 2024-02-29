@@ -27,6 +27,7 @@ export default function Home() {
     const intervalId = setInterval(updateCurrentTimeET, 1000);
     return () => clearInterval(intervalId);
   });
+  const codingStreak = DateTime.now().diff(DateTime.fromISO('2023-12-25'), 'days').as('days').toFixed(0);
 
   const icons = [
     { src: '/about.png', text: 'About', link: 'https://www.linkedin.com/in/mattwong-ca/' },
@@ -93,12 +94,12 @@ export default function Home() {
             <div className={`${subTitle.className}`} style={{ marginTop: '10px', marginLeft: '4px', fontSize: '35px', lineHeight: '1' }}>I code + design software products</div>
             <div className={`${subTitle.className} flex`} style={{ marginTop: '42px' }}>
               <div className="pl-3">
-                <div style={{ fontSize: '28px', lineHeight: '1' }}>✸ &nbsp;About</div>
-                <div style={{ fontSize: '28px', marginTop: '18px', lineHeight: '1' }}>✸ &nbsp;Experience</div>
+                <div onClick={() => setAboutOpen(true)} style={{ fontSize: '28px', lineHeight: '1' }}>✸ &nbsp;About</div>
+                <div onClick={() => setWorkOpen(true)} style={{ fontSize: '28px', marginTop: '18px', lineHeight: '1' }}>✸ &nbsp;Experience</div>
               </div>
               <div style={{ paddingLeft: '60px' }}>
-                <div style={{ fontSize: '28px', lineHeight: '1' }}>✸ &nbsp;Contact</div>
-                <div style={{ fontSize: '28px', marginTop: '18px', lineHeight: '1' }}>✸ &nbsp;Features</div>
+                <div onClick={() => setContactOpen(true)} style={{ fontSize: '28px', lineHeight: '1' }}>✸ &nbsp;Contact</div>
+                <div onClick={() => setFeaturesOpen(true)} style={{ fontSize: '28px', marginTop: '18px', lineHeight: '1' }}>✸ &nbsp;Features</div>
               </div>
             </div>
           </div>
@@ -199,7 +200,7 @@ export default function Home() {
                         <div className={`${subTitle.className}`} style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
                           <p>➔&nbsp;&nbsp; Software developer with 3+ years of experience</p>
                           <p style={{ marginTop: '0.5rem' }}>➔&nbsp;&nbsp; 2nd year engineering student at UWaterloo</p>
-                          <p style={{ marginTop: '0.5rem' }}>➔&nbsp;&nbsp; Building in blockchain and exploring in AI</p>
+                          <p style={{ marginTop: '0.5rem' }}>➔&nbsp;&nbsp; Building in blockchain & exploring in AI</p>
                           <p style={{ marginTop: '0.5rem' }}>➔&nbsp;&nbsp; Enjoys hackathons, travelling, & sports</p>
                         </div>
                       </div>
@@ -211,7 +212,20 @@ export default function Home() {
                         style={{ marginLeft: 'auto', marginTop: '5px', pointerEvents: 'none', userSelect: 'none' }}
                       />
                     </div>
-                    <p className={`${experience.className}`} style={{ color: 'black', fontSize: '18px' }}>More details soon...</p>
+                    <p className={`${tagline.className}`} style={{ color: 'black', fontSize: '24px', paddingTop: '8px', paddingBottom: '8px' }}>Currently</p>
+                    <div className={`${subTitle.className}`} style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
+                      <p>➔&nbsp;&nbsp; Full stack developer at ExaCare, a VC-backed health tech startup</p>
+                      <p style={{ marginTop: '0.5rem' }}>➔&nbsp;&nbsp; Coding & designing side projects</p>
+                      <p style={{ marginTop: '0.5rem' }}>➔&nbsp;&nbsp; Writing about Canadian startup founders</p>
+                      <p style={{ marginTop: '0.5rem' }}>➔&nbsp;&nbsp; On a {codingStreak} day coding streak!</p>
+                    </div>
+                    <p className={`${tagline.className}`} style={{ color: 'black', fontSize: '24px', marginTop: '20px', paddingBottom: '8px' }}>Previously</p>
+                    <div className={`${subTitle.className}`} style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
+                      <p>➔&nbsp;&nbsp; Led partnerships for Waterloo Blockchain</p>
+                      <p style={{ marginTop: '0.5rem' }}>➔&nbsp;&nbsp; Did iOS development at theScore</p>
+                      <p style={{ marginTop: '0.5rem' }}>➔&nbsp;&nbsp; Built ecommerce stores at Shopify</p>
+                      <p style={{ marginTop: '0.5rem', marginBottom: '3rem' }}>➔&nbsp;&nbsp; Completed Google&apos;s SPS program</p>
+                    </div>
                   </PopUp>
 
                   <PopUp title='Work' open={workOpen} onClose={() => setWorkOpen(false)}>
