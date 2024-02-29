@@ -54,7 +54,7 @@ const popupStyle = {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: '60%',
-    height: '85%',
+    height: '78%',
     bgcolor: 'white',
     boxShadow: 24,
     border: '4px solid black',

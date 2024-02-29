@@ -205,14 +205,14 @@ export default function Home() {
                         </div>
                       </div>
                       <Image
-                        src="/profilepic.png"
-                        alt="Profile pic"
-                        width={200}
+                        src="/aboutpfp.png"
+                        alt="Matt Wong profile picture"
+                        width={170}
                         height={0}
-                        style={{ marginLeft: 'auto', marginTop: '5px', pointerEvents: 'none', userSelect: 'none' }}
+                        style={{ marginLeft: 'auto', marginTop: '15px', marginRight: '20px', pointerEvents: 'none', userSelect: 'none' }}
                       />
                     </div>
-                    <p className={`${tagline.className}`} style={{ color: 'black', fontSize: '24px', paddingTop: '8px', paddingBottom: '8px' }}>Currently</p>
+                    <p className={`${tagline.className}`} style={{ color: 'black', fontSize: '24px', paddingTop: '20px', paddingBottom: '8px' }}>Currently</p>
                     <div className={`${subTitle.className}`} style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
                       <p>➔&nbsp;&nbsp; Full stack developer at ExaCare, a VC-backed health tech startup</p>
                       <p style={{ marginTop: '0.5rem' }}>➔&nbsp;&nbsp; Coding & designing side projects</p>
