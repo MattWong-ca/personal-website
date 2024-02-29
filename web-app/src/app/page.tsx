@@ -7,7 +7,6 @@ import { Poppins } from 'next/font/google';
 import { Inter } from 'next/font/google';
 import { EB_Garamond } from 'next/font/google';
 import PopUp from './components/popup';
-import { subtle } from 'crypto';
 
 // Fonts
 const inter = Inter({ subsets: ["latin"] });
@@ -195,13 +194,13 @@ export default function Home() {
 
                   <PopUp title='About' open={aboutOpen} onClose={() => setAboutOpen(false)}>
                     <div className="flex">
-                      <div style={{ marginTop: '0.5rem' }}>
-                        <p className={`${tagline.className}`} style={{ lineHeight: 'normal', color: 'white', fontSize: '25px' }}>TLDR</p>
-                        <div className={`${experience.className}`} style={{ color: 'white', marginLeft: '1.3rem', fontSize: '18px' }}>
-                          <p>➔ Software developer with 3+ years of experience</p>
-                          <p style={{ marginTop: '0.5rem' }}>➔ 2nd year engineering student at UWaterloo</p>
-                          <p style={{ marginTop: '0.5rem' }}>➔ Building in blockchain and exploring in AI</p>
-                          <p style={{ marginTop: '0.5rem' }}>➔ Enjoys hackathons, travelling, & sports</p>
+                      <div >
+                        <p className={`${tagline.className}`} style={{ lineHeight: 'normal', color: 'black', fontSize: '25px', marginTop: '0.5rem' }}>TLDR</p>
+                        <div className={`${subTitle.className}`} style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
+                          <p>➔&nbsp;&nbsp; Software developer with 3+ years of experience</p>
+                          <p style={{ marginTop: '0.5rem' }}>➔&nbsp;&nbsp; 2nd year engineering student at UWaterloo</p>
+                          <p style={{ marginTop: '0.5rem' }}>➔&nbsp;&nbsp; Building in blockchain and exploring in AI</p>
+                          <p style={{ marginTop: '0.5rem' }}>➔&nbsp;&nbsp; Enjoys hackathons, travelling, & sports</p>
                         </div>
                       </div>
                       <Image
@@ -212,7 +211,7 @@ export default function Home() {
                         style={{ marginLeft: 'auto', marginTop: '5px', pointerEvents: 'none', userSelect: 'none' }}
                       />
                     </div>
-                    <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>More details soon...</p>
+                    <p className={`${experience.className}`} style={{ color: 'black', fontSize: '18px' }}>More details soon...</p>
                   </PopUp>
 
                   <PopUp title='Work' open={workOpen} onClose={() => setWorkOpen(false)}>
