@@ -187,7 +187,7 @@ export default function Home() {
               </div>
 
               <div className="flex justify-center absolute bottom-4 w-full">
-                <div style={{ gap: '18px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(240, 240, 240, 0.15)', borderRadius: '30px', width: '290px', height: '75px' }}>
+                <div style={{ gap: '18px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(240, 240, 240, 0.15)', borderRadius: '30px', width: '290px', height: '75px', paddingTop: '1px' }}>
                   <IconAndText src={'/mail.webp'} onClick={() => setEmailOpen(true)} />
                   <IconAndText src={'/camera.webp'} link='https://www.linkedin.com/in/mattwong-ca/' />
                   <IconAndText src={'/safari.webp'} link='https://www.google.com/search?q=matt+wong+waterloo' />
@@ -198,7 +198,7 @@ export default function Home() {
                       <div style={{ marginTop: '0.5rem' }}>
                         <p className={`${tagline.className}`} style={{ lineHeight: 'normal', color: 'white', fontSize: '25px' }}>TLDR</p>
                         <div className={`${experience.className}`} style={{ color: 'white', marginLeft: '1.3rem', fontSize: '18px' }}>
-                          <p >➔ Software developer with 3+ years of experience</p>
+                          <p>➔ Software developer with 3+ years of experience</p>
                           <p style={{ marginTop: '0.5rem' }}>➔ 2nd year engineering student at UWaterloo</p>
                           <p style={{ marginTop: '0.5rem' }}>➔ Building in blockchain and exploring in AI</p>
                           <p style={{ marginTop: '0.5rem' }}>➔ Enjoys hackathons, travelling, & sports</p>
