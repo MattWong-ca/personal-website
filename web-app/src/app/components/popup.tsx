@@ -28,10 +28,15 @@ const PopUp: React.FC<PopUpProps> = ({ title, open, onClose, children }) => {
             onClose={onClose}
         >
             <Box className={`no-outline`} sx={popupStyle}>
-                <div style={{ width: '100%', height: '30px', backgroundColor: '#a5b1c2', borderTopLeftRadius: '9px', borderTopRightRadius: '9px' }}></div>
+                <div className="flex" style={{ width: '100%', height: '35px', backgroundColor: 'black', borderBottom: '4px solid black' }}>
+                 <div className="bg-blue-500 h-full w-1/5 border-r-4 border-black"></div>
+                 <div className="bg-red-600 h-full w-1/5 border-r-4 border-black"></div>
+                 <div className="bg-white h-full w-1/5 border-r-4 border-black"></div>
+                 <div className="bg-yellow-400 h-full w-1/5 border-r-4 border-black"></div>
+                </div>
                 <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
-                    <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'white', fontSize: '35px' }}>{title}</p>
-                    <hr style={{ backgroundColor: 'white', height: '2px', border: 'none' }} />
+                    <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'black', fontSize: '35px' }}>{title}</p>
+                    <hr style={{ backgroundColor: 'black', height: '2px', border: 'none' }} />
                     <div style={{ paddingTop: '10px' }}>
                         {children}
                     </div>
@@ -49,9 +54,9 @@ const popupStyle = {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: '60%',
-    height: '80%',
-    bgcolor: '#0097e6',
+    height: '78%',
+    bgcolor: 'white',
     boxShadow: 24,
-    borderRadius: '12px',
+    border: '4px solid black',
     overflowY: 'auto'
 };
