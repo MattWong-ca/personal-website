@@ -209,7 +209,7 @@ export default function Home() {
                         alt="Matt Wong profile picture"
                         width={170}
                         height={0}
-                        style={{ marginLeft: 'auto', marginTop: '15px', marginRight: '20px', pointerEvents: 'none', userSelect: 'none' }}
+                        style={{ marginLeft: 'auto', marginTop: '15px', marginRight: '20px' }}
                       />
                     </div>
                     <p className={`${tagline.className}`} style={{ color: 'black', fontSize: '24px', paddingTop: '20px', paddingBottom: '8px' }}>Currently</p>
@@ -229,7 +229,16 @@ export default function Home() {
                   </PopUp>
 
                   <PopUp title='Work' open={workOpen} onClose={() => setWorkOpen(false)}>
-                    <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>Soon... Full stack dev at ExaCare, iOS dev at theScore, store design at Shopify</p>
+                    <div className="w-full flex" style={{ marginTop: '20px', height: '150px', border: '2px solid black' }}>
+                      <div className="h-full border-r-2 border-black" style={{ width: '148px' }}>
+                      <Image
+                        src="/exacare.jpeg"
+                        alt="Matt Wong profile picture"
+                        width={146}
+                        height={0}
+                      />
+                      </div>
+                    </div>
                   </PopUp>
 
                   <PopUp title='Projects' open={projectsOpen} onClose={() => setProjectsOpen(false)}>
