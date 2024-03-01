@@ -194,7 +194,7 @@ export default function Home() {
                   <IconAndText src={'/phone.webp'} onClick={() => setPhoneOpen(true)} />
 
                   <PopUp title='About' open={aboutOpen} onClose={() => setAboutOpen(false)}>
-                    <div className="flex">
+                    <div className="flex" style={{ marginTop: '10px' }}>
                       <div >
                         <p className={`${tagline.className}`} style={{ lineHeight: 'normal', color: 'black', fontSize: '25px', marginTop: '0.5rem' }}>TLDR</p>
                         <div className={`${subTitle.className}`} style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
