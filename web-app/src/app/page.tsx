@@ -367,7 +367,11 @@ export default function Home() {
                   </PopUp>
 
                   <PopUp title='Features' open={featuresOpen} onClose={() => setFeaturesOpen(false)}>
-                    <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>News features</p>
+                  <div className={`${subTitle.className}`} style={{ color: 'black', marginLeft: '1.3rem', marginTop: '20px', fontSize: '22px' }}>
+                      <p>➔&nbsp;&nbsp; YCDSB announces its 2021 Top Scholars (<a href="https://www.ycdsb.ca/2021-top-scholars" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                      <p>➔&nbsp;&nbsp; York Region Kiva 2020 bottle drive (<a href="https://www.yorkregion.com/news/richmond-hill-teen-starts-bottle-drive-to-help-businesses-in-developing-nations-amid-covid-19/article_26c44174-7a69-57a1-8c1a-babaacbd5209.html" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                      <p>➔&nbsp;&nbsp; Skills Ontario 2016 cardboard boat race (<a href="https://issuu.com/thornhillliberal/docs/tho_w_jan28" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                    </div>
                   </PopUp>
 
                   <PopUp title='Contact' open={contactOpen} onClose={() => setContactOpen(false)}>
