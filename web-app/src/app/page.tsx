@@ -287,10 +287,10 @@ export default function Home() {
                           <p className={experience.className} style={{ fontSize: '20px', fontStyle: 'italic' }}>{`May - Aug '22`}</p>
                         </div>
                         <p className={subTitle.className} style={{ marginTop: '10px', fontSize: '16px' }}>
-                        {`Collaborated with designers to enhance theScore's 4.8-star sports-betting app.
+                          {`Collaborated with designers to enhance theScore's 4.8-star sports-betting app.
                         Worked on UI improvements and features in Swift. Volunteered for Jays Care
                         and met Adam Cimber.`}
-                          </p>
+                        </p>
                       </div>
                     </div>
 
@@ -309,10 +309,10 @@ export default function Home() {
                           <p className={experience.className} style={{ fontSize: '20px', fontStyle: 'italic' }}>{`Feb - May '22`}</p>
                         </div>
                         <p className={subTitle.className} style={{ marginTop: '10px', fontSize: '16px' }}>
-                        {`Interned at Shopify during my 2nd semester of university. Part of the inaugural 
+                          {`Interned at Shopify during my 2nd semester of university. Part of the inaugural 
                         cohort of student store designers that built stores to support merchants from their
                         partnership with Operation Hope.`}
-                          </p>
+                        </p>
                       </div>
                     </div>
                   </PopUp>
@@ -322,7 +322,22 @@ export default function Home() {
                   </PopUp>
 
                   <PopUp title='Education' open={educationOpen} onClose={() => setEducationOpen(false)}>
-                    <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>University of Waterloo, Carleton University, St. Robert CHS, soon SUTD</p>
+                    <div className={`${subTitle.className}`} style={{ color: 'black', marginTop: '10px', fontSize: '22px' }}>
+                      <p style={{ textIndent: '40px' }}>
+                        {`I study biomedical engineering at the University of Waterloo. Although the courses 
+                    are interesting, computer science would've been the better choice. I spend every bit 
+                    of my free time coding :)`}
+                      </p>
+                      <p style={{ textIndent: '40px', marginTop: '10px' }}>
+                        I attended high school at St. Robert CHS, a top-20 school in Ontario. You 
+                        can read more about it <a href="https://www.ycdsb.ca/2021-top-scholars/" style={{ textDecoration: 'underline', color: 'blue' }}>here</a>.
+                      </p>
+                      <p style={{ textIndent: '40px', marginTop: '10px' }}>
+                        During the summer of 10th grade, I also stayed at Carleton University for 1 month.
+                        I learned about design thinking, built a design-entrepreneurship project, 
+                        and explored various other interesting topics.
+                      </p>
+                    </div>
                   </PopUp>
 
                   <PopUp title='Email' open={emailOpen} onClose={() => setEmailOpen(false)}>
