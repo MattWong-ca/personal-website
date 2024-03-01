@@ -189,7 +189,7 @@ export default function Home() {
               <div className="flex justify-center absolute bottom-4 w-full">
                 <div style={{ gap: '18px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(240, 240, 240, 0.15)', borderRadius: '30px', width: '290px', height: '75px', paddingTop: '1px' }}>
                   <IconAndText src={'/mail.webp'} onClick={() => setEmailOpen(true)} />
-                  <IconAndText src={'/camera.webp'} link='https://www.linkedin.com/in/mattwong-ca/' />
+                  <IconAndText src={'/camera.webp'} link='' />
                   <IconAndText src={'/safari.webp'} link='https://www.google.com/search?q=matt+wong+waterloo' />
                   <IconAndText src={'/phone.webp'} onClick={() => setPhoneOpen(true)} />
 
@@ -253,28 +253,6 @@ export default function Home() {
                     <div className="w-full flex" style={{ marginTop: '20px', height: '150px', border: '2px solid black' }}>
                       <div className="h-full border-r-2 border-black" style={{ width: '148px' }}>
                         <Image
-                          src="/waterlooblockchain.jpeg"
-                          alt="Waterloo Blockchain logo"
-                          width={146}
-                          height={0}
-                        />
-                      </div>
-                      <div style={{ width: 'calc(100% - 148px)', padding: '14px' }}>
-                        <div className="flex justify-between">
-                          <p className={tagline.className} style={{ fontSize: '20px' }}>Director of Partnerships</p>
-                          <p className={experience.className} style={{ fontSize: '20px', fontStyle: 'italic' }}>{`Oct '23 - Aug '24`}</p>
-                        </div>
-                        <p className={subTitle.className} style={{ marginTop: '10px', fontSize: '16px' }}>
-                          {`Led partnerships for Waterloo Blockchain, Canada's largest blockchain club. Organized the first
-                          hackathon resulting in 200+ hackers and 35+ projects, and the first ETHDenver hacker house for 15 
-                          builders (during my gap year).`}
-                        </p>
-                      </div>
-                    </div>
-
-                    <div className="w-full flex" style={{ marginTop: '20px', height: '150px', border: '2px solid black' }}>
-                      <div className="h-full border-r-2 border-black" style={{ width: '148px' }}>
-                        <Image
                           src="/thescore.png"
                           alt="theScore logo"
                           width={146}
@@ -315,6 +293,28 @@ export default function Home() {
                         </p>
                       </div>
                     </div>
+
+                    <div className="w-full flex" style={{ marginTop: '20px', height: '150px', border: '2px solid black' }}>
+                      <div className="h-full border-r-2 border-black" style={{ width: '148px' }}>
+                        <Image
+                          src="/waterlooblockchain.jpeg"
+                          alt="Waterloo Blockchain logo"
+                          width={146}
+                          height={0}
+                        />
+                      </div>
+                      <div style={{ width: 'calc(100% - 148px)', padding: '14px' }}>
+                        <div className="flex justify-between">
+                          <p className={tagline.className} style={{ fontSize: '20px' }}>Director of Partnerships</p>
+                          <p className={experience.className} style={{ fontSize: '20px', fontStyle: 'italic' }}>{`Oct '23 - Aug '24`}</p>
+                        </div>
+                        <p className={subTitle.className} style={{ marginTop: '10px', fontSize: '16px' }}>
+                          {`Led partnerships for Waterloo Blockchain, Canada's largest blockchain club. Organized the first
+                          hackathon resulting in 200+ hackers and 35+ projects, and the first ETHDenver hacker house for 15 
+                          builders (during my gap year).`}
+                        </p>
+                      </div>
+                    </div>
                   </PopUp>
 
                   <PopUp title='Projects' open={projectsOpen} onClose={() => setProjectsOpen(false)}>
@@ -329,27 +329,37 @@ export default function Home() {
                     of my free time coding :)`}
                       </p>
                       <p style={{ textIndent: '40px', marginTop: '10px' }}>
-                        I attended high school at St. Robert CHS, a top-20 school in Ontario. You 
+                        I attended high school at St. Robert CHS, a top-20 school in Ontario. You
                         can read more about it <a href="https://www.ycdsb.ca/2021-top-scholars/" style={{ textDecoration: 'underline', color: 'blue' }}>here</a>.
                       </p>
                       <p style={{ textIndent: '40px', marginTop: '10px' }}>
                         During the summer of 10th grade, I also stayed at Carleton University for 1 month.
-                        I learned about design thinking, built a design-entrepreneurship project, 
+                        I learned about design thinking, built a design-entrepreneurship project,
                         and explored various other interesting topics.
                       </p>
                     </div>
                   </PopUp>
 
                   <PopUp title='Email' open={emailOpen} onClose={() => setEmailOpen(false)}>
-                    <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>elonmusk@gmail.com or mark.zuckerberg@gmail.com</p>
+                    <div className={`${subTitle.className}`} style={{ color: 'black', marginTop: '10px', fontSize: '22px' }}>
+                      <p>
+                        {`Try elonmusk@gmail.com or mark.zuckerberg@gmail.com!`}
+                      </p>
+                    </div>          
                   </PopUp>
 
-                  <PopUp title='Phone 🤠' open={phoneOpen} onClose={() => setPhoneOpen(false)}>
-                    <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>My phone is always on silent. Please use Discord, Telegram, or email for fastest response times!</p>
+                  <PopUp title='Phone' open={phoneOpen} onClose={() => setPhoneOpen(false)}>
+                    <div className={`${subTitle.className}`} style={{ color: 'black', marginTop: '10px', fontSize: '22px' }}>
+                      <p>
+                        {`My phone is always on silent. Please use Discord, Telegram, or email for fastest response times!`}
+                      </p>
+                    </div>
                   </PopUp>
 
                   <PopUp title='Writing' open={writingOpen} onClose={() => setWritingOpen(false)}>
-                    <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>My writing and notes...</p>
+                    <div className={`${subTitle.className}`} style={{ color: 'black', marginLeft: '1.3rem', marginTop: '20px', fontSize: '22px' }}>
+                      <p>➔&nbsp;&nbsp; Waterloo Blockchain Founders (<a href="https://www.linkedin.com/posts/kevinolearytv_interesting-perspective-activity-7056440703538577408-tU_K" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                    </div>
                   </PopUp>
 
                   <PopUp title='Quests' open={questsOpen} onClose={() => setQuestsOpen(false)}>
@@ -361,7 +371,16 @@ export default function Home() {
                   </PopUp>
 
                   <PopUp title='Contact' open={contactOpen} onClose={() => setContactOpen(false)}>
-                    <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>All my links...</p>
+                    <div className={`${subTitle.className}`} style={{ color: 'black', marginTop: '20px', fontSize: '22px' }}>
+                      <p style={{ marginBottom: '10px' }}>LinkedIn: <a href="https://www.linkedin.com/in/mattwong-ca" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong-ca</a></p>
+                      <p style={{ marginBottom: '10px' }}>GitHub: <a href="https://github.com/MattWong-ca" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong-ca</a></p>
+                      <p style={{ marginBottom: '10px' }}>GitLab: <a href="https://gitlab.com/mattwong_ca" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong_ca</a></p>
+                      <p style={{ marginBottom: '10px' }}>Telegram: <a href="https://t.me/mattwong_ca" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong_ca</a></p>
+                      <p style={{ marginBottom: '10px' }}>Instagram: <a href="https://www.instagram.com/mattwong.ca" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong.ca</a></p>
+                      <p style={{ marginBottom: '10px' }}>X: <a href="https://x.com/mattwong_ca" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong_ca</a></p>
+                      <p style={{ marginBottom: '10px' }}>Discord: mattwong.ca</p>
+                      <p style={{ marginBottom: '10px' }}>Farcaster: mtt</p>
+                    </div>
                   </PopUp>
 
                 </div>
