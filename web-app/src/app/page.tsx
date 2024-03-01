@@ -318,7 +318,17 @@ export default function Home() {
                   </PopUp>
 
                   <PopUp title='Projects' open={projectsOpen} onClose={() => setProjectsOpen(false)}>
-                    <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>Soon...</p>
+                  <div className={`${subTitle.className}`} style={{ marginTop: '20px' }}>
+                    <p className={`${tagline.className}`} style={{ lineHeight: 'normal', color: 'black', fontSize: '25px', marginTop: '0.5rem' }}>2024</p>
+                    <div style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
+                    <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; Personal website redesign (<a href="https://github.com/MattWong-ca/personal-website" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                    </div>
+                    <p className={`${tagline.className}`} style={{ lineHeight: 'normal', color: 'black', fontSize: '25px', marginTop: '0.5rem' }}>2023</p>
+                    <div style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
+                    <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; Swift Tickets - NFT minting gated by Worldcoin&apos;s World ID (<a href="https://github.com/MattWong-ca/swift-tickets-navh" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                    <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; Various side projects (<a href="https://medium.com/@mattwong.ca/all-my-projects-14bf922d0a65" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                    </div>
+                    </div>
                   </PopUp>
 
                   <PopUp title='Education' open={educationOpen} onClose={() => setEducationOpen(false)}>
@@ -368,9 +378,10 @@ export default function Home() {
 
                   <PopUp title='Features' open={featuresOpen} onClose={() => setFeaturesOpen(false)}>
                   <div className={`${subTitle.className}`} style={{ color: 'black', marginLeft: '1.3rem', marginTop: '20px', fontSize: '22px' }}>
-                      <p>➔&nbsp;&nbsp; YCDSB announces its 2021 Top Scholars (<a href="https://www.ycdsb.ca/2021-top-scholars" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
-                      <p>➔&nbsp;&nbsp; York Region Kiva 2020 bottle drive (<a href="https://www.yorkregion.com/news/richmond-hill-teen-starts-bottle-drive-to-help-businesses-in-developing-nations-amid-covid-19/article_26c44174-7a69-57a1-8c1a-babaacbd5209.html" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
-                      <p>➔&nbsp;&nbsp; Skills Ontario 2016 cardboard boat race (<a href="https://issuu.com/thornhillliberal/docs/tho_w_jan28" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                      <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; YCDSB announces its 2021 Top Scholars (<a href="https://www.ycdsb.ca/2021-top-scholars" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                      <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; Canadian National Anthology 2021 artwork feature (<a href="https://hubs.mozilla.com/szhykoG/room-2-national-anthology-ink-mvmt" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                      <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; York Region Kiva 2020 bottle drive (<a href="https://www.yorkregion.com/news/richmond-hill-teen-starts-bottle-drive-to-help-businesses-in-developing-nations-amid-covid-19/article_26c44174-7a69-57a1-8c1a-babaacbd5209.html" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                      <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; Skills Ontario 2016 cardboard boat race (<a href="https://issuu.com/thornhillliberal/docs/tho_w_jan28" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                     </div>
                   </PopUp>
 
