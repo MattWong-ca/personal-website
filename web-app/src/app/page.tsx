@@ -231,12 +231,88 @@ export default function Home() {
                   <PopUp title='Work' open={workOpen} onClose={() => setWorkOpen(false)}>
                     <div className="w-full flex" style={{ marginTop: '20px', height: '150px', border: '2px solid black' }}>
                       <div className="h-full border-r-2 border-black" style={{ width: '148px' }}>
-                      <Image
-                        src="/exacare.jpeg"
-                        alt="Matt Wong profile picture"
-                        width={146}
-                        height={0}
-                      />
+                        <Image
+                          src="/exacare.jpeg"
+                          alt="Matt Wong profile picture"
+                          width={146}
+                          height={0}
+                        />
+                      </div>
+                      <div style={{ width: 'calc(100% - 148px)', padding: '14px' }}>
+                        <div className="flex justify-between">
+                          <p className={tagline.className} style={{ fontSize: '20px' }}>Software Engineer - Full Stack</p>
+                          <p className={experience.className} style={{ fontSize: '20px', fontStyle: 'italic' }}>{`Jan - Apr '24`}</p>
+                        </div>
+                        <p className={subTitle.className} style={{ marginTop: '10px', fontSize: '16px' }}>
+                          Building React/TypeScript frontend features and Node/Serverless backend APIs/endpoints
+                          at ExaCare, a VC-backed health tech startup that recently raised $6.5M.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="w-full flex" style={{ marginTop: '20px', height: '150px', border: '2px solid black' }}>
+                      <div className="h-full border-r-2 border-black" style={{ width: '148px' }}>
+                        <Image
+                          src="/waterlooblockchain.jpeg"
+                          alt="Waterloo Blockchain logo"
+                          width={146}
+                          height={0}
+                        />
+                      </div>
+                      <div style={{ width: 'calc(100% - 148px)', padding: '14px' }}>
+                        <div className="flex justify-between">
+                          <p className={tagline.className} style={{ fontSize: '20px' }}>Director of Partnerships</p>
+                          <p className={experience.className} style={{ fontSize: '20px', fontStyle: 'italic' }}>{`Oct '23 - Aug '24`}</p>
+                        </div>
+                        <p className={subTitle.className} style={{ marginTop: '10px', fontSize: '16px' }}>
+                          {`Led partnerships for Waterloo Blockchain, Canada's largest blockchain club. Organized the first
+                          hackathon resulting in 200+ hackers and 35+ projects, and the first ETHDenver hacker house for 15 
+                          builders (during my gap year).`}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="w-full flex" style={{ marginTop: '20px', height: '150px', border: '2px solid black' }}>
+                      <div className="h-full border-r-2 border-black" style={{ width: '148px' }}>
+                        <Image
+                          src="/thescore.png"
+                          alt="theScore logo"
+                          width={146}
+                          height={0}
+                        />
+                      </div>
+                      <div style={{ width: 'calc(100% - 148px)', padding: '14px' }}>
+                        <div className="flex justify-between">
+                          <p className={tagline.className} style={{ fontSize: '20px' }}>Software Engineer - iOS</p>
+                          <p className={experience.className} style={{ fontSize: '20px', fontStyle: 'italic' }}>{`May - Aug '22`}</p>
+                        </div>
+                        <p className={subTitle.className} style={{ marginTop: '10px', fontSize: '16px' }}>
+                        {`Collaborated with designers to enhance theScore's 4.8-star sports-betting app.
+                        Worked on UI improvements and features in Swift. Volunteered for Jays Care
+                        and met Adam Cimber.`}
+                          </p>
+                      </div>
+                    </div>
+
+                    <div className="w-full flex" style={{ marginTop: '20px', height: '150px', border: '2px solid black' }}>
+                      <div className="h-full border-r-2 border-black" style={{ width: '148px' }}>
+                        <Image
+                          src="/shopify.png"
+                          alt="Shopify logo"
+                          width={146}
+                          height={0}
+                        />
+                      </div>
+                      <div style={{ width: 'calc(100% - 148px)', padding: '14px' }}>
+                        <div className="flex justify-between">
+                          <p className={tagline.className} style={{ fontSize: '20px' }}>Store Designer</p>
+                          <p className={experience.className} style={{ fontSize: '20px', fontStyle: 'italic' }}>{`Feb - May '22`}</p>
+                        </div>
+                        <p className={subTitle.className} style={{ marginTop: '10px', fontSize: '16px' }}>
+                        {`Interned at Shopify during my 2nd semester of university. Part of the inaugural 
+                        cohort of student store designers that built stores to support merchants from their
+                        partnership with Operation Hope.`}
+                          </p>
                       </div>
                     </div>
                   </PopUp>
