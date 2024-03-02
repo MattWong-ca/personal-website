@@ -83,19 +83,19 @@ box-shadow: 0 0 3px #ccc;
   justify-content: center;
   align-items: center;
   color: white;
-  z-index: 9999; /* Ensure it's above other content */
+  z-index: 9999;
 }
 
 .full-screen-slide.slide-out {
-  transition: transform 1s ease;
+  transition: transform 10s ease;
   transform: translateY(-100%);
 }
 
-.content {
-  transition: opacity 1s ease; /* Optionally add a fade-in effect for the content */
+/* .content {
+  transition: opacity 1s ease;
   opacity: 1;
-}
+} */
 
-.full-screen-slide.slide-out .content {
+/* .full-screen-slide.slide-out .content {
   opacity: 1;
-}
+} */
