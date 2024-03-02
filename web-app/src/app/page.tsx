@@ -333,19 +333,17 @@ export default function Home() {
 
                   <PopUp title='Education' open={educationOpen} onClose={() => setEducationOpen(false)}>
                     <div className={`${subTitle.className}`} style={{ color: 'black', marginTop: '10px', fontSize: '22px' }}>
-                      <p style={{ textIndent: '40px' }}>
-                        {`I study biomedical engineering at the University of Waterloo. Although the courses 
-                    are interesting, computer science would've been the better choice. I spend every bit 
-                    of my free time coding :)`}
+                      <p>
+                        <b>University of Waterloo: </b>
+                        {`I study biomedical engineering, but spend every bit of my free time coding :)`}
                       </p>
-                      <p style={{ textIndent: '40px', marginTop: '10px' }}>
-                        I attended high school at St. Robert CHS, a top-20 school in Ontario. You
-                        can read more about it <a href="https://www.ycdsb.ca/2021-top-scholars/" style={{ textDecoration: 'underline', color: 'blue' }}>here</a>.
+                      <p style={{ marginTop: '10px' }}>
+                        <b>St. Robert CHS: </b>
+                        my high school, you can read about it <a href="https://www.ycdsb.ca/2021-top-scholars/" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>here</a>.
                       </p>
-                      <p style={{ textIndent: '40px', marginTop: '10px' }}>
-                        During the summer of 10th grade, I also stayed at Carleton University for 1 month.
-                        I learned about design thinking, built a design-entrepreneurship project,
-                        and explored various other interesting topics.
+                      <p style={{ marginTop: '10px' }}>
+                        <b>Carleton University: </b>
+                        studied here for 1 month during the summer of 10th grade for the SHAD program.
                       </p>
                     </div>
                   </PopUp>
@@ -368,7 +366,7 @@ export default function Home() {
 
                   <PopUp title='Writing' open={writingOpen} onClose={() => setWritingOpen(false)}>
                     <div className={`${subTitle.className}`} style={{ color: 'black', marginLeft: '1.3rem', marginTop: '20px', fontSize: '22px' }}>
-                      <p>➔&nbsp;&nbsp; Waterloo Blockchain Founders (<a href="https://www.linkedin.com/posts/kevinolearytv_interesting-perspective-activity-7056440703538577408-tU_K" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                      <p>➔&nbsp;&nbsp; Waterloo Blockchain Founders (<a href="https://www.linkedin.com/posts/kevinolearytv_interesting-perspective-activity-7056440703538577408-tU_K" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                     </div>
                   </PopUp>
 
@@ -378,23 +376,23 @@ export default function Home() {
 
                   <PopUp title='Features' open={featuresOpen} onClose={() => setFeaturesOpen(false)}>
                   <div className={`${subTitle.className}`} style={{ color: 'black', marginLeft: '1.3rem', marginTop: '20px', fontSize: '22px' }}>
-                      <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; YCDSB announces its 2021 Top Scholars (<a href="https://www.ycdsb.ca/2021-top-scholars" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
-                      <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; Canadian National Anthology 2021 artwork feature (<a href="https://hubs.mozilla.com/szhykoG/room-2-national-anthology-ink-mvmt" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
-                      <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; York Region Kiva 2020 bottle drive (<a href="https://www.yorkregion.com/news/richmond-hill-teen-starts-bottle-drive-to-help-businesses-in-developing-nations-amid-covid-19/article_26c44174-7a69-57a1-8c1a-babaacbd5209.html" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
-                      <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; Skills Ontario 2016 cardboard boat race (<a href="https://issuu.com/thornhillliberal/docs/tho_w_jan28" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                      <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; YCDSB announces its 2021 Top Scholars (<a href="https://www.ycdsb.ca/2021-top-scholars" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                      <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; Canadian National Anthology 2021 artwork feature (<a href="https://hubs.mozilla.com/szhykoG/room-2-national-anthology-ink-mvmt" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                      <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; York Region Kiva 2020 bottle drive (<a href="https://www.yorkregion.com/news/richmond-hill-teen-starts-bottle-drive-to-help-businesses-in-developing-nations-amid-covid-19/article_26c44174-7a69-57a1-8c1a-babaacbd5209.html" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                      <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; Skills Ontario 2016 cardboard boat race (<a href="https://issuu.com/thornhillliberal/docs/tho_w_jan28" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                     </div>
                   </PopUp>
 
                   <PopUp title='Contact' open={contactOpen} onClose={() => setContactOpen(false)}>
                     <div className={`${subTitle.className}`} style={{ color: 'black', marginTop: '20px', fontSize: '22px' }}>
-                      <p style={{ marginBottom: '10px' }}>LinkedIn: <a href="https://www.linkedin.com/in/mattwong-ca" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong-ca</a></p>
-                      <p style={{ marginBottom: '10px' }}>GitHub: <a href="https://github.com/MattWong-ca" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong-ca</a></p>
-                      <p style={{ marginBottom: '10px' }}>GitLab: <a href="https://gitlab.com/mattwong_ca" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong_ca</a></p>
-                      <p style={{ marginBottom: '10px' }}>Telegram: <a href="https://t.me/mattwong_ca" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong_ca</a></p>
-                      <p style={{ marginBottom: '10px' }}>Instagram: <a href="https://www.instagram.com/mattwong.ca" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong.ca</a></p>
-                      <p style={{ marginBottom: '10px' }}>X: <a href="https://x.com/mattwong_ca" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong_ca</a></p>
+                      <p style={{ marginBottom: '10px' }}>LinkedIn: <a href="https://www.linkedin.com/in/mattwong-ca" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong-ca</a></p>
+                      <p style={{ marginBottom: '10px' }}>GitHub: <a href="https://github.com/MattWong-ca" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong-ca</a></p>
+                      <p style={{ marginBottom: '10px' }}>GitLab: <a href="https://gitlab.com/mattwong_ca" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong_ca</a></p>
+                      <p style={{ marginBottom: '10px' }}>Telegram: <a href="https://t.me/mattwong_ca" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong_ca</a></p>
+                      <p style={{ marginBottom: '10px' }}>Instagram: <a href="https://www.instagram.com/mattwong.ca" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong.ca</a></p>
+                      <p style={{ marginBottom: '10px' }}>X: <a href="https://x.com/mattwong_ca" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong_ca</a></p>
                       <p style={{ marginBottom: '10px' }}>Discord: mattwong.ca</p>
-                      <p style={{ marginBottom: '10px' }}>Farcaster: mtt</p>
+                      <p style={{ marginBottom: '10px' }}>Farcaster: <a href="https://warpcast.com/mtt" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mtt</a></p>
                     </div>
                   </PopUp>
 
