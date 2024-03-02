@@ -318,16 +318,16 @@ export default function Home() {
                   </PopUp>
 
                   <PopUp title='Projects' open={projectsOpen} onClose={() => setProjectsOpen(false)}>
-                  <div className={`${subTitle.className}`} style={{ marginTop: '20px' }}>
-                    <p className={`${tagline.className}`} style={{ lineHeight: 'normal', color: 'black', fontSize: '25px', marginTop: '0.5rem' }}>2024</p>
-                    <div style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
-                    <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; Personal website redesign (<a href="https://github.com/MattWong-ca/personal-website" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
-                    </div>
-                    <p className={`${tagline.className}`} style={{ lineHeight: 'normal', color: 'black', fontSize: '25px', marginTop: '0.5rem' }}>2023</p>
-                    <div style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
-                    <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; Swift Tickets - NFT minting gated by Worldcoin&apos;s World ID (<a href="https://github.com/MattWong-ca/swift-tickets-navh" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
-                    <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; Various side projects (<a href="https://medium.com/@mattwong.ca/all-my-projects-14bf922d0a65" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
-                    </div>
+                    <div className={`${subTitle.className}`} style={{ marginTop: '20px' }}>
+                      <p className={`${tagline.className}`} style={{ lineHeight: 'normal', color: 'black', fontSize: '25px', marginTop: '0.5rem' }}>2024</p>
+                      <div style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
+                        <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; Personal website redesign (<a href="https://github.com/MattWong-ca/personal-website" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                      </div>
+                      <p className={`${tagline.className}`} style={{ lineHeight: 'normal', color: 'black', fontSize: '25px', marginTop: '0.5rem' }}>2023</p>
+                      <div style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
+                        <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; Swift Tickets - NFT minting gated by Worldcoin&apos;s World ID (<a href="https://github.com/MattWong-ca/swift-tickets-navh" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                        <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; Various side projects (<a href="https://medium.com/@mattwong.ca/all-my-projects-14bf922d0a65" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                      </div>
                     </div>
                   </PopUp>
 
@@ -353,7 +353,7 @@ export default function Home() {
                       <p>
                         {`Try elonmusk@gmail.com or mark.zuckerberg@gmail.com!`}
                       </p>
-                    </div>          
+                    </div>
                   </PopUp>
 
                   <PopUp title='Phone' open={phoneOpen} onClose={() => setPhoneOpen(false)}>
@@ -371,11 +371,27 @@ export default function Home() {
                   </PopUp>
 
                   <PopUp title='Quests' open={questsOpen} onClose={() => setQuestsOpen(false)}>
-                    <p className={`${experience.className}`} style={{ color: 'white', fontSize: '18px' }}>My side quests</p>
+                    <div className={`${subTitle.className}`} style={{ color: 'black', marginTop: '10px', fontSize: '22px' }}>
+                      <p>
+                        {`Pursuits I've spent more time on than a typical side project.`}
+                      </p>
+                      <p className={`${tagline.className}`} style={{ lineHeight: 'normal', color: 'black', fontSize: '25px', marginTop: '0.5rem' }}>2023</p>
+                      <div style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
+                        <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; Web3 Works - opportunities newsletter with 530+ subs (<a href="https://linktr.ee/web3works_" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                      </div>
+                      <p className={`${tagline.className}`} style={{ lineHeight: 'normal', color: 'black', fontSize: '25px', marginTop: '0.5rem' }}>2021</p>
+                      <div style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
+                        <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; How&apos;s the Climate - climate podcast with 425+ downloads (<a href="https://open.spotify.com/show/7fwDYUPsbMPLgopMAikDzw" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                      </div>
+                      <p className={`${tagline.className}`} style={{ lineHeight: 'normal', color: 'black', fontSize: '25px', marginTop: '0.5rem' }}>2020</p>
+                      <div style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
+                        <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; York Region Kiva - fundraising for underserved entrepreneurs (<a href="https://www.google.com/search?q=york+region+kiva" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                      </div>
+                    </div>
                   </PopUp>
 
                   <PopUp title='Features' open={featuresOpen} onClose={() => setFeaturesOpen(false)}>
-                  <div className={`${subTitle.className}`} style={{ color: 'black', marginLeft: '1.3rem', marginTop: '20px', fontSize: '22px' }}>
+                    <div className={`${subTitle.className}`} style={{ color: 'black', marginLeft: '1.3rem', marginTop: '20px', fontSize: '22px' }}>
                       <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; YCDSB announces its 2021 Top Scholars (<a href="https://www.ycdsb.ca/2021-top-scholars" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                       <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; Canadian National Anthology 2021 artwork feature (<a href="https://hubs.mozilla.com/szhykoG/room-2-national-anthology-ink-mvmt" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                       <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; York Region Kiva 2020 bottle drive (<a href="https://www.yorkregion.com/news/richmond-hill-teen-starts-bottle-drive-to-help-businesses-in-developing-nations-amid-covid-19/article_26c44174-7a69-57a1-8c1a-babaacbd5209.html" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
