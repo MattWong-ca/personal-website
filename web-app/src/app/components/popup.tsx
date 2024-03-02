@@ -37,7 +37,7 @@ const PopUp: React.FC<PopUpProps> = ({ title, open, onClose, children }) => {
                 <div style={{ paddingLeft: '10%', paddingRight: '10%', overflow: 'auto' }}>
                     <p className={`${tagline.className}`} style={{ marginTop: '50px', color: 'black', fontSize: '35px' }}>{title}</p>
                     <hr style={{ backgroundColor: 'black', height: '2px', border: 'none' }} />
-                    <div style={{ paddingTop: '10px' }}>
+                    <div style={{  }}>
                         {children}
                     </div>
                 </div>
