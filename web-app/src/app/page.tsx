@@ -48,6 +48,39 @@ export default function Home() {
   const [emailOpen, setEmailOpen] = React.useState(false);
   const [phoneOpen, setPhoneOpen] = React.useState(false);
 
+  const [fadeIn, setFadeIn] = useState(false);
+  const [fadeIn2, setFadeIn2] = useState(false);
+  const [fadeIn3, setFadeIn3] = useState(false);
+  const [fadeIn4, setFadeIn4] = useState(false);
+  useEffect(() => {
+    // Start fade-in animation after a delay
+    const timeout = setTimeout(() => {
+      setFadeIn(true);
+      const timeout2 = setTimeout(() => {
+        setFadeIn2(true);
+        const timeout3 = setTimeout(() => {
+          setFadeIn3(true);
+          
+        }, 200);
+        return () => clearTimeout(timeout3);
+      }, 200);
+      return () => clearTimeout(timeout2);
+    }, 11100); // Adjust timeout duration as needed
+
+    // Cleanup function to clear the timeout on component unmount
+    return () => clearTimeout(timeout);
+  }, []);
+  
+  useEffect(() => {
+    // Start fade-in animation after a delay
+    const timeout4 = setTimeout(() => {
+      setFadeIn4(true);
+    }, 12200); // Adjust timeout duration as needed
+
+    // Cleanup function to clear the timeout on component unmount
+    return () => clearTimeout(timeout4);
+  }, []);
+
   return (
     <div style={{ overflow: 'hidden', height: '100vh', display: 'flex', position: 'relative', zIndex: '100' }}>
       <StartAnimation />
@@ -92,9 +125,9 @@ export default function Home() {
             </div>
           </div>
           <div className="w-3/5 h-full p-4 border-r-4 border-black">
-            <div className={`${title.className} flex-1`} style={{ fontSize: '92px', lineHeight: '1' }}>MATTHEW WONG</div>
-            <div className={`${subTitle.className}`} style={{ marginTop: '10px', marginLeft: '4px', fontSize: '35px', lineHeight: '1' }}>I code + design software products</div>
-            <div className={`${subTitle.className} flex`} style={{ marginTop: '42px' }}>
+            <div className={`${title.className} ${fadeIn ? 'zoom-in' : ''} flex-1`} style={{ fontSize: '92px', lineHeight: '1', display: fadeIn ? '' : 'none' }}>MATTHEW WONG</div>
+            <div className={`${subTitle.className} ${fadeIn2 ? 'zoom-in' : ''}`} style={{ display: fadeIn2 ? '' : 'none', marginTop: '10px', marginLeft: '4px', fontSize: '35px', lineHeight: '1' }}>I code + design software products</div>
+            <div className={`${subTitle.className} ${fadeIn3 ? 'zoom-in' : ''} flex`} style={{ display: fadeIn3 ? '' : 'none', marginTop: '42px' }}>
               <div className="pl-3">
                 <div onClick={() => setAboutOpen(true)} style={{ fontSize: '28px', lineHeight: '1' }}>✸ &nbsp;About</div>
                 <div onClick={() => setWorkOpen(true)} style={{ fontSize: '28px', marginTop: '18px', lineHeight: '1' }}>✸ &nbsp;Experience</div>
@@ -160,7 +193,7 @@ export default function Home() {
           </div>
           <div className="h-full border-r-4 border-black flex items-center justify-center" style={{ width: '72%' }}>
 
-            <div className="boxShadow bg-blue-600 h-4/5 rounded-70 bg-cover pt-3 relative" style={{ width: '333px', height: '90%', border: '5px solid #d3d3d3', backgroundImage: `url('astronaut.jpg')` }}>
+            <div className={`boxShadow bg-blue-600 h-4/5 rounded-70 bg-cover pt-3 relative ${fadeIn4 ? 'zoom-in' : ''}`} style={{ display: fadeIn4 ? '' : 'none', width: '333px', height: '90%', border: '5px solid #d3d3d3', backgroundImage: `url('astronaut.jpg')` }}>
 
               <div style={{ height: '26px' }} className="flex justify-center">
                 <div className="w-70 flex items-center" style={{ justifyContent: 'space-between' }}>

@@ -141,3 +141,18 @@ img {
       opacity: 1; /* End at opacity 1 */
   }
 }
+
+.zoom-in {
+  animation: zoomIn 0.5s ease forwards;
+  transform-origin: center;
+
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
