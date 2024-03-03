@@ -70,14 +70,13 @@ box-shadow: 0 0 3px #ccc;
             /* 2px 4px 20px 0px #0400ff; */
 }
 
-/* 
 .full-screen-slide {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 60%;
   height: 100%;
-  background-color: #171523;
+  background-color: black;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -88,50 +87,46 @@ box-shadow: 0 0 3px #ccc;
 
 .full-screen-slide.slide-out {
   transition: transform 1s ease;
-  transform: translateY(-100%);
-} */
+  transform: translateY(100%);
+}
 
-/* .content {
+.full-screen-slidee {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background-color: black;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 9999;
+}
+
+.full-screen-slidee.slide-outt {
+  transition: transform 1s ease;
+  transform: translateY(-100%);
+}
+
+.content {
   transition: opacity 1s ease;
   opacity: 1;
-} */
+} 
 
-/* .full-screen-slide.slide-out .content {
+ .full-screen-slide.slide-out .content {
   opacity: 1;
-} */
+} 
 
-/* .falling-image-container {
+ .falling-image-container {
   position: fixed;
-  top: -314px;
+  top: calc(100vh - 16px);
   left: 50%;
   transform: translateX(-50%);
-  transition: top 40s ease;
+  transition: top 15s ease;
 }
 
 .falling-image-container.falling {
-  top: calc(100vh + 200px);
-} */
-
-.falling-image-container {
-  position: fixed;
-  top: -200px; /* Start position, above the viewport */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%);
-  transition: top 2s ease; /* Use a transition for smooth animation */
-}
-
-.falling-image-container.falling {
-  top: calc(100vh + 200px); /* End position, below the viewport */
-}
-
-.slide-up-container {
-  position: fixed;
-  bottom: -100vh; /* Start position, below the viewport */
-  left: 0;
-  width: 100%;
-  transition: bottom 1s ease; /* Use a transition for smooth animation */
-}
-
-.slide-up-container.slide-up {
-  bottom: 0; /* End position, at the bottom of the viewport */
-}
+  top: -380px;
+} 
