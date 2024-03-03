@@ -17,7 +17,7 @@ function StartAnimation() {
       return () => clearTimeout(timeout);
     }, 11000);
     return () => clearTimeout(timeout);
-  }, []);
+  }, [isVisible]);
 
   return (
     <div className={`${showSixtyPercentScreen ? 'w-full h-full flex absolute' : ''}`}>
