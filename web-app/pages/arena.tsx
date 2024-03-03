@@ -13,7 +13,7 @@ function StartAnimation() {
     const timeout = setTimeout(() => {
       setBlackScreenVisible(false);
       const timeout2 = setTimeout(() => {
-        setShowRedScreen(false);        
+        setShowRedScreen(false);
       }, 1000);
       return () => clearTimeout(timeout2);
 
@@ -25,8 +25,8 @@ function StartAnimation() {
 
   return (
     <div className={`${blackScreenVisible ? 'w-full h-full flex absolute' : ''}`}>
-      <div className={`${'full-screen-slide'} ${blackScreenVisible ? '' : 'slide-out'}`}>
-        <div className={`falling-image-container ${isVisible ? 'falling' : ''}`}>
+      <div className={`${'sixtyPercentSide'} ${blackScreenVisible ? '' : 'slideOutDown'}`}>
+        <div className={`fallingImageContainer ${isVisible ? 'falling' : ''}`}>
           <Image
             src="/spaceman.png"
             alt="Spaceman"
@@ -36,8 +36,8 @@ function StartAnimation() {
           />
         </div>
       </div>
-        <div className={`full-screen-slidee ${showRedScreen ? '' : 'slide-outt'}`}></div>
-         </div>
+      <div className={`fortyPercentSide ${showRedScreen ? '' : 'slideOutUp'}`}></div>
+    </div>
   );
 }
 

@@ -12,7 +12,7 @@
   -webkit-text-stroke-color: black;
 
   position: absolute;
-  z-index:100;
+  z-index: 100;
 }
 
 .name {
@@ -25,9 +25,11 @@
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-20px);
   }
+
   100% {
     transform: translateY(0);
   }
@@ -48,29 +50,33 @@ img {
 }
 
 .iphone {
-  width: 300px; /* Adjust size as needed */
-  height: 600px; /* Adjust size as needed */
+  width: 300px;
+  /* Adjust size as needed */
+  height: 600px;
+  /* Adjust size as needed */
   background: linear-gradient(145deg, #d1d1d1, #f1f1f1);
   border-radius: 30px;
-  box-shadow: 
-    10px 10px 20px #bebebe, /* Light shadow */
-    -10px -10px 20px #ffffff; /* Highlight */
+  box-shadow:
+    10px 10px 20px #bebebe,
+    /* Light shadow */
+    -10px -10px 20px #ffffff;
+  /* Highlight */
 }
 
 .blur {
   -moz-box-shadow: 0 0 3px #ccc;
--webkit-box-shadow: 0 0 3px #ccc;
-box-shadow: 0 0 3px #ccc;
+  -webkit-box-shadow: 0 0 3px #ccc;
+  box-shadow: 0 0 3px #ccc;
 }
 
 .boxShadow {
   /* box-shadow: 0px 1px 20px 0px #0400ff, */
-            /* 1px 2px 4px 0px #00eaff, */
-            /* 2px 4px 40px 0px #f200ff, */
-            /* 2px 4px 20px 0px #0400ff; */
+  /* 1px 2px 4px 0px #00eaff, */
+  /* 2px 4px 40px 0px #f200ff, */
+  /* 2px 4px 20px 0px #0400ff; */
 }
 
-.full-screen-slide {
+.sixtyPercentSide {
   position: fixed;
   top: 0;
   left: 0;
@@ -85,12 +91,12 @@ box-shadow: 0 0 3px #ccc;
   z-index: 9999;
 }
 
-.full-screen-slide.slide-out {
+.sixtyPercentSide.slideOutDown {
   transition: transform 1s ease;
   transform: translateY(100%);
 }
 
-.full-screen-slidee {
+.fortyPercentSide {
   position: fixed;
   top: 0;
   right: 0;
@@ -105,21 +111,12 @@ box-shadow: 0 0 3px #ccc;
   z-index: 9999;
 }
 
-.full-screen-slidee.slide-outt {
+.fortyPercentSide.slideOutUp {
   transition: transform 1s ease;
   transform: translateY(-100%);
 }
 
-.content {
-  transition: opacity 1s ease;
-  opacity: 1;
-} 
-
- .full-screen-slide.slide-out .content {
-  opacity: 1;
-} 
-
- .falling-image-container {
+.fallingImageContainer {
   position: fixed;
   top: calc(100vh - 16px);
   left: 50%;
@@ -127,6 +124,6 @@ box-shadow: 0 0 3px #ccc;
   transition: top 15s ease;
 }
 
-.falling-image-container.falling {
+.fallingImageContainer.falling {
   top: -380px;
-} 
+}
