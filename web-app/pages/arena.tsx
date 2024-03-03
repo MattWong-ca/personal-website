@@ -22,10 +22,20 @@ function StartAnimation() {
     // Cleanup function to clear the timeout
     return () => clearTimeout(timeout);
   }, []);
+  const [fadeIn, setFadeIn] = useState(false);
 
+  useEffect(() => {
+    // Start fade-in animation after a delay
+    const timeout = setTimeout(() => {
+      setFadeIn(true);
+    }, 12000); // Adjust timeout duration as needed
+
+    // Cleanup function to clear the timeout on component unmount
+    return () => clearTimeout(timeout);
+  }, []);
   return (
     <div className={`${blackScreenVisible ? 'w-full h-full flex absolute' : ''}`}>
-      <div className={`${'sixtyPercentSide'} ${blackScreenVisible ? '' : 'slideOutDown'}`}>
+      {/* <div className={`${'sixtyPercentSide'} ${blackScreenVisible ? '' : 'slideOutDown'}`}>
         <div className={`fallingImageContainer ${isVisible ? 'falling' : ''}`}>
           <Image
             src="/spaceman.png"
@@ -36,7 +46,10 @@ function StartAnimation() {
           />
         </div>
       </div>
-      <div className={`fortyPercentSide ${showRedScreen ? '' : 'slideOutUp'}`}></div>
+      <div className={`fortyPercentSide ${showRedScreen ? '' : 'slideOutUp'}`}></div> */}
+      <div className={fadeIn ? 'fade-in' : ''} style={{ color: fadeIn ? '': 'white'}}>
+        Content here
+      </div>
     </div>
   );
 }
