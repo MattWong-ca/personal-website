@@ -7,6 +7,7 @@ import { Poppins } from 'next/font/google';
 import { Inter } from 'next/font/google';
 import { EB_Garamond } from 'next/font/google';
 import PopUp from './components/popup';
+import StartAnimation from '../../pages/arena';
 
 // Fonts
 const inter = Inter({ subsets: ["latin"] });
@@ -47,8 +48,34 @@ export default function Home() {
   const [emailOpen, setEmailOpen] = React.useState(false);
   const [phoneOpen, setPhoneOpen] = React.useState(false);
 
+  const [nameZoomIn, setNameZoomIn] = useState(false);
+  const [taglineZoomIn, setTaglineZoomIn] = useState(false);
+  const [shortcutsZoomIn, setShortcutsZoomIn] = useState(false);
+  const [phoneZoomIn, setPhoneZoomIn] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setNameZoomIn(true);
+      const timeout = setTimeout(() => {
+        setTaglineZoomIn(true);
+        const timeout = setTimeout(() => {
+          setShortcutsZoomIn(true);
+        }, 200);
+        return () => clearTimeout(timeout);
+      }, 200);
+      return () => clearTimeout(timeout);
+    }, 11100);
+    return () => clearTimeout(timeout);
+  }, []);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setPhoneZoomIn(true), 12200);
+    return () => clearTimeout(timeout);
+  }, []);
+
   return (
     <div style={{ overflow: 'hidden', height: '100vh', display: 'flex', position: 'relative', zIndex: '100' }}>
+      <StartAnimation />
       <div style={{ width: '60%', position: 'relative' }}>
         {/* Content for the 60% width column */}
         <div className="w-full h-1/4 border-b-4 border-black flex">
@@ -90,9 +117,9 @@ export default function Home() {
             </div>
           </div>
           <div className="w-3/5 h-full p-4 border-r-4 border-black">
-            <div className={`${title.className} flex-1`} style={{ fontSize: '92px', lineHeight: '1' }}>MATTHEW WONG</div>
-            <div className={`${subTitle.className}`} style={{ marginTop: '10px', marginLeft: '4px', fontSize: '35px', lineHeight: '1' }}>I code + design software products</div>
-            <div className={`${subTitle.className} flex`} style={{ marginTop: '42px' }}>
+            <div className={`${title.className} ${nameZoomIn ? 'zoom-in' : ''} flex-1`} style={{ fontSize: '92px', lineHeight: '1', display: nameZoomIn ? '' : 'none' }}>MATTHEW WONG</div>
+            <div className={`${subTitle.className} ${taglineZoomIn ? 'zoom-in' : ''}`} style={{ display: taglineZoomIn ? '' : 'none', marginTop: '10px', marginLeft: '4px', fontSize: '35px', lineHeight: '1' }}>I code + design software products</div>
+            <div className={`${subTitle.className} ${shortcutsZoomIn ? 'zoom-in' : ''} flex`} style={{ display: shortcutsZoomIn ? '' : 'none', marginTop: '42px' }}>
               <div className="pl-3">
                 <div onClick={() => setAboutOpen(true)} style={{ fontSize: '28px', lineHeight: '1' }}>✸ &nbsp;About</div>
                 <div onClick={() => setWorkOpen(true)} style={{ fontSize: '28px', marginTop: '18px', lineHeight: '1' }}>✸ &nbsp;Experience</div>
@@ -158,7 +185,7 @@ export default function Home() {
           </div>
           <div className="h-full border-r-4 border-black flex items-center justify-center" style={{ width: '72%' }}>
 
-            <div className="boxShadow bg-blue-600 h-4/5 rounded-70 bg-cover pt-3 relative" style={{ width: '333px', height: '90%', border: '5px solid #d3d3d3', backgroundImage: `url('astronaut.jpg')` }}>
+            <div className={`boxShadow bg-blue-600 h-4/5 rounded-70 bg-cover pt-3 relative ${phoneZoomIn ? 'zoom-in' : ''}`} style={{ display: phoneZoomIn ? '' : 'none', width: '333px', height: '90%', border: '5px solid #d3d3d3', backgroundImage: `url('astronaut.jpg')` }}>
 
               <div style={{ height: '26px' }} className="flex justify-center">
                 <div className="w-70 flex items-center" style={{ justifyContent: 'space-between' }}>
@@ -411,7 +438,6 @@ export default function Home() {
                       <p style={{ marginBottom: '10px' }}>Farcaster: <a href="https://warpcast.com/mtt" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mtt</a></p>
                     </div>
                   </PopUp>
-
                 </div>
               </div>
             </div>

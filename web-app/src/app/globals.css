@@ -5,10 +5,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 .nameOutline {
-  /* font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: bold; */
-
   color: #000;
   color: rgba(0, 0, 0, 0);
 
@@ -16,44 +12,24 @@
   -webkit-text-stroke-color: black;
 
   position: absolute;
-  z-index:100;
+  z-index: 100;
 }
-.flying{
-  cursor: url('https://res.cloudinary.com/dvkugaw3b/image/upload/v1641562028/cursor_ad12rf.png'), auto;
-}
-.square-cursor {
-  cursor: url('https://cryptologos.cc/logos/ethereum-eth-logo.png'), auto; /* Replace 'square-cursor.png' with the path to your square cursor image */
-  /* cursor: none; */
-}
-body {
-  cursor: url('https://cryptologos.cc/logos/ethereum-eth-logo.png'), auto;
-  /* cursor: none; */
-}
+
 .name {
-  /* font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: bold; */
-
   color: #0652DD;
-
   transform: translate(3px, 3px);
-
   /* text-shadow: 5px 5px 0px rgba(0, 0, 0, 1); */
-}
-
-.headline {
-  /* font-family: "Poppins", sans-serif; */
-  /* font-weight: 400;
-  font-style: normal; */
 }
 
 @keyframes hoverUpDown {
   0% {
     transform: translateY(0);
   }
+
   50% {
-    transform: translateY(-20px); /* Adjust the distance */
+    transform: translateY(-20px);
   }
+
   100% {
     transform: translateY(0);
   }
@@ -74,24 +50,94 @@ img {
 }
 
 .iphone {
-  width: 300px; /* Adjust size as needed */
-  height: 600px; /* Adjust size as needed */
+  width: 300px;
+  /* Adjust size as needed */
+  height: 600px;
+  /* Adjust size as needed */
   background: linear-gradient(145deg, #d1d1d1, #f1f1f1);
   border-radius: 30px;
-  box-shadow: 
-    10px 10px 20px #bebebe, /* Light shadow */
-    -10px -10px 20px #ffffff; /* Highlight */
+  box-shadow:
+    10px 10px 20px #bebebe,
+    /* Light shadow */
+    -10px -10px 20px #ffffff;
+  /* Highlight */
 }
 
 .blur {
   -moz-box-shadow: 0 0 3px #ccc;
--webkit-box-shadow: 0 0 3px #ccc;
-box-shadow: 0 0 3px #ccc;
+  -webkit-box-shadow: 0 0 3px #ccc;
+  box-shadow: 0 0 3px #ccc;
 }
 
 .boxShadow {
   /* box-shadow: 0px 1px 20px 0px #0400ff, */
-            /* 1px 2px 4px 0px #00eaff, */
-            /* 2px 4px 40px 0px #f200ff, */
-            /* 2px 4px 20px 0px #0400ff; */
+  /* 1px 2px 4px 0px #00eaff, */
+  /* 2px 4px 40px 0px #f200ff, */
+  /* 2px 4px 20px 0px #0400ff; */
+}
+
+.sixtyPercentSide {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background-color: black;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 9999;
+}
+
+.sixtyPercentSide.slideOutDown {
+  transition: transform 1s ease;
+  transform: translateY(100%);
+}
+
+.fortyPercentSide {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background-color: black;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 9999;
+}
+
+.fortyPercentSide.slideOutUp {
+  transition: transform 1s ease;
+  transform: translateY(-100%);
+}
+
+.fallingImageContainer {
+  position: fixed;
+  top: calc(100vh - 16px);
+  left: 50%;
+  transform: translateX(-50%);
+  transition: top 15s ease;
+}
+
+.fallingImageContainer.falling {
+  top: -380px;
+}
+
+.zoom-in {
+  animation: zoomIn 0.5s ease forwards;
+  transform-origin: center;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
