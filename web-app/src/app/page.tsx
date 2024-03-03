@@ -48,19 +48,18 @@ export default function Home() {
   const [emailOpen, setEmailOpen] = React.useState(false);
   const [phoneOpen, setPhoneOpen] = React.useState(false);
 
-  const [fadeIn, setFadeIn] = useState(false);
-  const [fadeIn2, setFadeIn2] = useState(false);
-  const [fadeIn3, setFadeIn3] = useState(false);
+  const [nameZoomIn, setNameZoomIn] = useState(false);
+  const [taglineZoomIn, setTaglineZoomIn] = useState(false);
+  const [shortcutsZoomIn, setShortcutsZoomIn] = useState(false);
   const [phoneZoomIn, setPhoneZoomIn] = useState(false);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
-      setFadeIn(true);
+      setNameZoomIn(true);
       const timeout = setTimeout(() => {
-        setFadeIn2(true);
+        setTaglineZoomIn(true);
         const timeout = setTimeout(() => {
-          setFadeIn3(true);
-          
+          setShortcutsZoomIn(true);
         }, 200);
         return () => clearTimeout(timeout);
       }, 200);
@@ -118,9 +117,9 @@ export default function Home() {
             </div>
           </div>
           <div className="w-3/5 h-full p-4 border-r-4 border-black">
-            <div className={`${title.className} ${fadeIn ? 'zoom-in' : ''} flex-1`} style={{ fontSize: '92px', lineHeight: '1', display: fadeIn ? '' : 'none' }}>MATTHEW WONG</div>
-            <div className={`${subTitle.className} ${fadeIn2 ? 'zoom-in' : ''}`} style={{ display: fadeIn2 ? '' : 'none', marginTop: '10px', marginLeft: '4px', fontSize: '35px', lineHeight: '1' }}>I code + design software products</div>
-            <div className={`${subTitle.className} ${fadeIn3 ? 'zoom-in' : ''} flex`} style={{ display: fadeIn3 ? '' : 'none', marginTop: '42px' }}>
+            <div className={`${title.className} ${nameZoomIn ? 'zoom-in' : ''} flex-1`} style={{ fontSize: '92px', lineHeight: '1', display: nameZoomIn ? '' : 'none' }}>MATTHEW WONG</div>
+            <div className={`${subTitle.className} ${taglineZoomIn ? 'zoom-in' : ''}`} style={{ display: taglineZoomIn ? '' : 'none', marginTop: '10px', marginLeft: '4px', fontSize: '35px', lineHeight: '1' }}>I code + design software products</div>
+            <div className={`${subTitle.className} ${shortcutsZoomIn ? 'zoom-in' : ''} flex`} style={{ display: shortcutsZoomIn ? '' : 'none', marginTop: '42px' }}>
               <div className="pl-3">
                 <div onClick={() => setAboutOpen(true)} style={{ fontSize: '28px', lineHeight: '1' }}>✸ &nbsp;About</div>
                 <div onClick={() => setWorkOpen(true)} style={{ fontSize: '28px', marginTop: '18px', lineHeight: '1' }}>✸ &nbsp;Experience</div>
