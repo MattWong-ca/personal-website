@@ -4,28 +4,24 @@ import '../src/app/globals.css';
 
 function StartAnimation() {
   const [isVisible, setIsVisible] = useState(false);
-  const [blackScreenVisible, setBlackScreenVisible] = useState(true);
-  const [showRedScreen, setShowRedScreen] = useState(true);
+  const [showSixtyPercentScreen, setShowSixtyPercentScreen] = useState(true);
+  const [showFortyPercentScreen, setShowFortyPercentScreen] = useState(true);
 
   useEffect(() => {
     setIsVisible(true);
-    // Set a timeout to mark the black screen removal after the astronaut animation is complete
     const timeout = setTimeout(() => {
-      setBlackScreenVisible(false);
-      const timeout2 = setTimeout(() => {
-        setShowRedScreen(false);
+      setShowSixtyPercentScreen(false);
+      const timeout = setTimeout(() => {
+        setShowFortyPercentScreen(false);
       }, 1000);
-      return () => clearTimeout(timeout2);
-
-    }, 11000); // Adjust the delay to match the astronaut animation duration
-
-    // Cleanup function to clear the timeout
+      return () => clearTimeout(timeout);
+    }, 11000);
     return () => clearTimeout(timeout);
   }, []);
 
   return (
-    <div className={`${blackScreenVisible ? 'w-full h-full flex absolute' : ''}`}>
-      <div className={`${'sixtyPercentSide'} ${blackScreenVisible ? '' : 'slideOutDown'}`}>
+    <div className={`${showSixtyPercentScreen ? 'w-full h-full flex absolute' : ''}`}>
+      <div className={`${'sixtyPercentSide'} ${showSixtyPercentScreen ? '' : 'slideOutDown'}`}>
         <div className={`fallingImageContainer ${isVisible ? 'falling' : ''}`}>
           <Image
             src="/spaceman.png"
@@ -36,7 +32,7 @@ function StartAnimation() {
           />
         </div>
       </div>
-      <div className={`fortyPercentSide ${showRedScreen ? '' : 'slideOutUp'}`}></div>
+      <div className={`fortyPercentSide ${showFortyPercentScreen ? '' : 'slideOutUp'}`}></div>
     </div>
   );
 }
