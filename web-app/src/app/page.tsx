@@ -51,34 +51,27 @@ export default function Home() {
   const [fadeIn, setFadeIn] = useState(false);
   const [fadeIn2, setFadeIn2] = useState(false);
   const [fadeIn3, setFadeIn3] = useState(false);
-  const [fadeIn4, setFadeIn4] = useState(false);
+  const [phoneZoomIn, setPhoneZoomIn] = useState(false);
+
   useEffect(() => {
-    // Start fade-in animation after a delay
     const timeout = setTimeout(() => {
       setFadeIn(true);
-      const timeout2 = setTimeout(() => {
+      const timeout = setTimeout(() => {
         setFadeIn2(true);
-        const timeout3 = setTimeout(() => {
+        const timeout = setTimeout(() => {
           setFadeIn3(true);
           
         }, 200);
-        return () => clearTimeout(timeout3);
+        return () => clearTimeout(timeout);
       }, 200);
-      return () => clearTimeout(timeout2);
-    }, 11100); // Adjust timeout duration as needed
-
-    // Cleanup function to clear the timeout on component unmount
+      return () => clearTimeout(timeout);
+    }, 11100);
     return () => clearTimeout(timeout);
   }, []);
-  
-  useEffect(() => {
-    // Start fade-in animation after a delay
-    const timeout4 = setTimeout(() => {
-      setFadeIn4(true);
-    }, 12200); // Adjust timeout duration as needed
 
-    // Cleanup function to clear the timeout on component unmount
-    return () => clearTimeout(timeout4);
+  useEffect(() => {
+    const timeout = setTimeout(() => setPhoneZoomIn(true), 12200);
+    return () => clearTimeout(timeout);
   }, []);
 
   return (
@@ -193,7 +186,7 @@ export default function Home() {
           </div>
           <div className="h-full border-r-4 border-black flex items-center justify-center" style={{ width: '72%' }}>
 
-            <div className={`boxShadow bg-blue-600 h-4/5 rounded-70 bg-cover pt-3 relative ${fadeIn4 ? 'zoom-in' : ''}`} style={{ display: fadeIn4 ? '' : 'none', width: '333px', height: '90%', border: '5px solid #d3d3d3', backgroundImage: `url('astronaut.jpg')` }}>
+            <div className={`boxShadow bg-blue-600 h-4/5 rounded-70 bg-cover pt-3 relative ${phoneZoomIn ? 'zoom-in' : ''}`} style={{ display: phoneZoomIn ? '' : 'none', width: '333px', height: '90%', border: '5px solid #d3d3d3', backgroundImage: `url('astronaut.jpg')` }}>
 
               <div style={{ height: '26px' }} className="flex justify-center">
                 <div className="w-70 flex items-center" style={{ justifyContent: 'space-between' }}>
