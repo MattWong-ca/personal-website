@@ -7,6 +7,7 @@ import { Poppins } from 'next/font/google';
 import { Inter } from 'next/font/google';
 import { EB_Garamond } from 'next/font/google';
 import PopUp from './components/popup';
+import StartAnimation from '../../pages/arena';
 
 // Fonts
 const inter = Inter({ subsets: ["latin"] });
@@ -47,20 +48,9 @@ export default function Home() {
   const [emailOpen, setEmailOpen] = React.useState(false);
   const [phoneOpen, setPhoneOpen] = React.useState(false);
 
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    // Set a timeout to mark the animation as complete after a delay
-    const timeout = setTimeout(() => {
-      setIsVisible(true);
-    }, 1000); // Adjust the delay as needed
-
-    // Cleanup function to clear the timeout
-    return () => clearTimeout(timeout);
-  }, []);
-
   return (
     <div style={{ overflow: 'hidden', height: '100vh', display: 'flex', position: 'relative', zIndex: '100' }}>
+      <StartAnimation />
       <div style={{ width: '60%', position: 'relative' }}>
         {/* Content for the 60% width column */}
         <div className="w-full h-1/4 border-b-4 border-black flex">
@@ -423,7 +413,6 @@ export default function Home() {
                       <p style={{ marginBottom: '10px' }}>Farcaster: <a href="https://warpcast.com/mtt" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mtt</a></p>
                     </div>
                   </PopUp>
-                  <div className={`full-screen-slide ${isVisible ? 'slide-out' : ''}`}></div>
                 </div>
               </div>
             </div>
