@@ -17,20 +17,19 @@ function StartAnimation() {
       return () => clearTimeout(timeout);
     }, 11000);
     return () => clearTimeout(timeout);
-  }, []);
+  }, [showSixtyPercentScreen]);
 
   return (
     <div className={`${showSixtyPercentScreen ? 'w-full h-full flex absolute' : ''}`}>
       <div className={`${'sixtyPercentSide'} ${showSixtyPercentScreen ? '' : 'slideOutDown'}`}>
         <div className={`fallingImageContainer ${isVisible ? 'falling' : ''}`}>
-          {/* <Image
+          <Image
             src="/spaceman.png"
             alt="Spaceman"
             width={170}
             height={0}
             style={{ marginLeft: 'auto', marginTop: '15px', marginRight: '20px' }}
-          /> */}
-          <div style={{ height: '40px', width: '30px', backgroundColor: 'white'}}></div>
+          />
         </div>
       </div>
       <div className={`fortyPercentSide ${showFortyPercentScreen ? '' : 'slideOutUp'}`}></div>
