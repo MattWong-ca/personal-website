@@ -16,7 +16,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Matthew Wong | Software Developer",
-  description: "Matthew Wong. Waterloo. Software developer. Blockchain. Web3.",
+  description: "Software developer, experienced in full stack (TypeScript, React, Next), iOS (Swift, SwiftUI), and Web3 (Solidity, Ethers). Studying engineering at UWaterloo. Blockchain!"
 };
 
 export default function RootLayout({
@@ -26,6 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <meta name="description" content={metadata.description!} />
+      </Head>
       <body className={inter.className}>{children}</body>
     </html>
   );
