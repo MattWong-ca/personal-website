@@ -124,7 +124,7 @@ export default function Home() {
                 <div onClick={() => setAboutOpen(true)} style={{ fontSize: '28px', lineHeight: '1' }}>✸ &nbsp;About</div>
                 <div onClick={() => setWorkOpen(true)} style={{ fontSize: '28px', marginTop: '18px', lineHeight: '1' }}>✸ &nbsp;Experience</div>
               </div>
-              <div style={{ paddingLeft: '60px' }}>
+              <div className="pl-14">
                 <div onClick={() => setContactOpen(true)} style={{ fontSize: '28px', lineHeight: '1' }}>✸ &nbsp;Contact</div>
                 <div onClick={() => setFeaturesOpen(true)} style={{ fontSize: '28px', marginTop: '18px', lineHeight: '1' }}>✸ &nbsp;Features</div>
               </div>
@@ -185,12 +185,12 @@ export default function Home() {
           </div>
           <div className="h-full border-r-4 border-black flex items-center justify-center" style={{ width: '72%' }}>
 
-            <div className={`boxShadow bg-blue-600 h-4/5 rounded-70 bg-cover pt-3 relative ${phoneZoomIn ? 'zoom-in' : ''}`} style={{ display: phoneZoomIn ? '' : 'none', width: '333px', height: '650px', border: '5px solid #d3d3d3', backgroundImage: `url('astronaut.jpg')` }}>
+            <div className={`boxShadow h-4/5 rounded-70 bg-cover pt-3 relative ${phoneZoomIn ? 'zoom-in' : 'hidden'}`} style={{ width: '333px', height: '655px', border: '5px solid #d3d3d3', backgroundImage: `url('astronaut.jpg')` }}>
 
-              <div style={{ height: '26px' }} className="flex justify-center">
-                <div className="w-70 flex items-center" style={{ justifyContent: 'space-between' }}>
-                  {currentTime ? (<p className="apple" style={{ fontSize: '0.92rem', color: 'white', justifyContent: 'start', paddingLeft: '0.5rem', paddingTop: '0.125rem' }}>{currentTime}</p>) : (<p className="apple" style={{ fontSize: '1rem', color: 'white', justifyContent: 'start', paddingLeft: '0.5rem', paddingTop: '0.125rem' }}>1:23</p>)}
-                  <Image src="/statusbar.png" alt="iPhone Status Bar" width={75} height={50} className="filter brightness-0 invert pr-1" />
+              <div className="h-6 flex justify-center">
+                <div className="w-70 flex items-center justify-between">
+                  <p className="apple text-white pt-0.5 pl-2 justify-start" style={{ fontSize: '0.92rem' }}>{currentTime ?? '1:23'}</p>
+                  <Image src="/statusbar.png" alt="iPhone Wifi and Battery" width={75} height={50} className="filter brightness-0 invert pr-1" />
                 </div>
                 <div className="bg-black rounded-xl w-20 h-6 mx-auto absolute" style={{ height: '21.5px' }}></div>
               </div>
@@ -214,14 +214,14 @@ export default function Home() {
               </div>
 
               <div className="flex justify-center absolute bottom-4 w-full">
-                <div style={{ gap: '18px', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'rgba(240, 240, 240, 0.15)', borderRadius: '30px', width: '290px', height: '75px', paddingTop: '1px' }}>
+                <div className="flex items-center justify-center pt-px" style={{ gap: '18px', backgroundColor: 'rgba(240, 240, 240, 0.15)', borderRadius: '26px', width: '290px', height: '75px' }}>
                   <IconAndText src={'/mail.webp'} onClick={() => setEmailOpen(true)} />
                   <IconAndText src={'/camera.webp'} link='' />
                   <IconAndText src={'/safari.webp'} link='https://www.google.com/search?q=matt+wong+waterloo' />
                   <IconAndText src={'/phone.webp'} onClick={() => setPhoneOpen(true)} />
 
                   <PopUp title='About' open={aboutOpen} onClose={() => setAboutOpen(false)}>
-                    <div className="flex" style={{ marginTop: '10px' }}>
+                    <div className="flex mt-2.5">
                       <div >
                         <p className={`${tagline.className}`} style={{ lineHeight: 'normal', color: 'black', fontSize: '25px', marginTop: '0.5rem' }}>TLDR</p>
                         <div className={`${subTitle.className}`} style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
@@ -260,7 +260,7 @@ export default function Home() {
                       <div className="h-full border-r-2 border-black" style={{ width: '148px' }}>
                         <Image
                           src="/exacare.jpeg"
-                          alt="Matt Wong profile picture"
+                          alt="ExaCare logo"
                           width={146}
                           height={0}
                         />
