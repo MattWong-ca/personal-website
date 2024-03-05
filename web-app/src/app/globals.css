@@ -88,7 +88,7 @@ img {
   justify-content: center;
   align-items: center;
   color: white;
-  z-index: 9999;
+  z-index: 9998;
 }
 
 .sixtyPercentSide.slideOutDown {
@@ -108,7 +108,7 @@ img {
   justify-content: center;
   align-items: center;
   color: white;
-  z-index: 9999;
+  z-index: 9997;
 }
 
 .fortyPercentSide.slideOutUp {
@@ -139,5 +139,78 @@ img {
   }
   to {
     transform: scale(1);
+  }
+}
+/* 
+@media only screen and (min-width: 1500px) {
+  .phone {
+    display: block;
+  }
+  .leftWidth {
+    width: 60%;
+  }
+}
+@media only screen and (max-width: 1499px) {
+  .phone {
+    display: none;
+  }
+  .leftWidth {
+    width: 100%;
+  }
+} */
+
+@media only screen and (max-width: 430px) {
+  .fortyPercentSide {
+    display: none;
+  }
+  
+  .sixtyPercentSide {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 9998;
+  }
+  
+  .phone {
+    display: none;
+  }
+
+  .leftWidth {
+    width: 100%;
+  }
+
+  .nameFontSize {
+    font-size: 36px;
+  }
+
+  .taglineFontSize {
+    font-size: 25px;
+  }
+
+  .regularNameBox {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 431px) {
+  .leftWidth {
+    width: 60%;
+  }
+  .nameFontSize {
+    font-size: 92px;
+  }
+  .taglineFontSize {
+    font-size: 35px;
+  }
+  .mobileNameBox {
+    display: none;
   }
 }
