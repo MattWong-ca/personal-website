@@ -223,8 +223,8 @@ export default function Home() {
                   <PopUp title='About' open={aboutOpen} onClose={() => setAboutOpen(false)}>
                     <div className="flex mt-2.5">
                       <div >
-                        <p className={`${poppins600.className}`} style={{ lineHeight: 'normal', color: 'black', fontSize: '25px', marginTop: '0.5rem' }}>TLDR</p>
-                        <div className={`${garamond400.className}`} style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
+                        <p className={`${poppins600.className} mt-2 text-black`} style={{ lineHeight: 'normal', fontSize: '25px' }}>TLDR</p>
+                        <div className={`${garamond400.className} text-black`} style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
                           <p>➔&nbsp;&nbsp; Software developer with 3+ years of experience</p>
                           <p className="mt-2">➔&nbsp;&nbsp; 2nd year engineering student at UWaterloo</p>
                           <p className="mt-2">➔&nbsp;&nbsp; Building in blockchain & exploring in AI</p>
@@ -239,15 +239,15 @@ export default function Home() {
                         className="ml-auto mt-3.5 mr-5"
                       />
                     </div>
-                    <p className={`${poppins600.className}`} style={{ color: 'black', fontSize: '24px', paddingTop: '20px', paddingBottom: '8px' }}>Currently</p>
-                    <div className={`${garamond400.className}`} style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
+                    <p className={`${poppins600.className} mt-5 pb-2 text-black`} style={{ fontSize: '24px' }}>Currently</p>
+                    <div className={`${garamond400.className} text-black`} style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
                       <p>➔&nbsp;&nbsp; Full stack developer at ExaCare, a VC-backed health tech startup</p>
                       <p className="mt-2">➔&nbsp;&nbsp; Coding & designing side projects</p>
                       <p className="mt-2">➔&nbsp;&nbsp; Writing about Canadian startup founders</p>
                       <p className="mt-2">➔&nbsp;&nbsp; On a {codingStreak} day coding streak!</p>
                     </div>
-                    <p className={`${poppins600.className}`} style={{ color: 'black', fontSize: '24px', marginTop: '20px', paddingBottom: '8px' }}>Previously</p>
-                    <div className={`${garamond400.className}`} style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
+                    <p className={`${poppins600.className} mt-5 pb-2 text-black`} style={{ color: 'black', fontSize: '24px' }}>Previously</p>
+                    <div className={`${garamond400.className} text-black`} style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
                       <p>➔&nbsp;&nbsp; Led partnerships for Waterloo Blockchain</p>
                       <p className="mt-2">➔&nbsp;&nbsp; Did iOS development at theScore</p>
                       <p className="mt-2">➔&nbsp;&nbsp; Built ecommerce stores at Shopify</p>
@@ -348,12 +348,12 @@ export default function Home() {
                     <div className={`${garamond400.className}`} style={{ marginTop: '20px' }}>
                       <p className={`${poppins600.className}`} style={{ lineHeight: 'normal', color: 'black', fontSize: '25px', marginTop: '0.5rem' }}>2024</p>
                       <div style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
-                        <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; Personal website redesign (<a href="https://github.com/MattWong-ca/personal-website" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                        <p className="mb-2.5">➔&nbsp;&nbsp; Personal website redesign (<a href="https://github.com/MattWong-ca/personal-website" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                       </div>
                       <p className={`${poppins600.className}`} style={{ lineHeight: 'normal', color: 'black', fontSize: '25px', marginTop: '0.5rem' }}>2023</p>
                       <div style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
-                        <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; Swift Tickets - NFT minting gated by Worldcoin&apos;s World ID (<a href="https://github.com/MattWong-ca/swift-tickets-navh" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
-                        <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; Various side projects (<a href="https://medium.com/@mattwong.ca/all-my-projects-14bf922d0a65" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                        <p className="mb-2.5">➔&nbsp;&nbsp; Swift Tickets - NFT minting gated by Worldcoin&apos;s World ID (<a href="https://github.com/MattWong-ca/swift-tickets-navh" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                        <p className="mb-2.5">➔&nbsp;&nbsp; Various side projects (<a href="https://medium.com/@mattwong.ca/all-my-projects-14bf922d0a65" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                       </div>
                     </div>
                   </PopUp>
@@ -398,44 +398,44 @@ export default function Home() {
                   </PopUp>
 
                   <PopUp title='Quests' open={questsOpen} onClose={() => setQuestsOpen(false)}>
-                    <div className={`${garamond400.className}`} style={{ color: 'black', marginTop: '10px', fontSize: '22px' }}>
+                    <div className={`${garamond400.className} text-black mt-2.5`} style={{ fontSize: '22px' }}>
                       <p>
                         {`Pursuits I've spent more time on than a typical side project.`}
                       </p>
-                      <p className={`${poppins600.className}`} style={{ lineHeight: 'normal', color: 'black', fontSize: '25px', marginTop: '0.5rem' }}>2023</p>
-                      <div style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
-                        <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; Web3 Works - opportunities newsletter with 530+ subs (<a href="https://linktr.ee/web3works_" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                      <p className={`${poppins600.className} mt-2`} style={{ lineHeight: 'normal', fontSize: '25px' }}>2023</p>
+                      <div style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
+                        <p className="mb-2.5">➔&nbsp;&nbsp; Web3 Works - opportunities newsletter with 530+ subs (<a href="https://linktr.ee/web3works_" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                       </div>
-                      <p className={`${poppins600.className}`} style={{ lineHeight: 'normal', color: 'black', fontSize: '25px', marginTop: '0.5rem' }}>2021</p>
-                      <div style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
-                        <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; How&apos;s the Climate - climate podcast with 425+ downloads (<a href="https://open.spotify.com/show/7fwDYUPsbMPLgopMAikDzw" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                      <p className={`${poppins600.className} mt-2`} style={{ lineHeight: 'normal', fontSize: '25px'}}>2021</p>
+                      <div style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
+                        <p className="mb-2.5">➔&nbsp;&nbsp; How&apos;s the Climate - climate podcast with 425+ downloads (<a href="https://open.spotify.com/show/7fwDYUPsbMPLgopMAikDzw" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                       </div>
-                      <p className={`${poppins600.className}`} style={{ lineHeight: 'normal', color: 'black', fontSize: '25px', marginTop: '0.5rem' }}>2020</p>
-                      <div style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
-                        <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; York Region Kiva - fundraising for underserved entrepreneurs (<a href="https://www.google.com/search?q=york+region+kiva" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                      <p className={`${poppins600.className} mt-2`} style={{ lineHeight: 'normal', fontSize: '25px' }}>2020</p>
+                      <div style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
+                        <p className="mb-2.5">➔&nbsp;&nbsp; York Region Kiva - fundraising for underserved entrepreneurs (<a href="https://www.google.com/search?q=york+region+kiva" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                       </div>
                     </div>
                   </PopUp>
 
                   <PopUp title='Features' open={featuresOpen} onClose={() => setFeaturesOpen(false)}>
                     <div className={`${garamond400.className}`} style={{ color: 'black', marginLeft: '1.3rem', marginTop: '20px', fontSize: '22px' }}>
-                      <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; YCDSB announces its 2021 Top Scholars (<a href="https://www.ycdsb.ca/2021-top-scholars" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
-                      <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; Canadian National Anthology 2021 artwork feature (<a href="https://hubs.mozilla.com/szhykoG/room-2-national-anthology-ink-mvmt" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
-                      <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; York Region Kiva 2020 bottle drive (<a href="https://www.yorkregion.com/news/richmond-hill-teen-starts-bottle-drive-to-help-businesses-in-developing-nations-amid-covid-19/article_26c44174-7a69-57a1-8c1a-babaacbd5209.html" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
-                      <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; Skills Ontario 2016 cardboard boat race (<a href="https://issuu.com/thornhillliberal/docs/tho_w_jan28" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                      <p className="mb-2.5">➔&nbsp;&nbsp; YCDSB announces its 2021 Top Scholars (<a href="https://www.ycdsb.ca/2021-top-scholars" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                      <p className="mb-2.5">➔&nbsp;&nbsp; Canadian National Anthology 2021 artwork feature (<a href="https://hubs.mozilla.com/szhykoG/room-2-national-anthology-ink-mvmt" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                      <p className="mb-2.5">➔&nbsp;&nbsp; York Region Kiva 2020 bottle drive (<a href="https://www.yorkregion.com/news/richmond-hill-teen-starts-bottle-drive-to-help-businesses-in-developing-nations-amid-covid-19/article_26c44174-7a69-57a1-8c1a-babaacbd5209.html" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                      <p className="mb-2.5">➔&nbsp;&nbsp; Skills Ontario 2016 cardboard boat race (<a href="https://issuu.com/thornhillliberal/docs/tho_w_jan28" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                     </div>
                   </PopUp>
 
                   <PopUp title='Contact' open={contactOpen} onClose={() => setContactOpen(false)}>
                     <div className={`${garamond400.className}`} style={{ color: 'black', marginTop: '20px', fontSize: '22px' }}>
-                      <p style={{ marginBottom: '10px' }}>LinkedIn: <a href="https://www.linkedin.com/in/mattwong-ca" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong-ca</a></p>
-                      <p style={{ marginBottom: '10px' }}>GitHub: <a href="https://github.com/MattWong-ca" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong-ca</a></p>
-                      <p style={{ marginBottom: '10px' }}>GitLab: <a href="https://gitlab.com/mattwong_ca" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong_ca</a></p>
-                      <p style={{ marginBottom: '10px' }}>Telegram: <a href="https://t.me/mattwong_ca" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong_ca</a></p>
-                      <p style={{ marginBottom: '10px' }}>Instagram: <a href="https://www.instagram.com/mattwong.ca" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong.ca</a></p>
-                      <p style={{ marginBottom: '10px' }}>X: <a href="https://x.com/mattwong_ca" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong_ca</a></p>
-                      <p style={{ marginBottom: '10px' }}>Discord: mattwong.ca</p>
-                      <p style={{ marginBottom: '10px' }}>Farcaster: <a href="https://warpcast.com/mtt" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mtt</a></p>
+                      <p className="mb-2.5">LinkedIn: <a href="https://www.linkedin.com/in/mattwong-ca" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong-ca</a></p>
+                      <p className="mb-2.5">GitHub: <a href="https://github.com/MattWong-ca" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong-ca</a></p>
+                      <p className="mb-2.5">GitLab: <a href="https://gitlab.com/mattwong_ca" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong_ca</a></p>
+                      <p className="mb-2.5">Telegram: <a href="https://t.me/mattwong_ca" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong_ca</a></p>
+                      <p className="mb-2.5">Instagram: <a href="https://www.instagram.com/mattwong.ca" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong.ca</a></p>
+                      <p className="mb-2.5">X: <a href="https://x.com/mattwong_ca" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong_ca</a></p>
+                      <p className="mb-2.5">Discord: mattwong.ca</p>
+                      <p className="mb-2.5">Farcaster: <a href="https://warpcast.com/mtt" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mtt</a></p>
                     </div>
                   </PopUp>
                 </div>
