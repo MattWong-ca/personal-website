@@ -11,10 +11,10 @@ import StartAnimation from '../../pages/arena';
 
 // Fonts
 const inter = Inter({ subsets: ["latin"] });
+const poppins400 = Poppins({ subsets: ["latin-ext"], weight: ["400"], style: ["normal"] });
+const poppins600 = Poppins({ subsets: ["latin-ext"], weight: ["600"], style: ["normal"] });
 const poppins700 = Poppins({ subsets: ["latin-ext"], weight: ["700"], style: ["normal"] });
-const tagline = Poppins({ subsets: ["latin-ext"], weight: ["600"], style: ["normal"] });
-const experience = Poppins({ subsets: ["latin-ext"], weight: ["400"], style: ["normal"] });
-const subTitle = EB_Garamond({ subsets: ["latin-ext"], weight: ["400"], style: ["normal"] });
+const garamond400 = EB_Garamond({ subsets: ["latin-ext"], weight: ["400"], style: ["normal"] });
 
 export default function Home() {
   // Time on status bar
@@ -118,8 +118,8 @@ export default function Home() {
           </div>
           <div className="w-3/5 h-full p-4 border-r-4 border-black">
             <div className={`${poppins700.className} ${nameZoomIn ? 'zoom-in' : ''} ${nameZoomIn ? '' : 'hidden'} flex-1`} style={{ fontSize: '92px', lineHeight: '1' }}>MATTHEW WONG</div>
-            <div className={`${subTitle.className} ${taglineZoomIn ? 'zoom-in' : 'hidden'} mt-2.5 ml-1`} style={{ fontSize: '35px', lineHeight: '1' }}>I code + design software products</div>
-            <div className={`${subTitle.className} ${shortcutsZoomIn ? 'zoom-in' : 'hidden'} flex mt-10`}>
+            <div className={`${garamond400.className} ${taglineZoomIn ? 'zoom-in' : 'hidden'} mt-2.5 ml-1`} style={{ fontSize: '35px', lineHeight: '1' }}>I code + design software products</div>
+            <div className={`${garamond400.className} ${shortcutsZoomIn ? 'zoom-in' : 'hidden'} flex mt-10`}>
               <div className="pl-3">
                 <div onClick={() => setAboutOpen(true)} style={{ fontSize: '28px', lineHeight: '1' }}>✸ &nbsp;About</div>
                 <div onClick={() => setWorkOpen(true)} style={{ fontSize: '28px', marginTop: '18px', lineHeight: '1' }}>✸ &nbsp;Experience</div>
@@ -223,8 +223,8 @@ export default function Home() {
                   <PopUp title='About' open={aboutOpen} onClose={() => setAboutOpen(false)}>
                     <div className="flex mt-2.5">
                       <div >
-                        <p className={`${tagline.className}`} style={{ lineHeight: 'normal', color: 'black', fontSize: '25px', marginTop: '0.5rem' }}>TLDR</p>
-                        <div className={`${subTitle.className}`} style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
+                        <p className={`${poppins600.className}`} style={{ lineHeight: 'normal', color: 'black', fontSize: '25px', marginTop: '0.5rem' }}>TLDR</p>
+                        <div className={`${garamond400.className}`} style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
                           <p>➔&nbsp;&nbsp; Software developer with 3+ years of experience</p>
                           <p style={{ marginTop: '0.5rem' }}>➔&nbsp;&nbsp; 2nd year engineering student at UWaterloo</p>
                           <p style={{ marginTop: '0.5rem' }}>➔&nbsp;&nbsp; Building in blockchain & exploring in AI</p>
@@ -239,15 +239,15 @@ export default function Home() {
                         style={{ marginLeft: 'auto', marginTop: '15px', marginRight: '20px' }}
                       />
                     </div>
-                    <p className={`${tagline.className}`} style={{ color: 'black', fontSize: '24px', paddingTop: '20px', paddingBottom: '8px' }}>Currently</p>
-                    <div className={`${subTitle.className}`} style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
+                    <p className={`${poppins600.className}`} style={{ color: 'black', fontSize: '24px', paddingTop: '20px', paddingBottom: '8px' }}>Currently</p>
+                    <div className={`${garamond400.className}`} style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
                       <p>➔&nbsp;&nbsp; Full stack developer at ExaCare, a VC-backed health tech startup</p>
                       <p style={{ marginTop: '0.5rem' }}>➔&nbsp;&nbsp; Coding & designing side projects</p>
                       <p style={{ marginTop: '0.5rem' }}>➔&nbsp;&nbsp; Writing about Canadian startup founders</p>
                       <p style={{ marginTop: '0.5rem' }}>➔&nbsp;&nbsp; On a {codingStreak} day coding streak!</p>
                     </div>
-                    <p className={`${tagline.className}`} style={{ color: 'black', fontSize: '24px', marginTop: '20px', paddingBottom: '8px' }}>Previously</p>
-                    <div className={`${subTitle.className}`} style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
+                    <p className={`${poppins600.className}`} style={{ color: 'black', fontSize: '24px', marginTop: '20px', paddingBottom: '8px' }}>Previously</p>
+                    <div className={`${garamond400.className}`} style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
                       <p>➔&nbsp;&nbsp; Led partnerships for Waterloo Blockchain</p>
                       <p style={{ marginTop: '0.5rem' }}>➔&nbsp;&nbsp; Did iOS development at theScore</p>
                       <p style={{ marginTop: '0.5rem' }}>➔&nbsp;&nbsp; Built ecommerce stores at Shopify</p>
@@ -267,10 +267,10 @@ export default function Home() {
                       </div>
                       <div style={{ width: 'calc(100% - 148px)', padding: '14px' }}>
                         <div className="flex justify-between">
-                          <p className={tagline.className} style={{ fontSize: '20px' }}>Software Engineer - Full Stack</p>
-                          <p className={experience.className} style={{ fontSize: '20px', fontStyle: 'italic' }}>{`Jan - Apr '24`}</p>
+                          <p className={poppins600.className} style={{ fontSize: '20px' }}>Software Engineer - Full Stack</p>
+                          <p className={poppins400.className} style={{ fontSize: '20px', fontStyle: 'italic' }}>{`Jan - Apr '24`}</p>
                         </div>
-                        <p className={subTitle.className} style={{ marginTop: '10px', fontSize: '16px' }}>
+                        <p className={garamond400.className} style={{ marginTop: '10px', fontSize: '16px' }}>
                           Building React/TypeScript frontend features and Node/Serverless backend APIs/endpoints
                           at ExaCare, a VC-backed health tech startup that recently raised $6.5M.
                         </p>
@@ -288,10 +288,10 @@ export default function Home() {
                       </div>
                       <div style={{ width: 'calc(100% - 148px)', padding: '14px' }}>
                         <div className="flex justify-between">
-                          <p className={tagline.className} style={{ fontSize: '20px' }}>Software Engineer - iOS</p>
-                          <p className={experience.className} style={{ fontSize: '20px', fontStyle: 'italic' }}>{`May - Aug '22`}</p>
+                          <p className={poppins600.className} style={{ fontSize: '20px' }}>Software Engineer - iOS</p>
+                          <p className={poppins400.className} style={{ fontSize: '20px', fontStyle: 'italic' }}>{`May - Aug '22`}</p>
                         </div>
-                        <p className={subTitle.className} style={{ marginTop: '10px', fontSize: '16px' }}>
+                        <p className={garamond400.className} style={{ marginTop: '10px', fontSize: '16px' }}>
                           {`Collaborated with designers to enhance theScore's 4.8-star sports-betting app.
                         Worked on UI improvements and features in Swift. Volunteered for Jays Care
                         and met Adam Cimber.`}
@@ -310,10 +310,10 @@ export default function Home() {
                       </div>
                       <div style={{ width: 'calc(100% - 148px)', padding: '14px' }}>
                         <div className="flex justify-between">
-                          <p className={tagline.className} style={{ fontSize: '20px' }}>Store Designer</p>
-                          <p className={experience.className} style={{ fontSize: '20px', fontStyle: 'italic' }}>{`Feb - May '22`}</p>
+                          <p className={poppins600.className} style={{ fontSize: '20px' }}>Store Designer</p>
+                          <p className={poppins400.className} style={{ fontSize: '20px', fontStyle: 'italic' }}>{`Feb - May '22`}</p>
                         </div>
-                        <p className={subTitle.className} style={{ marginTop: '10px', fontSize: '16px' }}>
+                        <p className={garamond400.className} style={{ marginTop: '10px', fontSize: '16px' }}>
                           {`Interned at Shopify during my 2nd semester of university. Part of the inaugural 
                         cohort of student store designers that built stores to support merchants from their
                         partnership with Operation Hope.`}
@@ -332,10 +332,10 @@ export default function Home() {
                       </div>
                       <div style={{ width: 'calc(100% - 148px)', padding: '14px' }}>
                         <div className="flex justify-between">
-                          <p className={tagline.className} style={{ fontSize: '20px' }}>Director of Partnerships</p>
-                          <p className={experience.className} style={{ fontSize: '20px', fontStyle: 'italic' }}>{`Oct '23 - Aug '24`}</p>
+                          <p className={poppins600.className} style={{ fontSize: '20px' }}>Director of Partnerships</p>
+                          <p className={poppins400.className} style={{ fontSize: '20px', fontStyle: 'italic' }}>{`Oct '23 - Aug '24`}</p>
                         </div>
-                        <p className={subTitle.className} style={{ marginTop: '10px', fontSize: '16px' }}>
+                        <p className={garamond400.className} style={{ marginTop: '10px', fontSize: '16px' }}>
                           {`Led partnerships for Waterloo Blockchain, Canada's largest blockchain club. Organized the first
                           hackathon resulting in 200+ hackers and 35+ projects, and the first ETHDenver hacker house for 15 
                           builders (during my gap year).`}
@@ -345,12 +345,12 @@ export default function Home() {
                   </PopUp>
 
                   <PopUp title='Projects' open={projectsOpen} onClose={() => setProjectsOpen(false)}>
-                    <div className={`${subTitle.className}`} style={{ marginTop: '20px' }}>
-                      <p className={`${tagline.className}`} style={{ lineHeight: 'normal', color: 'black', fontSize: '25px', marginTop: '0.5rem' }}>2024</p>
+                    <div className={`${garamond400.className}`} style={{ marginTop: '20px' }}>
+                      <p className={`${poppins600.className}`} style={{ lineHeight: 'normal', color: 'black', fontSize: '25px', marginTop: '0.5rem' }}>2024</p>
                       <div style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
                         <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; Personal website redesign (<a href="https://github.com/MattWong-ca/personal-website" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                       </div>
-                      <p className={`${tagline.className}`} style={{ lineHeight: 'normal', color: 'black', fontSize: '25px', marginTop: '0.5rem' }}>2023</p>
+                      <p className={`${poppins600.className}`} style={{ lineHeight: 'normal', color: 'black', fontSize: '25px', marginTop: '0.5rem' }}>2023</p>
                       <div style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
                         <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; Swift Tickets - NFT minting gated by Worldcoin&apos;s World ID (<a href="https://github.com/MattWong-ca/swift-tickets-navh" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                         <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; Various side projects (<a href="https://medium.com/@mattwong.ca/all-my-projects-14bf922d0a65" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
@@ -359,7 +359,7 @@ export default function Home() {
                   </PopUp>
 
                   <PopUp title='Education' open={educationOpen} onClose={() => setEducationOpen(false)}>
-                    <div className={`${subTitle.className}`} style={{ color: 'black', marginTop: '10px', fontSize: '22px' }}>
+                    <div className={`${garamond400.className}`} style={{ color: 'black', marginTop: '10px', fontSize: '22px' }}>
                       <p>
                         <b>University of Waterloo: </b>
                         {`I study biomedical engineering, but spend every bit of my free time coding :)`}
@@ -376,7 +376,7 @@ export default function Home() {
                   </PopUp>
 
                   <PopUp title='Email' open={emailOpen} onClose={() => setEmailOpen(false)}>
-                    <div className={`${subTitle.className}`} style={{ color: 'black', marginTop: '10px', fontSize: '22px' }}>
+                    <div className={`${garamond400.className}`} style={{ color: 'black', marginTop: '10px', fontSize: '22px' }}>
                       <p>
                         {`Try elonmusk@gmail.com or mark.zuckerberg@gmail.com!`}
                       </p>
@@ -384,7 +384,7 @@ export default function Home() {
                   </PopUp>
 
                   <PopUp title='Phone' open={phoneOpen} onClose={() => setPhoneOpen(false)}>
-                    <div className={`${subTitle.className}`} style={{ color: 'black', marginTop: '10px', fontSize: '22px' }}>
+                    <div className={`${garamond400.className}`} style={{ color: 'black', marginTop: '10px', fontSize: '22px' }}>
                       <p>
                         {`My phone is always on silent. Please use Discord, Telegram, or email for fastest response times!`}
                       </p>
@@ -392,25 +392,25 @@ export default function Home() {
                   </PopUp>
 
                   <PopUp title='Writing' open={writingOpen} onClose={() => setWritingOpen(false)}>
-                    <div className={`${subTitle.className}`} style={{ color: 'black', marginLeft: '1.3rem', marginTop: '20px', fontSize: '22px' }}>
+                    <div className={`${garamond400.className}`} style={{ color: 'black', marginLeft: '1.3rem', marginTop: '20px', fontSize: '22px' }}>
                       <p>➔&nbsp;&nbsp; Waterloo Blockchain Founders (<a href="https://www.linkedin.com/posts/kevinolearytv_interesting-perspective-activity-7056440703538577408-tU_K" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                     </div>
                   </PopUp>
 
                   <PopUp title='Quests' open={questsOpen} onClose={() => setQuestsOpen(false)}>
-                    <div className={`${subTitle.className}`} style={{ color: 'black', marginTop: '10px', fontSize: '22px' }}>
+                    <div className={`${garamond400.className}`} style={{ color: 'black', marginTop: '10px', fontSize: '22px' }}>
                       <p>
                         {`Pursuits I've spent more time on than a typical side project.`}
                       </p>
-                      <p className={`${tagline.className}`} style={{ lineHeight: 'normal', color: 'black', fontSize: '25px', marginTop: '0.5rem' }}>2023</p>
+                      <p className={`${poppins600.className}`} style={{ lineHeight: 'normal', color: 'black', fontSize: '25px', marginTop: '0.5rem' }}>2023</p>
                       <div style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
                         <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; Web3 Works - opportunities newsletter with 530+ subs (<a href="https://linktr.ee/web3works_" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                       </div>
-                      <p className={`${tagline.className}`} style={{ lineHeight: 'normal', color: 'black', fontSize: '25px', marginTop: '0.5rem' }}>2021</p>
+                      <p className={`${poppins600.className}`} style={{ lineHeight: 'normal', color: 'black', fontSize: '25px', marginTop: '0.5rem' }}>2021</p>
                       <div style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
                         <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; How&apos;s the Climate - climate podcast with 425+ downloads (<a href="https://open.spotify.com/show/7fwDYUPsbMPLgopMAikDzw" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                       </div>
-                      <p className={`${tagline.className}`} style={{ lineHeight: 'normal', color: 'black', fontSize: '25px', marginTop: '0.5rem' }}>2020</p>
+                      <p className={`${poppins600.className}`} style={{ lineHeight: 'normal', color: 'black', fontSize: '25px', marginTop: '0.5rem' }}>2020</p>
                       <div style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
                         <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; York Region Kiva - fundraising for underserved entrepreneurs (<a href="https://www.google.com/search?q=york+region+kiva" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                       </div>
@@ -418,7 +418,7 @@ export default function Home() {
                   </PopUp>
 
                   <PopUp title='Features' open={featuresOpen} onClose={() => setFeaturesOpen(false)}>
-                    <div className={`${subTitle.className}`} style={{ color: 'black', marginLeft: '1.3rem', marginTop: '20px', fontSize: '22px' }}>
+                    <div className={`${garamond400.className}`} style={{ color: 'black', marginLeft: '1.3rem', marginTop: '20px', fontSize: '22px' }}>
                       <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; YCDSB announces its 2021 Top Scholars (<a href="https://www.ycdsb.ca/2021-top-scholars" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                       <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; Canadian National Anthology 2021 artwork feature (<a href="https://hubs.mozilla.com/szhykoG/room-2-national-anthology-ink-mvmt" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                       <p style={{ marginBottom: '10px' }}>➔&nbsp;&nbsp; York Region Kiva 2020 bottle drive (<a href="https://www.yorkregion.com/news/richmond-hill-teen-starts-bottle-drive-to-help-businesses-in-developing-nations-amid-covid-19/article_26c44174-7a69-57a1-8c1a-babaacbd5209.html" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
@@ -427,7 +427,7 @@ export default function Home() {
                   </PopUp>
 
                   <PopUp title='Contact' open={contactOpen} onClose={() => setContactOpen(false)}>
-                    <div className={`${subTitle.className}`} style={{ color: 'black', marginTop: '20px', fontSize: '22px' }}>
+                    <div className={`${garamond400.className}`} style={{ color: 'black', marginTop: '20px', fontSize: '22px' }}>
                       <p style={{ marginBottom: '10px' }}>LinkedIn: <a href="https://www.linkedin.com/in/mattwong-ca" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong-ca</a></p>
                       <p style={{ marginBottom: '10px' }}>GitHub: <a href="https://github.com/MattWong-ca" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong-ca</a></p>
                       <p style={{ marginBottom: '10px' }}>GitLab: <a href="https://gitlab.com/mattwong_ca" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong_ca</a></p>
