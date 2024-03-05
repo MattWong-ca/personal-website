@@ -246,7 +246,7 @@ export default function Home() {
                       <p className="mt-2">➔&nbsp;&nbsp; Writing about Canadian startup founders</p>
                       <p className="mt-2">➔&nbsp;&nbsp; On a {codingStreak} day coding streak!</p>
                     </div>
-                    <p className={`${poppins600.className} mt-5 pb-2 text-black`} style={{ color: 'black', fontSize: '24px' }}>Previously</p>
+                    <p className={`${poppins600.className} mt-5 pb-2 text-black`} style={{ fontSize: '24px' }}>Previously</p>
                     <div className={`${garamond400.className} text-black`} style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
                       <p>➔&nbsp;&nbsp; Led partnerships for Waterloo Blockchain</p>
                       <p className="mt-2">➔&nbsp;&nbsp; Did iOS development at theScore</p>
@@ -256,7 +256,7 @@ export default function Home() {
                   </PopUp>
 
                   <PopUp title='Work' open={workOpen} onClose={() => setWorkOpen(false)}>
-                    <div className="w-full flex" style={{ marginTop: '20px', height: '150px', border: '2px solid black' }}>
+                    <div className="w-full flex mt-5" style={{ height: '150px', border: '2px solid black' }}>
                       <div className="h-full border-r-2 border-black" style={{ width: '148px' }}>
                         <Image
                           src="/exacare.jpeg"
@@ -270,14 +270,14 @@ export default function Home() {
                           <p className={poppins600.className} style={{ fontSize: '20px' }}>Software Engineer - Full Stack</p>
                           <p className={poppins400.className} style={{ fontSize: '20px', fontStyle: 'italic' }}>{`Jan - Apr '24`}</p>
                         </div>
-                        <p className={garamond400.className} style={{ marginTop: '10px', fontSize: '16px' }}>
+                        <p className={`${garamond400.className} mt-2.5`} style={{ fontSize: '16px' }}>
                           Building React/TypeScript frontend features and Node/Serverless backend APIs/endpoints
                           at ExaCare, a VC-backed health tech startup that recently raised $6.5M.
                         </p>
                       </div>
                     </div>
 
-                    <div className="w-full flex" style={{ marginTop: '20px', height: '150px', border: '2px solid black' }}>
+                    <div className="w-full flex mt-5" style={{ height: '150px', border: '2px solid black' }}>
                       <div className="h-full border-r-2 border-black" style={{ width: '148px' }}>
                         <Image
                           src="/thescore.png"
