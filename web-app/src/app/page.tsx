@@ -226,9 +226,9 @@ export default function Home() {
                         <p className={`${poppins600.className}`} style={{ lineHeight: 'normal', color: 'black', fontSize: '25px', marginTop: '0.5rem' }}>TLDR</p>
                         <div className={`${garamond400.className}`} style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
                           <p>➔&nbsp;&nbsp; Software developer with 3+ years of experience</p>
-                          <p style={{ marginTop: '0.5rem' }}>➔&nbsp;&nbsp; 2nd year engineering student at UWaterloo</p>
-                          <p style={{ marginTop: '0.5rem' }}>➔&nbsp;&nbsp; Building in blockchain & exploring in AI</p>
-                          <p style={{ marginTop: '0.5rem' }}>➔&nbsp;&nbsp; Enjoys hackathons, travelling, & sports</p>
+                          <p className="mt-2">➔&nbsp;&nbsp; 2nd year engineering student at UWaterloo</p>
+                          <p className="mt-2">➔&nbsp;&nbsp; Building in blockchain & exploring in AI</p>
+                          <p className="mt-2">➔&nbsp;&nbsp; Enjoys hackathons, travelling, & sports</p>
                         </div>
                       </div>
                       <Image
@@ -236,22 +236,22 @@ export default function Home() {
                         alt="Matt Wong profile picture"
                         width={170}
                         height={0}
-                        style={{ marginLeft: 'auto', marginTop: '15px', marginRight: '20px' }}
+                        className="ml-auto mt-3.5 mr-5"
                       />
                     </div>
                     <p className={`${poppins600.className}`} style={{ color: 'black', fontSize: '24px', paddingTop: '20px', paddingBottom: '8px' }}>Currently</p>
                     <div className={`${garamond400.className}`} style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
                       <p>➔&nbsp;&nbsp; Full stack developer at ExaCare, a VC-backed health tech startup</p>
-                      <p style={{ marginTop: '0.5rem' }}>➔&nbsp;&nbsp; Coding & designing side projects</p>
-                      <p style={{ marginTop: '0.5rem' }}>➔&nbsp;&nbsp; Writing about Canadian startup founders</p>
-                      <p style={{ marginTop: '0.5rem' }}>➔&nbsp;&nbsp; On a {codingStreak} day coding streak!</p>
+                      <p className="mt-2">➔&nbsp;&nbsp; Coding & designing side projects</p>
+                      <p className="mt-2">➔&nbsp;&nbsp; Writing about Canadian startup founders</p>
+                      <p className="mt-2">➔&nbsp;&nbsp; On a {codingStreak} day coding streak!</p>
                     </div>
                     <p className={`${poppins600.className}`} style={{ color: 'black', fontSize: '24px', marginTop: '20px', paddingBottom: '8px' }}>Previously</p>
                     <div className={`${garamond400.className}`} style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
                       <p>➔&nbsp;&nbsp; Led partnerships for Waterloo Blockchain</p>
-                      <p style={{ marginTop: '0.5rem' }}>➔&nbsp;&nbsp; Did iOS development at theScore</p>
-                      <p style={{ marginTop: '0.5rem' }}>➔&nbsp;&nbsp; Built ecommerce stores at Shopify</p>
-                      <p style={{ marginTop: '0.5rem', marginBottom: '3rem' }}>➔&nbsp;&nbsp; Completed Google&apos;s SPS program</p>
+                      <p className="mt-2">➔&nbsp;&nbsp; Did iOS development at theScore</p>
+                      <p className="mt-2">➔&nbsp;&nbsp; Built ecommerce stores at Shopify</p>
+                      <p className="mt-2 mb-12">➔&nbsp;&nbsp; Completed Google&apos;s SPS program</p>
                     </div>
                   </PopUp>
 
