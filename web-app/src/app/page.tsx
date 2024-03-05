@@ -76,7 +76,7 @@ export default function Home() {
   return (
     <div className="overflow-hidden h-screen flex relative z-50">
       <StartAnimation />
-      <div className="w-3/5 relative">
+      <div className="leftWidth relative">
         {/* Content for the 60% width column */}
         <div className="w-full h-1/4 border-b-4 border-black flex">
           <div className="bg-red-600 h-full border-r-4 border-black" style={{ width: '5%' }}></div>
@@ -117,9 +117,9 @@ export default function Home() {
             </div>
           </div>
           <div className="w-3/5 h-full p-4 border-r-4 border-black">
-            <div className={`${poppins700.className} ${nameZoomIn ? 'zoom-in' : ''} ${nameZoomIn ? '' : 'hidden'} flex-1`} style={{ fontSize: '92px', lineHeight: '1' }}>MATTHEW WONG</div>
-            <div className={`${garamond400.className} ${taglineZoomIn ? 'zoom-in' : 'hidden'} mt-2.5 ml-1`} style={{ fontSize: '35px', lineHeight: '1' }}>I code + design software products</div>
-            <div className={`${garamond400.className} ${shortcutsZoomIn ? 'zoom-in' : 'hidden'} flex mt-10`}>
+            <div className={`nameFontSize ${poppins700.className} ${nameZoomIn ? 'zoom-in' : ''} ${nameZoomIn ? '' : 'hidden'} flex-1`} style={{ lineHeight: '1' }}>MATTHEW WONG</div>
+            <div className={`taglineFontSize ${garamond400.className} ${taglineZoomIn ? 'zoom-in' : 'hidden'} mt-2.5 ml-1`} style={{ lineHeight: '1' }}>I code + design software products</div>
+            <div className={`regularNameBox ${garamond400.className} ${shortcutsZoomIn ? 'zoom-in' : 'hidden'} flex mt-10`}>
               <div className="pl-3">
                 <div onClick={() => setAboutOpen(true)} style={{ fontSize: '28px', lineHeight: '1' }}>✸ &nbsp;About</div>
                 <div onClick={() => setWorkOpen(true)} style={{ fontSize: '28px', marginTop: '18px', lineHeight: '1' }}>✸ &nbsp;Experience</div>
@@ -127,6 +127,14 @@ export default function Home() {
               <div className="pl-14">
                 <div onClick={() => setContactOpen(true)} style={{ fontSize: '28px', lineHeight: '1' }}>✸ &nbsp;Contact</div>
                 <div onClick={() => setFeaturesOpen(true)} style={{ fontSize: '28px', marginTop: '18px', lineHeight: '1' }}>✸ &nbsp;Features</div>
+              </div>
+            </div>
+            <div className={`mobileNameBox ${garamond400.className} ${shortcutsZoomIn ? 'zoom-in' : 'hidden'} flex mt-6`} style={{ fontSize: '18px', lineHeight: '1' }}>
+              <div className="pl-3">
+                <div onClick={() => setAboutOpen(true)}>✸ &nbsp;About</div>
+                <div onClick={() => setWorkOpen(true)} className="mt-3.5">✸ &nbsp;Experience</div>
+                <div onClick={() => setFeaturesOpen(true)} className="mt-3.5">✸ &nbsp;Features</div>
+                <div onClick={() => setContactOpen(true)} className="mt-3.5">✸ &nbsp;Contact</div>
               </div>
             </div>
           </div>
@@ -169,7 +177,7 @@ export default function Home() {
       </div>
 
       {/* 40% screen, mountain valley background */}
-      <div className="w-2/5 border-l-4 border-black">
+      <div className="phone w-2/5 border-l-4 border-black">
         <div className="w-full border-b-4 border-black" style={{ height: '4.9%' }}>
           <div className="bg-yellow-400 h-full border-r-4 border-black" style={{ width: '86%' }}>
             <div className="bg-white w-1/2 h-full border-r-4 border-black"></div>
