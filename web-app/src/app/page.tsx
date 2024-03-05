@@ -11,7 +11,7 @@ import StartAnimation from '../../pages/arena';
 
 // Fonts
 const inter = Inter({ subsets: ["latin"] });
-const title = Poppins({ subsets: ["latin-ext"], weight: ["700"], style: ["normal"] });
+const poppins700 = Poppins({ subsets: ["latin-ext"], weight: ["700"], style: ["normal"] });
 const tagline = Poppins({ subsets: ["latin-ext"], weight: ["600"], style: ["normal"] });
 const experience = Poppins({ subsets: ["latin-ext"], weight: ["400"], style: ["normal"] });
 const subTitle = EB_Garamond({ subsets: ["latin-ext"], weight: ["400"], style: ["normal"] });
@@ -74,9 +74,9 @@ export default function Home() {
   }, []);
 
   return (
-    <div style={{ overflow: 'hidden', height: '100vh', display: 'flex', position: 'relative', zIndex: '100' }}>
+    <div className="overflow-hidden h-screen flex relative z-50">
       <StartAnimation />
-      <div style={{ width: '60%', position: 'relative' }}>
+      <div className="w-3/5 relative">
         {/* Content for the 60% width column */}
         <div className="w-full h-1/4 border-b-4 border-black flex">
           <div className="bg-red-600 h-full border-r-4 border-black" style={{ width: '5%' }}></div>
@@ -102,7 +102,7 @@ export default function Home() {
         </div>
         <div className="w-full h-1/2 border-b-4 border-black flex">
           <div className="bg-black w-1/5 h-full border-r-4 border-black">
-            <div className="h-full flex" style={{ width: '100%' }}>
+            <div className="w-full h-full flex">
               <div className="h-full border-r-4 border-black" style={{ width: '85.7%' }}>
                 <div className="bg-blue-500 w-full border-b-4 border-black" style={{ height: '34%' }}>
                 </div>
@@ -117,9 +117,9 @@ export default function Home() {
             </div>
           </div>
           <div className="w-3/5 h-full p-4 border-r-4 border-black">
-            <div className={`${title.className} ${nameZoomIn ? 'zoom-in' : ''} flex-1`} style={{ fontSize: '92px', lineHeight: '1', display: nameZoomIn ? '' : 'none' }}>MATTHEW WONG</div>
-            <div className={`${subTitle.className} ${taglineZoomIn ? 'zoom-in' : ''}`} style={{ display: taglineZoomIn ? '' : 'none', marginTop: '10px', marginLeft: '4px', fontSize: '35px', lineHeight: '1' }}>I code + design software products</div>
-            <div className={`${subTitle.className} ${shortcutsZoomIn ? 'zoom-in' : ''} flex`} style={{ display: shortcutsZoomIn ? '' : 'none', marginTop: '42px' }}>
+            <div className={`${poppins700.className} ${nameZoomIn ? 'zoom-in' : ''} ${nameZoomIn ? '' : 'hidden'} flex-1`} style={{ fontSize: '92px', lineHeight: '1' }}>MATTHEW WONG</div>
+            <div className={`${subTitle.className} ${taglineZoomIn ? 'zoom-in' : 'hidden'} mt-2.5 ml-1`} style={{ fontSize: '35px', lineHeight: '1' }}>I code + design software products</div>
+            <div className={`${subTitle.className} ${shortcutsZoomIn ? 'zoom-in' : 'hidden'} flex mt-10`}>
               <div className="pl-3">
                 <div onClick={() => setAboutOpen(true)} style={{ fontSize: '28px', lineHeight: '1' }}>✸ &nbsp;About</div>
                 <div onClick={() => setWorkOpen(true)} style={{ fontSize: '28px', marginTop: '18px', lineHeight: '1' }}>✸ &nbsp;Experience</div>
