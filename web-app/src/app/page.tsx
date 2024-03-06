@@ -117,9 +117,9 @@ export default function Home() {
             </div>
           </div>
           <div className="w-3/5 h-full p-4 border-r-4 border-black">
-            <div className={`nameFontSize ${poppins700.className} ${nameZoomIn ? 'zoom-in' : ''} ${nameZoomIn ? '' : 'hidden'} flex-1`} style={{ lineHeight: '1' }}>MATTHEW WONG</div>
-            <div className={`taglineFontSize ${garamond400.className} ${taglineZoomIn ? 'zoom-in' : 'hidden'} mt-2.5 ml-1`} style={{ lineHeight: '1' }}>I code + design software products</div>
-            <div className={`regularNameBox ${garamond400.className} ${shortcutsZoomIn ? 'zoom-in' : 'hidden'} flex mt-10`}>
+            <div className={`nameFontSize flex-1 ${poppins700.className} ${nameZoomIn ? 'zoom-in' : ''} ${nameZoomIn ? '' : 'hidden'}`} style={{ lineHeight: '1' }}>MATTHEW WONG</div>
+            <div className={`taglineFontSize mt-2.5 ml-1 ${garamond400.className} ${taglineZoomIn ? 'zoom-in' : 'hidden'}`} style={{ lineHeight: '1' }}>I code + design software products</div>
+            <div className={`regularNameBox flex mt-10 ${garamond400.className} ${shortcutsZoomIn ? 'zoom-in' : 'hidden'}`}>
               <div className="pl-3">
                 <div onClick={() => setAboutOpen(true)} style={{ fontSize: '28px', lineHeight: '1' }}>✸ &nbsp;About</div>
                 <div onClick={() => setWorkOpen(true)} style={{ fontSize: '28px', marginTop: '18px', lineHeight: '1' }}>✸ &nbsp;Experience</div>
