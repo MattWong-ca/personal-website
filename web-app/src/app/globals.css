@@ -215,6 +215,9 @@ img {
   .aboutPfp { 
     display: none;
   }
+  .mobileShortcuts {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 431px) and (max-width: 649px) {
@@ -244,6 +247,12 @@ img {
   }
   .phone {
     display: none;
+  }
+  .mobileShortcuts2 {
+    display: none;
+  }
+  .shortcutsMarginTop {
+    margin-top: 25px;
   }
 }
 
@@ -275,6 +284,12 @@ img {
   .phone {
     display: none;
   }
+  .mobileShortcuts {
+    display: none;
+  }
+  .shortcutsMarginTop {
+    margin-top: 40px;
+  }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1429px) {
@@ -301,6 +316,12 @@ img {
     box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
     border: 4px solid black;
     overflow-y: auto;
+  }
+  .mobileShortcuts {
+    display: none;
+  }
+  .shortcutsMarginTop {
+    margin-top: 40px;
   }
 }
 
@@ -329,6 +350,12 @@ img {
     border: 4px solid black;
     overflow-y: auto;
   }
+  .mobileShortcuts {
+    display: none;
+  }
+  .shortcutsMarginTop {
+    margin-top: 40px;
+  }
 }
 
 @media only screen and (min-width: 1600px) {
@@ -355,5 +382,11 @@ img {
     box-shadow: 0 0 24px rgba(0, 0, 0, 0.2);
     border: 4px solid black;
     overflow-y: auto;
+  }
+  .mobileShortcuts {
+    display: none;
+  }
+  .shortcutsMarginTop {
+    margin-top: 40px;
   }
 }
