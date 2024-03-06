@@ -132,7 +132,7 @@ export default function Home() {
             <div className={`mobileNameBox ${garamond400.className} ${shortcutsZoomIn ? 'zoom-in' : 'hidden'} flex mt-6`} style={{ fontSize: '18px', lineHeight: '1' }}>
               <div className="pl-3">
                 <div onClick={() => setAboutOpen(true)}>✸ &nbsp;About</div>
-                <div onClick={() => setWorkOpen(true)} className="mt-3.5">✸ &nbsp;Experience</div>
+                {/* <div onClick={() => setWorkOpen(true)} className="mt-3.5">✸ &nbsp;Experience</div> */}
                 <div onClick={() => setFeaturesOpen(true)} className="mt-3.5">✸ &nbsp;Features</div>
                 <div onClick={() => setContactOpen(true)} className="mt-3.5">✸ &nbsp;Contact</div>
               </div>
@@ -244,7 +244,7 @@ export default function Home() {
                         alt="Matt Wong profile picture"
                         width={170}
                         height={0}
-                        className="ml-auto mt-3.5 mr-5"
+                        className="aboutPfp ml-auto mt-3.5 mr-5"
                       />
                     </div>
                     <p className={`${poppins600.className} mt-5 pb-2 text-black`} style={{ fontSize: '24px' }}>Currently</p>
