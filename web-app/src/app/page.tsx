@@ -195,7 +195,7 @@ export default function Home() {
           </div>
           <div className="h-full border-r-4 border-black flex items-center justify-center" style={{ width: '72%' }}>
 
-            <div className={`boxShadow h-4/5 rounded-70 bg-cover pt-3 relative ${phoneZoomIn ? 'zoom-in' : 'hidden'}`} style={{ width: '333px', height: '655px', border: '5px solid #d3d3d3', backgroundImage: `url('astronaut.jpg')` }}>
+            <div className={`phoneHeight rounded-70 bg-cover pt-3 relative ${phoneZoomIn ? 'zoom-in' : 'hidden'}`} style={{ width: '333px', border: '5px solid #d3d3d3', backgroundImage: `url('astronaut.jpg')` }}>
 
               <div className="h-6 flex justify-center">
                 <div className="w-70 flex items-center justify-between">

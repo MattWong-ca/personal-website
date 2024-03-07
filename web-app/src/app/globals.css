@@ -178,27 +178,21 @@ img {
     color: white;
     z-index: 9998;
   }
-  
   .phone {
     display: none;
   }
-
   .leftWidth {
     width: 100%;
   }
-
   .nameFontSize {
     font-size: 36px;
   }
-
   .taglineFontSize {
     font-size: 25px;
   }
-
   .regularNameBox {
     display: none;
   }
-
   .popupStyle {
     position: absolute;
     top: 50%;
@@ -211,12 +205,14 @@ img {
     border: 4px solid black;
     overflow-y: auto;
   }
-
   .aboutPfp { 
     display: none;
   }
   .mobileShortcuts {
     display: none;
+  }
+  .phoneHeight {
+    height: 655px;
   }
 }
 
@@ -254,6 +250,9 @@ img {
   .shortcutsMarginTop {
     margin-top: 25px;
   }
+  .phoneHeight {
+    height: 655px;
+  }
 }
 
 @media only screen and (min-width: 650px) and (max-width: 1199px) {
@@ -290,6 +289,9 @@ img {
   .shortcutsMarginTop {
     margin-top: 40px;
   }
+  .phoneHeight {
+    height: 655px;
+  }
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1429px) {
@@ -322,6 +324,9 @@ img {
   }
   .shortcutsMarginTop {
     margin-top: 40px;
+  }
+  .phoneHeight {
+    height: 655px;
   }
 }
 
@@ -356,6 +361,9 @@ img {
   .shortcutsMarginTop {
     margin-top: 40px;
   }
+  .phoneHeight {
+    height: 655px;
+  }
 }
 
 @media only screen and (min-width: 1600px) {
@@ -388,5 +396,17 @@ img {
   }
   .shortcutsMarginTop {
     margin-top: 40px;
+  }
+  .phoneHeight {
+    height: 655px;
+  }
+}
+
+@media only screen and (max-height: 780px) {
+  .shortcutsMarginTop {
+    margin-top: 20px;
+  }
+  .phoneHeight {
+    height: 90%;
   }
 }
