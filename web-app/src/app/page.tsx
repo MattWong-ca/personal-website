@@ -131,7 +131,7 @@ export default function Home() {
                 <div onClick={() => setFeaturesOpen(true)} style={{ fontSize: '28px', marginTop: '18px', lineHeight: '1' }}>✸ &nbsp;Features</div>
               </div>
             </div>
-            <div className={`mobileNameBox ${garamond400.className} ${shortcutsZoomIn ? 'zoom-in' : 'hidden'} flex mt-6`} style={{ fontSize: '18px', lineHeight: '1' }}>
+            <div className={`mobileNameBox ${garamond400.className} ${shortcutsZoomIn ? 'zoom-in' : 'hidden'} flex mt-6`} style={{ fontSize: '22px', lineHeight: '1' }}>
               <div className="pl-3">
                 <div onClick={() => setAboutOpen(true)}>✸ &nbsp;About</div>
                 {/* <div onClick={() => setWorkOpen(true)} className="mt-3.5">✸ &nbsp;Experience</div> */}

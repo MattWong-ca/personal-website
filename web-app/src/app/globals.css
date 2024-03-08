@@ -402,11 +402,26 @@ img {
   }
 }
 
-@media only screen and (max-height: 780px) {
+@media only screen and (max-height: 800px) {
   .shortcutsMarginTop {
     margin-top: 20px;
   }
   .phoneHeight {
     height: 90%;
+  }
+}
+
+@media only screen and (max-height: 710px) {
+  .regularNameBox {
+    display: none;
+  }
+}
+
+@media only screen and (max-height: 540px) {
+  .regularNameBox {
+    display: none;
+  }
+  .taglineFontSize {
+    display: none;
   }
 }
