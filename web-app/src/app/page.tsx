@@ -76,7 +76,7 @@ export default function Home() {
   return (
     <div className="overflow-hidden h-screen flex relative z-50">
       <StartAnimation />
-      <div className="w-3/5 relative">
+      <div className="leftWidth relative">
         {/* Content for the 60% width column */}
         <div className="w-full h-1/4 border-b-4 border-black flex">
           <div className="bg-red-600 h-full border-r-4 border-black" style={{ width: '5%' }}></div>
@@ -117,16 +117,26 @@ export default function Home() {
             </div>
           </div>
           <div className="w-3/5 h-full p-4 border-r-4 border-black">
-            <div className={`${poppins700.className} ${nameZoomIn ? 'zoom-in' : ''} ${nameZoomIn ? '' : 'hidden'} flex-1`} style={{ fontSize: '92px', lineHeight: '1' }}>MATTHEW WONG</div>
-            <div className={`${garamond400.className} ${taglineZoomIn ? 'zoom-in' : 'hidden'} mt-2.5 ml-1`} style={{ fontSize: '35px', lineHeight: '1' }}>I code + design software products</div>
-            <div className={`${garamond400.className} ${shortcutsZoomIn ? 'zoom-in' : 'hidden'} flex mt-10`}>
+            <div className={`nameFontSize flex-1 ${poppins700.className} ${nameZoomIn ? 'zoom-in' : ''} ${nameZoomIn ? '' : 'hidden'}`} style={{ lineHeight: '1' }}>MATTHEW WONG</div>
+            <div className={`taglineFontSize mt-2.5 ml-1 ${garamond400.className} ${taglineZoomIn ? 'zoom-in' : 'hidden'}`} style={{ lineHeight: '1' }}>I code + design software products</div>
+            <div className={`regularNameBox shortcutsMarginTop flex ${garamond400.className} ${shortcutsZoomIn ? 'zoom-in' : 'hidden'}`}>
               <div className="pl-3">
                 <div onClick={() => setAboutOpen(true)} style={{ fontSize: '28px', lineHeight: '1' }}>✸ &nbsp;About</div>
                 <div onClick={() => setWorkOpen(true)} style={{ fontSize: '28px', marginTop: '18px', lineHeight: '1' }}>✸ &nbsp;Experience</div>
+                <div onClick={() => setContactOpen(true)} className="mobileShortcuts" style={{ fontSize: '28px', marginTop: '18px', lineHeight: '1' }}>✸ &nbsp;Contact</div>
+                <div onClick={() => setFeaturesOpen(true)} className="mobileShortcuts" style={{ fontSize: '28px', marginTop: '18px', lineHeight: '1' }}>✸ &nbsp;Features</div>
               </div>
-              <div className="pl-14">
+              <div className="mobileShortcuts2 pl-14">
                 <div onClick={() => setContactOpen(true)} style={{ fontSize: '28px', lineHeight: '1' }}>✸ &nbsp;Contact</div>
                 <div onClick={() => setFeaturesOpen(true)} style={{ fontSize: '28px', marginTop: '18px', lineHeight: '1' }}>✸ &nbsp;Features</div>
+              </div>
+            </div>
+            <div className={`mobileNameBox ${garamond400.className} ${shortcutsZoomIn ? 'zoom-in' : 'hidden'} flex mt-6`} style={{ fontSize: '22px', lineHeight: '1' }}>
+              <div className="pl-3">
+                <div onClick={() => setAboutOpen(true)}>✸ &nbsp;About</div>
+                {/* <div onClick={() => setWorkOpen(true)} className="mt-3.5">✸ &nbsp;Experience</div> */}
+                <div onClick={() => setFeaturesOpen(true)} className="mt-3.5">✸ &nbsp;Features</div>
+                <div onClick={() => setContactOpen(true)} className="mt-3.5">✸ &nbsp;Contact</div>
               </div>
             </div>
           </div>
@@ -169,7 +179,7 @@ export default function Home() {
       </div>
 
       {/* 40% screen, mountain valley background */}
-      <div className="w-2/5 border-l-4 border-black">
+      <div className="phone w-2/5 border-l-4 border-black">
         <div className="w-full border-b-4 border-black" style={{ height: '4.9%' }}>
           <div className="bg-yellow-400 h-full border-r-4 border-black" style={{ width: '86%' }}>
             <div className="bg-white w-1/2 h-full border-r-4 border-black"></div>
@@ -185,7 +195,7 @@ export default function Home() {
           </div>
           <div className="h-full border-r-4 border-black flex items-center justify-center" style={{ width: '72%' }}>
 
-            <div className={`boxShadow h-4/5 rounded-70 bg-cover pt-3 relative ${phoneZoomIn ? 'zoom-in' : 'hidden'}`} style={{ width: '333px', height: '655px', border: '5px solid #d3d3d3', backgroundImage: `url('astronaut.jpg')` }}>
+            <div className={`phoneHeight rounded-70 bg-cover pt-3 relative ${phoneZoomIn ? 'zoom-in' : 'hidden'}`} style={{ width: '333px', border: '5px solid #d3d3d3', backgroundImage: `url('astronaut.jpg')` }}>
 
               <div className="h-6 flex justify-center">
                 <div className="w-70 flex items-center justify-between">
@@ -236,7 +246,7 @@ export default function Home() {
                         alt="Matt Wong profile picture"
                         width={170}
                         height={0}
-                        className="ml-auto mt-3.5 mr-5"
+                        className="aboutPfp ml-auto mt-3.5 mr-5"
                       />
                     </div>
                     <p className={`${poppins600.className} mt-5 pb-2 text-black`} style={{ fontSize: '24px' }}>Currently</p>

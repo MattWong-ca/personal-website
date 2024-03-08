@@ -21,14 +21,14 @@ function StartAnimation() {
 
   return (
     <div className={`${showSixtyPercentScreen ? 'w-full h-full flex absolute' : ''}`}>
-      <div className={`${'sixtyPercentSide'} ${showSixtyPercentScreen ? '' : 'slideOutDown'}`}>
+      <div className={`sixtyPercentSide ${showSixtyPercentScreen ? '' : 'slideOutDown'}`}>
         <div className={`fallingImageContainer ${isVisible ? 'falling' : ''}`}>
           <Image
             src="/spaceman.png"
             alt="Spaceman"
             width={170}
             height={0}
-            style={{ marginLeft: 'auto', marginTop: '15px', marginRight: '20px' }}
+            style={{ marginLeft: 'auto', marginTop: '15px', marginRight: '20px', zIndex: '9999' }}
           />
         </div>
       </div>
