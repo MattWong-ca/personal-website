@@ -121,14 +121,14 @@ export default function Home() {
             <div className={`taglineFontSize mt-2.5 ml-1 ${garamond400.className} ${taglineZoomIn ? 'zoom-in' : 'hidden'}`} style={{ lineHeight: '1' }}>I code + design software products</div>
             <div className={`regularNameBox shortcutsMarginTop flex ${garamond400.className} ${shortcutsZoomIn ? 'zoom-in' : 'hidden'}`}>
               <div className="pl-3">
-                <div onClick={() => setAboutOpen(true)} style={{ fontSize: '28px', lineHeight: '1' }}>✸ &nbsp;About</div>
-                <div onClick={() => setWorkOpen(true)} style={{ fontSize: '28px', marginTop: '18px', lineHeight: '1' }}>✸ &nbsp;Experience</div>
-                <div onClick={() => setContactOpen(true)} className="mobileShortcuts" style={{ fontSize: '28px', marginTop: '18px', lineHeight: '1' }}>✸ &nbsp;Contact</div>
-                <div onClick={() => setFeaturesOpen(true)} className="mobileShortcuts" style={{ fontSize: '28px', marginTop: '18px', lineHeight: '1' }}>✸ &nbsp;Features</div>
+                <div onClick={() => setAboutOpen(true)} className="clickCursor" style={{ fontSize: '28px', lineHeight: '1' }}>✸ &nbsp;About</div>
+                <div onClick={() => setWorkOpen(true)} className="clickCursor" style={{ fontSize: '28px', marginTop: '18px', lineHeight: '1' }}>✸ &nbsp;Experience</div>
+                <div onClick={() => setContactOpen(true)} className="mobileShortcuts clickCursor" style={{ fontSize: '28px', marginTop: '18px', lineHeight: '1' }}>✸ &nbsp;Contact</div>
+                <div onClick={() => setFeaturesOpen(true)} className="mobileShortcuts clickCursor" style={{ fontSize: '28px', marginTop: '18px', lineHeight: '1' }}>✸ &nbsp;Features</div>
               </div>
               <div className="mobileShortcuts2 pl-14">
-                <div onClick={() => setContactOpen(true)} style={{ fontSize: '28px', lineHeight: '1' }}>✸ &nbsp;Contact</div>
-                <div onClick={() => setFeaturesOpen(true)} style={{ fontSize: '28px', marginTop: '18px', lineHeight: '1' }}>✸ &nbsp;Features</div>
+                <div onClick={() => setContactOpen(true)} className="clickCursor" style={{ fontSize: '28px', lineHeight: '1' }}>✸ &nbsp;Contact</div>
+                <div onClick={() => setFeaturesOpen(true)} className="clickCursor" style={{ fontSize: '28px', marginTop: '18px', lineHeight: '1' }}>✸ &nbsp;Features</div>
               </div>
             </div>
             <div className={`mobileNameBox ${garamond400.className} ${shortcutsZoomIn ? 'zoom-in' : 'hidden'} flex mt-6`} style={{ fontSize: '22px', lineHeight: '1' }}>

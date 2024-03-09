@@ -434,3 +434,7 @@ img {
     display: none;
   }
 }
+
+.clickCursor {
+  cursor: pointer;
+}
