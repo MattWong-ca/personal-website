@@ -8,7 +8,7 @@ import { Inter } from 'next/font/google';
 import { EB_Garamond } from 'next/font/google';
 import StartAnimation from './components/StartAnimation';
 import NameBox from './components/NameBox';
-import PopUp from './components/test';
+import PopUp from './components/PopUp';
 
 // Fonts
 const inter = Inter({ subsets: ["latin"] });
