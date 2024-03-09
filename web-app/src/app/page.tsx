@@ -7,8 +7,8 @@ import { Poppins } from 'next/font/google';
 import { Inter } from 'next/font/google';
 import { EB_Garamond } from 'next/font/google';
 import StartAnimation from './components/StartAnimation';
-import PopUp from './components/PopUp';
 import NameBox from './components/NameBox';
+import PopUp from './components/test';
 
 // Fonts
 const inter = Inter({ subsets: ["latin"] });
