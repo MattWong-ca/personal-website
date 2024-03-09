@@ -6,8 +6,8 @@ import './globals.css';
 import { Poppins } from 'next/font/google';
 import { Inter } from 'next/font/google';
 import { EB_Garamond } from 'next/font/google';
-import PopUp from './components/popup';
-import StartAnimation from '../../pages/arena';
+import StartAnimation from './components/StartAnimation';
+import PopUp from './components/PopUp';
 
 // Fonts
 const inter = Inter({ subsets: ["latin"] });

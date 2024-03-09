@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import '../src/app/globals.css';
+import '../globals.css';
 
 function StartAnimation() {
   const [isVisible, setIsVisible] = useState(false);
