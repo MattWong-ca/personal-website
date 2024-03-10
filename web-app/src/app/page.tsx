@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import './globals.css';
 import StartAnimation from './components/StartAnimation';
 import NameBox from './components/NameBox';
-import Phone from './components/test';
+import Phone from './components/Phone';
 
 export default function Home() {
   const icons = [
