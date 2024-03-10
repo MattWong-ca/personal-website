@@ -20,7 +20,7 @@ function StartAnimation() {
   }, []);
 
   return (
-    <div className={`${showSixtyPercentScreen ? 'w-full h-full flex absolute' : ''}`}>
+    <div className={showSixtyPercentScreen ? 'w-full h-full flex absolute' : ''}>
       <div className={`sixtyPercentSide ${showSixtyPercentScreen ? '' : 'slideOutDown'}`}>
         <div className={`fallingImageContainer ${isVisible ? 'falling' : ''}`}>
           <Image

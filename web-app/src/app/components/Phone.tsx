@@ -69,10 +69,11 @@ const Phone: React.FC<iPhoneProps> = ({
     return () => clearInterval(intervalId);
   });
   const codingStreak = DateTime.now().diff(DateTime.fromISO('2023-12-25'), 'days').as('days').toFixed(0);
+
   return (
     <div>
       <div className={`phoneHeight rounded-70 bg-cover pt-3 relative ${phoneZoomIn ? 'zoom-in' : 'hidden'}`} style={{ width: '333px', border: '5px solid #d3d3d3', backgroundImage: `url('astronaut.jpg')` }}>
-
+        {/* Status bar */}
         <div className="h-6 flex justify-center">
           <div className="w-70 flex items-center justify-between">
             <p className="apple text-white pt-0.5 pl-2 justify-start" style={{ fontSize: '0.92rem' }}>{currentTime ?? '1:23'}</p>
@@ -231,13 +232,13 @@ const Phone: React.FC<iPhoneProps> = ({
             </PopUp>
 
             <PopUp title='Projects' open={projectsOpen} onClose={() => setProjectsOpen(false)}>
-              <div className={`${garamond400.className}`} style={{ marginTop: '20px' }}>
-                <p className={`${poppins600.className}`} style={{ lineHeight: 'normal', color: 'black', fontSize: '25px', marginTop: '0.5rem' }}>2024</p>
-                <div style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
+              <div className={`mt-5 ${garamond400.className}`}>
+                <p className={`${poppins600.className}`} style={{ lineHeight: 'normal', fontSize: '25px', marginTop: '0.5rem' }}>2024</p>
+                <div style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
                   <p className="mb-2.5">➔&nbsp;&nbsp; Personal website redesign (<a href="https://github.com/MattWong-ca/personal-website" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                 </div>
-                <p className={`${poppins600.className}`} style={{ lineHeight: 'normal', color: 'black', fontSize: '25px', marginTop: '0.5rem' }}>2023</p>
-                <div style={{ color: 'black', marginLeft: '1.3rem', fontSize: '22px' }}>
+                <p className={`${poppins600.className}`} style={{ lineHeight: 'normal', fontSize: '25px', marginTop: '0.5rem' }}>2023</p>
+                <div style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
                   <p className="mb-2.5">➔&nbsp;&nbsp; Swift Tickets - NFT minting gated by Worldcoin&apos;s World ID (<a href="https://github.com/MattWong-ca/swift-tickets-navh" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                   <p className="mb-2.5">➔&nbsp;&nbsp; Various side projects (<a href="https://medium.com/@mattwong.ca/all-my-projects-14bf922d0a65" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                 </div>
@@ -245,16 +246,16 @@ const Phone: React.FC<iPhoneProps> = ({
             </PopUp>
 
             <PopUp title='Education' open={educationOpen} onClose={() => setEducationOpen(false)}>
-              <div className={`${garamond400.className}`} style={{ color: 'black', marginTop: '10px', fontSize: '22px' }}>
+              <div className={`mt-2.5 ${garamond400.className}`} style={{ fontSize: '22px' }}>
                 <p>
                   <b>University of Waterloo: </b>
                   {`I study biomedical engineering, but spend every bit of my free time coding :)`}
                 </p>
-                <p style={{ marginTop: '10px' }}>
+                <p className="mt-2.5">
                   <b>St. Robert CHS: </b>
                   my high school, you can read about it <a href="https://www.ycdsb.ca/2021-top-scholars/" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>here</a>.
                 </p>
-                <p style={{ marginTop: '10px' }}>
+                <p className="mt-2.5">
                   <b>Carleton University: </b>
                   studied here for 1 month during the summer of 10th grade for the SHAD program.
                 </p>
@@ -262,7 +263,7 @@ const Phone: React.FC<iPhoneProps> = ({
             </PopUp>
 
             <PopUp title='Email' open={emailOpen} onClose={() => setEmailOpen(false)}>
-              <div className={`${garamond400.className}`} style={{ color: 'black', marginTop: '10px', fontSize: '22px' }}>
+              <div className={`mt-2.5 ${garamond400.className}`} style={{ fontSize: '22px' }}>
                 <p>
                   {`Try elonmusk@gmail.com or mark.zuckerberg@gmail.com!`}
                 </p>
@@ -270,7 +271,7 @@ const Phone: React.FC<iPhoneProps> = ({
             </PopUp>
 
             <PopUp title='Phone' open={phoneOpen} onClose={() => setPhoneOpen(false)}>
-              <div className={`${garamond400.className}`} style={{ color: 'black', marginTop: '10px', fontSize: '22px' }}>
+              <div className={`mt-2.5 ${garamond400.className}`} style={{ fontSize: '22px' }}>
                 <p>
                   {`My phone is always on silent. Please use Discord, Telegram, or email for fastest response times!`}
                 </p>
@@ -278,7 +279,7 @@ const Phone: React.FC<iPhoneProps> = ({
             </PopUp>
 
             <PopUp title='Writing' open={writingOpen} onClose={() => setWritingOpen(false)}>
-              <div className={`${garamond400.className}`} style={{ color: 'black', marginLeft: '1.3rem', marginTop: '20px', fontSize: '22px' }}>
+              <div className={`mt-5 ${garamond400.className}`} style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
                 <p>➔&nbsp;&nbsp; Waterloo Blockchain Founders (<a href="https://www.linkedin.com/posts/kevinolearytv_interesting-perspective-activity-7056440703538577408-tU_K" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
               </div>
             </PopUp>
@@ -304,7 +305,7 @@ const Phone: React.FC<iPhoneProps> = ({
             </PopUp>
 
             <PopUp title='Features' open={featuresOpen} onClose={() => setFeaturesOpen(false)}>
-              <div className={`${garamond400.className}`} style={{ color: 'black', marginLeft: '1.3rem', marginTop: '20px', fontSize: '22px' }}>
+              <div className={`${garamond400.className} mt-5`} style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
                 <p className="mb-2.5">➔&nbsp;&nbsp; YCDSB announces its 2021 Top Scholars (<a href="https://www.ycdsb.ca/2021-top-scholars" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                 <p className="mb-2.5">➔&nbsp;&nbsp; Canadian National Anthology 2021 artwork feature (<a href="https://hubs.mozilla.com/szhykoG/room-2-national-anthology-ink-mvmt" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                 <p className="mb-2.5">➔&nbsp;&nbsp; York Region Kiva 2020 bottle drive (<a href="https://www.yorkregion.com/news/richmond-hill-teen-starts-bottle-drive-to-help-businesses-in-developing-nations-amid-covid-19/article_26c44174-7a69-57a1-8c1a-babaacbd5209.html" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
@@ -313,7 +314,7 @@ const Phone: React.FC<iPhoneProps> = ({
             </PopUp>
 
             <PopUp title='Contact' open={contactOpen} onClose={() => setContactOpen(false)}>
-              <div className={`${garamond400.className}`} style={{ color: 'black', marginTop: '20px', fontSize: '22px' }}>
+              <div className={`${garamond400.className} mt-5`} style={{ fontSize: '22px' }}>
                 <p className="mb-2.5">LinkedIn: <a href="https://www.linkedin.com/in/mattwong-ca" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong-ca</a></p>
                 <p className="mb-2.5">GitHub: <a href="https://github.com/MattWong-ca" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong-ca</a></p>
                 <p className="mb-2.5">GitLab: <a href="https://gitlab.com/mattwong_ca" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong_ca</a></p>
