@@ -1,19 +1,11 @@
 "use client";
 import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
-import IconAndText from './components/IconAndText';
 import './globals.css';
-import { Poppins } from 'next/font/google';
-import { Inter } from 'next/font/google';
-import { EB_Garamond } from 'next/font/google';
 import StartAnimation from './components/StartAnimation';
 import NameBox from './components/NameBox';
-import PopUp from './components/PopUp';
 import Phone from './components/test';
 
 export default function Home() {
-
-
   const icons = [
     { src: '/about.png', text: 'About', link: 'https://www.linkedin.com/in/mattwong-ca/' },
     { src: '/briefcase.png', text: 'Work', link: 'https://www.linkedin.com/in/mattwong-ca/' },
