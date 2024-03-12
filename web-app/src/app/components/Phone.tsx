@@ -71,7 +71,7 @@ const Phone: React.FC<iPhoneProps> = ({
   const codingStreak = DateTime.now().diff(DateTime.fromISO('2023-12-25'), 'days').as('days').toFixed(0);
 
   return (
-    <div>
+    <>
       <div className={`phoneHeight rounded-70 bg-cover pt-3 relative ${phoneZoomIn ? 'zoom-in' : 'hidden'}`} style={{ width: '333px', border: '5px solid #d3d3d3', backgroundImage: `url('astronaut.jpg')` }}>
         {/* Status bar */}
         <div className="h-6 flex justify-center">
@@ -328,7 +328,7 @@ const Phone: React.FC<iPhoneProps> = ({
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
