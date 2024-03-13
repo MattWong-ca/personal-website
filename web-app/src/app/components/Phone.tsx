@@ -83,16 +83,11 @@ const Phone: React.FC<iPhoneProps> = ({
         </div>
 
         <div className="flex justify-center">
-          <div className="pt-7 flex flex-wrap space-x-5">
+          <div className="pt-7 flex flex-wrap justify-center gap-x-5 gap-y-4">
             <IconAndText src={'/about.png'} onClick={() => setAboutOpen(true)} text='About' />
             <IconAndText src={'/briefcase.png'} onClick={() => setWorkOpen(true)} text='Work' />
             <IconAndText src={'/projects.png'} onClick={() => setProjectsOpen(true)} text='Projects' />
             <IconAndText src={'/education.jpeg'} onClick={() => setEducationOpen(true)} text='Education' />
-          </div>
-        </div>
-
-        <div className="flex justify-center">
-          <div className="pt-4 flex space-x-5">
             <IconAndText src={'/writing.png'} onClick={() => setWritingOpen(true)} text='Writing' />
             <IconAndText src={'/quests.png'} onClick={() => setQuestsOpen(true)} text='Quests' />
             <IconAndText src={'/media.png'} onClick={() => setFeaturesOpen(true)} text='Features' />
