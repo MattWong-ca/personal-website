@@ -230,12 +230,13 @@ const Phone: React.FC<iPhoneProps> = ({
               <div className={`mt-5 ${garamond400.className}`}>
                 <p className={`${poppins600.className}`} style={{ lineHeight: 'normal', fontSize: '25px', marginTop: '0.5rem' }}>2024</p>
                 <div style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
-                  <p className="mb-2.5">➔&nbsp;&nbsp; Personal website redesign (<a href="https://github.com/MattWong-ca/personal-website" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                  <p className="mb-2.5">➔&nbsp;&nbsp; FrameGPT - free no-code builder for Farcaster frames (<a href="https://ethglobal.com/showcase/framegpt-0gxad" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                  <p className="mb-2.5">➔&nbsp;&nbsp; Personal website redesign (<a href="https://github.com/MattWong-ca/personal-website" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                 </div>
                 <p className={`${poppins600.className}`} style={{ lineHeight: 'normal', fontSize: '25px', marginTop: '0.5rem' }}>2023</p>
                 <div style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
-                  <p className="mb-2.5">➔&nbsp;&nbsp; Swift Tickets - NFT minting gated by Worldcoin&apos;s World ID (<a href="https://github.com/MattWong-ca/swift-tickets-navh" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
-                  <p className="mb-2.5">➔&nbsp;&nbsp; Various side projects (<a href="https://medium.com/@mattwong.ca/all-my-projects-14bf922d0a65" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                  <p className="mb-2.5">➔&nbsp;&nbsp; Swift Tickets - NFT minting gated by Worldcoin&apos;s World ID (<a href="https://github.com/MattWong-ca/swift-tickets-navh" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                  <p className="mb-2.5">➔&nbsp;&nbsp; Various side projects (<a href="https://medium.com/@mattwong.ca/all-my-projects-14bf922d0a65" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                 </div>
               </div>
             </PopUp>
