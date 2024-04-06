@@ -230,6 +230,7 @@ const Phone: React.FC<iPhoneProps> = ({
               <div className={`mt-5 ${garamond400.className}`}>
                 <p className={`${poppins600.className}`} style={{ lineHeight: 'normal', fontSize: '25px', marginTop: '0.5rem' }}>2024</p>
                 <div style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
+                  <p className="mb-2.5">➔&nbsp;&nbsp; Translate Bot - language translation for Farcaster (<a href="https://github.com/MattWong-ca/translate-bot" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                   <p className="mb-2.5">➔&nbsp;&nbsp; FrameGPT - free no-code builder for Farcaster frames (<a href="https://ethglobal.com/showcase/framegpt-0gxad" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                   <p className="mb-2.5">➔&nbsp;&nbsp; Personal website redesign (<a href="https://github.com/MattWong-ca/personal-website" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                 </div>
