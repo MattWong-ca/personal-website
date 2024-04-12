@@ -215,7 +215,7 @@ const Phone: React.FC<iPhoneProps> = ({
                 <div style={{ width: 'calc(100% - 148px)', padding: '14px' }}>
                   <div className="flex justify-between">
                     <p className={poppins600.className} style={{ fontSize: '20px' }}>Director of Partnerships</p>
-                    <p className={poppins400.className} style={{ fontSize: '20px', fontStyle: 'italic' }}>{`Oct '23 - Aug '24`}</p>
+                    <p className={poppins400.className} style={{ fontSize: '20px', fontStyle: 'italic' }}>{`Oct '22 - Aug '23`}</p>
                   </div>
                   <p className={garamond400.className} style={{ marginTop: '10px', fontSize: '16px' }}>
                     {`Led partnerships for Waterloo Blockchain, Canada's largest blockchain club. Organized the first
