@@ -153,7 +153,7 @@ const Phone: React.FC<iPhoneProps> = ({
                     <p className={poppins400.className} style={{ fontSize: '20px', fontStyle: 'italic' }}>{`Jan - Apr '24`}</p>
                   </div>
                   <p className={`${garamond400.className} mt-2.5`} style={{ fontSize: '16px' }}>
-                    Building React/TypeScript frontend features and Node/Serverless backend APIs/endpoints
+                    Building React/TypeScript frontend features and Node/Serverless backend API endpoints
                     at ExaCare, a VC-backed health tech startup that recently raised $6.5M.
                   </p>
                 </div>
@@ -277,6 +277,7 @@ const Phone: React.FC<iPhoneProps> = ({
 
             <PopUp title='Writing' open={writingOpen} onClose={() => setWritingOpen(false)}>
               <div className={`mt-5 ${garamond400.className}`} style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
+                <p>➔&nbsp;&nbsp; Full Stack Dev Notes - ExaCare, W24 (<a href="https://mattwong.ca/writing/exacare" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                 <p>➔&nbsp;&nbsp; Waterloo Blockchain Founders (<a href="https://www.linkedin.com/posts/kevinolearytv_interesting-perspective-activity-7056440703538577408-tU_K" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
               </div>
             </PopUp>
