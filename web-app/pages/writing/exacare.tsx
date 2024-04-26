@@ -4,7 +4,7 @@ import { EB_Garamond, Poppins } from 'next/font/google';
 import Image from 'next/image';
 
 const title = Poppins({ subsets: ["latin-ext"], weight: ["600"], style: ["normal"] });
-// const garamond400 = EB_Garamond({ subsets: ["latin-ext"], weight: ["400"], style: ["italic"] });
+const garamond400 = EB_Garamond({ subsets: ["latin-ext"], weight: ["400"], style: ["normal"] });
 
 const ExaCare = () => {
     return (
@@ -21,12 +21,16 @@ const ExaCare = () => {
                         height={0}
                         className="mx-auto"
                     />
-                    <p className="italic">
+                    <p className="italic" style={{ fontSize: '18px'}}>
                         Founded in early 2022, ExaCare is a health tech startup building
                         an all-in-one EHR and CRM platform for senior care homes. They
                         raised $6.5M from Foundation Capital, 1984 Ventures, and Fractal
                         Software. Below are the technical notes I took as a Full Stack
                         Developer Intern from Jan - Apr 2024.
+                    </p>
+                    <p className={`${title.className}`} style={{ marginTop: '50px', fontSize: '24px' }}>Backend - How to Make an API Endpoint</p>
+                    <p className={`${garamond400.className}`} style={{ fontSize: '20px' }}>
+                        Tech stack: serverless architecture, AWS Lambda, API Gateway, S3, Node.js, Sequelize, PostgresSQL, pgAdmin, Docker
                     </p>
                 </div>
             </div>
