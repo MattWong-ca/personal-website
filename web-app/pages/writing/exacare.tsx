@@ -46,8 +46,12 @@ const ExaCare = () => {
 
                     <ol className={`${garamond400.className}`} style={{ fontSize: '20px' }}>
                         <li>1. Define API endpoint</li>
+                        <li>- In .yml file</li>
+                        <li>- In .yaml file (for OpenAPI schema)</li>
                         <li>2. Create handler code (eg. findAll)</li>
                         <li>3. Define data models</li>
+                        <li>- In /models folder (defines structure + relationships)</li>
+                        <li>- In migration file (creates the database table + columns)</li>
                         <li>4. Create service class (calls repo class methods)</li>
                         <li>5. Create repo class (methods interact with database)</li>
                     </ol>
@@ -62,6 +66,22 @@ const ExaCare = () => {
                         code in response to events like HTTP requests (hence eliminating
                         the need to manage servers).
                     </p>
+
+                    <br />
+
+                    <p className={`${garamond400.className}`} style={{ fontSize: '20px' }}>
+                        Here’s the request-response flow:
+                    </p>
+
+                    <br />
+
+                    <ol className={`${garamond400.className}`} style={{ fontSize: '20px' }}>
+                        <li>1. API Gateway receives HTTP request from FE client</li>
+                        <li>2. API Gateway routes request to appropriate endpoint (eg. /users)</li>
+                        <li>3. Lambda function is triggered, executing code associated with the endpoint</li>
+                        <li>4. Lambda function processes and sends response back to API Gateway</li>
+                        <li>5. API Gateway receives response and sends it back to FE client</li>
+                    </ol>
                 </div>
             </div>
         </div>
