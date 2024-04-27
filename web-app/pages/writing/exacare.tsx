@@ -82,6 +82,27 @@ const ExaCare = () => {
                         <li>4. Lambda function processes and sends response back to API Gateway</li>
                         <li>5. API Gateway receives response and sends it back to FE client</li>
                     </ol>
+
+                    <br/>
+
+                    <p className={`${garamond400.className}`} style={{ fontSize: '20px' }}>
+                        What it looks like in code:
+                    </p>
+
+                    <br/>
+
+                    <p className={`${title.className}`} style={{ fontSize: '18px' }}>
+                        Defining API Endpoints
+                    </p>
+
+                    <p className={`${garamond400.className}`} style={{ fontSize: '20px' }}>
+                        In the BE’s root directory, there’s various 
+                        serverless.&#123;SERVICE_NAME&#125;.yml files. These represent the
+                        different microservices responsible for handling APIs specific to 
+                        different parts of the app. Instead of running npm run start and 
+                        waiting ~8 minutes for all services, we can run only the services 
+                        we need, reducing the wait time for services to boot up.
+                    </p>
                 </div>
             </div>
         </div>

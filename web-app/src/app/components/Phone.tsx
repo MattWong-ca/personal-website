@@ -3,6 +3,7 @@ import Image from 'next/image';
 import IconAndText from './IconAndText';
 import PopUp from './PopUp';
 import { EB_Garamond, Poppins } from 'next/font/google';
+import Link from 'next/link';
 
 const poppins600 = Poppins({ subsets: ["latin-ext"], weight: ["600"], style: ["normal"] });
 const poppins400 = Poppins({ subsets: ["latin-ext"], weight: ["400"], style: ["normal"] });
@@ -277,7 +278,7 @@ const Phone: React.FC<iPhoneProps> = ({
 
             <PopUp title='Writing' open={writingOpen} onClose={() => setWritingOpen(false)}>
               <div className={`mt-5 ${garamond400.className}`} style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
-                <p>➔&nbsp;&nbsp; Full Stack Dev Notes - ExaCare, W24 (<a href="/writing/exacare" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                <p>➔&nbsp;&nbsp; Full Stack Dev Notes - ExaCare, W24 (<Link href="/writing/exacare" style={{ textDecoration: 'underline', color: 'blue' }}>link</Link>)</p>
                 <p>➔&nbsp;&nbsp; Waterloo Blockchain Founders (<a href="https://www.linkedin.com/posts/kevinolearytv_interesting-perspective-activity-7056440703538577408-tU_K" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
               </div>
             </PopUp>
