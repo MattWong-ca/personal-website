@@ -44,14 +44,14 @@ const ExaCare = () => {
                         General flow:
                     </p>
 
-                    <ol className={`${garamond400.className}`} style={{ fontSize: '20px' }}>
+                    <ol className={`${garamond400.className}`} style={{ fontSize: '20px', marginLeft: '20px' }}>
                         <li>1. Define API endpoint</li>
-                        <li>- In .yml file</li>
-                        <li>- In .yaml file (for OpenAPI schema)</li>
+                        <li style={{ marginLeft: '20px'}}>- In .yml file</li>
+                        <li style={{ marginLeft: '20px'}}>- In .yaml file (for OpenAPI schema)</li>
                         <li>2. Create handler code (eg. findAll)</li>
                         <li>3. Define data models</li>
-                        <li>- In /models folder (defines structure + relationships)</li>
-                        <li>- In migration file (creates the database table + columns)</li>
+                        <li style={{ marginLeft: '20px'}}>- In /models folder (defines structure + relationships)</li>
+                        <li style={{ marginLeft: '20px'}}>- In migration file (creates the database table + columns)</li>
                         <li>4. Create service class (calls repo class methods)</li>
                         <li>5. Create repo class (methods interact with database)</li>
                     </ol>
@@ -75,7 +75,7 @@ const ExaCare = () => {
 
                     <br />
 
-                    <ol className={`${garamond400.className}`} style={{ fontSize: '20px' }}>
+                    <ol className={`${garamond400.className}`} style={{ fontSize: '20px', marginLeft: '20px' }}>
                         <li>1. API Gateway receives HTTP request from FE client</li>
                         <li>2. API Gateway routes request to appropriate endpoint (eg. /users)</li>
                         <li>3. Lambda function is triggered, executing code associated with the endpoint</li>
@@ -103,6 +103,53 @@ const ExaCare = () => {
                         waiting ~8 minutes for all services, we can run only the services 
                         we need, reducing the wait time for services to boot up.
                     </p>
+
+                    <br/>
+
+                    <p className={`${garamond400.className}`} style={{ fontSize: '20px' }}>
+                        Inside a serverless.&#123;SERVICE_NAME&#125;.yml file, the 
+                        ‘functions’ are the most important part:
+                    </p>
+
+                    <br/>
+
+                    <ol className={`${garamond400.className}`} style={{ fontSize: '20px', marginLeft: '20px' }}>
+                        <li>-&nbsp; handler: path to where the handler’s code is</li>
+                        <li>-&nbsp; path: URL of endpoint; uses &#123; &#125; for path parameters</li>
+                        <li>-&nbsp; method: type of HTTP request</li>
+                        <li>-&nbsp; request → parameters → paths: defines name of path parameter above</li>
+                    </ol>
+
+                    <br/>
+
+                    <p className={`${garamond400.className}`} style={{ fontSize: '20px' }}>
+                        Next, before going into the handler code (eg. findAll.ts), the 
+                        endpoints also need to be defined in the yaml files under the 
+                        api-schemas folder. Once a script is run, OpenAPI will generate the
+                        necessary types for the requests/responses, which the FE can then 
+                        also use by running a script. This makes it easier for the FE/BE 
+                        developers to be in sync and work with the same object types.
+                    </p>
+
+                    <br/>
+
+                    <p className={`${garamond400.className}`} style={{ fontSize: '20px' }}>
+                        Overview of a .yaml file:
+                    </p>
+
+                    <br/>
+
+                    <ol className={`${garamond400.className}`} style={{ fontSize: '20px', marginLeft: '20px' }}>
+                        <li>-&nbsp; paths: the endpoint URL</li>
+                        <li>-&nbsp; get/put/post: type of HTTP method</li>
+                        <li>-&nbsp; description: what the endpoint does</li>
+                        <li>-&nbsp; operationId: important for the handler code later on</li>
+                        <li>-&nbsp; parameters: describe the path and query parameters</li>
+                        <li>-&nbsp; responses: 400, 200, etc.</li>
+                        <li style={{ marginLeft: '20px' }}>-&nbsp; 200 response: need to specify content type, as well as response type (eg. 
+                            response is of type User, defined in components section at bottom of same file)
+                        </li>
+                    </ol>
                 </div>
             </div>
         </div>
