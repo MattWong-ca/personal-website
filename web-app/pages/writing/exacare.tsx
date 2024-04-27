@@ -223,6 +223,17 @@ const ExaCare = () => {
                     <p className={`${garamond400.className}`} style={{ fontSize: '20px' }}>
                         Tech stack: TypeScript, React, MUI, React Hook Form, TanStack, OpenAPI
                     </p>
+
+                    <br/>
+
+                    <p className={`${garamond400.className}`} style={{ fontSize: '20px', paddingBottom: '50px' }}>
+                        I built frontend components across Assessments (forms), Billing, and 
+                        the Data Center page. I used MUI for table (data grid) features like
+                        filters, search bars, and sorting methods. React Hook Form was used
+                        for all the form inputs, while TanStack and OpenAPI were used for 
+                        API requests/responses.
+                    </p>
+
                 </div>
             </div>
         </div>
