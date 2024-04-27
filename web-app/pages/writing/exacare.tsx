@@ -150,6 +150,72 @@ const ExaCare = () => {
                             response is of type User, defined in components section at bottom of same file)
                         </li>
                     </ol>
+
+                    <br/>
+
+                    <p className={`${title.className}`} style={{ fontSize: '18px' }}>
+                        Lambda Handler
+                    </p>
+
+                    <p className={`${garamond400.className}`} style={{ fontSize: '20px' }}>
+                        In the actual lambda handler code (eg. findAll.ts), a service (eg. 
+                        UserService) is instantiated and one of its methods will be called 
+                        (eg. userService.findAll()). If the request has a response, it’ll 
+                        be sent to API Gateway and then back to the FE. This Lambda handler 
+                        file is also where validations are done to ensure the FE sent 
+                        adequate/enough data.
+                    </p>
+
+                    <br/>
+
+                    <p className={`${title.className}`} style={{ fontSize: '18px' }}>
+                        Defining Data Models
+                    </p>
+
+                    <p className={`${garamond400.className}`} style={{ fontSize: '20px' }}>
+                        Before creating the service and repo classes, the object types 
+                        need to be defined through a model and migration file.
+                    </p>
+                    <br/>
+                    <p className={`${garamond400.className}`} style={{ fontSize: '20px' }}>
+                        Both the service and repo class will make use of object types 
+                        defined in the /models folder. These files essentially define the 
+                        structure of the data models, like the properties they include and 
+                        any relationships they have with other types.
+                    </p>
+                    <br/>
+                    <p className={`${garamond400.className}`} style={{ fontSize: '20px' }}>
+                        Similarly, a migration file is needed to actually create the 
+                        database table and define its columns. These files only run once, 
+                        so for adding a new column, you’d have to create a new file.
+                    </p>
+
+                    <br/>
+
+                    <p className={`${title.className}`} style={{ fontSize: '18px' }}>
+                        Service Class
+                    </p>
+
+                    <p className={`${garamond400.className}`} style={{ fontSize: '20px' }}>
+                        The service class serves as an intermediary between the handler 
+                        code that receives the HTTP request and the repository code that 
+                        actually interacts with the database through Sequelize. Its methods 
+                        will vary depending on the HTTP request and the action/response 
+                        expected.
+                    </p>
+
+                    <br/>
+
+                    <p className={`${title.className}`} style={{ fontSize: '18px' }}>
+                        Repo Class
+                    </p>
+
+                    <p className={`${garamond400.className}`} style={{ fontSize: '20px' }}>
+                        The repo class contains the repo methods that the service methods 
+                        use. This code is where you specify what properties you want from 
+                        the database rows (eg. where X property is false, where Y property 
+                        equals Z).  
+                    </p>
                 </div>
             </div>
         </div>
