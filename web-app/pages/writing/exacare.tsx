@@ -25,12 +25,12 @@ const ExaCare = () => {
                         Founded in early 2022, ExaCare is a health tech startup building
                         an all-in-one EHR and CRM platform for senior care homes. They
                         raised $6.5M from Foundation Capital, 1984 Ventures, and Fractal
-                        Software. Below are the technical notes I took as a Full Stack
-                        Developer Intern from Jan - Apr 2024.
+                        Software. Below are the technical notes I took as the first SWE
+                        Intern hire from Jan - Apr 2024.
                     </p>
                     <p className={`${title.className}`} style={{ marginTop: '50px', fontSize: '24px' }}>Backend - How to Make an API Endpoint</p>
                     <p className={`${garamond400.className}`} style={{ fontSize: '20px' }}>
-                        Tech stack: serverless architecture, AWS Lambda, API Gateway, S3, Node.js, Sequelize, PostgresSQL, pgAdmin, Docker
+                        Tech stack: serverless architecture, AWS Lambda, API Gateway, S3, Node.js, Sequelize, OpenAPI, PostgresSQL, pgAdmin, Docker
                     </p>
                     <Image
                         style={{ marginTop: '40px', marginBottom: '30px' }}
@@ -163,7 +163,7 @@ const ExaCare = () => {
                         (eg. userService.findAll()). If the request has a response, it’ll 
                         be sent to API Gateway and then back to the FE. This Lambda handler 
                         file is also where validations are done to ensure the FE sent 
-                        adequate/enough data.
+                        adequate/correct data.
                     </p>
 
                     <br/>
@@ -215,6 +215,13 @@ const ExaCare = () => {
                         use. This code is where you specify what properties you want from 
                         the database rows (eg. where X property is false, where Y property 
                         equals Z).  
+                    </p>
+
+                    <br/>
+
+                    <p className={`${title.className}`} style={{ marginTop: '50px', fontSize: '24px' }}>Frontend</p>
+                    <p className={`${garamond400.className}`} style={{ fontSize: '20px' }}>
+                        Tech stack: TypeScript, React, MUI, React Hook Form, TanStack, OpenAPI
                     </p>
                 </div>
             </div>
