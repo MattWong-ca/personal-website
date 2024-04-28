@@ -124,16 +124,16 @@ const Phone: React.FC<iPhoneProps> = ({
               </div>
               <p className={`${poppins600.className} mt-5 pb-2 text-black`} style={{ fontSize: '24px' }}>Currently</p>
               <div className={`${garamond400.className} text-black`} style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
-                <p>➔&nbsp;&nbsp; Full stack developer at ExaCare, a VC-backed health tech startup</p>
-                <p className="mt-2">➔&nbsp;&nbsp; Coding & designing side projects</p>
-                <p className="mt-2">➔&nbsp;&nbsp; Writing about Canadian startup founders</p>
+                <p>➔&nbsp;&nbsp; Building projects at hackathons</p>
+                <p className="mt-2">➔&nbsp;&nbsp; Reading about Canadian startup founders</p>
                 <p className="mt-2">➔&nbsp;&nbsp; On a {codingStreak} day coding streak!</p>
               </div>
               <p className={`${poppins600.className} mt-5 pb-2 text-black`} style={{ fontSize: '24px' }}>Previously</p>
               <div className={`${garamond400.className} text-black`} style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
-                <p>➔&nbsp;&nbsp; Led partnerships for Waterloo Blockchain</p>
-                <p className="mt-2">➔&nbsp;&nbsp; Did iOS development at theScore</p>
-                <p className="mt-2">➔&nbsp;&nbsp; Built ecommerce stores at Shopify</p>
+                <p>➔&nbsp;&nbsp; Partnerships at Waterloo Blockchain</p>
+                <p className="mt-2">➔&nbsp;&nbsp; iOS development at theScore</p>
+                <p className="mt-2">➔&nbsp;&nbsp; Full stack development at ExaCare</p>
+                <p className="mt-2">➔&nbsp;&nbsp; Ecommerce stores at Shopify</p>
                 <p className="mt-2 mb-12">➔&nbsp;&nbsp; Completed Google&apos;s SPS program</p>
               </div>
             </PopUp>
