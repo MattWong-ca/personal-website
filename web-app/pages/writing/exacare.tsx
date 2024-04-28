@@ -174,7 +174,9 @@ const ExaCare = () => {
 
                     <p className={`${garamond400.className}`} style={{ fontSize: '20px' }}>
                         Before creating the service and repo classes, the object types 
-                        need to be defined through a model and migration file.
+                        need to be defined through a model and migration file. This is 
+                        done with Sequelize, an Object-Relational Mapping library that
+                        lets you define an OOP model representing a database table.
                     </p>
                     <br/>
                     <p className={`${garamond400.className}`} style={{ fontSize: '20px' }}>
