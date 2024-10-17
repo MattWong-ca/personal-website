@@ -233,7 +233,7 @@ const Phone: React.FC<iPhoneProps> = ({
                 <p className={`${poppins600.className}`} style={{ lineHeight: 'normal', fontSize: '25px', marginTop: '0.5rem' }}>2024</p>
                 <div style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
                   <p className="mb-2.5">➔&nbsp;&nbsp; Endless Scroll - crypto-themed trivia game on Warpcast (<a href="https://github.com/MattWong-ca/endless-scroll" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
-                  <p className="mb-2.5">➔&nbsp;&nbsp; Lingocaster - learn languages by translating casts on Warpcast (<a href="https://github.com/MattWong-ca/lingocaster" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                  <p className="mb-2.5">➔&nbsp;&nbsp; Lingocaster - learn languages by translating casts on Warpcast (<a href="https://github.com/Lingo-Labs/lingocaster" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                   <p className="mb-2.5">➔&nbsp;&nbsp; BANGER! - bet on casts to go viral with Chiliz Fan Tokens (<a href="https://github.com/MattWong-ca/banger-bets" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                   <p className="mb-2.5">➔&nbsp;&nbsp; Castlingo - Chrome extension for language learning on Warpcast (<a href="https://github.com/MattWong-ca/castlingo" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                   <p className="mb-2.5">➔&nbsp;&nbsp; EMG Controlled Whisk</p>
