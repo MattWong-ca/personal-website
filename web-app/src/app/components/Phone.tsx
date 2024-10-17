@@ -109,7 +109,7 @@ const Phone: React.FC<iPhoneProps> = ({
                   <p className={`${poppins600.className} mt-2 text-black`} style={{ lineHeight: 'normal', fontSize: '25px' }}>TLDR</p>
                   <div className={`${garamond400.className} text-black`} style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
                     <p>➔&nbsp;&nbsp; Software developer with 3+ years of experience</p>
-                    <p className="mt-2">➔&nbsp;&nbsp; 2nd year engineering student at UWaterloo</p>
+                    <p className="mt-2">➔&nbsp;&nbsp; 3rd year engineering student at UWaterloo</p>
                     <p className="mt-2">➔&nbsp;&nbsp; Building in blockchain & exploring in AI</p>
                     <p className="mt-2">➔&nbsp;&nbsp; Enjoys hackathons, travelling, & sports</p>
                   </div>
@@ -124,7 +124,8 @@ const Phone: React.FC<iPhoneProps> = ({
               </div>
               <p className={`${poppins600.className} mt-5 pb-2 text-black`} style={{ fontSize: '24px' }}>Currently</p>
               <div className={`${garamond400.className} text-black`} style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
-                <p>➔&nbsp;&nbsp; Building projects at hackathons</p>
+                <p>➔&nbsp;&nbsp; Contributing to Filecoin & IPFS</p>
+                <p className="mt-2">➔&nbsp;&nbsp; Building projects at hackathons</p>
                 <p className="mt-2">➔&nbsp;&nbsp; Reading about Canadian startup founders</p>
                 <p className="mt-2">➔&nbsp;&nbsp; On a {codingStreak} day coding streak!</p>
               </div>
