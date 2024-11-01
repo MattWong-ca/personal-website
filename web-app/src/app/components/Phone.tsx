@@ -309,6 +309,7 @@ const Phone: React.FC<iPhoneProps> = ({
               <div className={`mt-5 ${garamond400.className}`} style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
                 <p>➔&nbsp;&nbsp; Full Stack Dev Notes - ExaCare, W24 (<Link href="/writing/exacare" style={{ textDecoration: 'underline', color: 'blue' }}>link</Link>)</p>
                 <p>➔&nbsp;&nbsp; Waterloo Blockchain Founders (<a href="https://www.linkedin.com/posts/kevinolearytv_interesting-perspective-activity-7056440703538577408-tU_K" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                <p>➔&nbsp;&nbsp; Account Abstraction (<a href="https://twitter.com/mattwong_ca/status/1632336009953431553" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
               </div>
             </PopUp>
 
