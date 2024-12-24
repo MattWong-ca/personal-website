@@ -335,8 +335,9 @@ const Phone: React.FC<iPhoneProps> = ({
 
             <PopUp title='Features' open={featuresOpen} onClose={() => setFeaturesOpen(false)}>
               <div className={`${garamond400.className} mt-5`} style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
+                <p className="mb-2.5">➔&nbsp;&nbsp; Winning Solutions from the PYUSD Portal Hackathon on Solana (<a href="https://developer.paypal.com/community/blog/winning-solutions-pyusd-portal-hackathon-solana/" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                 <p className="mb-2.5">➔&nbsp;&nbsp; YCDSB announces its 2021 Top Scholars (<a href="https://www.ycdsb.ca/2021-top-scholars" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
-                <p className="mb-2.5">➔&nbsp;&nbsp; Canadian National Anthology 2021 artwork feature (<a href="https://hubs.mozilla.com/szhykoG/room-2-national-anthology-ink-mvmt" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                <p className="mb-2.5">➔&nbsp;&nbsp; Canadian National Anthology 2021 artwork feature (<a href="https://images.squarespace-cdn.com/content/v1/5395c972e4b0989057d6a862/daccdf6e-c064-4e4b-947d-e285c29813c5/Second+Drop+Cover+with+Barcode.jpg" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                 <p className="mb-2.5">➔&nbsp;&nbsp; York Region Kiva 2020 bottle drive (<a href="https://www.yorkregion.com/news/richmond-hill-teen-starts-bottle-drive-to-help-businesses-in-developing-nations-amid-covid-19/article_26c44174-7a69-57a1-8c1a-babaacbd5209.html" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                 <p className="mb-2.5">➔&nbsp;&nbsp; Skills Ontario 2016 cardboard boat race (<a href="https://issuu.com/thornhillliberal/docs/tho_w_jan28" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
               </div>
@@ -346,9 +347,7 @@ const Phone: React.FC<iPhoneProps> = ({
               <div className={`${garamond400.className} mt-5`} style={{ fontSize: '22px' }}>
                 <p className="mb-2.5">LinkedIn: <a href="https://www.linkedin.com/in/mattwong-ca" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong-ca</a></p>
                 <p className="mb-2.5">GitHub: <a href="https://github.com/MattWong-ca" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong-ca</a></p>
-                <p className="mb-2.5">GitLab: <a href="https://gitlab.com/mattwong_ca" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong_ca</a></p>
                 <p className="mb-2.5">Telegram: <a href="https://t.me/mattwong_ca" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong_ca</a></p>
-                <p className="mb-2.5">Instagram: <a href="https://www.instagram.com/mattwong.ca" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong.ca</a></p>
                 <p className="mb-2.5">X: <a href="https://x.com/mattwong_ca" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong_ca</a></p>
                 <p className="mb-2.5">Discord: mattwong.ca</p>
                 <p className="mb-2.5">Farcaster: <a href="https://warpcast.com/mtt" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mtt</a></p>
