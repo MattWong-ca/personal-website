@@ -17,7 +17,10 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Matthew Wong - Waterloo",
-  description: "Software developer, experienced in full stack, iOS, & Web3. Studying engineering at UWaterloo. Building in blockchain!"
+  description: "Software developer, experienced in full stack, iOS, & Web3. Studying engineering at UWaterloo. Building in blockchain!",
+  verification: {
+    google: '5K6dT33iyD2EPXTe4QuMelr7U-MwJE0r9V03CdLHUXc',
+  }
 };
 
 export default function RootLayout({
