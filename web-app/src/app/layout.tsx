@@ -4,6 +4,8 @@ import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react"
 import "./globals.css";
 import Head from "next/head";
+import sdk from "@farcaster/frame-sdk";
+import { useState, useEffect } from "react";
 
 const poppins = Poppins({
   subsets: ["latin-ext"],
@@ -28,6 +30,34 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [context, setContext] = useState<any | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [safeAreaInsets, setSafeAreaInsets] = useState<any>(null);
+
+  useEffect(() => {
+    const load = async () => {
+      try {
+        const context = await sdk.context;
+        if (context) {
+          if (context.client?.safeAreaInsets) {
+            setSafeAreaInsets(context.client.safeAreaInsets);
+          }
+          setContext(context);
+        } else {
+          setError("Failed to load Farcaster context");
+        }
+        await sdk.actions.ready();
+      } catch (err) {
+        setError(
+          err instanceof Error ? err.message : "Failed to initialize SDK",
+        );
+        console.error("SDK initialization error:", err);
+      }
+    };
+
+    load();
+  }, []);
+
   return (
     <html lang="en">
       <Head>
