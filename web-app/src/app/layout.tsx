@@ -32,6 +32,20 @@ export default function RootLayout({
     <html lang="en">
       <Head>
         <meta name="description" content={metadata.description!} />
+        <meta name="fc:frame" content='{
+          "version": "next",
+          "imageUrl": "https://private-user-images.githubusercontent.com/66754344/320710831-95fb8908-0904-454b-b579-df3c6e5ad64e.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mzk2MTkwMDMsIm5iZiI6MTczOTYxODcwMywicGF0aCI6Ii82Njc1NDM0NC8zMjA3MTA4MzEtOTVmYjg5MDgtMDkwNC00NTRiLWI1NzktZGYzYzZlNWFkNjRlLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTAyMTUlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwMjE1VDExMjUwM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTM2YjU2MjNkNDIwYTk0NWEzZGZhM2UzNmM5YjkzODA3OTg4MjlhOGUyNmQ3NjQxOTA1NzlmNTY5ZjZiZTFlNTkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.vL4PhZyIoAwNJpj971G9hOcxymfcn4WTeGhvAag79Os",
+          "button":{
+            "title": "Visit",
+            "action": {
+              "type": "launch_frame",
+              "name": "mattwong.ca",
+              "url": "https://mattwong.ca",
+              "splashImageUrl": "https://mattwong.ca/about.png",
+              "splashBackgroundColor": "#000000"
+            }
+          }
+        }' data-rh="true"/>
       </Head>
       <body className={inter.className}>
         {children}
