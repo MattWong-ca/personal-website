@@ -4,6 +4,8 @@ import './globals.css';
 import StartAnimation from './components/StartAnimation';
 import NameBox from './components/NameBox';
 import Phone from './components/Phone';
+import frameSDK from '@farcaster/frame-sdk'
+import { useFrame } from './components/providers/FrameSDKProvider';
 
 export default function Home() {
   const icons = [
@@ -12,7 +14,7 @@ export default function Home() {
     { src: '/projects.png', text: 'Projects', link: 'https://www.linkedin.com/in/mattwong-ca/' },
     { src: '/education.jpeg', text: 'Education', link: 'https://www.linkedin.com/in/mattwong-ca/' }
   ];
-
+  const { context, refetch: refetchFrame } = useFrame()
   const [aboutOpen, setAboutOpen] = React.useState(false);
   const [workOpen, setWorkOpen] = React.useState(false);
   const [projectsOpen, setProjectsOpen] = React.useState(false);
@@ -48,6 +50,21 @@ export default function Home() {
     const timeout = setTimeout(() => setPhoneZoomIn(true), 12200);
     return () => clearTimeout(timeout);
   }, []);
+
+  if (context && !context.client.added) {
+    return (
+      <div className="flex min-h-screen flex-col items-center justify-center gap-4 px-4 py-6">
+        <button
+          onClick={async () => {
+            await frameSDK.actions.addFrame()
+            refetchFrame()
+          }}
+        >
+          Matt Wong
+        </button>
+      </div>
+    )
+  }
 
   return (
     <div className="overflow-hidden h-screen flex relative z-50">
