@@ -13,23 +13,7 @@ export const metadata: Metadata = {
   description: "Software developer, experienced in full stack, iOS, & Web3. Studying engineering at UWaterloo. Building in blockchain!",
   verification: {
     google: '5K6dT33iyD2EPXTe4QuMelr7U-MwJE0r9V03CdLHUXc',
-  },
-  other: {
-    'fc:frame': JSON.stringify({
-      version: 'next',
-      imageUrl: `/about.png`,
-      button: {
-        title: 'About',
-        action: {
-          type: 'launch_frame',
-          name: 'Matthew Wong',
-          url: `https://mattwong.ca`,
-          splashImageUrl: `/about.png`,
-          splashBackgroundColor: '#000000',
-        },
-      },
-    }),
-  },
+  }
 };
 
 export default function RootLayout({
