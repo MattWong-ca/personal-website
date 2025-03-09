@@ -4,7 +4,7 @@ import './globals.css';
 import StartAnimation from './components/StartAnimation';
 import NameBox from './components/NameBox';
 import Phone from './components/Phone';
-
+import HoverCard from './components/HoverCard';
 export default function Home() {
   const icons = [
     { src: '/about.png', text: 'About', link: 'https://www.linkedin.com/in/mattwong-ca/' },
@@ -156,7 +156,7 @@ export default function Home() {
             </div>
           </div>
           <div className="h-full border-r-4 border-black flex items-center justify-center" style={{ width: '72%' }}>
-            <Phone
+            {/* <Phone
               phoneZoomIn={phoneZoomIn}
               taglineZoomIn={taglineZoomIn}
               shortcutsZoomIn={shortcutsZoomIn}
@@ -180,7 +180,31 @@ export default function Home() {
               setWritingOpen={setWritingOpen}
               setEmailOpen={setEmailOpen}
               setPhoneOpen={setPhoneOpen}
-            />
+            /> */}
+            <HoverCard
+            phoneZoomIn={phoneZoomIn}
+            taglineZoomIn={taglineZoomIn}
+            shortcutsZoomIn={shortcutsZoomIn}
+            aboutOpen={aboutOpen}
+            workOpen={workOpen}
+            contactOpen={contactOpen}
+            featuresOpen={featuresOpen}
+            projectsOpen={projectsOpen}
+            educationOpen={educationOpen}
+            questsOpen={questsOpen}
+            writingOpen={writingOpen}
+            emailOpen={emailOpen}
+            phoneOpen={phoneOpen}
+            setAboutOpen={setAboutOpen}
+            setWorkOpen={setWorkOpen}
+            setContactOpen={setContactOpen}
+            setFeaturesOpen={setFeaturesOpen}
+            setProjectsOpen={setProjectsOpen}
+            setEducationOpen={setEducationOpen}
+            setQuestsOpen={setQuestsOpen}
+            setWritingOpen={setWritingOpen}
+            setEmailOpen={setEmailOpen}
+            setPhoneOpen={setPhoneOpen} />
           </div>
           <div className="bg-blue-500 h-full" style={{ width: '14%' }}>
             <div className="bg-black w-full h-1/6 border-b-4 border-black"></div>
