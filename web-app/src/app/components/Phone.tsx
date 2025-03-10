@@ -125,9 +125,9 @@ const Phone: React.FC<iPhoneProps> = ({
               <p className={`${poppins600.className} mt-5 pb-2 text-black`} style={{ fontSize: '24px' }}>Currently</p>
               <div className={`${garamond400.className} text-black`} style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
                 <p>➔&nbsp;&nbsp; CS exchange at SUTD (Singapore)</p>
-                <p className="mt-2">➔&nbsp;&nbsp; Contributing to IPFS & Filecoin DevEx</p>
+                {/* <p className="mt-2">➔&nbsp;&nbsp; Contributing to IPFS & Filecoin DevEx</p> */}
                 <p className="mt-2">➔&nbsp;&nbsp; Devcon Scholar via Ethereum Foundation</p>
-                <p className="mt-2">➔&nbsp;&nbsp; Building projects with real users</p>
+                {/* <p className="mt-2">➔&nbsp;&nbsp; Building projects with real users</p> */}
                 <p className="mt-2">➔&nbsp;&nbsp; Reading about Canadian startup founders</p>
                 <p className="mt-2">➔&nbsp;&nbsp; On a {codingStreak} day coding streak!</p>
               </div>
@@ -154,7 +154,7 @@ const Phone: React.FC<iPhoneProps> = ({
                 <div style={{ width: 'calc(100% - 148px)', padding: '14px' }}>
                   <div className="flex justify-between">
                     <p className={poppins600.className} style={{ fontSize: '20px' }}>Open Source Engineer</p>
-                    <p className={poppins400.className} style={{ fontSize: '20px', fontStyle: 'italic' }}>{`Sept '24 - Present`}</p>
+                    <p className={poppins400.className} style={{ fontSize: '20px', fontStyle: 'italic' }}>{`Sept '24 - Jan '25`}</p>
                   </div>
                   <p className={`${garamond400.className} mt-2.5`} style={{ fontSize: '16px' }}>
                   Contributing to IPFS & Filecoin hackathon starter kits for the leader in decentralized storage & compute (90% market share)
