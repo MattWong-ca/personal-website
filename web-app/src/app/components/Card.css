@@ -1,8 +1,10 @@
 .card {
     cursor: pointer;
     position: relative;
+    pointer-events: none;
 
     .content {
+        pointer-events: auto;
         overflow: hidden;
         display: flex;
         flex-direction: column;
@@ -17,6 +19,7 @@
 }
 
 .gloss {
+    pointer-events: none;
     opacity: 0;
     z-index: 10;
     width: 100%;
