@@ -254,12 +254,13 @@ const Phone: React.FC<iPhoneProps> = ({
               <div className={`mt-5 ${garamond400.className}`}>
               <p className={`${poppins600.className}`} style={{ lineHeight: 'normal', fontSize: '25px', marginTop: '0.5rem' }}>2025</p>
                 <div style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
+                  <p className="mb-2.5">➔&nbsp;&nbsp; FindMyPhotos.app - find your photos in untagged photo albums (<a href="https://github.com/MattWong-ca/find-my-photos" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                   <p className="mb-2.5">➔&nbsp;&nbsp; ETHGlobal Explorer - project showcase with filters (<a href="https://x.com/mattwong_ca/status/1875358547569197460" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                 </div>
                 <p className={`${poppins600.className}`} style={{ lineHeight: 'normal', fontSize: '25px', marginTop: '0.5rem' }}>2024</p>
                 <div style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
                   <p className="mb-2.5">➔&nbsp;&nbsp; Omikave - data marketplace for Omi AI data, powered by Akave (<a href="https://github.com/MattWong-ca/omikave" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
-                  <p className="mb-2.5">➔&nbsp;&nbsp; Neurosaurs (<a href="https://github.com/MattWong-ca/neurosaurs" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                  <p className="mb-2.5">➔&nbsp;&nbsp; Neurosaurs - concentration game powered by Neurosity (<a href="https://github.com/MattWong-ca/neurosaurs" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                   <p className="mb-2.5">➔&nbsp;&nbsp; Endless Scroll - crypto-themed trivia game on Warpcast (<a href="https://github.com/MattWong-ca/endless-scroll" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                   <p className="mb-2.5">➔&nbsp;&nbsp; Lingocaster - learn languages by translating casts on Warpcast (<a href="https://github.com/Lingo-Labs/lingocaster" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                   <p className="mb-2.5">➔&nbsp;&nbsp; BANGER! - bet on casts to go viral with Chiliz Fan Tokens (<a href="https://github.com/MattWong-ca/banger-bets" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
