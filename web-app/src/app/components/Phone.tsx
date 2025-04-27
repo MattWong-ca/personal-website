@@ -341,6 +341,7 @@ const Phone: React.FC<iPhoneProps> = ({
 
             <PopUp title='Features' open={featuresOpen} onClose={() => setFeaturesOpen(false)}>
               <div className={`${garamond400.className} mt-5`} style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
+                <p className="mb-2.5">➔&nbsp;&nbsp; Zircuit at ETHGlobal Taipei 2025: The Year of AI & EIP-7702 (<a href="https://www.zircuit.com/blog/zircuit-at-eth-global-taipei-2025-the-year-of-ai-eip-7702" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                 <p className="mb-2.5">➔&nbsp;&nbsp; Flow celebrates another #1 spot as the most built on L1 at ETHGlobal Taipei (<a href="https://flow.com/post/flow-celebrates-another-1-spot-as-the-most-built-on-l1-at-ethglobal-taipei" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                 <p className="mb-2.5">➔&nbsp;&nbsp; Winning Solutions from the PYUSD Portal Hackathon on Solana (<a href="https://developer.paypal.com/community/blog/winning-solutions-pyusd-portal-hackathon-solana/" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                 <p className="mb-2.5">➔&nbsp;&nbsp; YCDSB announces its 2021 Top Scholars (<a href="https://www.ycdsb.ca/2021-top-scholars" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
