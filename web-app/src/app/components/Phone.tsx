@@ -286,7 +286,7 @@ const Phone: React.FC<iPhoneProps> = ({
                 </p>
                 <p>
                   <b>Singapore University of Technology and Design (SUTD): </b>
-                  {`I studied computer science here for exchange in Winter 2025! Got featured on the SUTD LinkedIn (<a href="https://www.linkedin.com/posts/sutd_sutd-sutdlife-uwaterloo-ugcPost-7323605607712722945-J7IM" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)`}
+                  I studied computer science here for exchange in Winter 2025! Got featured on the SUTD <a href="https://www.linkedin.com/posts/sutd_sutd-sutdlife-uwaterloo-ugcPost-7323605607712722945-J7IM" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>LinkedIn</a>
                 </p>
                 <p className="mt-2.5">
                   <b>St. Robert CHS: </b>
