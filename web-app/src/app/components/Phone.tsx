@@ -124,7 +124,7 @@ const Phone: React.FC<iPhoneProps> = ({
               </div>
               <p className={`${poppins600.className} mt-5 pb-2 text-black`} style={{ fontSize: '24px' }}>Currently</p>
               <div className={`${garamond400.className} text-black`} style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
-                <p>➔&nbsp;&nbsp; CS exchange at SUTD (Singapore)</p>
+                <p>➔&nbsp;&nbsp; Product at Notable Health</p>
                 {/* <p className="mt-2">➔&nbsp;&nbsp; Contributing to IPFS & Filecoin DevEx</p> */}
                 <p className="mt-2">➔&nbsp;&nbsp; Devcon Scholar via Ethereum Foundation</p>
                 {/* <p className="mt-2">➔&nbsp;&nbsp; Building projects with real users</p> */}
@@ -283,6 +283,10 @@ const Phone: React.FC<iPhoneProps> = ({
                 <p>
                   <b>University of Waterloo: </b>
                   {`I study biomedical engineering, but spend every bit of my free time coding :)`}
+                </p>
+                <p>
+                  <b>Singapore University of Technology and Design (SUTD): </b>
+                  {`I studied computer science here for exchange in Winter 2025! Got featured on the SUTD LinkedIn (<a href="https://www.linkedin.com/posts/sutd_sutd-sutdlife-uwaterloo-ugcPost-7323605607712722945-J7IM" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)`}
                 </p>
                 <p className="mt-2.5">
                   <b>St. Robert CHS: </b>
