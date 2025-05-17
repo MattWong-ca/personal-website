@@ -142,7 +142,7 @@ const Phone: React.FC<iPhoneProps> = ({
             </PopUp>
 
             <PopUp title='Work' open={workOpen} onClose={() => setWorkOpen(false)}>
-            <div className="w-full flex mt-5" style={{ height: '150px', border: '2px solid black' }}>
+              <div className="w-full flex mt-5" style={{ height: '150px', border: '2px solid black' }}>
                 <div className="h-full border-r-2 border-black" style={{ width: '148px' }}>
                   <Image
                     src="/protocol.jpeg"
@@ -157,7 +157,26 @@ const Phone: React.FC<iPhoneProps> = ({
                     <p className={poppins400.className} style={{ fontSize: '20px', fontStyle: 'italic' }}>{`Sept '24 - Jan '25`}</p>
                   </div>
                   <p className={`${garamond400.className} mt-2.5`} style={{ fontSize: '16px' }}>
-                  Contributing to IPFS & Filecoin hackathon starter kits for the leader in decentralized storage & compute (90% market share)
+                    Contributing to IPFS & Filecoin hackathon starter kits for the leader in decentralized storage & compute (90% market share)
+                  </p>
+                </div>
+              </div>
+              <div className="w-full flex mt-5" style={{ height: '150px', border: '2px solid black' }}>
+                <div className="h-full border-r-2 border-black" style={{ width: '148px' }}>
+                  <Image
+                    src="/notable.jpeg"
+                    alt="Notable Health logo"
+                    width={146}
+                    height={0}
+                  />
+                </div>
+                <div style={{ width: 'calc(100% - 148px)', padding: '14px' }}>
+                  <div className="flex justify-between">
+                    <p className={poppins600.className} style={{ fontSize: '20px' }}>Product Manager</p>
+                    <p className={poppins400.className} style={{ fontSize: '20px', fontStyle: 'italic' }}>{`Sept '24 - Jan '25`}</p>
+                  </div>
+                  <p className={`${garamond400.className} mt-2.5`} style={{ fontSize: '16px' }}>
+                    Building voice AI agents for healthcare!
                   </p>
                 </div>
               </div>
@@ -252,7 +271,7 @@ const Phone: React.FC<iPhoneProps> = ({
 
             <PopUp title='Projects' open={projectsOpen} onClose={() => setProjectsOpen(false)}>
               <div className={`mt-5 ${garamond400.className}`}>
-              <p className={`${poppins600.className}`} style={{ lineHeight: 'normal', fontSize: '25px', marginTop: '0.5rem' }}>2025</p>
+                <p className={`${poppins600.className}`} style={{ lineHeight: 'normal', fontSize: '25px', marginTop: '0.5rem' }}>2025</p>
                 <div style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
                   <p className="mb-2.5">➔&nbsp;&nbsp; FindMyPhotos.app - find your photos in untagged photo albums (<a href="https://github.com/MattWong-ca/find-my-photos" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                   <p className="mb-2.5">➔&nbsp;&nbsp; ETHGlobal Explorer - project showcase with filters (<a href="https://x.com/mattwong_ca/status/1875358547569197460" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
