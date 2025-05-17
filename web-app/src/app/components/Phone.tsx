@@ -145,6 +145,26 @@ const Phone: React.FC<iPhoneProps> = ({
               <div className="w-full flex mt-5" style={{ height: '150px', border: '2px solid black' }}>
                 <div className="h-full border-r-2 border-black" style={{ width: '148px' }}>
                   <Image
+                    src="/notable.jpeg"
+                    alt="Notable Health logo"
+                    width={146}
+                    height={0}
+                  />
+                </div>
+                <div style={{ width: 'calc(100% - 148px)', padding: '14px' }}>
+                  <div className="flex justify-between">
+                    <p className={poppins600.className} style={{ fontSize: '20px' }}>Product Manager</p>
+                    <p className={poppins400.className} style={{ fontSize: '20px', fontStyle: 'italic' }}>{`May '25 - Present`}</p>
+                  </div>
+                  <p className={`${garamond400.className} mt-2.5`} style={{ fontSize: '16px' }}>
+                    Building voice AI agents for healthcare!
+                  </p>
+                </div>
+              </div>
+
+              <div className="w-full flex mt-5" style={{ height: '150px', border: '2px solid black' }}>
+                <div className="h-full border-r-2 border-black" style={{ width: '148px' }}>
+                  <Image
                     src="/protocol.jpeg"
                     alt="Protocol Labs logo"
                     width={146}
@@ -158,25 +178,6 @@ const Phone: React.FC<iPhoneProps> = ({
                   </div>
                   <p className={`${garamond400.className} mt-2.5`} style={{ fontSize: '16px' }}>
                     Contributing to IPFS & Filecoin hackathon starter kits for the leader in decentralized storage & compute (90% market share)
-                  </p>
-                </div>
-              </div>
-              <div className="w-full flex mt-5" style={{ height: '150px', border: '2px solid black' }}>
-                <div className="h-full border-r-2 border-black" style={{ width: '148px' }}>
-                  <Image
-                    src="/notable.jpeg"
-                    alt="Notable Health logo"
-                    width={146}
-                    height={0}
-                  />
-                </div>
-                <div style={{ width: 'calc(100% - 148px)', padding: '14px' }}>
-                  <div className="flex justify-between">
-                    <p className={poppins600.className} style={{ fontSize: '20px' }}>Product Manager</p>
-                    <p className={poppins400.className} style={{ fontSize: '20px', fontStyle: 'italic' }}>{`Sept '24 - Jan '25`}</p>
-                  </div>
-                  <p className={`${garamond400.className} mt-2.5`} style={{ fontSize: '16px' }}>
-                    Building voice AI agents for healthcare!
                   </p>
                 </div>
               </div>
