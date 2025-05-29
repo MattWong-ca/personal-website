@@ -300,22 +300,42 @@ const Phone: React.FC<iPhoneProps> = ({
 
             <PopUp title='Education' open={educationOpen} onClose={() => setEducationOpen(false)}>
               <div className={`mt-2.5 ${garamond400.className}`} style={{ fontSize: '22px' }}>
-                <p>
-                  <b>University of Waterloo: </b>
-                  {`I study biomedical engineering, but spend every bit of my free time coding :)`}
-                </p>
-                <p>
-                  <b>Singapore University of Technology and Design (SUTD): </b>
-                  I studied computer science here for exchange in Winter 2025! Got featured on the SUTD <a href="https://www.linkedin.com/posts/sutd_sutd-sutdlife-uwaterloo-ugcPost-7323605607712722945-J7IM" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>LinkedIn</a>
-                </p>
-                <p className="mt-2.5">
-                  <b>St. Robert CHS: </b>
-                  my high school, you can read about it <a href="https://www.ycdsb.ca/2021-top-scholars/" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>here</a>.
-                </p>
-                <p className="mt-2.5">
-                  <b>Carleton University: </b>
-                  studied here for 1 month during the summer of 10th grade for the SHAD program.
-                </p>
+                <div>
+                  <div className="flex">
+                    <p className="ml-4">➔</p>
+                    <p className="ml-4">
+                      <b>UWaterloo: </b>
+                      {`I study biomedical engineering, but spend every bit of my free time hacking away on projects :)`}
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-6">
+                  <div className="flex">
+                    <p className="ml-4">➔</p>
+                    <p className="ml-4">
+                      <b>SUTD: </b>
+                      I studied computer science here for exchange in Winter 2025! Got featured on their <a href="https://www.linkedin.com/posts/sutd_sutd-sutdlife-uwaterloo-ugcPost-7323605607712722945-J7IM" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>LinkedIn</a>.
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-6">
+                  <div className="flex">
+                    <p className="ml-4">➔</p>
+                    <p className="ml-4">
+                      <b>St. Robert CHS: </b>
+                      my high school, you can read about it <a href="https://www.ycdsb.ca/2021-top-scholars/" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>here</a>.
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-6">
+                  <div className="flex">
+                    <p className="ml-4">➔</p>
+                    <p className="ml-4">
+                      <b>Carleton: </b>
+                      studied here for 1 month during the summer of 10th grade for the SHAD program.
+                    </p>
+                  </div>
+                </div>
               </div>
             </PopUp>
 
