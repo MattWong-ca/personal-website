@@ -404,7 +404,7 @@ const Phone: React.FC<iPhoneProps> = ({
                 <p className="mb-2.5">Telegram: <a href="https://t.me/mattwong_ca" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong_ca</a></p>
                 <p className="mb-2.5">X: <a href="https://x.com/mattwong_ca" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mattwong_ca</a></p>
                 <p className="mb-2.5">Discord: mattwong.ca</p>
-                <p className="mb-2.5">Farcaster: <a href="https://warpcast.com/mtt" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mtt</a></p>
+                <p className="mb-2.5">Farcaster: <a href="https://farcaster.xyz/mtt" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>mtt</a></p>
               </div>
             </PopUp>
           </div>
