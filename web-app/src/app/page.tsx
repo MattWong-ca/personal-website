@@ -91,7 +91,7 @@ export default function Home() {
               <div className="bg-yellow-400 h-full" style={{ width: '14.3%' }}></div>
             </div>
           </div>
-          <div className="w-3/5 h-full p-4 border-r-4 border-black">
+          <div className="w-3/5 h-full p-4 border-r-4 border-black" style={{ paddingLeft: '24px' }}>
             <NameBox
               nameZoomIn={nameZoomIn}
               taglineZoomIn={taglineZoomIn}
