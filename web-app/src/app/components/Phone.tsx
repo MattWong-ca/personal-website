@@ -276,6 +276,7 @@ const Phone: React.FC<iPhoneProps> = ({
                 <div style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
                   <p className="mb-2.5">➔&nbsp;&nbsp; Translate to English - Farcaster language extension (<a href="https://farcaster.xyz/mtt/0x269fc24c" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                   <p className="mb-2.5">➔&nbsp;&nbsp; Bubble Wrap Popper - Farcaster mini app with haptics (<a href="https://farcaster.xyz/mtt/0x2a887f18" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                  <p className="mb-2.5">➔&nbsp;&nbsp; Farlo - Farcaster onboarding buddy (<a href="https://github.com/MattWong-ca/farlo" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                   <p className="mb-2.5">➔&nbsp;&nbsp; FindMyPhotos.app - find your photos in untagged photo albums (<a href="https://github.com/MattWong-ca/find-my-photos" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                   <p className="mb-2.5">➔&nbsp;&nbsp; ETHGlobal Explorer - project showcase with filters (<a href="https://x.com/mattwong_ca/status/1875358547569197460" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
                 </div>
