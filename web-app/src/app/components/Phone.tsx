@@ -71,6 +71,40 @@ const Phone: React.FC<iPhoneProps> = ({
   });
   const codingStreak = DateTime.now().diff(DateTime.fromISO('2023-12-25'), 'days').as('days').toFixed(0);
 
+  const LinkIcon = () => (
+    <svg
+      className="inline-block"
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      style={{ marginTop: '-5px' }}
+    >
+      <path
+        d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M15 3h6v6"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M10 14L21 3"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+
   return (
     <>
       <div className={`phoneHeight rounded-70 bg-cover pt-3 relative ${phoneZoomIn ? 'zoom-in' : 'hidden'}`} style={{ width: '333px', border: '5px solid #d3d3d3', backgroundImage: `url('astronaut.jpg')` }}>
@@ -274,8 +308,25 @@ const Phone: React.FC<iPhoneProps> = ({
               <div className={`mt-5 ${garamond400.className}`}>
                 <p className={`${poppins600.className}`} style={{ lineHeight: 'normal', fontSize: '25px', marginTop: '0.5rem' }}>2025</p>
                 <div style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
-                  <p className="mb-2.5">➔&nbsp;&nbsp; Translate to English - Farcaster language extension <a href="https://farcaster.xyz/mtt/0x269fc24c" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}><svg className="inline-block" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ marginTop: '-5px' }}><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M15 3h6v6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M10 14L21 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg></a></p>
-                  <p className="mb-2.5">➔&nbsp;&nbsp; Bubble Wrap Popper - Farcaster mini app with haptics <a href="https://farcaster.xyz/mtt/0x2a887f18" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}><svg className="inline-block" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ marginTop: '-5px' }}><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M15 3h6v6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M10 14L21 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg></a></p>
+                  <p className="mb-2.5">➔&nbsp;&nbsp; Translate to English - Farcaster language extension{' '}
+                    <a
+                      href="https://farcaster.xyz/mtt/0x269fc24c"
+                      target="_blank"
+                      style={{ color: 'blue' }}
+                    >
+                      <LinkIcon />
+                    </a>
+                    <span>{' '}</span>
+                    <a
+                      href="https://x.com/mattwong_ca/status/1933950749647737312"
+                      target="_blank"
+                      style={{ textDecoration: 'underline', color: 'blue' }}
+                    >
+                      <LinkIcon />
+                    </a></p>
+                  <p className="mb-2.5">➔&nbsp;&nbsp; Bubble Wrap Popper - Farcaster mini app with haptics <a href="https://farcaster.xyz/mtt/0x2a887f18" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>
+                    <LinkIcon />
+                  </a></p>
                   <p className="mb-2.5">➔&nbsp;&nbsp; Farlo - Farcaster onboarding buddy <a href="https://github.com/MattWong-ca/farlo" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}><svg className="inline-block" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ marginTop: '-5px' }}><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M15 3h6v6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M10 14L21 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg></a></p>
                   <p className="mb-2.5">➔&nbsp;&nbsp; FindMyPhotos.app - find your photos in untagged photo albums <a href="https://github.com/MattWong-ca/find-my-photos" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}><svg className="inline-block" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ marginTop: '-5px' }}><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M15 3h6v6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M10 14L21 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg></a></p>
                   <p className="mb-2.5">➔&nbsp;&nbsp; ETHGlobal Explorer - project showcase with filters <a href="https://x.com/mattwong_ca/status/1875358547569197460" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}><svg className="inline-block" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ marginTop: '-5px' }}><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M15 3h6v6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M10 14L21 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg></a></p>
