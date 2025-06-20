@@ -439,15 +439,33 @@ const Phone: React.FC<iPhoneProps> = ({
 
             <PopUp title='Features' open={featuresOpen} onClose={() => setFeaturesOpen(false)}>
               <div className={`${garamond400.className} mt-5`} style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
-                <p className="mb-2.5">➔&nbsp;&nbsp; Facial recognition app nets BME student hackathon win (<a href="https://uwaterloo.ca/biomedical-engineering/news/facial-recognition-app-nets-bme-student-hackathon-win" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
-                <p className="mb-2.5">➔&nbsp;&nbsp; Exchange student clinches three 1st place bounties - SUTD LinkedIn (<a href="https://www.linkedin.com/posts/sutd_sutd-sutdlife-uwaterloo-ugcPost-7323605607712722945-J7IM" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
-                <p className="mb-2.5">➔&nbsp;&nbsp; Zircuit at ETHGlobal Taipei 2025: The Year of AI & EIP-7702 (<a href="https://www.zircuit.com/blog/zircuit-at-eth-global-taipei-2025-the-year-of-ai-eip-7702" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
-                <p className="mb-2.5">➔&nbsp;&nbsp; Flow celebrates another #1 spot as the most built on L1 at ETHGlobal Taipei (<a href="https://flow.com/post/flow-celebrates-another-1-spot-as-the-most-built-on-l1-at-ethglobal-taipei" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
-                <p className="mb-2.5">➔&nbsp;&nbsp; Winning Solutions from the PYUSD Portal Hackathon on Solana (<a href="https://developer.paypal.com/community/blog/winning-solutions-pyusd-portal-hackathon-solana/" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
-                <p className="mb-2.5">➔&nbsp;&nbsp; YCDSB announces its 2021 Top Scholars (<a href="https://www.ycdsb.ca/2021-top-scholars" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
-                <p className="mb-2.5">➔&nbsp;&nbsp; Canadian National Anthology 2021 artwork feature (<a href="https://images.squarespace-cdn.com/content/v1/5395c972e4b0989057d6a862/daccdf6e-c064-4e4b-947d-e285c29813c5/Second+Drop+Cover+with+Barcode.jpg" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
-                <p className="mb-2.5">➔&nbsp;&nbsp; York Region Kiva 2020 bottle drive (<a href="https://www.yorkregion.com/news/richmond-hill-teen-starts-bottle-drive-to-help-businesses-in-developing-nations-amid-covid-19/article_26c44174-7a69-57a1-8c1a-babaacbd5209.html" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
-                <p className="mb-2.5">➔&nbsp;&nbsp; Skills Ontario 2016 cardboard boat race (<a href="https://issuu.com/thornhillliberal/docs/tho_w_jan28" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>link</a>)</p>
+                <p className="mb-2.5">➔&nbsp;&nbsp; Facial recognition app nets BME student hackathon win <a href="https://uwaterloo.ca/biomedical-engineering/news/facial-recognition-app-nets-bme-student-hackathon-win" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>
+                  <LinkIcon />
+                </a></p>
+                <p className="mb-2.5">➔&nbsp;&nbsp; Exchange student clinches three 1st place bounties - SUTD LinkedIn <a href="https://www.linkedin.com/posts/sutd_sutd-sutdlife-uwaterloo-ugcPost-7323605607712722945-J7IM" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>
+                  <LinkIcon />
+                </a></p>
+                <p className="mb-2.5">➔&nbsp;&nbsp; Zircuit at ETHGlobal Taipei 2025: The Year of AI & EIP-7702 <a href="https://www.zircuit.com/blog/zircuit-at-eth-global-taipei-2025-the-year-of-ai-eip-7702" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>
+                  <LinkIcon />
+                </a></p>
+                <p className="mb-2.5">➔&nbsp;&nbsp; Flow celebrates another #1 spot as the most built on L1 at ETHGlobal Taipei <a href="https://flow.com/post/flow-celebrates-another-1-spot-as-the-most-built-on-l1-at-ethglobal-taipei" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>
+                  <LinkIcon />
+                </a></p>
+                <p className="mb-2.5">➔&nbsp;&nbsp; Winning Solutions from the PYUSD Portal Hackathon on Solana <a href="https://developer.paypal.com/community/blog/winning-solutions-pyusd-portal-hackathon-solana/" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>
+                  <LinkIcon />
+                </a></p>
+                <p className="mb-2.5">➔&nbsp;&nbsp; YCDSB announces its 2021 Top Scholars <a href="https://www.ycdsb.ca/2021-top-scholars" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>
+                  <LinkIcon />
+                </a></p>
+                <p className="mb-2.5">➔&nbsp;&nbsp; Canadian National Anthology 2021 artwork feature <a href="https://images.squarespace-cdn.com/content/v1/5395c972e4b0989057d6a862/daccdf6e-c064-4e4b-947d-e285c29813c5/Second+Drop+Cover+with+Barcode.jpg" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>
+                  <LinkIcon />
+                </a></p>
+                <p className="mb-2.5">➔&nbsp;&nbsp; York Region Kiva 2020 bottle drive <a href="https://www.yorkregion.com/news/richmond-hill-teen-starts-bottle-drive-to-help-businesses-in-developing-nations-amid-covid-19/article_26c44174-7a69-57a1-8c1a-babaacbd5209.html" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>
+                  <LinkIcon />
+                </a></p>
+                <p className="mb-2.5">➔&nbsp;&nbsp; Skills Ontario 2016 cardboard boat race <a href="https://issuu.com/thornhillliberal/docs/tho_w_jan28" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>
+                  <LinkIcon />
+                </a></p>
               </div>
             </PopUp>
 
