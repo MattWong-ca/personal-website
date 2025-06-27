@@ -308,9 +308,15 @@ const Phone: React.FC<iPhoneProps> = ({
               <div className={`mt-5 ${garamond400.className}`}>
                 <p className={`${poppins600.className}`} style={{ lineHeight: 'normal', fontSize: '25px', marginTop: '0.5rem' }}>2025</p>
                 <div style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
-                  <p className="mb-2.5">➔&nbsp;&nbsp; VoiceCam - fully voice-controlled camera <a href="https://www.youtube.com/watch?v=81QMIXHEYfo" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>
-                    <LinkIcon />
-                  </a></p>
+                  <p className="mb-2.5">➔&nbsp;&nbsp; VoiceCam - fully voice-controlled camera{' '}
+                    <a href="https://www.youtube.com/watch?v=81QMIXHEYfo" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>
+                      <LinkIcon />
+                    </a>
+                    <span>{' '}</span>
+                    <a href="https://x.com/replicate/status/1938316589830652192" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>
+                      <LinkIcon />
+                    </a>
+                  </p>
                   <p className="mb-2.5">➔&nbsp;&nbsp; Translate to English - Farcaster language extension{' '}
                     <a
                       href="https://farcaster.xyz/mtt/0x269fc24c"
