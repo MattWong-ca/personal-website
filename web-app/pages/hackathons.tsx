@@ -192,11 +192,11 @@ const HackathonsPage = () => {
     <div className="min-h-screen bg-white p-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-8">
-          <h1 className={`${poppins600.className} text-4xl md:text-5xl text-gray-800 mb-4`}>
-            All My Hackathon Projects
+          <h1 className={`${poppins600.className} font-extrabold text-gray-800 mb-4`} style={{ fontSize: '35px' }}>
+            All My Hackathon Projects!
           </h1>
-          <p className={`${garamond400.className} text-xl text-gray-600 max-w-3xl mx-auto`}>
-            A collection of projects built during hackathons, competitions, and building sessions
+          <p className={`${garamond400.className} text-gray-600 max-w-3xl mx-auto`} style={{ fontSize: '20px' }}>
+            All my solo hackathon projects since 2023.
           </p>
         </div>
 
