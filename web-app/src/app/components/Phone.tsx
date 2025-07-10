@@ -495,6 +495,9 @@ const Phone: React.FC<iPhoneProps> = ({
 
             <PopUp title='Features' open={featuresOpen} onClose={() => setFeaturesOpen(false)}>
               <div className={`${garamond400.className} mt-5`} style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
+                <p className="mb-2.5">➔&nbsp;&nbsp; The FLUX.1 Kontext hackathon - Replicate Blog <a href="https://replicate.com/blog/kontext-hackathon" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>
+                  <LinkIcon />
+                </a></p>
                 <p className="mb-2.5">➔&nbsp;&nbsp; Facial recognition app nets BME student hackathon win <a href="https://uwaterloo.ca/biomedical-engineering/news/facial-recognition-app-nets-bme-student-hackathon-win" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>
                   <LinkIcon />
                 </a></p>
