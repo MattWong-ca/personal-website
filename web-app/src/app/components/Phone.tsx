@@ -321,6 +321,10 @@ const Phone: React.FC<iPhoneProps> = ({
                     <a href="https://x.com/replicate/status/1938316589830652192" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>
                       <LinkIcon />
                     </a>
+                    <span>{' '}</span>
+                    <a href="https://replicate.com/blog/kontext-hackathon" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>
+                      <LinkIcon />
+                    </a>
                   </p>
                   <p className="mb-2.5">➔&nbsp;&nbsp; Translate to English - Farcaster language extension{' '}
                     <a
