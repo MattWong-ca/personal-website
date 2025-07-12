@@ -189,9 +189,9 @@ const hackathonData = [
 
 const HackathonsPage = () => {
   return (
-    <div className="min-h-screen bg-white p-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-8">
+    <div className="min-h-screen bg-white">
+      <div className="" style={{ paddingLeft: '5rem', paddingRight: '5rem', paddingTop: '3rem', paddingBottom: '3rem' }}>
+        <div className="text-center mb-8" style={{ marginBottom: '1rem' }}>
           <h1 className={`${poppins600.className} font-extrabold text-gray-800 mb-4`} style={{ fontSize: '35px' }}>
             All My Hackathon Projects!
           </h1>
