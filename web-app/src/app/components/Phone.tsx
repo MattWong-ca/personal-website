@@ -308,7 +308,7 @@ const Phone: React.FC<iPhoneProps> = ({
               <div className={`mt-5 ${garamond400.className}`}>
                 <p className={`${poppins600.className}`} style={{ lineHeight: 'normal', fontSize: '25px', marginTop: '0.5rem' }}>2025</p>
                 <div style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
-                <p className="mb-2.5">➔&nbsp;&nbsp; CallBlock.AI - AI phone numbers{' '}
+                <p className="mb-2.5">➔&nbsp;&nbsp; CallBlock.AI - AI proxy phone numbers to prevent spam + scams{' '}
                     <a href="https://github.com/MattWong-ca/callblock-ai" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>
                       <LinkIcon />
                     </a>
@@ -404,7 +404,14 @@ const Phone: React.FC<iPhoneProps> = ({
                 <div style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
                   <p className="mb-2.5">➔&nbsp;&nbsp; Swift Tickets - NFT minting gated by World ID <a href="https://github.com/MattWong-ca/swift-tickets-navh" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>
                     <LinkIcon />
-                  </a></p>
+                  </a><span>{' '}</span>
+                    <a
+                      href="https://youtu.be/RAUQhd-ZXpw?t=1580"
+                      target="_blank"
+                      style={{ textDecoration: 'underline', color: 'blue' }}
+                    >
+                      <LinkIcon />
+                    </a></p>
                   <p className="mb-2.5">➔&nbsp;&nbsp; Various side projects <a href="https://medium.com/@mattwong.ca/all-my-projects-14bf922d0a65" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>
                     <LinkIcon />
                   </a></p>
