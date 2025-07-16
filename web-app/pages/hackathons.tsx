@@ -206,22 +206,22 @@ const HackathonsPage = () => {
             <table className="w-full border-collapse">
               <thead>
                 <tr className="bg-gray-50 border-b border-gray-200">
-                  <th className={`${poppins600.className} px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-r border-gray-200`} style={{ minWidth: '120px' }}>
+                  <th className="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-r border-gray-200" style={{ minWidth: '120px' }}>
                     Project
                   </th>
-                  <th className={`${poppins600.className} px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-r border-gray-200`} style={{ minWidth: '150px' }}>
-                    Hackathon
-                  </th>
-                  <th className={`${poppins600.className} px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-r border-gray-200`} style={{ minWidth: '80px' }}>
-                    Date
-                  </th>
-                  <th className={`${poppins600.className} px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-r border-gray-200`} style={{ minWidth: '200px' }}>
+                  <th className="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-r border-gray-200" style={{ minWidth: '200px' }}>
                     Description
                   </th>
-                  <th className={`${poppins600.className} px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-r border-gray-200`} style={{ minWidth: '120px' }}>
+                  <th className="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-r border-gray-200" style={{ minWidth: '150px' }}>
+                    Hackathon
+                  </th>
+                  <th className="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-r border-gray-200" style={{ minWidth: '120px' }}>
                     Winnings
                   </th>
-                  <th className={`${poppins600.className} px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider`} style={{ minWidth: '100px' }}>
+                  <th className="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-r border-gray-200" style={{ minWidth: '80px' }}>
+                    Date
+                  </th>
+                  <th className="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider" style={{ minWidth: '100px' }}>
                     Links
                   </th>
                 </tr>
@@ -229,40 +229,40 @@ const HackathonsPage = () => {
               <tbody className="bg-white divide-y divide-gray-200">
                 {hackathonData.map((project, index) => (
                   <tr key={index} className="hover:bg-gray-50 transition-colors">
-                    <td className={`${poppins600.className} px-4 py-3 text-sm font-semibold text-gray-900 border-r border-gray-200`}>
+                    <td className="px-4 py-3 text-sm font-semibold text-gray-900 border-r border-gray-200">
                       {project.project}
                     </td>
-                    <td className={`${garamond400.className} px-4 py-3 text-sm text-gray-700 border-r border-gray-200`}>
-                      {project.hackathon}
-                    </td>
-                    <td className={`${garamond400.className} px-4 py-3 text-sm text-gray-700 border-r border-gray-200`}>
-                      {project.date}
-                    </td>
-                    <td className={`${garamond400.className} px-4 py-3 text-sm text-gray-700 border-r border-gray-200`}>
+                    <td className="px-4 py-3 text-sm text-gray-700 border-r border-gray-200">
                       {project.description}
                     </td>
-                    <td className={`${poppins400.className} px-4 py-3 text-sm text-gray-700 border-r border-gray-200`}>
-                      <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full ${
+                    <td className="px-4 py-3 text-sm text-gray-700 border-r border-gray-200">
+                      {project.hackathon}
+                    </td>
+                    <td className="px-4 py-3 text-sm text-gray-700 border-r border-gray-200">
+                      <span className={`inline-flex items-center px-2 py-1 text-xs font-semibold rounded-full ${
                         project.winnings.includes('1st') ? 'bg-green-100 text-green-800 border border-green-200' :
                         project.winnings.includes('Bounty') ? 'bg-blue-100 text-blue-800 border border-blue-200' :
                         'bg-gray-100 text-gray-800 border border-gray-200'
                       }`}>
-                        {project.winnings}
+                        <img
+                          src="https://via.placeholder.com/24x24?text=%F0%9F%8F%86"
+                          alt="Trophy"
+                          style={{ width: '18px', height: '18px', display: 'inline-block', verticalAlign: 'middle' }}
+                        />
                       </span>
+                    </td>
+                    <td className="px-4 py-3 text-sm text-gray-700 border-r border-gray-200">
+                      {project.date}
                     </td>
                     <td className="px-4 py-3 text-sm text-gray-700">
                       <div className="flex flex-wrap gap-2">
                         {project.links.map((link, linkIndex) => (
-                          <a
+                          <img
                             key={linkIndex}
-                            href={link.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors border border-blue-200 rounded px-2 py-1 hover:bg-blue-50"
-                          >
-                            {link.label}
-                            <LinkIcon />
-                          </a>
+                            src="https://via.placeholder.com/24x24?text=%F0%9F%94%97"
+                            alt="Link placeholder"
+                            style={{ width: '20px', height: '20px', display: 'inline-block', borderRadius: '4px' }}
+                          />
                         ))}
                       </div>
                     </td>
