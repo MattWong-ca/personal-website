@@ -228,7 +228,11 @@ const HackathonsPage = () => {
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
                 {hackathonData.map((project, index) => (
-                  <tr key={index} className="hover:bg-gray-50 transition-colors">
+                  <tr
+                    key={index}
+                    className="hover:bg-gray-50 transition-colors"
+                    style={index !== hackathonData.length - 1 ? { borderBottom: '1px solid #e5e7eb' } : {}}
+                  >
                     <td className="px-4 py-3 text-sm font-semibold text-gray-900 border-r border-gray-200">
                       {project.project}
                     </td>
