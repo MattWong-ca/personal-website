@@ -42,6 +42,16 @@ const LinkIcon = () => (
 
 const hackathonData = [
   {
+    project: "CallBlock.AI",
+    hackathon: "Personal Project",
+    date: "2025",
+    description: "AI proxy phone numbers to prevent spam + scams",
+    winnings: "Featured",
+    links: [
+      { url: "https://github.com/MattWong-ca/callblock-ai", label: "GitHub" }
+    ]
+  },
+  {
     project: "VoiceCam",
     hackathon: "ETHGlobal Taipei 2025",
     date: "Jan 2025",
@@ -49,7 +59,8 @@ const hackathonData = [
     winnings: "1st Place - Zircuit Bounty",
     links: [
       { url: "https://www.youtube.com/watch?v=81QMIXHEYfo", label: "Demo" },
-      { url: "https://x.com/replicate/status/1938316589830652192", label: "Tweet" }
+      { url: "https://x.com/replicate/status/1938316589830652192", label: "Tweet" },
+      { url: "https://replicate.com/blog/kontext-hackathon", label: "Article" }
     ]
   },
   {
@@ -71,6 +82,16 @@ const hackathonData = [
     winnings: "Featured",
     links: [
       { url: "https://farcaster.xyz/mtt/0x2a887f18", label: "Frame" }
+    ]
+  },
+  {
+    project: "Farlo",
+    hackathon: "Personal Project",
+    date: "2025",
+    description: "Farcaster onboarding buddy",
+    winnings: "Featured",
+    links: [
+      { url: "https://github.com/MattWong-ca/farlo", label: "GitHub" }
     ]
   },
   {
@@ -156,6 +177,14 @@ const hackathonData = [
     ]
   },
   {
+    project: "EMG Controlled Whisk",
+    hackathon: "Personal Project",
+    date: "2024",
+    description: "EMG controlled whisk project",
+    winnings: "Featured",
+    links: []
+  },
+  {
     project: "Translate Bot",
     hackathon: "Farcaster",
     date: "2024",
@@ -176,13 +205,34 @@ const hackathonData = [
     ]
   },
   {
+    project: "Personal Website Redesign",
+    hackathon: "Personal Project",
+    date: "2024",
+    description: "Personal website redesign",
+    winnings: "Featured",
+    links: [
+      { url: "https://github.com/MattWong-ca/personal-website", label: "GitHub" }
+    ]
+  },
+  {
     project: "Swift Tickets",
     hackathon: "ETHGlobal",
     date: "2023",
     description: "NFT minting gated by World ID",
     winnings: "Bounty Winner",
     links: [
-      { url: "https://github.com/MattWong-ca/swift-tickets-navh", label: "GitHub" }
+      { url: "https://github.com/MattWong-ca/swift-tickets-navh", label: "GitHub" },
+      { url: "https://youtu.be/RAUQhd-ZXpw?t=1580", label: "Demo" }
+    ]
+  },
+  {
+    project: "Various Side Projects",
+    hackathon: "Personal Projects",
+    date: "2023",
+    description: "Various side projects and experiments",
+    winnings: "Featured",
+    links: [
+      { url: "https://medium.com/@mattwong.ca/all-my-projects-14bf922d0a65", label: "Article" }
     ]
   }
 ];
@@ -233,7 +283,7 @@ const HackathonsPage = () => {
                     className="hover:bg-gray-50 transition-colors"
                     style={index !== hackathonData.length - 1 ? { borderBottom: '1px solid #e5e7eb' } : {}}
                   >
-                    <td className="px-4 py-3 text-sm font-semibold text-gray-900 border-r border-gray-200">
+                    <td className="px-4 py-3 text-sm font-semibold text-gray-900 border-r border-gray-200" style={{ paddingLeft: '10px' }}>
                       {project.project}
                     </td>
                     <td className="px-4 py-3 text-sm text-gray-700 border-r border-gray-200">
