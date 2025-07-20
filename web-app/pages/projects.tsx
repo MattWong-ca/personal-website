@@ -336,6 +336,54 @@ const HackathonsPage = () => {
           </div>
         </div>
 
+        {/* Winnings Summary */}
+        <div className="mt-12 bg-gray-50 rounded-lg p-6" style={{ marginTop: '2rem' }}>
+          <div className="flex items-center gap-4 mb-4">
+            <h2 className={`${poppins600.className} text-xl font-semibold text-gray-800`} style={{ marginRight: '0.5rem' }}>
+            💰 Total Winnings:
+            </h2>
+            <span className={`${poppins600.className} text-xl font-bold text-green-600`}>
+              ${(() => {
+                const total = hackathonData.reduce((sum, project) => {
+                  const winnings = project.winnings;
+                  if (winnings && winnings.startsWith('$')) {
+                    const amount = parseInt(winnings.replace(/[$,]/g, ''));
+                    if (!isNaN(amount)) {
+                      return sum + amount;
+                    }
+                  }
+                  return sum;
+                }, 0);
+                return total.toLocaleString();
+              })()}
+            </span>
+          </div>
+          <div className="flex flex-wrap items-center gap-8">
+            {(() => {
+              const yearlyWinnings = hackathonData.reduce((acc: { [key: string]: number }, project) => {
+                const year = project.date;
+                const winnings = project.winnings;
+                
+                if (winnings && winnings.startsWith('$')) {
+                  const amount = parseInt(winnings.replace(/[$,]/g, ''));
+                  if (!isNaN(amount)) {
+                    acc[year] = (acc[year] || 0) + amount;
+                  }
+                }
+                return acc;
+              }, {});
+
+              return Object.entries(yearlyWinnings)
+                .sort(([a], [b]) => b.localeCompare(a)) // Sort by year descending
+                .map(([year, total]) => (
+                  <span key={year} className={`${garamond400.className} text-gray-700`} style={{ marginRight: '1rem' }}>
+                    {year}: <span className={`${poppins600.className} font-bold text-green-600`}>${(total as number).toLocaleString()}</span>
+                  </span>
+                ));
+            })()}
+          </div>
+        </div>
+
         <div className="text-center" style={{ marginTop: '2rem' }}>
           <a
             href="/"
