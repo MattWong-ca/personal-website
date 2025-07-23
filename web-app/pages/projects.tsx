@@ -53,7 +53,7 @@ const hackathonData = [
   },
   {
     project: "VoiceCam",
-    hackathon: "Replicate x BFL",
+    hackathon: "Replicate x Black Forest Labs",
     date: "2025",
     description: "Take + edit photos with just your voice",
     winnings: "$150",
@@ -236,22 +236,22 @@ const HackathonsPage = () => {
             <table className="w-full border-collapse">
               <thead>
                 <tr style={{ borderBottom: '2px solid #d1d5db', backgroundColor: '#f9fafb' }}>
-                  <th className="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-r border-gray-200" style={{ minWidth: '120px' }}>
+                  <th className="px-4 py-3 text-xs font-semibold text-gray-700 uppercase tracking-wider border-r border-gray-200" style={{ minWidth: '120px', textAlign: 'left', paddingLeft: '10px' }}>
                     Project
                   </th>
-                  <th className="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-r border-gray-200" style={{ minWidth: '200px' }}>
+                  <th className="px-4 py-3 text-xs font-semibold text-gray-700 uppercase tracking-wider border-r border-gray-200" style={{ minWidth: '200px', textAlign: 'left' }}>
                     Description
                   </th>
-                  <th className="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-r border-gray-200" style={{ minWidth: '150px' }}>
+                  <th className="px-4 py-3 text-xs font-semibold text-gray-700 uppercase tracking-wider border-r border-gray-200" style={{ minWidth: '150px', textAlign: 'left' }}>
                     Hackathon
                   </th>
-                  <th className="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-r border-gray-200" style={{ minWidth: '80px' }}>
+                  <th className="px-4 py-3 text-xs font-semibold text-gray-700 uppercase tracking-wider border-r border-gray-200" style={{ minWidth: '80px', textAlign: 'left' }}>
                     Stats
                   </th>
-                  <th className="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider border-r border-gray-200" style={{ minWidth: '80px' }}>
+                  <th className="px-4 py-3 text-xs font-semibold text-gray-700 uppercase tracking-wider border-r border-gray-200" style={{ minWidth: '80px', textAlign: 'left' }}>
                     Date
                   </th>
-                  <th className="px-4 py-3 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider" style={{ minWidth: '70px' }}>
+                  <th className="px-4 py-3 text-xs font-semibold text-gray-700 uppercase tracking-wider" style={{ minWidth: '70px', textAlign: 'left' }}>
                     Links
                   </th>
                 </tr>
@@ -293,7 +293,7 @@ const HackathonsPage = () => {
                         <span className="text-gray-500">-</span>
                       )}
                     </td>
-                    <td className="px-4 py-3 text-sm text-gray-700" style={{ textAlign: 'center' }}>
+                    <td className="px-4 py-3 text-sm text-gray-700">
                       {project.date}
                     </td>
                     <td className="px-4 py-3 text-sm text-gray-700">
@@ -337,12 +337,12 @@ const HackathonsPage = () => {
         </div>
 
         {/* Winnings Summary */}
-        <div className="mt-12 bg-gray-50 rounded-lg p-6" style={{ marginTop: '2rem' }}>
-          <div className="flex items-center gap-4 mb-4">
-            <h2 className={`${poppins600.className} text-xl font-semibold text-gray-800`} style={{ marginRight: '0.5rem' }}>
+        <div className="mt-12 bg-gray-50 rounded-lg p-6" style={{ marginTop: '1.5rem' }}>
+          <div className="flex items-center gap-4 mb-4" style={{ marginBottom: '10px' }}>
+            <h2 className={`${poppins600.className} font-semibold text-gray-800`} style={{ marginRight: '0.5rem', fontSize: '20px' }}>
             💰 Total Winnings:
             </h2>
-            <span className={`${poppins600.className} text-xl font-bold text-green-600`}>
+            <span className={`${poppins600.className} font-bold text-green-600`} style={{ fontSize: '20px' }}>
               ${(() => {
                 const total = hackathonData.reduce((sum, project) => {
                   const winnings = project.winnings;
@@ -358,7 +358,7 @@ const HackathonsPage = () => {
               })()}
             </span>
           </div>
-          <div className="flex flex-wrap items-center gap-8">
+          <div className="flex flex-wrap items-center gap-8 justify-start">
             {(() => {
               const yearlyWinnings = hackathonData.reduce((acc: { [key: string]: number }, project) => {
                 const year = project.date;
@@ -376,7 +376,7 @@ const HackathonsPage = () => {
               return Object.entries(yearlyWinnings)
                 .sort(([a], [b]) => b.localeCompare(a)) // Sort by year descending
                 .map(([year, total]) => (
-                  <span key={year} className={`${garamond400.className} text-gray-700`} style={{ marginRight: '1rem' }}>
+                  <span key={year} className={`${garamond400.className} text-gray-700 mr-8`}>
                     {year}: <span className={`${poppins600.className} font-bold text-green-600`}>${(total as number).toLocaleString()}</span>
                   </span>
                 ));
@@ -388,7 +388,7 @@ const HackathonsPage = () => {
           <a
             href="/"
             className={`${poppins400.className} inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors`}
-            style={{ marginTop: '2rem' }}
+            style={{ marginTop: '1.5rem' }}
           >
             ← Home
           </a>
