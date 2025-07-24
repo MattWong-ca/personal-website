@@ -384,7 +384,7 @@ const HackathonsPage = () => {
           </div>
         </div>
 
-        <div className="text-center" style={{ marginTop: '2rem' }}>
+        <div className="text-center" style={{ marginTop: '1rem' }}>
           <a
             href="/"
             className={`${poppins400.className} inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors`}
