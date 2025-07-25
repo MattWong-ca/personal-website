@@ -358,7 +358,7 @@ const HackathonsPage = () => {
               })()}
             </span>
           </div>
-          <div className="flex flex-wrap items-center gap-8 justify-start">
+          <div className="flex flex-wrap items-center gap-8 justify-start" style={{ gap: '2.5rem' }}>
             {(() => {
               const yearlyWinnings = hackathonData.reduce((acc: { [key: string]: number }, project) => {
                 const year = project.date;
