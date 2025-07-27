@@ -220,7 +220,12 @@ const hackathonData = [
 const HackathonsPage = () => {
   return (
     <div className="min-h-screen bg-white">
-      <div className="" style={{ paddingLeft: '5rem', paddingRight: '5rem', paddingTop: '3rem', paddingBottom: '3rem' }}>
+      <div className="" style={{ 
+        paddingLeft: 'clamp(1rem, 5vw, 5rem)', 
+        paddingRight: 'clamp(1rem, 5vw, 5rem)', 
+        paddingTop: '3rem', 
+        paddingBottom: '3rem' 
+      }}>
         <div className="text-center mb-8" style={{ marginBottom: '1rem' }}>
           <h1 className={`${poppins600.className} font-extrabold text-gray-800 mb-4`} style={{ fontSize: '35px' }}>
             All My Projects!
@@ -232,8 +237,15 @@ const HackathonsPage = () => {
 
         {/* Table Container */}
         <div className="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse">
+          <div className="overflow-x-auto" style={{ 
+            WebkitOverflowScrolling: 'touch', 
+            width: '100%', 
+            maxWidth: '100vw',
+            overflowX: 'scroll',
+            msOverflowStyle: 'none',
+            scrollbarWidth: 'none'
+          }}>
+            <table className="border-collapse" style={{ minWidth: '800px', width: '100%' }}>
               <thead>
                 <tr style={{ borderBottom: '2px solid #d1d5db', backgroundColor: '#f9fafb' }}>
                   <th className="px-4 py-3 text-xs font-semibold text-gray-700 uppercase tracking-wider border-r border-gray-200" style={{ minWidth: '120px', textAlign: 'left', paddingLeft: '10px' }}>
@@ -358,7 +370,7 @@ const HackathonsPage = () => {
               })()}
             </span>
           </div>
-          <div className="flex flex-wrap items-center gap-8 justify-start" style={{ gap: '2.5rem' }}>
+          <div className="flex flex-wrap items-center gap-8 justify-start" style={{ gap: '2.5rem', rowGap: '0.5rem' }}>
             {(() => {
               const yearlyWinnings = hackathonData.reduce((acc: { [key: string]: number }, project) => {
                 const year = project.date;
