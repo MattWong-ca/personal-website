@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useMemo } from 'react';
 import '../src/app/globals.css';
 import { EB_Garamond, Poppins } from 'next/font/google';
 
@@ -218,6 +218,27 @@ const hackathonData = [
 ];
 
 const HackathonsPage = () => {
+  const [yearFilter, setYearFilter] = useState('all');
+  const [prizeFilter, setPrizeFilter] = useState('all');
+
+  // Get unique years for filter
+  const uniqueYears = useMemo(() => {
+    const years = Array.from(new Set(hackathonData.map(project => project.date)));
+    return years.sort((a, b) => b.localeCompare(a)); // Sort descending
+  }, []);
+
+  // Filter data based on selected filters
+  const filteredData = useMemo(() => {
+    return hackathonData.filter(project => {
+      const yearMatch = yearFilter === 'all' || project.date === yearFilter;
+      const prizeMatch = prizeFilter === 'all' || 
+        (prizeFilter === 'hasPrize' && project.winnings && project.winnings.includes('$')) ||
+        (prizeFilter === 'noPrize' && (!project.winnings || !project.winnings.includes('$')));
+      
+      return yearMatch && prizeMatch;
+    });
+  }, [yearFilter, prizeFilter]);
+
   return (
     <div className="min-h-screen bg-white">
       <div className="" style={{ 
@@ -233,6 +254,46 @@ const HackathonsPage = () => {
           <p className={`${garamond400.className} text-gray-600 max-w-3xl mx-auto`} style={{ fontSize: '20px' }}>
             All my solo projects since 2023.
           </p>
+        </div>
+
+        {/* Filters */}
+        <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '1rem', gap: '0.5rem' }}>
+          <select
+            value={yearFilter}
+            onChange={(e) => setYearFilter(e.target.value)}
+            style={{
+              fontFamily: poppins400.style.fontFamily,
+              padding: '0.25rem 0.75rem',
+              border: '1px solid #d1d5db',
+              borderRadius: '8px',
+              fontSize: '14px',
+              outline: 'none',
+              backgroundColor: 'white'
+            }}
+          >
+            <option value="all">All Years</option>
+            {uniqueYears.map(year => (
+              <option key={year} value={year}>{year}</option>
+            ))}
+          </select>
+          
+          <select
+            value={prizeFilter}
+            onChange={(e) => setPrizeFilter(e.target.value)}
+            style={{
+              fontFamily: poppins400.style.fontFamily,
+              padding: '0.25rem 0.75rem',
+              border: '1px solid #d1d5db',
+              borderRadius: '8px',
+              fontSize: '14px',
+              outline: 'none',
+              backgroundColor: 'white'
+            }}
+          >
+            <option value="all">All Projects</option>
+            <option value="hasPrize">Won Prizes</option>
+            <option value="noPrize">No Prizes</option>
+          </select>
         </div>
 
         {/* Table Container */}
@@ -269,11 +330,11 @@ const HackathonsPage = () => {
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
-                {hackathonData.map((project, index) => (
+                {filteredData.map((project, index) => (
                   <tr
                     key={index}
                     className="hover:bg-gray-50 transition-colors"
-                    style={index !== hackathonData.length - 1 ? { borderBottom: '1px solid #e5e7eb' } : {}}
+                    style={index !== filteredData.length - 1 ? { borderBottom: '1px solid #e5e7eb' } : {}}
                   >
                     <td className="px-4 py-3 text-sm font-semibold text-gray-900 border-r border-gray-200" style={{ paddingLeft: '10px' }}>
                       {project.project}
@@ -345,6 +406,13 @@ const HackathonsPage = () => {
                 ))}
               </tbody>
             </table>
+          </div>
+        </div>
+
+        {/* Project Counter */}
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '0.6rem' }}>
+          <div className={`${poppins400.className}`} style={{ fontSize: '14px', color: '#6b7280', fontStyle: 'italic' }}>
+            Showing {filteredData.length} of {hackathonData.length} projects
           </div>
         </div>
 
