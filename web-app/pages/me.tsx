@@ -9,7 +9,7 @@ const garamond400 = EB_Garamond({ subsets: ["latin-ext"], weight: ["400"], style
 const Me = () => {
     return (
         <div className="flex justify-center items-center h-screen w-screen">
-            <div className="w-3/5 h-screen">
+            <div className="h-screen">
                 <div style={{ paddingLeft: '10%', paddingRight: '10%' }}>
                     <p className={`${title.className}`} style={{ marginTop: '50px', fontSize: '35px' }}>Matt&apos;s User Manual</p>
                     <p className="italic" style={{ fontSize: '18px', marginBottom: '10px', marginTop: '-6px' }}>

@@ -89,7 +89,7 @@ const hackathonData = [
     hackathon: "Base x Vercel",
     date: "2025",
     description: "Farcaster onboarding buddy",
-    winnings: "-",
+    winnings: "$12500",
     links: [
       { url: "https://github.com/MattWong-ca/farlo", label: "GitHub" }
     ]
