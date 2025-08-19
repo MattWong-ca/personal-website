@@ -308,7 +308,12 @@ const Phone: React.FC<iPhoneProps> = ({
               <div className={`mt-5 ${garamond400.className}`}>
                 <p className={`${poppins600.className}`} style={{ lineHeight: 'normal', fontSize: '25px', marginTop: '0.5rem' }}>2025</p>
                 <div style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
-                <p className="mb-2.5">➔&nbsp;&nbsp; CallBlock.AI - AI proxy phone numbers to prevent spam + scams{' '}
+                  <p className="mb-2.5">➔&nbsp;&nbsp; Dreamprint - NFT polaroids{' '}
+                    <a href="https://github.com/MattWong-ca/dreamprint" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>
+                      <LinkIcon />
+                    </a>
+                  </p>
+                  <p className="mb-2.5">➔&nbsp;&nbsp; CallBlock.AI - AI proxy phone numbers to prevent spam + scams{' '}
                     <a href="https://github.com/MattWong-ca/callblock-ai" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>
                       <LinkIcon />
                     </a>
