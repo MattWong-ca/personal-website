@@ -9,8 +9,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Matthew Wong - Waterloo",
-  description: "Software developer, experienced in full stack, iOS, & Web3. Studying engineering at UWaterloo. Building in blockchain!",
+  title: "Matthew Wong | Waterloo",
+  description: "Software and Product. Studying engineering at UWaterloo. I win a lot of hackathons!",
   verification: {
     google: '5K6dT33iyD2EPXTe4QuMelr7U-MwJE0r9V03CdLHUXc',
   }
