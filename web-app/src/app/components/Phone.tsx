@@ -188,10 +188,10 @@ const Phone: React.FC<iPhoneProps> = ({
                 <div style={{ width: 'calc(100% - 148px)', padding: '14px' }}>
                   <div className="flex justify-between">
                     <p className={poppins600.className} style={{ fontSize: '20px' }}>Product Manager</p>
-                    <p className={poppins400.className} style={{ fontSize: '20px', fontStyle: 'italic' }}>{`May '25 - Present`}</p>
+                    <p className={poppins400.className} style={{ fontSize: '20px', fontStyle: 'italic' }}>{`May - Aug '25`}</p>
                   </div>
                   <p className={`${garamond400.className} mt-2.5`} style={{ fontSize: '16px' }}>
-                    Building voice AI agents for healthcare!
+                    Launched the company&apos;s first inbound use case for voice AI!
                   </p>
                 </div>
               </div>
