@@ -143,9 +143,9 @@ const Phone: React.FC<iPhoneProps> = ({
                   <p className={`${poppins600.className} mt-2 text-black`} style={{ lineHeight: 'normal', fontSize: '25px' }}>TLDR</p>
                   <div className={`${garamond400.className} text-black`} style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
                     <p>➔&nbsp;&nbsp; Software developer with 3+ years of experience</p>
-                    <p className="mt-2">➔&nbsp;&nbsp; 3rd year engineering student at UWaterloo</p>
-                    <p className="mt-2">➔&nbsp;&nbsp; Building in blockchain & exploring in AI</p>
-                    <p className="mt-2">➔&nbsp;&nbsp; Enjoys hackathons, travelling, & sports</p>
+                    <p className="mt-2">➔&nbsp;&nbsp; 3rd year engineering student @ UWaterloo</p>
+                    <p className="mt-2">➔&nbsp;&nbsp; Building in blockchain & AI</p>
+                    <p className="mt-2">➔&nbsp;&nbsp; Enjoys hackathons, traveling, & sports</p>
                   </div>
                 </div>
                 <Image
@@ -158,20 +158,20 @@ const Phone: React.FC<iPhoneProps> = ({
               </div>
               <p className={`${poppins600.className} mt-5 pb-2 text-black`} style={{ fontSize: '24px' }}>Currently</p>
               <div className={`${garamond400.className} text-black`} style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
-                <p>➔&nbsp;&nbsp; Product at Notable Health</p>
+                <p>➔&nbsp;&nbsp; Building hackathon projects!</p>
                 {/* <p className="mt-2">➔&nbsp;&nbsp; Contributing to IPFS & Filecoin DevEx</p> */}
-                <p className="mt-2">➔&nbsp;&nbsp; Devcon Scholar via Ethereum Foundation</p>
                 {/* <p className="mt-2">➔&nbsp;&nbsp; Building projects with real users</p> */}
                 <p className="mt-2">➔&nbsp;&nbsp; Reading about Canadian startup founders</p>
                 <p className="mt-2">➔&nbsp;&nbsp; On a {codingStreak} day coding streak!</p>
               </div>
               <p className={`${poppins600.className} mt-5 pb-2 text-black`} style={{ fontSize: '24px' }}>Previously</p>
               <div className={`${garamond400.className} text-black`} style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
-                <p>➔&nbsp;&nbsp; Partnerships at Waterloo Blockchain</p>
-                <p className="mt-2">➔&nbsp;&nbsp; iOS development at theScore</p>
-                <p className="mt-2">➔&nbsp;&nbsp; Full stack development at ExaCare</p>
-                <p className="mt-2">➔&nbsp;&nbsp; Ecommerce stores at Shopify</p>
-                <p className="mt-2 mb-12">➔&nbsp;&nbsp; Completed Google&apos;s SPS program</p>
+                <p>➔&nbsp;&nbsp; Product @ Notable Health</p>
+                <p className="mt-2">➔&nbsp;&nbsp; Devcon Scholar via Ethereum Foundation</p>
+                <p className="mt-2">➔&nbsp;&nbsp; Partnerships @ Waterloo Blockchain</p>
+                <p className="mt-2">➔&nbsp;&nbsp; iOS dev @ theScore, full stack dev @ ExaCare</p>
+                <p className="mt-2">➔&nbsp;&nbsp; Store design @ Shopify</p>
+                <p className="mt-2 mb-12">➔&nbsp;&nbsp; Google Software Product Sprint participant</p>
               </div>
             </PopUp>
 
