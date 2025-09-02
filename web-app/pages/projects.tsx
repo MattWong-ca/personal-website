@@ -176,13 +176,6 @@ const hackathonData = [
     ]
   },
   {
-    project: "EMG Controlled Whisk",
-    hackathon: "-",
-    date: "2024",
-    description: "EMG controlled whisk project",
-    links: []
-  },
-  {
     project: "⭐ Translate Bot",
     hackathon: "LearnWeb3",
     date: "2024",
