@@ -176,6 +176,27 @@ const Phone: React.FC<iPhoneProps> = ({
             </PopUp>
 
             <PopUp title='Work' open={workOpen} onClose={() => setWorkOpen(false)}>
+              
+            <div className="w-full flex mt-5" style={{ height: '150px', border: '2px solid black' }}>
+                <div className="h-full border-r-2 border-black" style={{ width: '148px' }}>
+                  <Image
+                    src="/nethermindlogo.png"
+                    alt="Nethermind logo"
+                    width={146}
+                    height={0}
+                  />
+                </div>
+                <div style={{ width: 'calc(100% - 148px)', padding: '14px' }}>
+                  <div className="flex justify-between">
+                    <p className={poppins600.className} style={{ fontSize: '20px' }}>Software Engineer</p>
+                    <p className={poppins400.className} style={{ fontSize: '20px', fontStyle: 'italic' }}>{`Sept '25 - Present`}</p>
+                  </div>
+                  <p className={`${garamond400.className} mt-2.5`} style={{ fontSize: '16px' }}>
+                    Biometrics project
+                  </p>
+                </div>
+              </div>
+
               <div className="w-full flex mt-5" style={{ height: '150px', border: '2px solid black' }}>
                 <div className="h-full border-r-2 border-black" style={{ width: '148px' }}>
                   <Image
