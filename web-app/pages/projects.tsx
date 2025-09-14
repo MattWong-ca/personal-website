@@ -42,6 +42,17 @@ const LinkIcon = () => (
 
 const hackathonData = [
   {
+    project: "Dreamprint",
+    hackathon: "ETHGlobal NYC",
+    date: "2025",
+    description: "Instant NFT polaroid prints for crypto events",
+    winnings: "$6985",
+    links: [
+      { url: "https://github.com/MattWong-ca/dreamprint", label: "GitHub" },
+      { url: "https://flow.com/post/flow-the-top-choice-for-builders-at-ethglobal-nyc", label: "Link" }
+    ]
+  },
+  {
     project: "CallBlock.AI",
     hackathon: "Protocol Labs",
     date: "2025",

@@ -31,7 +31,7 @@ const CareerOpportunities = () => {
                     
                     <ul className={`${garamond400.className}`} style={{ fontSize: '20px', marginLeft: '20px' }}>
                         <li>• Team: The founders or teammates I work with daily should be cracked. I should feel inspired when I see their LinkedIns.</li>
-                        <li>• Business impact: No intern projects. I should have tangible numbers + metrics that describe the impact I&apos;ve made after the internship.</li>
+                        <li>• Business impact: No intern projects. I should have tangible numbers + metrics that describe the impact I&apos;ve made after the internship. After four months, if I hadn&apos;t worked on what I did, would the customers / company have been worse off?</li>
                         <li>• The work: Bleeding edge tech is exciting, I&apos;d rather work on this than another full stack SaaS. The more unknowns and variables, the better.</li>
                         <li>• Location: Huge plus if it&apos;s the Bay Area, New York, or Boston – these places have the highest talent density. If it&apos;s in Canada, the other points above must be very strong.</li>
                     </ul>
