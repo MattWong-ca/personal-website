@@ -142,10 +142,10 @@ const Phone: React.FC<iPhoneProps> = ({
                 <div >
                   <p className={`${poppins600.className} mt-2 text-black`} style={{ lineHeight: 'normal', fontSize: '25px' }}>TLDR</p>
                   <div className={`${garamond400.className} text-black`} style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
-                    <p>➔&nbsp;&nbsp; 3rd year engineering student @ UWaterloo</p>
-                    <p className="mt-2">➔&nbsp;&nbsp; Makes $16k USD / year from solo hackathons</p>
-                    <p className="mt-2">➔&nbsp;&nbsp; Graduated high school with a perfect GPA</p>
-                    <p className="mt-2">➔&nbsp;&nbsp; Loves hackathons, traveling, & sports</p>
+                    <p>➔&nbsp;&nbsp; 3rd year engineering @ UWaterloo</p>
+                    <p className="mt-1">➔&nbsp;&nbsp; Makes $16k USD / year from hackathons</p>
+                    <p className="mt-1">➔&nbsp;&nbsp; Graduated high school with a perfect GPA</p>
+                    <p className="mt-1">➔&nbsp;&nbsp; Loves hackathons, traveling, & sports</p>
                   </div>
                 </div>
                 <Image
@@ -159,19 +159,19 @@ const Phone: React.FC<iPhoneProps> = ({
               <p className={`${poppins600.className} mt-5 pb-2 text-black`} style={{ fontSize: '24px' }}>Currently</p>
               <div className={`${garamond400.className} text-black`} style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
                 <p>➔&nbsp;&nbsp; Building hackathon projects!</p>
-                {/* <p className="mt-2">➔&nbsp;&nbsp; Contributing to IPFS & Filecoin DevEx</p> */}
+                <p className="mt-1">➔&nbsp;&nbsp; Engineering @ Nethermind</p>
                 {/* <p className="mt-2">➔&nbsp;&nbsp; Building projects with real users</p> */}
-                <p className="mt-2">➔&nbsp;&nbsp; Reading about Canadian startup founders</p>
-                <p className="mt-2">➔&nbsp;&nbsp; On a {codingStreak} day coding streak!</p>
+                <p className="mt-1">➔&nbsp;&nbsp; Reading about Canadian startup founders</p>
+                <p className="mt-1">➔&nbsp;&nbsp; On a {codingStreak} day coding streak!</p>
               </div>
               <p className={`${poppins600.className} mt-5 pb-2 text-black`} style={{ fontSize: '24px' }}>Previously</p>
               <div className={`${garamond400.className} text-black`} style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
                 <p>➔&nbsp;&nbsp; Product @ Notable Health</p>
-                <p className="mt-2">➔&nbsp;&nbsp; Devcon Scholar via Ethereum Foundation</p>
-                <p className="mt-2">➔&nbsp;&nbsp; Partnerships @ Waterloo Blockchain</p>
-                <p className="mt-2">➔&nbsp;&nbsp; iOS dev @ theScore, full stack dev @ ExaCare</p>
-                <p className="mt-2">➔&nbsp;&nbsp; Store design @ Shopify</p>
-                <p className="mt-2 mb-12">➔&nbsp;&nbsp; Google Software Product Sprint participant</p>
+                <p className="mt-1">➔&nbsp;&nbsp; Devcon Scholar via Ethereum Foundation</p>
+                <p className="mt-1">➔&nbsp;&nbsp; Partnerships @ Waterloo Blockchain</p>
+                <p className="mt-1">➔&nbsp;&nbsp; iOS dev @ theScore, full stack dev @ ExaCare</p>
+                <p className="mt-1">➔&nbsp;&nbsp; Store design @ Shopify</p>
+                <p className="mt-1 mb-12">➔&nbsp;&nbsp; Google Software Product Sprint participant</p>
               </div>
             </PopUp>
 
@@ -562,7 +562,7 @@ const Phone: React.FC<iPhoneProps> = ({
                 <p className="mb-2.5">➔&nbsp;&nbsp; York Region Kiva 2020 bottle drive <a href="https://www.yorkregion.com/news/richmond-hill-teen-starts-bottle-drive-to-help-businesses-in-developing-nations-amid-covid-19/article_26c44174-7a69-57a1-8c1a-babaacbd5209.html" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>
                   <LinkIcon />
                 </a></p>
-                <p className="mb-2.5">➔&nbsp;&nbsp; Skills Ontario 2016 cardboard boat race <a href="https://issuu.com/thornhillliberal/docs/tho_w_jan28" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>
+                <p className="mb-2.5">➔&nbsp;&nbsp; Skills Ontario 2016 cardboard boat race <a href="https://x.com/doncrestps/status/693865687048196096" target="_blank" style={{ textDecoration: 'underline', color: 'blue' }}>
                   <LinkIcon />
                 </a></p>
               </div>
