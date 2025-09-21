@@ -27,30 +27,38 @@ export default function Home() {
   const [taglineZoomIn, setTaglineZoomIn] = useState(false);
   const [shortcutsZoomIn, setShortcutsZoomIn] = useState(false);
   const [phoneZoomIn, setPhoneZoomIn] = useState(false);
+  const [animationKey] = useState(() => Math.random().toString(36));
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
+    // Reset all animation states on mount
+    setNameZoomIn(false);
+    setTaglineZoomIn(false);
+    setShortcutsZoomIn(false);
+    setPhoneZoomIn(false);
+
+    const nameTimeout = setTimeout(() => {
       setNameZoomIn(true);
-      const timeout = setTimeout(() => {
+      const taglineTimeout = setTimeout(() => {
         setTaglineZoomIn(true);
-        const timeout = setTimeout(() => {
+        const shortcutsTimeout = setTimeout(() => {
           setShortcutsZoomIn(true);
         }, 200);
-        return () => clearTimeout(timeout);
+        return () => clearTimeout(shortcutsTimeout);
       }, 200);
-      return () => clearTimeout(timeout);
+      return () => clearTimeout(taglineTimeout);
     }, 11100);
-    return () => clearTimeout(timeout);
-  }, []);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => setPhoneZoomIn(true), 12200);
-    return () => clearTimeout(timeout);
+    
+    const phoneTimeout = setTimeout(() => setPhoneZoomIn(true), 12200);
+    
+    return () => {
+      clearTimeout(nameTimeout);
+      clearTimeout(phoneTimeout);
+    };
   }, []);
 
   return (
     <div className="overflow-hidden h-screen flex relative z-50">
-      <StartAnimation />
+      <StartAnimation key={animationKey} />
       <div className="leftWidth relative">
         {/* Content for the 60% width column */}
         <div className="w-full h-1/4 border-b-4 border-black flex">

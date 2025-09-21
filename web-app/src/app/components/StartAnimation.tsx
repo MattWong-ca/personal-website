@@ -8,15 +8,29 @@ function StartAnimation() {
   const [showFortyPercentScreen, setShowFortyPercentScreen] = useState(true);
 
   useEffect(() => {
-    setIsVisible(true);
-    const timeout = setTimeout(() => {
-      setShowSixtyPercentScreen(false);
-      const timeout = setTimeout(() => {
-        setShowFortyPercentScreen(false);
-      }, 1000);
-      return () => clearTimeout(timeout);
-    }, 11000);
-    return () => clearTimeout(timeout);
+    // Force reset all states on component mount
+    setIsVisible(false);
+    setShowSixtyPercentScreen(true);
+    setShowFortyPercentScreen(true);
+
+    // Small delay to ensure DOM is ready, then start animation
+    const initialDelay = setTimeout(() => {
+      setIsVisible(true);
+      
+      const sixtyPercentTimeout = setTimeout(() => {
+        setShowSixtyPercentScreen(false);
+        
+        const fortyPercentTimeout = setTimeout(() => {
+          setShowFortyPercentScreen(false);
+        }, 1000);
+        
+        return () => clearTimeout(fortyPercentTimeout);
+      }, 11000);
+      
+      return () => clearTimeout(sixtyPercentTimeout);
+    }, 100);
+
+    return () => clearTimeout(initialDelay);
   }, []);
 
   return (
