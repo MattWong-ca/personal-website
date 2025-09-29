@@ -159,7 +159,7 @@ const Phone: React.FC<iPhoneProps> = ({
               <p className={`${poppins600.className} mt-5 pb-2 text-black`} style={{ fontSize: '24px' }}>Currently</p>
               <div className={`${garamond400.className} text-black`} style={{ marginLeft: '1.3rem', fontSize: '22px' }}>
                 <p>➔&nbsp;&nbsp; Building hackathon projects!</p>
-                <p className="mt-1">➔&nbsp;&nbsp; Engineering @ Nethermind</p>
+                <p className="mt-1">➔&nbsp;&nbsp; Engineering @ Nethermind, King&apos;s College London</p>
                 {/* <p className="mt-2">➔&nbsp;&nbsp; Building projects with real users</p> */}
                 <p className="mt-1">➔&nbsp;&nbsp; Reading about Canadian startup founders</p>
                 <p className="mt-1">➔&nbsp;&nbsp; On a {codingStreak} day coding streak!</p>
